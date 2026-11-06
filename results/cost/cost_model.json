@@ -1,0 +1,255 @@
+{
+ "prices": {
+  "dram_usd_gb_month": 3.0,
+  "ssd_usd_gb_month": 0.08,
+  "gpu_usd_hour": 0.5,
+  "vcpu_usd_hour": 0.04
+ },
+ "settings": {
+  "msmarco": {
+   "n_docs": 8841823,
+   "index_gb": {
+    "reco_sketch": 0.868883664,
+    "colbert_fp16": 114.834073852,
+    "colbertv2_2bit": 18.570939178,
+    "raw_text": 2.983086288
+   },
+   "per_query": {
+    "gpu_b8": {
+     "ms": 190.89100366225466,
+     "usd": 2.651263939753537e-05
+    },
+    "gpu_b32": {
+     "ms": 86.56095844693482,
+     "usd": 1.2022355339852059e-05
+    },
+    "plaid_gpu": {
+     "ms": 50.243364442139864,
+     "usd": 6.978245061408314e-06
+    }
+   },
+   "break_even": {
+    "colbert_fp16|dram|gpu_b8": {
+     "saved_usd_month": 341.89557056399997,
+     "queries_per_month": 12895568.99400151,
+     "qps": 4.975142358796878,
+     "interval_s": 0.20099927356487274
+    },
+    "colbert_fp16|ssd|gpu_b8": {
+     "saved_usd_month": 9.11721521504,
+     "queries_per_month": 343881.8398400403,
+     "qps": 0.13267046290125012,
+     "interval_s": 7.537472758682726
+    },
+    "colbertv2_2bit|dram|gpu_b8": {
+     "saved_usd_month": 53.106166542000004,
+     "queries_per_month": 2003050.912650243,
+     "qps": 0.7727819879051863,
+     "interval_s": 1.294026019823189
+    },
+    "colbertv2_2bit|ssd|gpu_b8": {
+     "saved_usd_month": 1.41616444112,
+     "queries_per_month": 53414.691004006476,
+     "qps": 0.020607519677471636,
+     "interval_s": 48.525975743369585
+    },
+    "colbert_fp16|dram|gpu_b32": {
+     "saved_usd_month": 341.89557056399997,
+     "queries_per_month": 28438318.524047814,
+     "qps": 10.971573504648077,
+     "interval_s": 0.09114462930739632
+    },
+    "colbert_fp16|ssd|gpu_b32": {
+     "saved_usd_month": 9.11721521504,
+     "queries_per_month": 758355.1606412751,
+     "qps": 0.29257529345728206,
+     "interval_s": 3.4179235990273615
+    },
+    "colbertv2_2bit|dram|gpu_b32": {
+     "saved_usd_month": 53.106166542000004,
+     "queries_per_month": 4417284.720071625,
+     "qps": 1.704199351879485,
+     "interval_s": 0.5867858117051534
+    },
+    "colbertv2_2bit|ssd|gpu_b32": {
+     "saved_usd_month": 1.41616444112,
+     "queries_per_month": 117794.25920191,
+     "qps": 0.045445316050119595,
+     "interval_s": 22.004467938943254
+    },
+    "colbertv2_2bit_net|dram|gpu_b8": {
+     "saved_usd_month": 53.106166542000004,
+     "queries_per_month": 2718598.0598223647,
+     "qps": 1.0488418440672704,
+     "interval_s": 0.9534325939191479
+    },
+    "colbertv2_2bit_net|ssd|gpu_b8": {
+     "saved_usd_month": 1.41616444112,
+     "queries_per_month": 72495.94826192972,
+     "qps": 0.027969115841793873,
+     "interval_s": 35.75372227196805
+    },
+    "colbertv2_2bit_net|dram|gpu_b32": {
+     "saved_usd_month": 53.106166542000004,
+     "queries_per_month": 10528351.604236696,
+     "qps": 4.0618640448444046,
+     "interval_s": 0.24619238580111227
+    },
+    "colbertv2_2bit_net|ssd|gpu_b32": {
+     "saved_usd_month": 1.41616444112,
+     "queries_per_month": 280756.04277964524,
+     "qps": 0.10831637452918412,
+     "interval_s": 9.23221446754171
+    }
+   }
+  },
+  "longmemeval": {
+   "units_per_memory": 248.15531914893617,
+   "latency_source": "server",
+   "memory_mb": {
+    "raw text": 0.4931208122047268,
+    "ColBERT fp16": 10.292168952862644,
+    "ColBERTv2 1-bit (ref.)": 0.7513908954547451,
+    "ReCo sketch K=16k": 0.04504769651213647,
+    "ReCo sketch K=64k": 0.057743447184269846,
+    "bge-small fp16": 0.19058328510638298,
+    "bge-base fp16": 0.38116657021276595,
+    "BM25 index": 0.06058507021276596
+   },
+   "per_query": {
+    "cpu8": {
+     "ms": 2081.2530048098415,
+     "usd": 0.00018500026709420813
+    },
+    "gpu": {
+     "ms": 38.78445337171254,
+     "usd": 5.386729634960075e-06
+    }
+   },
+   "break_even": {
+    "ColBERT fp16|dram|cpu8": {
+     "saved_usd_month": 0.030703276517035125,
+     "queries_per_month": 165.9634172387439,
+     "qps": 6.402909615692279e-05,
+     "interval_s": 15617.899674066857
+    },
+    "ColBERT fp16|ssd|cpu8": {
+     "saved_usd_month": 0.0008187540404542699,
+     "queries_per_month": 4.4256911263665035,
+     "qps": 1.7074425641846078e-06,
+     "interval_s": 585671.2377775072
+    },
+    "ColBERTv2 1-bit (ref.)|dram|cpu8": {
+     "saved_usd_month": 0.0020809423448114256,
+     "queries_per_month": 11.248320759189728,
+     "qps": 4.339629922526901e-06,
+     "interval_s": 230434.39598594044
+    },
+    "ColBERTv2 1-bit (ref.)|ssd|cpu8": {
+     "saved_usd_month": 5.549179586163802e-05,
+     "queries_per_month": 0.29995522024505944,
+     "qps": 1.1572346460071738e-07,
+     "interval_s": 8641289.849472765
+    },
+    "ColBERT fp16|dram|gpu": {
+     "saved_usd_month": 0.030703276517035125,
+     "queries_per_month": 5699.799061339504,
+     "qps": 0.00219899655144271,
+     "interval_s": 454.7528732338955
+    },
+    "ColBERT fp16|ssd|gpu": {
+     "saved_usd_month": 0.0008187540404542699,
+     "queries_per_month": 151.99464163572011,
+     "qps": 5.8639908038472266e-05,
+     "interval_s": 17053.232746271082
+    },
+    "ColBERTv2 1-bit (ref.)|dram|gpu": {
+     "saved_usd_month": 0.0020809423448114256,
+     "queries_per_month": 386.30903829032604,
+     "qps": 0.00014903898082188505,
+     "interval_s": 6709.654041415445
+    },
+    "ColBERTv2 1-bit (ref.)|ssd|gpu": {
+     "saved_usd_month": 5.549179586163802e-05,
+     "queries_per_month": 10.301574354408695,
+     "qps": 3.974372821916934e-06,
+     "interval_s": 251612.02655307917
+    }
+   }
+  },
+  "locomo": {
+   "units_per_memory": 601.5133770822816,
+   "latency_source": "server",
+   "memory_mb": {
+    "raw text": 0.08673552922124343,
+    "ColBERT fp16": 3.611260518392941,
+    "ColBERTv2 1-bit (ref.)": 0.26555169157283204,
+    "ReCo sketch K=16k": 0.02948177410106999,
+    "ReCo sketch K=64k": 0.03459755231345178,
+    "bge-small fp16": 0.4619622735991923,
+    "bge-base fp16": 0.9239245471983846,
+    "BM25 index": 0.023029708228167592
+   },
+   "per_query": {
+    "cpu8": {
+     "ms": 686.0491134691983,
+     "usd": 6.09821434194843e-05
+    },
+    "gpu": {
+     "ms": 60.94476941627325,
+     "usd": 8.46455130781573e-06
+    }
+   },
+   "break_even": {
+    "ColBERT fp16|dram|cpu8": {
+     "saved_usd_month": 0.010729988898238467,
+     "queries_per_month": 175.95296420509462,
+     "qps": 6.788308804208897e-05,
+     "interval_s": 14731.209625878813
+    },
+    "ColBERT fp16|ssd|cpu8": {
+     "saved_usd_month": 0.0002861330372863591,
+     "queries_per_month": 4.692079045469189,
+     "qps": 1.8102156811223722e-06,
+     "interval_s": 552420.3609704556
+    },
+    "ColBERTv2 1-bit (ref.)|dram|cpu8": {
+     "saved_usd_month": 0.0006928624177781409,
+     "queries_per_month": 11.361726218969954,
+     "qps": 4.3833820289235936e-06,
+     "interval_s": 228134.34772546287
+    },
+    "ColBERTv2 1-bit (ref.)|ssd|cpu8": {
+     "saved_usd_month": 1.8476331140750424e-05,
+     "queries_per_month": 0.3029793658391988,
+     "qps": 1.1689018743796251e-07,
+     "interval_s": 8555038.039704856
+    },
+    "ColBERT fp16|dram|gpu": {
+     "saved_usd_month": 0.010729988898238467,
+     "queries_per_month": 1267.638237165737,
+     "qps": 0.0004890579618694973,
+     "interval_s": 2044.7474082158894
+    },
+    "ColBERT fp16|ssd|gpu": {
+     "saved_usd_month": 0.0002861330372863591,
+     "queries_per_month": 33.80368632441966,
+     "qps": 1.3041545649853262e-05,
+     "interval_s": 76678.02780809585
+    },
+    "ColBERTv2 1-bit (ref.)|dram|gpu": {
+     "saved_usd_month": 0.0006928624177781409,
+     "queries_per_month": 81.85459483698652,
+     "qps": 3.157970479822011e-05,
+     "interval_s": 31665.907151113137
+    },
+    "ColBERTv2 1-bit (ref.)|ssd|gpu": {
+     "saved_usd_month": 1.8476331140750424e-05,
+     "queries_per_month": 2.182789195652974,
+     "qps": 8.421254612858696e-07,
+     "interval_s": 1187471.5181667428
+    }
+   }
+  }
+ }
+}

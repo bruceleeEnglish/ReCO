@@ -1,0 +1,18 @@
+=== longmemeval
+15:00:56 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+15:01:56 | INFO  | savemv.memory_by_size | longmemeval: sizes {'min': 199, 'p25': 238.0, 'median': 247.0, 'p75': 257.0, 'max': 308}, recall 0.9506, R 19.6
+15:01:56 | INFO  | savemv.memory_by_size | longmemeval quartile 1 (199-238 units, 121 tasks): recall 0.9537, R 19.0
+15:01:56 | INFO  | savemv.memory_by_size | longmemeval quartile 2 (239-247 units, 122 tasks): recall 0.9508, R 19.1
+15:01:56 | INFO  | savemv.memory_by_size | longmemeval quartile 3 (248-257 units, 111 tasks): recall 0.9468, R 19.7
+15:01:56 | INFO  | savemv.memory_by_size | longmemeval quartile 4 (258-308 units, 116 tasks): recall 0.9509, R 20.7
+15:01:56 | INFO  | savemv.memory_by_size | longmemeval calibrated on smaller memories (237 units), tested on larger (261 units): recall 0.9552, R 21.1, recall on the smaller ones 0.9523
+[stage] longmemeval rc=0
+=== locomo
+15:02:01 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+15:03:00 | INFO  | savemv.memory_by_size | locomo: sizes {'min': 369, 'p25': 509.0, 'median': 663.0, 'p75': 680.0, 'max': 689}, recall 0.9523, R 59.5
+15:03:00 | INFO  | savemv.memory_by_size | locomo quartile 1 (369-509 units, 498 tasks): recall 0.9576, R 58.0
+15:03:00 | INFO  | savemv.memory_by_size | locomo quartile 2 (568-663 units, 654 tasks): recall 0.9544, R 63.1
+15:03:00 | INFO  | savemv.memory_by_size | locomo quartile 3 (675-680 units, 400 tasks): recall 0.9380, R 58.2
+15:03:00 | INFO  | savemv.memory_by_size | locomo quartile 4 (681-689 units, 429 tasks): recall 0.9562, R 56.8
+15:03:00 | INFO  | savemv.memory_by_size | locomo calibrated on smaller memories (544 units), tested on larger (681 units): recall 0.9375, R 52.9, recall on the smaller ones 0.9519
+[stage] locomo rc=0

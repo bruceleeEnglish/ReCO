@@ -1,0 +1,17 @@
+\filltable{7}{%
+\begin{tabular}{@{}l rr rr rr@{}}
+\toprule
+ & \multicolumn{2}{c}{bytes / unit} & \multicolumn{2}{c}{4B reader (on-device)} & \multicolumn{2}{c}{cloud reader} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-7}
+Retriever (top-10) & LME & LoCoMo & LME & LoCoMo & LME & LoCoMo \\
+\midrule
+Oracle & -- & -- & 0.700 & 0.645 & 0.898 & 0.760 \\
+ColBERT & 41,475 & 6,004 & 0.609 & 0.545 & \textbf{0.847} & 0.660 \\
+\oursL \reco{} & \ours 233 & \ours 58 & \ours \textbf{0.615} & \ours \textbf{0.547} & \ours 0.845 & \oursR \textbf{0.667} \\
+\oursL \reco{} w/o verification & \ours 233 & \ours 58 & \ours 0.598 & \ours 0.537 & \ours 0.838 & \oursR 0.662 \\
+BM25 & 244 & 38 & 0.581 & 0.400 & 0.768 & 0.517 \\
+bge-base & 1,536 & 1,536 & 0.577 & 0.440 & 0.798 & 0.535 \\
+\midrule
+FullContext & -- & -- & 0.183 & 0.565 & 0.900 & 0.860 \\
+\bottomrule
+\end{tabular}}

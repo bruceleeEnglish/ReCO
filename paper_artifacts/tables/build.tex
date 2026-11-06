@@ -1,0 +1,13 @@
+\filltable{7}{%
+\begin{tabular}{@{}l rrr rrr @{}}
+\toprule
+ & \multicolumn{3}{c}{FiQA (58k docs)} & \multicolumn{3}{c}{Quora (523k docs)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Index & B/doc & build (s) & insert & B/doc & build (s) & insert \\
+\midrule
+ColBERT (fp16) & 24,368 & 0.0 & 0.44 & 2,993 & 0.0 & 0.23 \\
+ColBERTv2 (2-bit) & 3,287 & 21.2 & 0.64 & 407 & 29.5 & 0.27 \\
+\oursL \reco{} & \ours 156 & \ours 11.0 & \ours 0.59 & \ours 27 & \ours 11.3 & \oursR 0.25 \\
+\oursL \reco{}, universal codebook & \ours \textbf{136} & \ours 8.6 & \ours 0.59 & \ours \textbf{26} & \ours 5.7 & \oursR 0.24 \\
+\bottomrule
+\end{tabular}}

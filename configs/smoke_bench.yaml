@@ -1,0 +1,36 @@
+# Quick CPU check of the benchmark runner: first 1,000 SciFact documents, light methods only.
+#   python -m savemv bench --config configs/smoke_bench.yaml  (CPU, ~1 min)
+dataset: scifact
+data_root: data
+output_root: outputs
+max_docs: 1000
+
+encoder:
+  batch_size: 32
+  device: cpu
+
+sketch:
+  codebook_sizes: [256, 1024]
+  kmeans_iters: 10
+  min_train_points: 50000
+
+stop:
+  deltas: [0.1, 0.05]
+  folds: 5
+  fit_fraction: 0.4
+
+latency:
+  enabled: false
+
+bench:
+  workers: 4
+  methods:
+    - {kind: full}
+    - {kind: reco, codebook_size: 256}
+    - {kind: reco, codebook_size: 1024}
+    - {kind: residual, nbits: [2, 1]}
+    - {kind: pool, factor: 2, nbits: [null, 2, 1]}
+    - {kind: pool, factor: 8, nbits: [null, 1]}
+    - {kind: fde, reps: [2, 5], pq: true, pq_train_docs: 1000}
+    - {kind: meanpool, quant: [fp16, binary]}
+    - {kind: bm25}

@@ -1,0 +1,6 @@
+2026-10-25 07:01:57 start fiqa -> outputs/logs/bench_fiqa_20261025_070157.log
+2026-10-25 07:20:49 done  fiqa
+2026-10-25 07:20:49 start trec-covid -> outputs/logs/bench_trec-covid_20261025_072049.log
+2026-10-25 07:32:37 done  trec-covid
+2026-10-25 07:32:37 start quora -> outputs/logs/bench_quora_20261025_073237.log
+2026-10-25 08:34:18 done  quora

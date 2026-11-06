@@ -1,0 +1,879 @@
+== scifact index Wed Oct 28 04:30:55 AM UTC 2026
+
+
+[Oct 28, 04:31:00] #> Creating directory <repo>/outputs/warp/indexes/beir-scifact.split=test.nbits=2 
+
+
+#> Starting...
+nranks = 1 	 num_gpus = 1 	 device=0
+{
+    "query_token_id": "[unused0]",
+    "doc_token_id": "[unused1]",
+    "query_token": "[Q]",
+    "doc_token": "[D]",
+    "ncells": 16,
+    "centroid_score_threshold": null,
+    "ndocs": null,
+    "load_index_with_mmap": false,
+    "index_path": "<repo>\/outputs\/warp\/indexes\/beir-scifact.split=test.nbits=2",
+    "index_bsize": 64,
+    "nbits": 2,
+    "kmeans_niters": 4,
+    "resume": false,
+    "similarity": "cosine",
+    "bsize": 64,
+    "accumsteps": 1,
+    "lr": 3e-6,
+    "maxsteps": 500000,
+    "save_every": null,
+    "warmup": null,
+    "warmup_bert": null,
+    "relu": false,
+    "nway": 2,
+    "use_ib_negatives": false,
+    "reranker": false,
+    "distillation_alpha": 1.0,
+    "ignore_scores": false,
+    "model_name": null,
+    "query_maxlen": 32,
+    "attend_to_mask_tokens": false,
+    "interaction": "colbert",
+    "dim": 128,
+    "doc_maxlen": 512,
+    "mask_punctuation": true,
+    "checkpoint": "google\/xtr-base-en",
+    "triples": null,
+    "collection": "<repo>\/outputs\/warp\/beir\/scifact\/collection.tsv",
+    "queries": null,
+    "index_name": "beir-scifact.split=test.nbits=2",
+    "overwrite": false,
+    "root": "<repo>\/third_party\/xtr-warp\/experiments",
+    "experiment": "beir-scifact",
+    "index_root": null,
+    "name": "2026-10\/28\/04.30.56",
+    "rank": 0,
+    "nranks": 1,
+    "amp": true,
+    "gpus": 1,
+    "avoid_fork_if_possible": false
+}
+[Oct 28, 04:31:04] #> Loading collection...
+0M 
+[Oct 28, 04:31:05] [0] 		 # of sampled PIDs = 5183 	 sampled_pids[:3] = [3412, 83, 2446]
+[Oct 28, 04:31:05] [0] 		 #> Encoding 5183 passages..
+[Oct 28, 04:31:54] [0] 		 avg_doclen_est = 361.1983337402344 	 len(local_sample) = 5,183
+[Oct 28, 04:31:55] [0] 		 Creating 16,384 partitions.
+[Oct 28, 04:31:55] [0] 		 *Estimated* 1,872,090 embeddings.
+[Oct 28, 04:31:55] [0] 		 #> Saving the indexing plan to <repo>/outputs/warp/indexes/beir-scifact.split=test.nbits=2/plan.json ..
+[Oct 28, 04:31:55] [0] 		 #> use_gpu = True
+Clustering 1822091 points in 128D to 16384 clusters, redo 1 times, 4 iterations
+  Preprocessing in 0.11 s
+  Iteration 0 (0.73 s, search 0.64 s): objective=1.594e+06 imbalance=1.740 nsplit=0         Iteration 1 (1.41 s, search 1.27 s): objective=1.66464e+06 imbalance=1.444 nsplit=0         Iteration 2 (2.09 s, search 1.90 s): objective=1.67592e+06 imbalance=1.376 nsplit=0         Iteration 3 (2.77 s, search 2.52 s): objective=1.68107e+06 imbalance=1.347 nsplit=0       [Oct 28, 04:31:59] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:31:59] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[0.033, 0.028, 0.027, 0.026, 0.027, 0.03, 0.026, 0.027, 0.025, 0.027, 0.027, 0.025, 0.028, 0.029, 0.025, 0.026, 0.026, 0.027, 0.026, 0.028, 0.025, 0.026, 0.031, 0.025, 0.027, 0.028, 0.028, 0.029, 0.028, 0.025, 0.027, 0.028, 0.029, 0.028, 0.024, 0.027, 0.027, 0.027, 0.028, 0.026, 0.029, 0.026, 0.027, 0.027, 0.03, 0.029, 0.027, 0.027, 0.032, 0.027, 0.026, 0.03, 0.022, 0.028, 0.03, 0.025, 0.027, 0.028, 0.029, 0.027, 0.028, 0.026, 0.026, 0.026, 0.025, 0.027, 0.027, 0.032, 0.026, 0.024, 0.028, 0.025, 0.026, 0.03, 0.027, 0.028, 0.024, 0.028, 0.025, 0.025, 0.027, 0.029, 0.028, 0.026, 0.024, 0.027, 0.024, 0.027, 0.028, 0.028, 0.024, 0.024, 0.028, 0.028, 0.025, 0.029, 0.027, 0.029, 0.024, 0.026, 0.03, 0.026, 0.027, 0.026, 0.024, 0.024, 0.03, 0.025, 0.026, 0.027, 0.028, 0.027, 0.024, 0.031, 0.027, 0.027, 0.025, 0.028, 0.026, 0.03, 0.024, 0.027, 0.028, 0.024, 0.029, 0.027, 0.025, 0.027]
+[Oct 28, 04:31:59] #> Got bucket_cutoffs_quantiles = tensor([0.2500, 0.5000, 0.7500], device='cuda:0') and bucket_weights_quantiles = tensor([0.1250, 0.3750, 0.6250, 0.8750], device='cuda:0')
+[Oct 28, 04:31:59] #> Got bucket_cutoffs = tensor([-0.0214,  0.0001,  0.0217], device='cuda:0') and bucket_weights = tensor([-0.0380, -0.0099,  0.0101,  0.0382], device='cuda:0')
+[Oct 28, 04:31:59] avg_residual = 0.027026228606700897
+0it [00:00, ?it/s][Oct 28, 04:31:59] [0] 		 #> Encoding 5183 passages..
+[Oct 28, 04:32:48] [0] 		 #> Saving chunk 0: 	 5,183 passages and 1,872,091 embeddings. From #0 onward.
+1it [00:49, 49.80s/it]1it [00:49, 49.80s/it]
+[Oct 28, 04:32:49] [0] 		 #> Checking all files were saved...
+[Oct 28, 04:32:49] [0] 		 Found all files!
+[Oct 28, 04:32:49] [0] 		 #> Building IVF...
+[Oct 28, 04:32:49] [0] 		 #> Loading codes...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 347.47it/s]
+[Oct 28, 04:32:49] [0] 		 Sorting codes...
+[Oct 28, 04:32:49] [0] 		 Getting unique codes...
+[Oct 28, 04:32:49] #> Optimizing IVF to store map from centroids to list of pids..
+[Oct 28, 04:32:49] #> Building the emb2pid mapping..
+[Oct 28, 04:32:49] len(emb2pid) = 1872091
+  0%|          | 0/16384 [00:00<?, ?it/s] 46%|████▌     | 7484/16384 [00:00<00:00, 74832.93it/s] 92%|█████████▏| 15153/16384 [00:00<00:00, 75921.71it/s]100%|██████████| 16384/16384 [00:00<00:00, 75795.10it/s]
+[Oct 28, 04:32:49] #> Saved optimized IVF to <repo>/outputs/warp/indexes/beir-scifact.split=test.nbits=2/ivf.pid.pt
+[Oct 28, 04:32:49] [0] 		 #> Saving the indexing metadata to <repo>/outputs/warp/indexes/beir-scifact.split=test.nbits=2/metadata.json ..
+
+#> Joined...
+Compacting index at '<repo>/outputs/warp/indexes/beir-scifact.split=test.nbits=2' to '<repo>/outputs/warp/indexes/beir-scifact.split=test.nbits=2'
+#> centroids.dtype = torch.float32
+> Loading centroid information
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 58.07it/s]
+> Compacting index
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 10.53it/s]
+> Saving compacted index
+> Repacking residuals
+== scifact search Wed Oct 28 04:32:52 AM UTC 2026
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda-12.3'
+[Oct 28, 04:32:56] #> Loading collection...
+0M 
+[Oct 28, 04:32:57] #> Loading buckets...
+[Oct 28, 04:32:57] #> Loading codec...
+#> Not averaging centroids.
+[Oct 28, 04:32:57] #> Loading repacked residuals...
+[Oct 28, 04:32:57] Loading parallel_warp_select_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:32:57] Loading parallel_decompress_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:32:57] Loading parallel_merge_candidate_scores_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:32:57] Loading parallel_fused_decompress_merge extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+nprobe 16 t_prime <warp.engine.constants.TPrimePolicy object at 0x7fcea9b0bdf0> nbits 2
+#> Loading collection_map found in <repo>/outputs/warp/beir/scifact/collection.tsv
+scifact: nDCG@10 0.7038 | index 75.9 MB = 9.76x raw | latency 50.2 ms p50 (8 threads)
+== nfcorpus index Wed Oct 28 04:33:13 AM UTC 2026
+
+
+[Oct 28, 04:33:18] #> Creating directory <repo>/outputs/warp/indexes/beir-nfcorpus.split=test.nbits=2 
+
+
+#> Starting...
+nranks = 1 	 num_gpus = 1 	 device=0
+{
+    "query_token_id": "[unused0]",
+    "doc_token_id": "[unused1]",
+    "query_token": "[Q]",
+    "doc_token": "[D]",
+    "ncells": 16,
+    "centroid_score_threshold": null,
+    "ndocs": null,
+    "load_index_with_mmap": false,
+    "index_path": "<repo>\/outputs\/warp\/indexes\/beir-nfcorpus.split=test.nbits=2",
+    "index_bsize": 64,
+    "nbits": 2,
+    "kmeans_niters": 4,
+    "resume": false,
+    "similarity": "cosine",
+    "bsize": 64,
+    "accumsteps": 1,
+    "lr": 3e-6,
+    "maxsteps": 500000,
+    "save_every": null,
+    "warmup": null,
+    "warmup_bert": null,
+    "relu": false,
+    "nway": 2,
+    "use_ib_negatives": false,
+    "reranker": false,
+    "distillation_alpha": 1.0,
+    "ignore_scores": false,
+    "model_name": null,
+    "query_maxlen": 32,
+    "attend_to_mask_tokens": false,
+    "interaction": "colbert",
+    "dim": 128,
+    "doc_maxlen": 512,
+    "mask_punctuation": true,
+    "checkpoint": "google\/xtr-base-en",
+    "triples": null,
+    "collection": "<repo>\/outputs\/warp\/beir\/nfcorpus\/collection.tsv",
+    "queries": null,
+    "index_name": "beir-nfcorpus.split=test.nbits=2",
+    "overwrite": false,
+    "root": "<repo>\/third_party\/xtr-warp\/experiments",
+    "experiment": "beir-nfcorpus",
+    "index_root": null,
+    "name": "2026-10\/28\/04.33.14",
+    "rank": 0,
+    "nranks": 1,
+    "amp": true,
+    "gpus": 1,
+    "avoid_fork_if_possible": false
+}
+[Oct 28, 04:33:22] #> Loading collection...
+0M 
+[Oct 28, 04:33:23] [0] 		 # of sampled PIDs = 3633 	 sampled_pids[:3] = [1706, 3001, 41]
+[Oct 28, 04:33:23] [0] 		 #> Encoding 3633 passages..
+[Oct 28, 04:33:58] [0] 		 avg_doclen_est = 370.86761474609375 	 len(local_sample) = 3,633
+[Oct 28, 04:33:58] [0] 		 Creating 16,384 partitions.
+[Oct 28, 04:33:58] [0] 		 *Estimated* 1,347,362 embeddings.
+[Oct 28, 04:33:58] [0] 		 #> Saving the indexing plan to <repo>/outputs/warp/indexes/beir-nfcorpus.split=test.nbits=2/plan.json ..
+[Oct 28, 04:33:59] [0] 		 #> use_gpu = True
+Clustering 1297362 points in 128D to 16384 clusters, redo 1 times, 4 iterations
+  Preprocessing in 0.08 s
+  Iteration 0 (0.56 s, search 0.47 s): objective=1.13408e+06 imbalance=1.669 nsplit=2         Iteration 1 (1.08 s, search 0.93 s): objective=1.1819e+06 imbalance=1.417 nsplit=0         Iteration 2 (1.61 s, search 1.40 s): objective=1.18924e+06 imbalance=1.352 nsplit=0         Iteration 3 (2.14 s, search 1.86 s): objective=1.19247e+06 imbalance=1.324 nsplit=0       [Oct 28, 04:34:02] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:34:02] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[0.034, 0.027, 0.027, 0.026, 0.028, 0.03, 0.026, 0.026, 0.025, 0.027, 0.028, 0.025, 0.029, 0.029, 0.026, 0.026, 0.027, 0.026, 0.026, 0.029, 0.027, 0.027, 0.03, 0.026, 0.028, 0.028, 0.028, 0.03, 0.028, 0.025, 0.027, 0.027, 0.029, 0.03, 0.025, 0.03, 0.027, 0.028, 0.028, 0.027, 0.03, 0.027, 0.028, 0.028, 0.031, 0.03, 0.028, 0.028, 0.033, 0.029, 0.026, 0.03, 0.022, 0.029, 0.029, 0.025, 0.028, 0.028, 0.029, 0.027, 0.029, 0.027, 0.026, 0.026, 0.026, 0.027, 0.028, 0.036, 0.027, 0.025, 0.029, 0.026, 0.026, 0.03, 0.029, 0.028, 0.024, 0.029, 0.025, 0.026, 0.026, 0.029, 0.03, 0.027, 0.025, 0.029, 0.025, 0.03, 0.029, 0.027, 0.024, 0.025, 0.028, 0.028, 0.025, 0.029, 0.028, 0.029, 0.024, 0.026, 0.031, 0.026, 0.028, 0.027, 0.025, 0.025, 0.03, 0.026, 0.028, 0.028, 0.028, 0.026, 0.024, 0.032, 0.027, 0.027, 0.027, 0.029, 0.027, 0.029, 0.025, 0.028, 0.03, 0.024, 0.029, 0.028, 0.025, 0.028]
+[Oct 28, 04:34:02] #> Got bucket_cutoffs_quantiles = tensor([0.2500, 0.5000, 0.7500], device='cuda:0') and bucket_weights_quantiles = tensor([0.1250, 0.3750, 0.6250, 0.8750], device='cuda:0')
+[Oct 28, 04:34:02] #> Got bucket_cutoffs = tensor([-0.0217,  0.0004,  0.0224], device='cuda:0') and bucket_weights = tensor([-0.0386, -0.0099,  0.0106,  0.0392], device='cuda:0')
+[Oct 28, 04:34:02] avg_residual = 0.02756425179541111
+0it [00:00, ?it/s][Oct 28, 04:34:02] [0] 		 #> Encoding 3633 passages..
+[Oct 28, 04:34:37] [0] 		 #> Saving chunk 0: 	 3,633 passages and 1,347,362 embeddings. From #0 onward.
+1it [00:35, 35.68s/it]1it [00:35, 35.69s/it]
+[Oct 28, 04:34:38] [0] 		 #> Checking all files were saved...
+[Oct 28, 04:34:38] [0] 		 Found all files!
+[Oct 28, 04:34:38] [0] 		 #> Building IVF...
+[Oct 28, 04:34:38] [0] 		 #> Loading codes...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 460.10it/s]
+[Oct 28, 04:34:38] [0] 		 Sorting codes...
+[Oct 28, 04:34:38] [0] 		 Getting unique codes...
+[Oct 28, 04:34:38] #> Optimizing IVF to store map from centroids to list of pids..
+[Oct 28, 04:34:38] #> Building the emb2pid mapping..
+[Oct 28, 04:34:38] len(emb2pid) = 1347362
+  0%|          | 0/16384 [00:00<?, ?it/s] 46%|████▌     | 7519/16384 [00:00<00:00, 75186.31it/s] 93%|█████████▎| 15274/16384 [00:00<00:00, 76572.43it/s]100%|██████████| 16384/16384 [00:00<00:00, 76327.67it/s]
+[Oct 28, 04:34:38] #> Saved optimized IVF to <repo>/outputs/warp/indexes/beir-nfcorpus.split=test.nbits=2/ivf.pid.pt
+[Oct 28, 04:34:38] [0] 		 #> Saving the indexing metadata to <repo>/outputs/warp/indexes/beir-nfcorpus.split=test.nbits=2/metadata.json ..
+
+#> Joined...
+Compacting index at '<repo>/outputs/warp/indexes/beir-nfcorpus.split=test.nbits=2' to '<repo>/outputs/warp/indexes/beir-nfcorpus.split=test.nbits=2'
+#> centroids.dtype = torch.float32
+> Loading centroid information
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 78.94it/s]
+> Compacting index
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 15.21it/s]
+> Saving compacted index
+> Repacking residuals
+== nfcorpus search Wed Oct 28 04:34:40 AM UTC 2026
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda-12.3'
+[Oct 28, 04:34:45] #> Loading collection...
+0M 
+[Oct 28, 04:34:46] #> Loading buckets...
+[Oct 28, 04:34:46] #> Loading codec...
+#> Not averaging centroids.
+[Oct 28, 04:34:46] #> Loading repacked residuals...
+[Oct 28, 04:34:46] Loading parallel_warp_select_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:34:46] Loading parallel_decompress_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:34:46] Loading parallel_merge_candidate_scores_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:34:46] Loading parallel_fused_decompress_merge extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+nprobe 16 t_prime <warp.engine.constants.TPrimePolicy object at 0x7fd847267790> nbits 2
+#> Loading collection_map found in <repo>/outputs/warp/beir/nfcorpus/collection.tsv
+nfcorpus: nDCG@10 0.3322 | index 57.0 MB = 9.85x raw | latency 46.6 ms p50 (8 threads)
+== arguana index Wed Oct 28 04:35:02 AM UTC 2026
+
+
+[Oct 28, 04:35:07] #> Creating directory <repo>/outputs/warp/indexes/beir-arguana.split=test.nbits=2 
+
+
+#> Starting...
+nranks = 1 	 num_gpus = 1 	 device=0
+{
+    "query_token_id": "[unused0]",
+    "doc_token_id": "[unused1]",
+    "query_token": "[Q]",
+    "doc_token": "[D]",
+    "ncells": 16,
+    "centroid_score_threshold": null,
+    "ndocs": null,
+    "load_index_with_mmap": false,
+    "index_path": "<repo>\/outputs\/warp\/indexes\/beir-arguana.split=test.nbits=2",
+    "index_bsize": 64,
+    "nbits": 2,
+    "kmeans_niters": 4,
+    "resume": false,
+    "similarity": "cosine",
+    "bsize": 64,
+    "accumsteps": 1,
+    "lr": 3e-6,
+    "maxsteps": 500000,
+    "save_every": null,
+    "warmup": null,
+    "warmup_bert": null,
+    "relu": false,
+    "nway": 2,
+    "use_ib_negatives": false,
+    "reranker": false,
+    "distillation_alpha": 1.0,
+    "ignore_scores": false,
+    "model_name": null,
+    "query_maxlen": 32,
+    "attend_to_mask_tokens": false,
+    "interaction": "colbert",
+    "dim": 128,
+    "doc_maxlen": 512,
+    "mask_punctuation": true,
+    "checkpoint": "google\/xtr-base-en",
+    "triples": null,
+    "collection": "<repo>\/outputs\/warp\/beir\/arguana\/collection.tsv",
+    "queries": null,
+    "index_name": "beir-arguana.split=test.nbits=2",
+    "overwrite": false,
+    "root": "<repo>\/third_party\/xtr-warp\/experiments",
+    "experiment": "beir-arguana",
+    "index_root": null,
+    "name": "2026-10\/28\/04.35.03",
+    "rank": 0,
+    "nranks": 1,
+    "amp": true,
+    "gpus": 1,
+    "avoid_fork_if_possible": false
+}
+[Oct 28, 04:35:11] #> Loading collection...
+0M 
+[Oct 28, 04:35:12] [0] 		 # of sampled PIDs = 8674 	 sampled_pids[:3] = [6825, 166, 4892]
+[Oct 28, 04:35:12] [0] 		 #> Encoding 8674 passages..
+[Oct 28, 04:36:34] [0] 		 avg_doclen_est = 228.38125610351562 	 len(local_sample) = 8,674
+[Oct 28, 04:36:35] [0] 		 Creating 16,384 partitions.
+[Oct 28, 04:36:35] [0] 		 *Estimated* 1,980,979 embeddings.
+[Oct 28, 04:36:35] [0] 		 #> Saving the indexing plan to <repo>/outputs/warp/indexes/beir-arguana.split=test.nbits=2/plan.json ..
+[Oct 28, 04:36:36] [0] 		 #> use_gpu = True
+Clustering 1930979 points in 128D to 16384 clusters, redo 1 times, 4 iterations
+  Preprocessing in 0.13 s
+  Iteration 0 (0.80 s, search 0.68 s): objective=1.63829e+06 imbalance=1.886 nsplit=0         Iteration 1 (1.57 s, search 1.36 s): objective=1.71614e+06 imbalance=1.485 nsplit=0         Iteration 2 (2.32 s, search 2.04 s): objective=1.72842e+06 imbalance=1.388 nsplit=0         Iteration 3 (3.09 s, search 2.72 s): objective=1.73392e+06 imbalance=1.346 nsplit=0       [Oct 28, 04:36:39] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:36:39] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[0.036, 0.03, 0.028, 0.03, 0.033, 0.033, 0.029, 0.031, 0.028, 0.032, 0.03, 0.03, 0.034, 0.031, 0.027, 0.031, 0.03, 0.031, 0.031, 0.032, 0.03, 0.031, 0.035, 0.031, 0.033, 0.033, 0.031, 0.033, 0.032, 0.029, 0.032, 0.033, 0.031, 0.032, 0.026, 0.031, 0.032, 0.031, 0.032, 0.035, 0.032, 0.03, 0.031, 0.032, 0.032, 0.035, 0.031, 0.031, 0.036, 0.031, 0.028, 0.033, 0.026, 0.032, 0.03, 0.028, 0.031, 0.034, 0.034, 0.03, 0.03, 0.03, 0.028, 0.029, 0.029, 0.029, 0.03, 0.036, 0.031, 0.028, 0.033, 0.028, 0.03, 0.034, 0.033, 0.031, 0.027, 0.031, 0.029, 0.028, 0.028, 0.031, 0.033, 0.033, 0.029, 0.031, 0.029, 0.033, 0.031, 0.032, 0.028, 0.028, 0.031, 0.034, 0.029, 0.033, 0.031, 0.034, 0.026, 0.029, 0.036, 0.029, 0.03, 0.027, 0.027, 0.028, 0.032, 0.03, 0.032, 0.031, 0.031, 0.03, 0.027, 0.034, 0.03, 0.03, 0.029, 0.032, 0.032, 0.033, 0.028, 0.029, 0.033, 0.028, 0.031, 0.031, 0.028, 0.032]
+[Oct 28, 04:36:39] #> Got bucket_cutoffs_quantiles = tensor([0.2500, 0.5000, 0.7500], device='cuda:0') and bucket_weights_quantiles = tensor([0.1250, 0.3750, 0.6250, 0.8750], device='cuda:0')
+[Oct 28, 04:36:39] #> Got bucket_cutoffs = tensor([-0.0249, -0.0001,  0.0246], device='cuda:0') and bucket_weights = tensor([-0.0437, -0.0117,  0.0114,  0.0434], device='cuda:0')
+[Oct 28, 04:36:39] avg_residual = 0.030793115496635437
+0it [00:00, ?it/s][Oct 28, 04:36:40] [0] 		 #> Encoding 8674 passages..
+[Oct 28, 04:38:01] [0] 		 #> Saving chunk 0: 	 8,674 passages and 1,980,979 embeddings. From #0 onward.
+1it [01:22, 82.74s/it]1it [01:22, 82.74s/it]
+[Oct 28, 04:38:02] [0] 		 #> Checking all files were saved...
+[Oct 28, 04:38:02] [0] 		 Found all files!
+[Oct 28, 04:38:02] [0] 		 #> Building IVF...
+[Oct 28, 04:38:02] [0] 		 #> Loading codes...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 331.99it/s]
+[Oct 28, 04:38:02] [0] 		 Sorting codes...
+[Oct 28, 04:38:02] [0] 		 Getting unique codes...
+[Oct 28, 04:38:02] #> Optimizing IVF to store map from centroids to list of pids..
+[Oct 28, 04:38:02] #> Building the emb2pid mapping..
+[Oct 28, 04:38:02] len(emb2pid) = 1980979
+  0%|          | 0/16384 [00:00<?, ?it/s] 45%|████▍     | 7308/16384 [00:00<00:00, 73069.97it/s] 92%|█████████▏| 14995/16384 [00:00<00:00, 75298.97it/s]100%|██████████| 16384/16384 [00:00<00:00, 75116.72it/s]
+[Oct 28, 04:38:03] #> Saved optimized IVF to <repo>/outputs/warp/indexes/beir-arguana.split=test.nbits=2/ivf.pid.pt
+[Oct 28, 04:38:03] [0] 		 #> Saving the indexing metadata to <repo>/outputs/warp/indexes/beir-arguana.split=test.nbits=2/metadata.json ..
+
+#> Joined...
+Compacting index at '<repo>/outputs/warp/indexes/beir-arguana.split=test.nbits=2' to '<repo>/outputs/warp/indexes/beir-arguana.split=test.nbits=2'
+#> centroids.dtype = torch.float32
+> Loading centroid information
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 69.56it/s]
+> Compacting index
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  9.73it/s]100%|██████████| 1/1 [00:00<00:00,  9.70it/s]
+> Saving compacted index
+> Repacking residuals
+== arguana search Wed Oct 28 04:38:05 AM UTC 2026
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda-12.3'
+[Oct 28, 04:38:09] #> Loading collection...
+0M 
+[Oct 28, 04:38:10] #> Loading buckets...
+[Oct 28, 04:38:10] #> Loading codec...
+#> Not averaging centroids.
+[Oct 28, 04:38:10] #> Loading repacked residuals...
+[Oct 28, 04:38:10] Loading parallel_warp_select_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:38:10] Loading parallel_decompress_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:38:10] Loading parallel_merge_candidate_scores_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:38:10] Loading parallel_fused_decompress_merge extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+nprobe 16 t_prime <warp.engine.constants.TPrimePolicy object at 0x7f5d7d6c7a60> nbits 2
+#> Loading collection_map found in <repo>/outputs/warp/beir/arguana/collection.tsv
+arguana: nDCG@10 0.4138 | index 79.8 MB = 8.89x raw | latency 53.2 ms p50 (8 threads)
+== scidocs index Wed Oct 28 04:39:30 AM UTC 2026
+
+
+[Oct 28, 04:39:35] #> Creating directory <repo>/outputs/warp/indexes/beir-scidocs.split=test.nbits=2 
+
+
+#> Starting...
+nranks = 1 	 num_gpus = 1 	 device=0
+{
+    "query_token_id": "[unused0]",
+    "doc_token_id": "[unused1]",
+    "query_token": "[Q]",
+    "doc_token": "[D]",
+    "ncells": 16,
+    "centroid_score_threshold": null,
+    "ndocs": null,
+    "load_index_with_mmap": false,
+    "index_path": "<repo>\/outputs\/warp\/indexes\/beir-scidocs.split=test.nbits=2",
+    "index_bsize": 64,
+    "nbits": 2,
+    "kmeans_niters": 4,
+    "resume": false,
+    "similarity": "cosine",
+    "bsize": 64,
+    "accumsteps": 1,
+    "lr": 3e-6,
+    "maxsteps": 500000,
+    "save_every": null,
+    "warmup": null,
+    "warmup_bert": null,
+    "relu": false,
+    "nway": 2,
+    "use_ib_negatives": false,
+    "reranker": false,
+    "distillation_alpha": 1.0,
+    "ignore_scores": false,
+    "model_name": null,
+    "query_maxlen": 32,
+    "attend_to_mask_tokens": false,
+    "interaction": "colbert",
+    "dim": 128,
+    "doc_maxlen": 512,
+    "mask_punctuation": true,
+    "checkpoint": "google\/xtr-base-en",
+    "triples": null,
+    "collection": "<repo>\/outputs\/warp\/beir\/scidocs\/collection.tsv",
+    "queries": null,
+    "index_name": "beir-scidocs.split=test.nbits=2",
+    "overwrite": false,
+    "root": "<repo>\/third_party\/xtr-warp\/experiments",
+    "experiment": "beir-scidocs",
+    "index_root": null,
+    "name": "2026-10\/28\/04.39.31",
+    "rank": 0,
+    "nranks": 1,
+    "amp": true,
+    "gpus": 1,
+    "avoid_fork_if_possible": false
+}
+[Oct 28, 04:39:39] #> Loading collection...
+0M 
+[Oct 28, 04:39:40] [0] 		 # of sampled PIDs = 25657 	 sampled_pids[:3] = [13651, 24008, 333]
+[Oct 28, 04:39:40] [0] 		 #> Encoding 25657 passages..
+[Oct 28, 04:43:42] [0] 		 avg_doclen_est = 244.3462677001953 	 len(local_sample) = 25,657
+[Oct 28, 04:43:44] [0] 		 Creating 32,768 partitions.
+[Oct 28, 04:43:44] [0] 		 *Estimated* 6,269,192 embeddings.
+[Oct 28, 04:43:44] [0] 		 #> Saving the indexing plan to <repo>/outputs/warp/indexes/beir-scidocs.split=test.nbits=2/plan.json ..
+[Oct 28, 04:43:47] [0] 		 #> use_gpu = True
+Clustering 6219192 points in 128D to 32768 clusters, redo 1 times, 4 iterations
+  Preprocessing in 0.42 s
+  Iteration 0 (4.49 s, search 4.15 s): objective=5.53839e+06 imbalance=1.878 nsplit=0         Iteration 1 (8.77 s, search 8.29 s): objective=5.84379e+06 imbalance=1.445 nsplit=1         Iteration 2 (13.09 s, search 12.42 s): objective=5.88141e+06 imbalance=1.352 nsplit=0         Iteration 3 (17.41 s, search 16.55 s): objective=5.89723e+06 imbalance=1.313 nsplit=0       [Oct 28, 04:44:05] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:44:06] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[0.034, 0.028, 0.028, 0.028, 0.031, 0.031, 0.027, 0.028, 0.026, 0.03, 0.028, 0.027, 0.03, 0.031, 0.026, 0.029, 0.028, 0.028, 0.029, 0.029, 0.026, 0.029, 0.034, 0.028, 0.029, 0.031, 0.03, 0.031, 0.03, 0.027, 0.031, 0.031, 0.031, 0.03, 0.025, 0.029, 0.03, 0.031, 0.03, 0.03, 0.03, 0.028, 0.03, 0.031, 0.032, 0.033, 0.029, 0.029, 0.033, 0.03, 0.027, 0.03, 0.023, 0.031, 0.03, 0.026, 0.029, 0.032, 0.032, 0.029, 0.03, 0.028, 0.028, 0.028, 0.028, 0.028, 0.029, 0.033, 0.028, 0.027, 0.03, 0.027, 0.028, 0.033, 0.031, 0.032, 0.025, 0.03, 0.027, 0.028, 0.027, 0.03, 0.03, 0.03, 0.025, 0.031, 0.028, 0.03, 0.031, 0.03, 0.026, 0.027, 0.03, 0.029, 0.027, 0.033, 0.028, 0.031, 0.025, 0.029, 0.032, 0.027, 0.029, 0.026, 0.026, 0.026, 0.029, 0.028, 0.029, 0.029, 0.029, 0.028, 0.025, 0.033, 0.028, 0.028, 0.028, 0.031, 0.031, 0.032, 0.026, 0.028, 0.031, 0.026, 0.031, 0.03, 0.025, 0.031]
+[Oct 28, 04:44:06] #> Got bucket_cutoffs_quantiles = tensor([0.2500, 0.5000, 0.7500], device='cuda:0') and bucket_weights_quantiles = tensor([0.1250, 0.3750, 0.6250, 0.8750], device='cuda:0')
+[Oct 28, 04:44:06] #> Got bucket_cutoffs = tensor([-0.0239, -0.0004,  0.0230], device='cuda:0') and bucket_weights = tensor([-0.0416, -0.0113,  0.0105,  0.0406], device='cuda:0')
+[Oct 28, 04:44:06] avg_residual = 0.029033737257122993
+0it [00:00, ?it/s][Oct 28, 04:44:06] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 04:48:02] [0] 		 #> Saving chunk 0: 	 25,000 passages and 6,108,237 embeddings. From #0 onward.
+1it [04:00, 240.61s/it][Oct 28, 04:48:06] [0] 		 #> Encoding 657 passages..
+[Oct 28, 04:48:13] [0] 		 #> Saving chunk 1: 	 657 passages and 160,955 embeddings. From #25,000 onward.
+2it [04:07, 102.85s/it]2it [04:07, 123.51s/it]
+[Oct 28, 04:48:13] [0] 		 #> Checking all files were saved...
+[Oct 28, 04:48:13] [0] 		 Found all files!
+[Oct 28, 04:48:13] [0] 		 #> Building IVF...
+[Oct 28, 04:48:13] [0] 		 #> Loading codes...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 209.50it/s]
+[Oct 28, 04:48:13] [0] 		 Sorting codes...
+[Oct 28, 04:48:13] [0] 		 Getting unique codes...
+[Oct 28, 04:48:13] #> Optimizing IVF to store map from centroids to list of pids..
+[Oct 28, 04:48:13] #> Building the emb2pid mapping..
+[Oct 28, 04:48:13] len(emb2pid) = 6269192
+  0%|          | 0/32768 [00:00<?, ?it/s] 19%|█▉        | 6348/32768 [00:00<00:00, 63475.52it/s] 39%|███▉      | 12932/32768 [00:00<00:00, 64861.02it/s] 60%|█████▉    | 19577/32768 [00:00<00:00, 65581.28it/s] 80%|███████▉  | 26162/32768 [00:00<00:00, 65684.97it/s]100%|█████████▉| 32731/32768 [00:00<00:00, 65490.77it/s]100%|██████████| 32768/32768 [00:00<00:00, 65315.46it/s]
+[Oct 28, 04:48:14] #> Saved optimized IVF to <repo>/outputs/warp/indexes/beir-scidocs.split=test.nbits=2/ivf.pid.pt
+[Oct 28, 04:48:14] [0] 		 #> Saving the indexing metadata to <repo>/outputs/warp/indexes/beir-scidocs.split=test.nbits=2/metadata.json ..
+
+#> Joined...
+Compacting index at '<repo>/outputs/warp/indexes/beir-scidocs.split=test.nbits=2' to '<repo>/outputs/warp/indexes/beir-scidocs.split=test.nbits=2'
+#> centroids.dtype = torch.float32
+> Loading centroid information
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 64.41it/s]
+> Compacting index
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  2.30it/s]100%|██████████| 2/2 [00:00<00:00,  4.34it/s]
+> Saving compacted index
+> Repacking residuals
+== scidocs search Wed Oct 28 04:48:18 AM UTC 2026
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda-12.3'
+[Oct 28, 04:48:22] #> Loading collection...
+0M 
+[Oct 28, 04:48:23] #> Loading buckets...
+[Oct 28, 04:48:23] #> Loading codec...
+#> Not averaging centroids.
+[Oct 28, 04:48:23] #> Loading repacked residuals...
+[Oct 28, 04:48:23] Loading parallel_warp_select_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:48:23] Loading parallel_decompress_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:48:23] Loading parallel_merge_candidate_scores_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:48:23] Loading parallel_fused_decompress_merge extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+nprobe 16 t_prime <warp.engine.constants.TPrimePolicy object at 0x7f8c7d8e7af0> nbits 2
+#> Loading collection_map found in <repo>/outputs/warp/beir/scidocs/collection.tsv
+scidocs: nDCG@10 0.1486 | index 242.7 MB = 7.84x raw | latency 51.3 ms p50 (8 threads)
+== fiqa index Wed Oct 28 04:49:16 AM UTC 2026
+
+
+[Oct 28, 04:49:20] #> Creating directory <repo>/outputs/warp/indexes/beir-fiqa.split=test.nbits=2 
+
+
+#> Starting...
+nranks = 1 	 num_gpus = 1 	 device=0
+{
+    "query_token_id": "[unused0]",
+    "doc_token_id": "[unused1]",
+    "query_token": "[Q]",
+    "doc_token": "[D]",
+    "ncells": 16,
+    "centroid_score_threshold": null,
+    "ndocs": null,
+    "load_index_with_mmap": false,
+    "index_path": "<repo>\/outputs\/warp\/indexes\/beir-fiqa.split=test.nbits=2",
+    "index_bsize": 64,
+    "nbits": 2,
+    "kmeans_niters": 4,
+    "resume": false,
+    "similarity": "cosine",
+    "bsize": 64,
+    "accumsteps": 1,
+    "lr": 3e-6,
+    "maxsteps": 500000,
+    "save_every": null,
+    "warmup": null,
+    "warmup_bert": null,
+    "relu": false,
+    "nway": 2,
+    "use_ib_negatives": false,
+    "reranker": false,
+    "distillation_alpha": 1.0,
+    "ignore_scores": false,
+    "model_name": null,
+    "query_maxlen": 32,
+    "attend_to_mask_tokens": false,
+    "interaction": "colbert",
+    "dim": 128,
+    "doc_maxlen": 512,
+    "mask_punctuation": true,
+    "checkpoint": "google\/xtr-base-en",
+    "triples": null,
+    "collection": "<repo>\/outputs\/warp\/beir\/fiqa\/collection.tsv",
+    "queries": null,
+    "index_name": "beir-fiqa.split=test.nbits=2",
+    "overwrite": false,
+    "root": "<repo>\/third_party\/xtr-warp\/experiments",
+    "experiment": "beir-fiqa",
+    "index_root": null,
+    "name": "2026-10\/28\/04.49.17",
+    "rank": 0,
+    "nranks": 1,
+    "amp": true,
+    "gpus": 1,
+    "avoid_fork_if_possible": false
+}
+[Oct 28, 04:49:24] #> Loading collection...
+0M 
+[Oct 28, 04:49:26] [0] 		 # of sampled PIDs = 42079 	 sampled_pids[:3] = [27303, 48017, 666]
+[Oct 28, 04:49:26] [0] 		 #> Encoding 42079 passages..
+[Oct 28, 04:56:00] [0] 		 avg_doclen_est = 177.6602325439453 	 len(local_sample) = 42,079
+[Oct 28, 04:56:03] [0] 		 Creating 32,768 partitions.
+[Oct 28, 04:56:03] [0] 		 *Estimated* 10,239,980 embeddings.
+[Oct 28, 04:56:03] [0] 		 #> Saving the indexing plan to <repo>/outputs/warp/indexes/beir-fiqa.split=test.nbits=2/plan.json ..
+[Oct 28, 04:56:06] [0] 		 #> use_gpu = True
+Clustering 7425765 points in 128D to 32768 clusters, redo 1 times, 4 iterations
+  Preprocessing in 0.47 s
+  Iteration 0 (5.32 s, search 4.93 s): objective=6.56517e+06 imbalance=2.011 nsplit=0         Iteration 1 (10.43 s, search 9.82 s): objective=6.93511e+06 imbalance=1.449 nsplit=0         Iteration 2 (15.52 s, search 14.73 s): objective=6.98173e+06 imbalance=1.332 nsplit=0         Iteration 3 (20.69 s, search 19.65 s): objective=7.00107e+06 imbalance=1.283 nsplit=0       [Oct 28, 04:56:28] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 04:56:28] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[0.037, 0.03, 0.029, 0.03, 0.033, 0.033, 0.03, 0.032, 0.029, 0.033, 0.031, 0.031, 0.034, 0.032, 0.027, 0.032, 0.031, 0.031, 0.031, 0.031, 0.029, 0.032, 0.035, 0.03, 0.032, 0.033, 0.032, 0.033, 0.032, 0.03, 0.031, 0.033, 0.032, 0.032, 0.028, 0.035, 0.032, 0.031, 0.031, 0.032, 0.032, 0.03, 0.032, 0.032, 0.033, 0.036, 0.03, 0.032, 0.036, 0.033, 0.029, 0.033, 0.027, 0.033, 0.031, 0.029, 0.03, 0.034, 0.036, 0.03, 0.033, 0.03, 0.029, 0.029, 0.031, 0.03, 0.031, 0.034, 0.03, 0.03, 0.031, 0.029, 0.03, 0.036, 0.031, 0.033, 0.027, 0.033, 0.029, 0.03, 0.029, 0.033, 0.033, 0.033, 0.028, 0.032, 0.029, 0.032, 0.032, 0.032, 0.028, 0.03, 0.033, 0.033, 0.03, 0.032, 0.03, 0.033, 0.028, 0.03, 0.035, 0.029, 0.03, 0.028, 0.027, 0.027, 0.031, 0.03, 0.031, 0.031, 0.031, 0.031, 0.027, 0.036, 0.029, 0.03, 0.029, 0.033, 0.033, 0.033, 0.029, 0.03, 0.033, 0.028, 0.031, 0.031, 0.028, 0.032]
+[Oct 28, 04:56:28] #> Got bucket_cutoffs_quantiles = tensor([0.2500, 0.5000, 0.7500], device='cuda:0') and bucket_weights_quantiles = tensor([0.1250, 0.3750, 0.6250, 0.8750], device='cuda:0')
+[Oct 28, 04:56:28] #> Got bucket_cutoffs = tensor([-0.0254, -0.0002,  0.0250], device='cuda:0') and bucket_weights = tensor([-0.0444, -0.0119,  0.0116,  0.0440], device='cuda:0')
+[Oct 28, 04:56:28] avg_residual = 0.03117440640926361
+0it [00:00, ?it/s][Oct 28, 04:56:28] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 05:00:22] [0] 		 #> Saving chunk 0: 	 25,000 passages and 4,433,492 embeddings. From #0 onward.
+1it [03:57, 237.60s/it][Oct 28, 05:00:26] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 05:04:20] [0] 		 #> Saving chunk 1: 	 25,000 passages and 4,454,476 embeddings. From #25,000 onward.
+2it [07:55, 237.65s/it][Oct 28, 05:04:23] [0] 		 #> Encoding 7638 passages..
+[Oct 28, 05:05:35] [0] 		 #> Saving chunk 2: 	 7,638 passages and 1,337,279 embeddings. From #50,000 onward.
+3it [09:08, 162.36s/it]3it [09:08, 182.69s/it]
+[Oct 28, 05:05:36] [0] 		 #> Checking all files were saved...
+[Oct 28, 05:05:36] [0] 		 Found all files!
+[Oct 28, 05:05:36] [0] 		 #> Building IVF...
+[Oct 28, 05:05:36] [0] 		 #> Loading codes...
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 174.32it/s]
+[Oct 28, 05:05:36] [0] 		 Sorting codes...
+[Oct 28, 05:05:36] [0] 		 Getting unique codes...
+[Oct 28, 05:05:37] #> Optimizing IVF to store map from centroids to list of pids..
+[Oct 28, 05:05:37] #> Building the emb2pid mapping..
+[Oct 28, 05:05:37] len(emb2pid) = 10225247
+  0%|          | 0/32768 [00:00<?, ?it/s] 17%|█▋        | 5580/32768 [00:00<00:00, 55790.74it/s] 35%|███▍      | 11415/32768 [00:00<00:00, 57293.63it/s] 52%|█████▏    | 17145/32768 [00:00<00:00, 32858.21it/s] 70%|███████   | 22976/32768 [00:00<00:00, 39786.71it/s] 88%|████████▊ | 28759/32768 [00:00<00:00, 44837.16it/s]100%|██████████| 32768/32768 [00:00<00:00, 44772.91it/s]
+[Oct 28, 05:05:37] #> Saved optimized IVF to <repo>/outputs/warp/indexes/beir-fiqa.split=test.nbits=2/ivf.pid.pt
+[Oct 28, 05:05:38] [0] 		 #> Saving the indexing metadata to <repo>/outputs/warp/indexes/beir-fiqa.split=test.nbits=2/metadata.json ..
+
+#> Joined...
+Compacting index at '<repo>/outputs/warp/indexes/beir-fiqa.split=test.nbits=2' to '<repo>/outputs/warp/indexes/beir-fiqa.split=test.nbits=2'
+#> centroids.dtype = torch.float32
+> Loading centroid information
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 60.53it/s]
+> Compacting index
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  3.34it/s] 67%|██████▋   | 2/3 [00:00<00:00,  3.23it/s]100%|██████████| 3/3 [00:00<00:00,  4.49it/s]
+> Saving compacted index
+> Repacking residuals
+== fiqa search Wed Oct 28 05:05:42 AM UTC 2026
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda-12.3'
+[Oct 28, 05:05:46] #> Loading collection...
+0M 
+[Oct 28, 05:05:48] #> Loading buckets...
+[Oct 28, 05:05:48] #> Loading codec...
+#> Not averaging centroids.
+[Oct 28, 05:05:48] #> Loading repacked residuals...
+[Oct 28, 05:05:48] Loading parallel_warp_select_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 05:05:48] Loading parallel_decompress_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 05:05:48] Loading parallel_merge_candidate_scores_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 05:05:48] Loading parallel_fused_decompress_merge extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+nprobe 16 t_prime <warp.engine.constants.TPrimePolicy object at 0x7fe4517bfca0> nbits 2
+#> Loading collection_map found in <repo>/outputs/warp/beir/fiqa/collection.tsv
+fiqa: nDCG@10 0.3310 | index 385.2 MB = 8.70x raw | latency 55.0 ms p50 (8 threads)
+== trec-covid index Wed Oct 28 05:06:25 AM UTC 2026
+
+
+[Oct 28, 05:06:29] #> Creating directory <repo>/outputs/warp/indexes/beir-trec-covid.split=test.nbits=2 
+
+
+#> Starting...
+nranks = 1 	 num_gpus = 1 	 device=0
+{
+    "query_token_id": "[unused0]",
+    "doc_token_id": "[unused1]",
+    "query_token": "[Q]",
+    "doc_token": "[D]",
+    "ncells": 16,
+    "centroid_score_threshold": null,
+    "ndocs": null,
+    "load_index_with_mmap": false,
+    "index_path": "<repo>\/outputs\/warp\/indexes\/beir-trec-covid.split=test.nbits=2",
+    "index_bsize": 64,
+    "nbits": 2,
+    "kmeans_niters": 4,
+    "resume": false,
+    "similarity": "cosine",
+    "bsize": 64,
+    "accumsteps": 1,
+    "lr": 3e-6,
+    "maxsteps": 500000,
+    "save_every": null,
+    "warmup": null,
+    "warmup_bert": null,
+    "relu": false,
+    "nway": 2,
+    "use_ib_negatives": false,
+    "reranker": false,
+    "distillation_alpha": 1.0,
+    "ignore_scores": false,
+    "model_name": null,
+    "query_maxlen": 32,
+    "attend_to_mask_tokens": false,
+    "interaction": "colbert",
+    "dim": 128,
+    "doc_maxlen": 512,
+    "mask_punctuation": true,
+    "checkpoint": "google\/xtr-base-en",
+    "triples": null,
+    "collection": "<repo>\/outputs\/warp\/beir\/trec-covid\/collection.tsv",
+    "queries": null,
+    "index_name": "beir-trec-covid.split=test.nbits=2",
+    "overwrite": false,
+    "root": "<repo>\/third_party\/xtr-warp\/experiments",
+    "experiment": "beir-trec-covid",
+    "index_root": null,
+    "name": "2026-10\/28\/05.06.26",
+    "rank": 0,
+    "nranks": 1,
+    "amp": true,
+    "gpus": 1,
+    "avoid_fork_if_possible": false
+}
+[Oct 28, 05:06:34] #> Loading collection...
+0M 
+[Oct 28, 05:06:36] [0] 		 # of sampled PIDs = 72549 	 sampled_pids[:3] = [109214, 2665, 78286]
+[Oct 28, 05:06:36] [0] 		 #> Encoding 72549 passages..
+[Oct 28, 05:18:02] [0] 		 avg_doclen_est = 256.1368713378906 	 len(local_sample) = 72,549
+[Oct 28, 05:18:10] [0] 		 Creating 65,536 partitions.
+[Oct 28, 05:18:10] [0] 		 *Estimated* 43,884,442 embeddings.
+[Oct 28, 05:18:10] [0] 		 #> Saving the indexing plan to <repo>/outputs/warp/indexes/beir-trec-covid.split=test.nbits=2/plan.json ..
+[Oct 28, 05:18:19] [0] 		 #> use_gpu = True
+Sampling a subset of 16777216 / 18532474 for training
+Clustering 16777216 points in 128D to 65536 clusters, redo 1 times, 4 iterations
+  Preprocessing in 9.32 s
+  Iteration 0 (23.33 s, search 22.29 s): objective=1.62793e+07 imbalance=1.853 nsplit=0         Iteration 1 (46.93 s, search 44.75 s): objective=1.65211e+07 imbalance=1.433 nsplit=0         Iteration 2 (70.11 s, search 67.32 s): objective=1.65492e+07 imbalance=1.342 nsplit=0         Iteration 3 (94.44 s, search 89.84 s): objective=1.65607e+07 imbalance=1.303 nsplit=0       [Oct 28, 05:20:04] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 05:20:04] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[0.032, 0.025, 0.025, 0.025, 0.025, 0.028, 0.024, 0.025, 0.023, 0.026, 0.025, 0.024, 0.027, 0.027, 0.024, 0.025, 0.024, 0.026, 0.025, 0.027, 0.024, 0.025, 0.03, 0.025, 0.026, 0.026, 0.026, 0.028, 0.026, 0.024, 0.026, 0.027, 0.027, 0.027, 0.023, 0.026, 0.025, 0.026, 0.027, 0.026, 0.028, 0.025, 0.025, 0.025, 0.029, 0.028, 0.026, 0.026, 0.031, 0.026, 0.024, 0.029, 0.021, 0.027, 0.027, 0.023, 0.027, 0.026, 0.027, 0.025, 0.027, 0.025, 0.024, 0.024, 0.024, 0.025, 0.026, 0.03, 0.024, 0.023, 0.026, 0.024, 0.025, 0.029, 0.027, 0.027, 0.022, 0.027, 0.023, 0.024, 0.024, 0.027, 0.026, 0.026, 0.023, 0.026, 0.023, 0.026, 0.027, 0.027, 0.023, 0.023, 0.027, 0.027, 0.023, 0.028, 0.025, 0.028, 0.022, 0.025, 0.029, 0.024, 0.025, 0.024, 0.023, 0.024, 0.028, 0.023, 0.026, 0.026, 0.025, 0.025, 0.023, 0.03, 0.024, 0.025, 0.024, 0.027, 0.026, 0.028, 0.023, 0.025, 0.027, 0.022, 0.027, 0.025, 0.023, 0.026]
+[Oct 28, 05:20:04] #> Got bucket_cutoffs_quantiles = tensor([0.2500, 0.5000, 0.7500], device='cuda:0') and bucket_weights_quantiles = tensor([0.1250, 0.3750, 0.6250, 0.8750], device='cuda:0')
+[Oct 28, 05:20:04] #> Got bucket_cutoffs = tensor([-2.0347e-02, -4.9470e-06,  2.0276e-02], device='cuda:0') and bucket_weights = tensor([-0.0362, -0.0094,  0.0094,  0.0360], device='cuda:0')
+[Oct 28, 05:20:04] avg_residual = 0.02556903474032879
+0it [00:00, ?it/s][Oct 28, 05:20:04] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 05:23:59] [0] 		 #> Saving chunk 0: 	 25,000 passages and 5,233,864 embeddings. From #0 onward.
+1it [04:02, 242.19s/it][Oct 28, 05:24:07] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 05:28:05] [0] 		 #> Saving chunk 1: 	 25,000 passages and 7,376,908 embeddings. From #25,000 onward.
+2it [08:10, 245.86s/it][Oct 28, 05:28:15] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 05:32:12] [0] 		 #> Saving chunk 2: 	 25,000 passages and 7,638,880 embeddings. From #50,000 onward.
+3it [12:18, 246.77s/it][Oct 28, 05:32:23] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 05:36:18] [0] 		 #> Saving chunk 3: 	 25,000 passages and 5,747,785 embeddings. From #75,000 onward.
+4it [16:21, 245.31s/it][Oct 28, 05:36:26] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 05:40:20] [0] 		 #> Saving chunk 4: 	 25,000 passages and 4,815,505 embeddings. From #100,000 onward.
+5it [20:22, 243.80s/it][Oct 28, 05:40:27] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 05:44:24] [0] 		 #> Saving chunk 5: 	 25,000 passages and 7,088,430 embeddings. From #125,000 onward.
+6it [24:29, 244.84s/it][Oct 28, 05:44:34] [0] 		 #> Encoding 21332 passages..
+[Oct 28, 05:47:55] [0] 		 #> Saving chunk 6: 	 21,332 passages and 5,948,518 embeddings. From #150,000 onward.
+7it [27:59, 233.33s/it]7it [27:59, 239.88s/it]
+[Oct 28, 05:48:04] [0] 		 #> Checking all files were saved...
+[Oct 28, 05:48:04] [0] 		 Found all files!
+[Oct 28, 05:48:04] [0] 		 #> Building IVF...
+[Oct 28, 05:48:04] [0] 		 #> Loading codes...
+  0%|          | 0/7 [00:00<?, ?it/s]100%|██████████| 7/7 [00:00<00:00, 69.47it/s]100%|██████████| 7/7 [00:00<00:00, 69.27it/s]
+[Oct 28, 05:48:04] [0] 		 Sorting codes...
+[Oct 28, 05:48:05] [0] 		 Getting unique codes...
+[Oct 28, 05:48:05] #> Optimizing IVF to store map from centroids to list of pids..
+[Oct 28, 05:48:05] #> Building the emb2pid mapping..
+[Oct 28, 05:48:06] len(emb2pid) = 43849890
+  0%|          | 0/65536 [00:00<?, ?it/s]  6%|▌         | 3902/65536 [00:00<00:01, 39014.74it/s] 12%|█▏        | 7964/65536 [00:00<00:01, 39957.35it/s] 18%|█▊        | 12116/65536 [00:00<00:01, 40670.16it/s] 25%|██▍       | 16184/65536 [00:00<00:01, 39003.55it/s] 31%|███       | 20095/65536 [00:00<00:01, 35647.07it/s] 37%|███▋      | 24165/65536 [00:00<00:01, 37232.23it/s] 43%|████▎     | 28277/65536 [00:00<00:00, 38434.15it/s] 49%|████▉     | 32334/65536 [00:00<00:00, 39087.89it/s] 56%|█████▌    | 36450/65536 [00:00<00:00, 39715.72it/s] 62%|██████▏   | 40442/65536 [00:01<00:00, 39759.25it/s] 68%|██████▊   | 44457/65536 [00:01<00:00, 39874.11it/s] 74%|███████▍  | 48455/65536 [00:01<00:00, 39731.46it/s] 80%|████████  | 52458/65536 [00:01<00:00, 39820.22it/s] 86%|████████▋ | 56529/65536 [00:01<00:00, 40084.25it/s] 93%|█████████▎| 60650/65536 [00:01<00:00, 40421.34it/s] 99%|█████████▊| 64695/65536 [00:01<00:00, 40411.85it/s]100%|██████████| 65536/65536 [00:01<00:00, 35086.04it/s]
+[Oct 28, 05:48:08] #> Saved optimized IVF to <repo>/outputs/warp/indexes/beir-trec-covid.split=test.nbits=2/ivf.pid.pt
+[Oct 28, 05:48:08] [0] 		 #> Saving the indexing metadata to <repo>/outputs/warp/indexes/beir-trec-covid.split=test.nbits=2/metadata.json ..
+
+#> Joined...
+Compacting index at '<repo>/outputs/warp/indexes/beir-trec-covid.split=test.nbits=2' to '<repo>/outputs/warp/indexes/beir-trec-covid.split=test.nbits=2'
+#> centroids.dtype = torch.float32
+> Loading centroid information
+  0%|          | 0/7 [00:00<?, ?it/s] 29%|██▊       | 2/7 [00:00<00:00, 17.62it/s] 57%|█████▋    | 4/7 [00:00<00:00, 17.15it/s]100%|██████████| 7/7 [00:00<00:00, 18.64it/s]100%|██████████| 7/7 [00:00<00:00, 18.30it/s]
+> Compacting index
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:00<00:03,  1.55it/s] 29%|██▊       | 2/7 [00:01<00:04,  1.23it/s] 43%|████▎     | 3/7 [00:02<00:03,  1.09it/s] 57%|█████▋    | 4/7 [00:03<00:02,  1.14it/s] 71%|███████▏  | 5/7 [00:03<00:01,  1.33it/s] 86%|████████▌ | 6/7 [00:04<00:00,  1.23it/s]100%|██████████| 7/7 [00:05<00:00,  1.22it/s]100%|██████████| 7/7 [00:05<00:00,  1.22it/s]
+> Saving compacted index
+> Repacking residuals
+== trec-covid search Wed Oct 28 05:48:25 AM UTC 2026
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda-12.3'
+[Oct 28, 05:48:30] #> Loading collection...
+0M 
+[Oct 28, 05:48:32] #> Loading buckets...
+[Oct 28, 05:48:32] #> Loading codec...
+#> Not averaging centroids.
+[Oct 28, 05:48:33] #> Loading repacked residuals...
+[Oct 28, 05:48:34] Loading parallel_warp_select_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 05:48:34] Loading parallel_decompress_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 05:48:34] Loading parallel_merge_candidate_scores_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 05:48:34] Loading parallel_fused_decompress_merge extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+nprobe 16 t_prime <warp.engine.constants.TPrimePolicy object at 0x7ff4e4363e50> nbits 2
+#> Loading collection_map found in <repo>/outputs/warp/beir/trec-covid/collection.tsv
+trec-covid: nDCG@10 0.7230 | index 1612.7 MB = 8.40x raw | latency 61.1 ms p50 (8 threads)
+== quora index Wed Oct 28 05:48:38 AM UTC 2026
+
+
+[Oct 28, 05:48:42] #> Creating directory <repo>/outputs/warp/indexes/beir-quora.split=test.nbits=2 
+
+
+#> Starting...
+nranks = 1 	 num_gpus = 1 	 device=0
+{
+    "query_token_id": "[unused0]",
+    "doc_token_id": "[unused1]",
+    "query_token": "[Q]",
+    "doc_token": "[D]",
+    "ncells": 16,
+    "centroid_score_threshold": null,
+    "ndocs": null,
+    "load_index_with_mmap": false,
+    "index_path": "<repo>\/outputs\/warp\/indexes\/beir-quora.split=test.nbits=2",
+    "index_bsize": 64,
+    "nbits": 2,
+    "kmeans_niters": 4,
+    "resume": false,
+    "similarity": "cosine",
+    "bsize": 64,
+    "accumsteps": 1,
+    "lr": 3e-6,
+    "maxsteps": 500000,
+    "save_every": null,
+    "warmup": null,
+    "warmup_bert": null,
+    "relu": false,
+    "nway": 2,
+    "use_ib_negatives": false,
+    "reranker": false,
+    "distillation_alpha": 1.0,
+    "ignore_scores": false,
+    "model_name": null,
+    "query_maxlen": 32,
+    "attend_to_mask_tokens": false,
+    "interaction": "colbert",
+    "dim": 128,
+    "doc_maxlen": 512,
+    "mask_punctuation": true,
+    "checkpoint": "google\/xtr-base-en",
+    "triples": null,
+    "collection": "<repo>\/outputs\/warp\/beir\/quora\/collection.tsv",
+    "queries": null,
+    "index_name": "beir-quora.split=test.nbits=2",
+    "overwrite": false,
+    "root": "<repo>\/third_party\/xtr-warp\/experiments",
+    "experiment": "beir-quora",
+    "index_root": null,
+    "name": "2026-10\/28\/05.48.39",
+    "rank": 0,
+    "nranks": 1,
+    "amp": true,
+    "gpus": 1,
+    "avoid_fork_if_possible": false
+}
+[Oct 28, 05:48:47] #> Loading collection...
+0M 
+[Oct 28, 05:48:48] [0] 		 # of sampled PIDs = 126746 	 sampled_pids[:3] = [218428, 384138, 5331]
+[Oct 28, 05:48:49] [0] 		 #> Encoding 126746 passages..
+[Oct 28, 06:08:16] [0] 		 avg_doclen_est = 17.443145751953125 	 len(local_sample) = 126,746
+[Oct 28, 06:08:17] [0] 		 Creating 32,768 partitions.
+[Oct 28, 06:08:17] [0] 		 *Estimated* 9,121,561 embeddings.
+[Oct 28, 06:08:17] [0] 		 #> Saving the indexing plan to <repo>/outputs/warp/indexes/beir-quora.split=test.nbits=2/plan.json ..
+[Oct 28, 06:08:18] [0] 		 #> use_gpu = True
+Clustering 2160849 points in 128D to 32768 clusters, redo 1 times, 4 iterations
+  Preprocessing in 0.14 s
+  Iteration 0 (1.57 s, search 1.46 s): objective=1.77272e+06 imbalance=1.610 nsplit=0         Iteration 1 (3.10 s, search 2.91 s): objective=1.8714e+06 imbalance=1.392 nsplit=0         Iteration 2 (4.62 s, search 4.37 s): objective=1.88615e+06 imbalance=1.328 nsplit=0         Iteration 3 (6.15 s, search 5.83 s): objective=1.89278e+06 imbalance=1.299 nsplit=0       [Oct 28, 06:08:25] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 06:08:25] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[0.042, 0.034, 0.032, 0.036, 0.036, 0.036, 0.033, 0.036, 0.032, 0.035, 0.035, 0.033, 0.037, 0.035, 0.03, 0.034, 0.033, 0.035, 0.035, 0.035, 0.033, 0.034, 0.04, 0.032, 0.036, 0.037, 0.035, 0.036, 0.036, 0.033, 0.035, 0.037, 0.035, 0.036, 0.031, 0.035, 0.035, 0.035, 0.036, 0.037, 0.036, 0.034, 0.035, 0.035, 0.036, 0.041, 0.034, 0.037, 0.04, 0.034, 0.032, 0.036, 0.029, 0.036, 0.036, 0.032, 0.034, 0.037, 0.039, 0.033, 0.037, 0.033, 0.034, 0.032, 0.034, 0.033, 0.035, 0.039, 0.033, 0.032, 0.035, 0.031, 0.033, 0.039, 0.036, 0.037, 0.031, 0.036, 0.033, 0.031, 0.033, 0.036, 0.036, 0.037, 0.031, 0.037, 0.032, 0.036, 0.036, 0.037, 0.032, 0.032, 0.035, 0.035, 0.033, 0.037, 0.034, 0.038, 0.03, 0.034, 0.038, 0.031, 0.035, 0.03, 0.03, 0.029, 0.035, 0.033, 0.037, 0.035, 0.035, 0.034, 0.029, 0.04, 0.033, 0.034, 0.033, 0.037, 0.037, 0.038, 0.031, 0.033, 0.037, 0.031, 0.036, 0.033, 0.031, 0.036]
+[Oct 28, 06:08:25] #> Got bucket_cutoffs_quantiles = tensor([0.2500, 0.5000, 0.7500], device='cuda:0') and bucket_weights_quantiles = tensor([0.1250, 0.3750, 0.6250, 0.8750], device='cuda:0')
+[Oct 28, 06:08:25] #> Got bucket_cutoffs = tensor([-0.0284, -0.0003,  0.0278], device='cuda:0') and bucket_weights = tensor([-0.0496, -0.0134,  0.0128,  0.0489], device='cuda:0')
+[Oct 28, 06:08:25] avg_residual = 0.03461771458387375
+0it [00:00, ?it/s][Oct 28, 06:08:25] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:12:14] [0] 		 #> Saving chunk 0: 	 25,000 passages and 421,816 embeddings. From #0 onward.
+1it [03:49, 229.41s/it][Oct 28, 06:12:14] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:16:04] [0] 		 #> Saving chunk 1: 	 25,000 passages and 425,325 embeddings. From #25,000 onward.
+2it [07:39, 229.95s/it][Oct 28, 06:16:05] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:19:54] [0] 		 #> Saving chunk 2: 	 25,000 passages and 424,701 embeddings. From #50,000 onward.
+3it [11:29, 230.05s/it][Oct 28, 06:19:55] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:23:46] [0] 		 #> Saving chunk 3: 	 25,000 passages and 427,145 embeddings. From #75,000 onward.
+4it [15:20, 230.45s/it][Oct 28, 06:23:46] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:27:35] [0] 		 #> Saving chunk 4: 	 25,000 passages and 429,665 embeddings. From #100,000 onward.
+5it [19:10, 230.19s/it][Oct 28, 06:27:36] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:31:26] [0] 		 #> Saving chunk 5: 	 25,000 passages and 430,492 embeddings. From #125,000 onward.
+6it [23:01, 230.30s/it][Oct 28, 06:31:26] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:35:16] [0] 		 #> Saving chunk 6: 	 25,000 passages and 428,425 embeddings. From #150,000 onward.
+7it [26:51, 230.15s/it][Oct 28, 06:35:16] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:39:05] [0] 		 #> Saving chunk 7: 	 25,000 passages and 434,148 embeddings. From #175,000 onward.
+8it [30:40, 229.96s/it][Oct 28, 06:39:06] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:42:56] [0] 		 #> Saving chunk 8: 	 25,000 passages and 438,443 embeddings. From #200,000 onward.
+9it [34:31, 230.16s/it][Oct 28, 06:42:56] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:46:46] [0] 		 #> Saving chunk 9: 	 25,000 passages and 437,267 embeddings. From #225,000 onward.
+10it [38:21, 230.21s/it][Oct 28, 06:46:46] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:50:36] [0] 		 #> Saving chunk 10: 	 25,000 passages and 439,424 embeddings. From #250,000 onward.
+11it [42:11, 230.13s/it][Oct 28, 06:50:36] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:54:27] [0] 		 #> Saving chunk 11: 	 25,000 passages and 435,212 embeddings. From #275,000 onward.
+12it [46:02, 230.35s/it][Oct 28, 06:54:27] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 06:58:17] [0] 		 #> Saving chunk 12: 	 25,000 passages and 437,095 embeddings. From #300,000 onward.
+13it [49:52, 230.36s/it][Oct 28, 06:58:18] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 07:02:07] [0] 		 #> Saving chunk 13: 	 25,000 passages and 438,379 embeddings. From #325,000 onward.
+14it [53:42, 230.28s/it][Oct 28, 07:02:08] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 07:05:58] [0] 		 #> Saving chunk 14: 	 25,000 passages and 442,840 embeddings. From #350,000 onward.
+15it [57:33, 230.50s/it][Oct 28, 07:05:59] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 07:09:48] [0] 		 #> Saving chunk 15: 	 25,000 passages and 440,998 embeddings. From #375,000 onward.
+16it [1:01:23, 230.36s/it][Oct 28, 07:09:49] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 07:13:39] [0] 		 #> Saving chunk 16: 	 25,000 passages and 439,219 embeddings. From #400,000 onward.
+17it [1:05:14, 230.38s/it][Oct 28, 07:13:39] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 07:17:29] [0] 		 #> Saving chunk 17: 	 25,000 passages and 444,530 embeddings. From #425,000 onward.
+18it [1:09:04, 230.43s/it][Oct 28, 07:17:30] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 07:21:20] [0] 		 #> Saving chunk 18: 	 25,000 passages and 443,242 embeddings. From #450,000 onward.
+19it [1:12:55, 230.36s/it][Oct 28, 07:21:20] [0] 		 #> Encoding 25000 passages..
+[Oct 28, 07:25:09] [0] 		 #> Saving chunk 19: 	 25,000 passages and 446,724 embeddings. From #475,000 onward.
+20it [1:16:44, 230.21s/it][Oct 28, 07:25:10] [0] 		 #> Encoding 22931 passages..
+[Oct 28, 07:28:41] [0] 		 #> Saving chunk 20: 	 22,931 passages and 413,080 embeddings. From #500,000 onward.
+21it [1:20:16, 224.52s/it]21it [1:20:16, 229.34s/it]
+[Oct 28, 07:28:41] [0] 		 #> Checking all files were saved...
+[Oct 28, 07:28:41] [0] 		 Found all files!
+[Oct 28, 07:28:41] [0] 		 #> Building IVF...
+[Oct 28, 07:28:41] [0] 		 #> Loading codes...
+  0%|          | 0/21 [00:00<?, ?it/s] 48%|████▊     | 10/21 [00:00<00:00, 97.14it/s]100%|██████████| 21/21 [00:00<00:00, 99.89it/s]100%|██████████| 21/21 [00:00<00:00, 99.38it/s]
+[Oct 28, 07:28:41] [0] 		 Sorting codes...
+[Oct 28, 07:28:42] [0] 		 Getting unique codes...
+[Oct 28, 07:28:42] #> Optimizing IVF to store map from centroids to list of pids..
+[Oct 28, 07:28:42] #> Building the emb2pid mapping..
+[Oct 28, 07:28:43] len(emb2pid) = 9118170
+  0%|          | 0/32768 [00:00<?, ?it/s] 17%|█▋        | 5653/32768 [00:00<00:00, 56526.95it/s] 36%|███▌      | 11701/32768 [00:00<00:00, 58846.15it/s] 54%|█████▍    | 17770/32768 [00:00<00:00, 59683.51it/s] 72%|███████▏  | 23739/32768 [00:00<00:00, 59497.33it/s] 91%|█████████ | 29760/32768 [00:00<00:00, 59750.37it/s]100%|██████████| 32768/32768 [00:00<00:00, 59221.99it/s]
+[Oct 28, 07:28:44] #> Saved optimized IVF to <repo>/outputs/warp/indexes/beir-quora.split=test.nbits=2/ivf.pid.pt
+[Oct 28, 07:28:44] [0] 		 #> Saving the indexing metadata to <repo>/outputs/warp/indexes/beir-quora.split=test.nbits=2/metadata.json ..
+
+#> Joined...
+Compacting index at '<repo>/outputs/warp/indexes/beir-quora.split=test.nbits=2' to '<repo>/outputs/warp/indexes/beir-quora.split=test.nbits=2'
+#> centroids.dtype = torch.float32
+> Loading centroid information
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 437.61it/s]
+> Compacting index
+  0%|          | 0/21 [00:00<?, ?it/s]  5%|▍         | 1/21 [00:00<00:09,  2.01it/s] 10%|▉         | 2/21 [00:01<00:09,  1.99it/s] 14%|█▍        | 3/21 [00:01<00:07,  2.26it/s] 19%|█▉        | 4/21 [00:01<00:08,  2.07it/s] 24%|██▍       | 5/21 [00:02<00:06,  2.65it/s] 33%|███▎      | 7/21 [00:02<00:04,  3.02it/s] 38%|███▊      | 8/21 [00:03<00:04,  2.66it/s] 43%|████▎     | 9/21 [00:03<00:04,  2.44it/s] 52%|█████▏    | 11/21 [00:04<00:03,  2.82it/s] 57%|█████▋    | 12/21 [00:04<00:02,  3.22it/s] 71%|███████▏  | 15/21 [00:04<00:01,  5.14it/s] 81%|████████  | 17/21 [00:05<00:00,  4.94it/s] 86%|████████▌ | 18/21 [00:05<00:00,  3.84it/s] 90%|█████████ | 19/21 [00:06<00:00,  3.22it/s]100%|██████████| 21/21 [00:06<00:00,  4.28it/s]100%|██████████| 21/21 [00:06<00:00,  3.32it/s]
+> Saving compacted index
+> Repacking residuals
+== quora search Wed Oct 28 07:28:55 AM UTC 2026
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda-12.3'
+[Oct 28, 07:28:59] #> Loading collection...
+0M 
+[Oct 28, 07:29:01] #> Loading buckets...
+[Oct 28, 07:29:01] #> Loading codec...
+#> Not averaging centroids.
+[Oct 28, 07:29:01] #> Loading repacked residuals...
+[Oct 28, 07:29:01] Loading parallel_warp_select_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 07:29:01] Loading parallel_decompress_centroids_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 07:29:01] Loading parallel_merge_candidate_scores_cpp extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 28, 07:29:01] Loading parallel_fused_decompress_merge extension (set WARP_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+nprobe 16 t_prime <warp.engine.constants.TPrimePolicy object at 0x7f492d2ffd00> nbits 2
+#> Loading collection_map found in <repo>/outputs/warp/beir/quora/collection.tsv
+quora: nDCG@10 0.8510 | index 345.3 MB = 10.62x raw | latency 52.5 ms p50 (8 threads)
+ALL DONE

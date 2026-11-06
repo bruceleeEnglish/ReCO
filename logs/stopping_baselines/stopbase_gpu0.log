@@ -1,0 +1,27 @@
+02:52:46 | INFO  | savemv.data.beir | nfcorpus: 3633 docs, 323 test queries
+02:52:47 | INFO  | savemv.stopping_baselines | nfcorpus: 323 queries, 3633 docs, paths in 1 s
+02:53:06 | INFO  | savemv.stopping_baselines | nfcorpus d=0.1 | fixed 100 (0.908) | margin 77 (0.908) | hazard 70 (0.907) | probtopk 93 (0.907) | laet 97 (0.901) | darth 195 (0.906) | hazard_doc 67 (0.900) | probtopk_doc 89 (0.900) | laet_doc 92 (0.894) | darth_doc 193 (0.905) | darth_declared 206 (0.940)
+02:53:06 | INFO  | savemv.stopping_baselines | nfcorpus d=0.05 | fixed 210 (0.956) | margin 143 (0.957) | hazard 123 (0.955) | probtopk 189 (0.955) | laet 176 (0.956) | darth 395 (0.957) | hazard_doc 115 (0.951) | probtopk_doc 178 (0.952) | laet_doc 161 (0.948) | darth_doc 364 (0.952) | darth_declared 413 (0.978)
+02:53:06 | INFO  | savemv.stopping_baselines | nfcorpus d=0.01 | fixed 1177 (0.993) | margin 690 (0.996) | hazard 492 (0.996) | probtopk 749 (0.996) | laet 741 (0.996) | darth 2854 (0.996) | hazard_doc 329 (0.989) | probtopk_doc 542 (0.990) | laet_doc 455 (0.990) | darth_doc 1979 (0.992) | darth_declared 958 (0.990)
+02:53:06 | INFO  | savemv.stopping_baselines | wrote outputs/stopping_baselines/nfcorpus.json
+02:53:11 | INFO  | savemv.data.beir | arguana: 8674 docs, 1401 test queries
+02:53:12 | INFO  | savemv.experiments.pipeline | excluding 1294 (query, document) pairs with identical ids
+02:53:34 | INFO  | savemv.stopping_baselines | arguana: 1401 queries, 8674 docs, paths in 5 s
+02:55:00 | INFO  | savemv.stopping_baselines | arguana d=0.1 | fixed 19 (0.905) | margin 18 (0.903) | hazard 18 (0.901) | probtopk 18 (0.902) | laet 32 (0.962) | darth 29 (0.903) | hazard_doc 18 (0.900) | probtopk_doc 18 (0.900) | laet_doc 32 (0.962) | darth_doc 29 (0.902) | darth_declared 31 (0.908)
+02:55:00 | INFO  | savemv.stopping_baselines | arguana d=0.05 | fixed 29 (0.953) | margin 30 (0.952) | hazard 25 (0.951) | probtopk 25 (0.952) | laet 32 (0.962) | darth 50 (0.952) | hazard_doc 24 (0.950) | probtopk_doc 25 (0.951) | laet_doc 32 (0.962) | darth_doc 49 (0.951) | darth_declared 47 (0.963)
+02:55:00 | INFO  | savemv.stopping_baselines | arguana d=0.01 | fixed 64 (0.991) | margin 88 (0.991) | hazard 47 (0.992) | probtopk 49 (0.992) | laet 50 (0.991) | darth 2436 (0.994) | hazard_doc 45 (0.991) | probtopk_doc 46 (0.990) | laet_doc 48 (0.990) | darth_doc 186 (0.992) | darth_declared 86 (0.989)
+02:55:00 | INFO  | savemv.stopping_baselines | wrote outputs/stopping_baselines/arguana.json
+02:55:06 | INFO  | savemv.data.beir | scidocs: 25657 docs, 1000 test queries
+02:55:20 | INFO  | savemv.stopping_baselines | scidocs: 1000 queries, 25657 docs, paths in 10 s
+02:56:59 | INFO  | savemv.stopping_baselines | scidocs d=0.1 | fixed 26 (0.907) | margin 26 (0.904) | hazard 25 (0.903) | probtopk 26 (0.901) | laet 32 (0.931) | darth 55 (0.902) | hazard_doc 25 (0.901) | probtopk_doc 25 (0.900) | laet_doc 32 (0.931) | darth_doc 54 (0.901) | darth_declared 44 (0.880)
+02:56:59 | INFO  | savemv.stopping_baselines | scidocs d=0.05 | fixed 41 (0.954) | margin 41 (0.952) | hazard 36 (0.951) | probtopk 38 (0.952) | laet 38 (0.950) | darth 96 (0.955) | hazard_doc 36 (0.949) | probtopk_doc 37 (0.950) | laet_doc 38 (0.949) | darth_doc 94 (0.953) | darth_declared 85 (0.965)
+02:56:59 | INFO  | savemv.stopping_baselines | scidocs d=0.01 | fixed 121 (0.992) | margin 126 (0.991) | hazard 91 (0.992) | probtopk 103 (0.992) | laet 98 (0.991) | darth 19398 (0.993) | hazard_doc 83 (0.990) | probtopk_doc 92 (0.991) | laet_doc 90 (0.990) | darth_doc 19266 (0.992) | darth_declared 206 (0.987)
+02:56:59 | INFO  | savemv.stopping_baselines | wrote outputs/stopping_baselines/scidocs.json
+02:57:07 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+02:57:07 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+02:57:35 | INFO  | savemv.stopping_baselines | fiqa: 648 queries, 57638 docs, paths in 23 s
+02:59:26 | INFO  | savemv.stopping_baselines | fiqa d=0.1 | fixed 43 (0.905) | margin 43 (0.901) | hazard 40 (0.901) | probtopk 42 (0.900) | laet 44 (0.902) | darth 73 (0.897) | hazard_doc 39 (0.898) | probtopk_doc 41 (0.899) | laet_doc 42 (0.899) | darth_doc 72 (0.894) | darth_declared 72 (0.915)
+02:59:26 | INFO  | savemv.stopping_baselines | fiqa d=0.05 | fixed 72 (0.953) | margin 73 (0.950) | hazard 63 (0.953) | probtopk 72 (0.952) | laet 73 (0.955) | darth 217 (0.946) | hazard_doc 61 (0.949) | probtopk_doc 69 (0.948) | laet_doc 71 (0.953) | darth_doc 210 (0.943) | darth_declared 114 (0.957)
+02:59:26 | INFO  | savemv.stopping_baselines | fiqa d=0.01 | fixed 265 (0.993) | margin 299 (0.993) | hazard 196 (0.993) | probtopk 272 (0.993) | laet 224 (0.993) | darth 31297 (0.989) | hazard_doc 155 (0.990) | probtopk_doc 222 (0.990) | laet_doc 170 (0.989) | darth_doc 722 (0.987) | darth_declared 384 (0.983)
+02:59:26 | INFO  | savemv.stopping_baselines | wrote outputs/stopping_baselines/fiqa.json
+ALL DONE

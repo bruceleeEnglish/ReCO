@@ -1,0 +1,6 @@
+03:26:41 | INFO  | savemv.data.beir | scifact: 5183 docs, 300 test queries
+03:26:50 | INFO  | savemv.stopping_baselines | scifact: 300 queries, 5183 docs, paths in 8 s
+03:27:06 | INFO  | savemv.stopping_baselines | scifact d=0.1 | fixed 33 (0.914) | margin 32 (0.907) | hazard 32 (0.910) | probtopk 32 (0.909) | laet 33 (0.915) | darth 51 (0.917) | hazard_doc 31 (0.906) | probtopk_doc 31 (0.904) | laet_doc 33 (0.914) | darth_doc 47 (0.912) | darth_declared 45 (0.911)
+03:27:06 | INFO  | savemv.stopping_baselines | scifact d=0.05 | fixed 56 (0.961) | margin 56 (0.956) | hazard 47 (0.956) | probtopk 50 (0.958) | laet 53 (0.959) | darth 889 (0.969) | hazard_doc 44 (0.951) | probtopk_doc 47 (0.951) | laet_doc 49 (0.953) | darth_doc 175 (0.962) | darth_declared 99 (0.958)
+03:27:06 | INFO  | savemv.stopping_baselines | scifact d=0.01 | fixed 259 (0.997) | margin 228 (0.997) | hazard 162 (0.996) | probtopk 182 (0.997) | laet 147 (0.996) | darth 5131 (0.998) | hazard_doc 100 (0.991) | probtopk_doc 112 (0.991) | laet_doc 103 (0.991) | darth_doc 4996 (0.996) | darth_declared 197 (0.977)
+03:27:06 | INFO  | savemv.stopping_baselines | wrote outputs/stopping_baselines_check/scifact.json

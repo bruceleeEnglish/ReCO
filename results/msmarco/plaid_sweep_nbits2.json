@@ -1,0 +1,60 @@
+{
+ "engine": "colbert-ai 0.2.22 (PLAID)",
+ "nbits": 2,
+ "queries": 1000,
+ "device": "gpu",
+ "points": [
+  {
+   "ncells": 1,
+   "centroid_score_threshold": 0.5,
+   "ndocs": 256,
+   "latency_ms": {
+    "mean": 44.49134401651099,
+    "p50": 33.30009989440441,
+    "p90": 71.80920657701792,
+    "p99": 175.2411356056109,
+    "n": 1000
+   },
+   "wall_s": 44.511753594037145,
+   "qps": 22.46597627045548,
+   "mrr10": 0.3638797619047619,
+   "ndcg10": 0.4252273008578893,
+   "recall_vs_exact10": 0.811,
+   "peak_gpu_gb": 9.599632384
+  },
+  {
+   "ncells": 2,
+   "centroid_score_threshold": 0.45,
+   "ndocs": 1024,
+   "latency_ms": {
+    "mean": 72.66891512228176,
+    "p50": 57.487626327201724,
+    "p90": 133.98785423487428,
+    "p99": 247.48155951965595,
+    "n": 1000
+   },
+   "wall_s": 72.69021168770269,
+   "qps": 13.757010425231355,
+   "mrr10": 0.36858650793650793,
+   "ndcg10": 0.42988960161509243,
+   "recall_vs_exact10": 0.8468000000000001,
+   "peak_gpu_gb": 14.013740032
+  },
+  {
+   "ncells": 4,
+   "centroid_score_threshold": 0.4,
+   "ndocs": 4096,
+   "out_of_memory": true,
+   "queries_done": 622,
+   "error": "CUDA out of memory. Tried to allocate 13.70 GiB. GPU 0 has a total capacity of 23.60 GiB of which 1.04 GiB is free. Including non-PyTorch memory, this process has 22.53 GiB memory in use. Of the alloc"
+  },
+  {
+   "ncells": 6,
+   "centroid_score_threshold": 0.4,
+   "ndocs": 4096,
+   "out_of_memory": true,
+   "queries_done": 80,
+   "error": "CUDA out of memory. Tried to allocate 12.90 GiB. GPU 0 has a total capacity of 23.60 GiB of which 1.04 GiB is free. Including non-PyTorch memory, this process has 22.53 GiB memory in use. Of the alloc"
+  }
+ ]
+}

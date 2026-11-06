@@ -1,0 +1,8 @@
+2026-10-26 11:46:47 start scifact -> outputs/logs/bench_scifact_20261026_114647.log
+2026-10-26 11:51:04 done  scifact
+2026-10-26 11:51:04 start nfcorpus -> outputs/logs/bench_nfcorpus_20261026_115104.log
+2026-10-26 11:55:51 done  nfcorpus
+2026-10-26 11:55:51 start scidocs -> outputs/logs/bench_scidocs_20261026_115551.log
+2026-10-26 12:12:43 done  scidocs
+2026-10-26 12:12:43 start fiqa -> outputs/logs/bench_fiqa_20261026_121243.log
+2026-10-26 12:27:56 done  fiqa

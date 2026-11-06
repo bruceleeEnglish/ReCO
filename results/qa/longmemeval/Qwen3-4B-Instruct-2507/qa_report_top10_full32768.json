@@ -1,0 +1,159 @@
+{
+  "config": {
+    "bench": "longmemeval",
+    "data": "data/memory/longmemeval_s_cleaned.json",
+    "out_root": "outputs/qa",
+    "model": "deepseek-flash",
+    "reader": "hf:models/Qwen3-4B-Instruct-2507",
+    "effort": "high",
+    "top": 10,
+    "retrievers": [
+      "oracle",
+      "colbert",
+      "reco-K64k+R",
+      "reco-K64k",
+      "bge-base",
+      "bm25"
+    ],
+    "stop": "hazard",
+    "delta": 0.05,
+    "full_subset": 60,
+    "max_context": 32768,
+    "max_questions": 470,
+    "workers": 8,
+    "judge2": null,
+    "judge2_sample": 0
+  },
+  "n_questions": 470,
+  "recompute": {
+    "reco-K64k+R": {
+      "rule": "hazard",
+      "R_mean": 19.608510638297872,
+      "R_p90": 24.0
+    }
+  },
+  "retrievers": {
+    "oracle": {
+      "n": 470,
+      "accuracy": 0.7,
+      "f1": 0.2150497847371647,
+      "prompt_tokens": 1162.3191489361702,
+      "by_category": {
+        "knowledge-update": 0.8194444444444444,
+        "multi-session": 0.5454545454545454,
+        "single-session-assistant": 0.9107142857142857,
+        "single-session-preference": 0.43333333333333335,
+        "single-session-user": 0.90625,
+        "temporal-reasoning": 0.6456692913385826
+      },
+      "vs_colbert": {
+        "diff": 0.09148936170212765,
+        "ci95": 0.04439015417240916
+      }
+    },
+    "colbert": {
+      "n": 470,
+      "accuracy": 0.6085106382978723,
+      "f1": 0.1787099560728296,
+      "prompt_tokens": 5304.202127659574,
+      "by_category": {
+        "knowledge-update": 0.7361111111111112,
+        "multi-session": 0.4132231404958678,
+        "single-session-assistant": 0.9821428571428571,
+        "single-session-preference": 0.43333333333333335,
+        "single-session-user": 0.828125,
+        "temporal-reasoning": 0.4881889763779528
+      }
+    },
+    "reco-K64k+R": {
+      "n": 470,
+      "accuracy": 0.6148936170212767,
+      "f1": 0.1790755379982368,
+      "prompt_tokens": 5306.18085106383,
+      "by_category": {
+        "knowledge-update": 0.7361111111111112,
+        "multi-session": 0.39669421487603307,
+        "single-session-assistant": 0.9821428571428571,
+        "single-session-preference": 0.5,
+        "single-session-user": 0.84375,
+        "temporal-reasoning": 0.5039370078740157
+      },
+      "vs_colbert": {
+        "diff": 0.006382978723404255,
+        "ci95": 0.016158050615004072
+      }
+    },
+    "reco-K64k": {
+      "n": 470,
+      "accuracy": 0.597872340425532,
+      "f1": 0.1756672438088435,
+      "prompt_tokens": 5345.082978723404,
+      "by_category": {
+        "knowledge-update": 0.6805555555555556,
+        "multi-session": 0.39669421487603307,
+        "single-session-assistant": 0.9642857142857143,
+        "single-session-preference": 0.43333333333333335,
+        "single-session-user": 0.8125,
+        "temporal-reasoning": 0.5118110236220472
+      },
+      "vs_colbert": {
+        "diff": -0.010638297872340425,
+        "ci95": 0.0325908888675182
+      }
+    },
+    "bge-base": {
+      "n": 470,
+      "accuracy": 0.5765957446808511,
+      "f1": 0.18074975254278228,
+      "prompt_tokens": 5289.048936170213,
+      "by_category": {
+        "knowledge-update": 0.75,
+        "multi-session": 0.34710743801652894,
+        "single-session-assistant": 1.0,
+        "single-session-preference": 0.3333333333333333,
+        "single-session-user": 0.796875,
+        "temporal-reasoning": 0.4566929133858268
+      },
+      "vs_colbert": {
+        "diff": -0.031914893617021274,
+        "ci95": 0.03555113260359018
+      }
+    },
+    "bm25": {
+      "n": 470,
+      "accuracy": 0.5808510638297872,
+      "f1": 0.17753736569486364,
+      "prompt_tokens": 5714.244680851064,
+      "by_category": {
+        "knowledge-update": 0.7083333333333334,
+        "multi-session": 0.36363636363636365,
+        "single-session-assistant": 0.9821428571428571,
+        "single-session-preference": 0.3,
+        "single-session-user": 0.859375,
+        "temporal-reasoning": 0.4645669291338583
+      },
+      "vs_colbert": {
+        "diff": -0.027659574468085105,
+        "ci95": 0.03558032501042407
+      }
+    },
+    "full": {
+      "n": 60,
+      "accuracy": 0.18333333333333332,
+      "f1": 0.13018635359705952,
+      "prompt_tokens": 32703.283333333333,
+      "by_category": {
+        "knowledge-update": 0.18181818181818182,
+        "multi-session": 0.0,
+        "single-session-assistant": 0.6666666666666666,
+        "single-session-preference": 0.3333333333333333,
+        "single-session-user": 0.25,
+        "temporal-reasoning": 0.11764705882352941
+      },
+      "vs_colbert": {
+        "diff": -0.5166666666666667,
+        "ci95": 0.14352933648960062
+      }
+    }
+  }
+}

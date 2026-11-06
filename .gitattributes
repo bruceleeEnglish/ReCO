@@ -1,0 +1,6 @@
+# Text files are stored and checked out with LF; run logs stay byte for byte as the runs wrote them.
+* text=auto eol=lf
+logs/** -text
+*.gz binary
+*.pdf binary
+*.png binary

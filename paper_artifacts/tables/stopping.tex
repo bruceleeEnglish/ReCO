@@ -1,0 +1,34 @@
+\filltable{15}{%
+\begin{tabular}{@{}l rrrrrrr rrrrrrr@{}}
+\toprule
+ & \multicolumn{7}{c}{Recall target 0.95 ($\delta{=}0.05$)} & \multicolumn{7}{c}{Recall target 0.99 ($\delta{=}0.01$)} \\
+\cmidrule(lr){2-8}\cmidrule(l){9-15}
+Rule & SciF. & NFC. & Arg. & SCID. & FiQA & TREC & Quora & SciF. & NFC. & Arg. & SCID. & FiQA & TREC & Quora \\
+\midrule
+\multicolumn{15}{@{}l}{\textit{Query-level CRC}} \\
+FixedBudget & 56 & 210 & 29 & 41 & 72 & 116 & 120 & 259 & 1177 & 64 & 121 & 265 & -- & 791 \\
+TA-Margin~\cite{fagin} & 56 & 143 & 30 & 41 & 73 & 115 & 173 & 228 & 690 & 88 & 126 & 299 & -- & 1199 \\
+Patience~\cite{pip} & 52 & 146 & 27 & 39 & 69 & \textbf{103} & 98 & 223 & 897 & 54 & 105 & 228 & -- & 529 \\
+ProbTopK~\cite{theobald} & 50 & 189 & \textbf{25} & 38 & 72 & 179 & 186 & 182 & 749 & 49 & 103 & 272 & -- & 1262 \\
+LAET~\cite{learnedterm} & 53 & 176 & 32 & 38 & 73 & 118 & 138 & \textbf{147} & 741 & 50 & 98 & 224 & -- & 589 \\
+DARTH~\cite{darth} & 889 & 395 & 50 & 96 & 217 & 151k & 391 & 5131 & 2854 & 2436 & 19k & 31k & -- & 64k \\
+\oursL \reco{} & \ours \textbf{47} & \ours \textbf{123} & \ours \textbf{25} & \ours \textbf{36} & \ours \textbf{63} & \ours 120 & \ours \textbf{97} & \ours 162 & \ours \textbf{492} & \ours \textbf{47} & \ours \textbf{91} & \ours \textbf{197} & \ours -- & \oursR \textbf{442} \\
+\quad\textit{Saving over best other} & \textit{6\%} & \textit{14\%} & \textit{2\%} & \textit{5\%} & \textit{8\%} & \textit{\minus{}16\%} & \textit{2\%} & \textit{\minus{}11\%} & \textit{29\%} & \textit{4\%} & \textit{7\%} & \textit{12\%} & -- & \textit{16\%} \\
+\quad\textit{\reco{}-U} & \textit{50} & \textit{156} & \textit{25} & \textit{38} & \textit{67} & \textit{105} & \textit{104} & \textit{207} & \textit{843} & \textit{52} & \textit{104} & \textit{229} & -- & \textit{547} \\
+\midrule
+\multicolumn{15}{@{}l}{\textit{Pooled per-document correction$^\ddagger$}} \\
+FixedBudget & 52 & 188 & 29 & 41 & 70 & 54 & 115 & 139 & 739 & 60 & 108 & 205 & 191 & 624 \\
+TA-Margin~\cite{fagin} & 50 & 134 & 29 & 40 & 71 & 48 & 166 & 112 & 435 & 81 & 113 & 241 & 175 & 984 \\
+Patience~\cite{pip} & 48 & 131 & 26 & 38 & 66 & \textbf{45} & \textbf{93} & 114 & 485 & 52 & 94 & 176 & 185 & 419 \\
+ConfMargin & 63 & 182 & 52 & 52 & 92 & 60 & 362 & 143 & 485 & 120 & 136 & 303 & 186 & 1723 \\
+ProbTopK & 47 & 178 & 25 & 37 & 69 & 50 & 178 & 112 & 542 & 46 & 92 & 222 & 206 & 972 \\
+LAET & 49 & 161 & 32 & 38 & 71 & 58 & 134 & 103 & 455 & 48 & 90 & 170 & 183 & 507 \\
+DARTH & 175 & 364 & 49 & 94 & 210 & 86k & 381 & 4996 & 1979 & 186 & 19k & 722 & -- & 3032 \\
+\oursL \reco{}-D & \ours \textbf{44} & \ours \textbf{115} & \ours \textbf{24} & \ours \textbf{36} & \ours \textbf{61} & \ours 46 & \ours \textbf{93} & \ours \textbf{100} & \ours \textbf{329} & \ours \textbf{45} & \ours \textbf{83} & \ours \textbf{155} & \ours \textbf{145} & \oursR \textbf{376} \\
+\quad\textit{Saving over best other} & \textit{5\%} & \textit{13\%} & \textit{2\%} & \textit{4\%} & \textit{8\%} & \textit{\minus{}3\%} & \textit{\minus{}1\%} & \textit{3\%} & \textit{24\%} & \textit{3\%} & \textit{8\%} & \textit{9\%} & \textit{17\%} & \textit{10\%} \\
+\midrule
+\multicolumn{15}{@{}l}{\textit{Uncalibrated}} \\
+DARTH as published~\cite{darth} & 99 & 413 & 47 & 85 & 114 & 86 & 400 & 197 & 958 & 86 & 206 & 384 & 109 & 1138 \\
+\quad\textit{achieved recall} & \textit{0.958} & \textit{0.977} & \textit{0.962} & \textit{0.964} & \textit{0.957} & \textit{0.956} & \textit{0.971} & \textit{0.977}$^\times$ & \textit{0.989}$^\times$ & \textit{0.989}$^\times$ & \textit{0.986}$^\times$ & \textit{0.983}$^\times$ & \textit{0.976}$^\times$ & \textit{0.985}$^\times$ \\
+\bottomrule
+\end{tabular}}

@@ -1,0 +1,72 @@
+2026-10-25 06:52:43 == hazard
+06:52:46 | INFO  | savemv.data.beir | scifact: 5183 docs, 300 test queries
+06:52:47 | INFO  | savemv.universal_hazard | K=1024 scifact: 300 paths, a=1.133 b=-4.221
+06:52:47 | INFO  | savemv.data.beir | nfcorpus: 3633 docs, 323 test queries
+06:52:47 | INFO  | savemv.universal_hazard | K=1024 nfcorpus: 323 paths, a=1.074 b=-2.359
+06:52:47 | INFO  | savemv.data.beir | arguana: 8674 docs, 1401 test queries
+06:52:47 | INFO  | savemv.experiments.pipeline | excluding 1294 (query, document) pairs with identical ids
+06:53:01 | INFO  | savemv.universal_hazard | K=1024 arguana: 500 paths, a=1.262 b=-76.879
+06:53:01 | INFO  | savemv.data.beir | scidocs: 25657 docs, 1000 test queries
+06:53:05 | INFO  | savemv.universal_hazard | K=1024 scidocs: 500 paths, a=1.073 b=-2.338
+06:53:05 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+06:53:05 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+06:53:12 | INFO  | savemv.universal_hazard | K=1024 fiqa: 500 paths, a=1.080 b=-2.583
+06:53:13 | INFO  | savemv.data.beir | trec-covid: 171332 docs, 50 test queries
+06:53:15 | INFO  | savemv.universal_hazard | K=1024 trec-covid: 50 paths, a=1.069 b=-2.189
+06:53:16 | INFO  | savemv.data.beir | quora: 522931 docs, 1000 test queries
+06:54:03 | INFO  | savemv.universal_hazard | K=1024 quora: 500 paths, a=1.118 b=-3.739
+06:54:56 | INFO  | savemv.universal_hazard | wrote 7 leave-one-out models and all_K1024.json to models/hazard
+06:54:56 | INFO  | savemv.data.beir | scifact: 5183 docs, 300 test queries
+06:54:56 | INFO  | savemv.universal_hazard | K=4096 scifact: 300 paths, a=1.099 b=-3.146
+06:54:56 | INFO  | savemv.data.beir | nfcorpus: 3633 docs, 323 test queries
+06:54:57 | INFO  | savemv.universal_hazard | K=4096 nfcorpus: 323 paths, a=1.050 b=-1.604
+06:54:57 | INFO  | savemv.data.beir | arguana: 8674 docs, 1401 test queries
+06:54:57 | INFO  | savemv.experiments.pipeline | excluding 1294 (query, document) pairs with identical ids
+06:55:14 | INFO  | savemv.universal_hazard | K=4096 arguana: 500 paths, a=1.201 b=-59.110
+06:55:14 | INFO  | savemv.data.beir | scidocs: 25657 docs, 1000 test queries
+06:55:18 | INFO  | savemv.universal_hazard | K=4096 scidocs: 500 paths, a=1.062 b=-1.988
+06:55:18 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+06:55:18 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+06:55:25 | INFO  | savemv.universal_hazard | K=4096 fiqa: 500 paths, a=1.062 b=-2.007
+06:55:26 | INFO  | savemv.data.beir | trec-covid: 171332 docs, 50 test queries
+06:55:28 | INFO  | savemv.universal_hazard | K=4096 trec-covid: 50 paths, a=1.099 b=-3.143
+06:55:30 | INFO  | savemv.data.beir | quora: 522931 docs, 1000 test queries
+06:56:16 | INFO  | savemv.universal_hazard | K=4096 quora: 500 paths, a=1.118 b=-3.709
+06:57:09 | INFO  | savemv.universal_hazard | wrote 7 leave-one-out models and all_K4096.json to models/hazard
+06:57:09 | INFO  | savemv.data.beir | scifact: 5183 docs, 300 test queries
+06:57:10 | INFO  | savemv.universal_hazard | K=16384 scifact: 300 paths, a=1.068 b=-2.141
+06:57:10 | INFO  | savemv.data.beir | nfcorpus: 3633 docs, 323 test queries
+06:57:10 | INFO  | savemv.universal_hazard | K=16384 nfcorpus: 323 paths, a=1.033 b=-1.055
+06:57:10 | INFO  | savemv.data.beir | arguana: 8674 docs, 1401 test queries
+06:57:10 | INFO  | savemv.experiments.pipeline | excluding 1294 (query, document) pairs with identical ids
+06:57:29 | INFO  | savemv.universal_hazard | K=16384 arguana: 500 paths, a=1.136 b=-40.119
+06:57:30 | INFO  | savemv.data.beir | scidocs: 25657 docs, 1000 test queries
+06:57:34 | INFO  | savemv.universal_hazard | K=16384 scidocs: 500 paths, a=1.052 b=-1.656
+06:57:35 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+06:57:35 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+06:57:42 | INFO  | savemv.universal_hazard | K=16384 fiqa: 500 paths, a=1.052 b=-1.692
+06:57:43 | INFO  | savemv.data.beir | trec-covid: 171332 docs, 50 test queries
+06:57:46 | INFO  | savemv.universal_hazard | K=16384 trec-covid: 50 paths, a=1.063 b=-2.035
+06:57:47 | INFO  | savemv.data.beir | quora: 522931 docs, 1000 test queries
+06:58:34 | INFO  | savemv.universal_hazard | K=16384 quora: 500 paths, a=1.095 b=-3.033
+06:59:30 | INFO  | savemv.universal_hazard | wrote 7 leave-one-out models and all_K16384.json to models/hazard
+06:59:30 | INFO  | savemv.data.beir | scifact: 5183 docs, 300 test queries
+06:59:31 | INFO  | savemv.universal_hazard | K=65536 scifact: 300 paths, a=1.042 b=-1.332
+06:59:31 | INFO  | savemv.data.beir | nfcorpus: 3633 docs, 323 test queries
+06:59:31 | INFO  | savemv.universal_hazard | K=65536 nfcorpus: 323 paths, a=1.018 b=-0.577
+06:59:31 | INFO  | savemv.data.beir | arguana: 8674 docs, 1401 test queries
+06:59:31 | INFO  | savemv.experiments.pipeline | excluding 1294 (query, document) pairs with identical ids
+06:59:52 | INFO  | savemv.universal_hazard | K=65536 arguana: 500 paths, a=1.086 b=-25.423
+06:59:52 | INFO  | savemv.data.beir | scidocs: 25657 docs, 1000 test queries
+06:59:57 | INFO  | savemv.universal_hazard | K=65536 scidocs: 500 paths, a=1.040 b=-1.269
+06:59:58 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+06:59:58 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+07:00:05 | INFO  | savemv.universal_hazard | K=65536 fiqa: 500 paths, a=1.044 b=-1.421
+07:00:06 | INFO  | savemv.data.beir | trec-covid: 171332 docs, 50 test queries
+07:00:09 | INFO  | savemv.universal_hazard | K=65536 trec-covid: 50 paths, a=1.042 b=-1.381
+07:00:11 | INFO  | savemv.data.beir | quora: 522931 docs, 1000 test queries
+07:00:58 | INFO  | savemv.universal_hazard | K=65536 quora: 500 paths, a=1.074 b=-2.380
+07:01:56 | INFO  | savemv.universal_hazard | wrote 7 leave-one-out models and all_K65536.json to models/hazard
+2026-10-25 07:01:57 == bench
+queue on GPU 0 started (pid 3719294) -> outputs/logs/queue_gpu0_20261025_070157.log
+queue on GPU 1 started (pid 3719302) -> outputs/logs/queue_gpu1_20261025_070157.log

@@ -1,0 +1,189 @@
+start 2026-10-31T02:57:24Z, gpu 1
+ 02:57:24 up 44 days, 12:27,  0 users,  load average: 2.37, 3.74, 3.66
+0, 18 MiB, 0 %
+1, 15 MiB, 0 %
+=== 2026-10-31T02:57:24Z plaid_sweep: plaid sweep --nbits 2 --points 4
+[Oct 31, 02:57:28] #> Loading collection...
+0M 1M 2M 3M 4M 5M 6M 7M 8M 
+[Oct 31, 02:57:48] #> Loading codec...
+[Oct 31, 02:57:48] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 31, 02:58:00] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 31, 02:58:00] #> Loading IVF...
+[Oct 31, 02:58:01] #> Loading doclens...
+  0%|          | 0/354 [00:00<?, ?it/s] 40%|███▉      | 141/354 [00:00<00:00, 1407.07it/s] 88%|████████▊ | 310/354 [00:00<00:00, 1571.87it/s]100%|██████████| 354/354 [00:00<00:00, 1566.13it/s]
+[Oct 31, 02:58:03] #> Loading codes and residuals...
+  0%|          | 0/354 [00:00<?, ?it/s]  1%|          | 4/354 [00:00<00:10, 33.93it/s]  2%|▏         | 8/354 [00:00<00:10, 33.08it/s]  3%|▎         | 12/354 [00:00<00:10, 33.55it/s]  5%|▍         | 16/354 [00:00<00:10, 33.49it/s]  6%|▌         | 20/354 [00:00<00:10, 31.48it/s]  7%|▋         | 24/354 [00:00<00:10, 30.69it/s]  8%|▊         | 28/354 [00:00<00:10, 30.45it/s]  9%|▉         | 32/354 [00:01<00:10, 30.15it/s] 10%|█         | 36/354 [00:01<00:10, 29.75it/s] 11%|█         | 39/354 [00:01<00:10, 28.81it/s] 12%|█▏        | 43/354 [00:01<00:10, 29.69it/s] 13%|█▎        | 47/354 [00:01<00:10, 30.21it/s] 14%|█▍        | 51/354 [00:01<00:09, 31.54it/s] 16%|█▌        | 55/354 [00:01<00:09, 32.59it/s] 17%|█▋        | 59/354 [00:01<00:08, 33.18it/s] 18%|█▊        | 63/354 [00:01<00:08, 33.51it/s] 19%|█▉        | 67/354 [00:02<00:08, 33.84it/s] 20%|██        | 71/354 [00:02<00:08, 34.31it/s] 21%|██        | 75/354 [00:02<00:08, 34.48it/s] 22%|██▏       | 79/354 [00:02<00:07, 34.42it/s] 23%|██▎       | 83/354 [00:02<00:07, 34.22it/s] 25%|██▍       | 87/354 [00:02<00:08, 33.33it/s] 26%|██▌       | 91/354 [00:02<00:07, 33.73it/s] 27%|██▋       | 95/354 [00:02<00:07, 33.96it/s] 28%|██▊       | 99/354 [00:03<00:07, 34.38it/s] 29%|██▉       | 103/354 [00:03<00:07, 34.62it/s] 30%|███       | 107/354 [00:03<00:07, 34.85it/s] 31%|███▏      | 111/354 [00:03<00:06, 35.02it/s] 32%|███▏      | 115/354 [00:03<00:06, 34.97it/s] 34%|███▎      | 119/354 [00:03<00:06, 34.80it/s] 35%|███▍      | 123/354 [00:03<00:06, 34.69it/s] 36%|███▌      | 127/354 [00:03<00:06, 34.05it/s] 37%|███▋      | 131/354 [00:03<00:06, 33.68it/s] 38%|███▊      | 135/354 [00:04<00:06, 32.92it/s] 39%|███▉      | 139/354 [00:04<00:06, 32.41it/s] 40%|████      | 143/354 [00:04<00:06, 32.17it/s] 42%|████▏     | 147/354 [00:04<00:06, 31.95it/s] 43%|████▎     | 151/354 [00:04<00:06, 31.87it/s] 44%|████▍     | 155/354 [00:04<00:06, 32.08it/s] 45%|████▍     | 159/354 [00:04<00:06, 31.01it/s] 46%|████▌     | 163/354 [00:05<00:06, 30.48it/s] 47%|████▋     | 167/354 [00:05<00:06, 30.20it/s] 48%|████▊     | 171/354 [00:05<00:06, 29.94it/s] 49%|████▉     | 174/354 [00:05<00:06, 29.76it/s] 50%|█████     | 177/354 [00:05<00:05, 29.55it/s] 51%|█████     | 180/354 [00:05<00:05, 29.53it/s] 52%|█████▏    | 183/354 [00:05<00:05, 29.38it/s] 53%|█████▎    | 186/354 [00:05<00:05, 28.80it/s] 53%|█████▎    | 189/354 [00:05<00:05, 28.37it/s] 54%|█████▍    | 192/354 [00:06<00:05, 28.10it/s] 55%|█████▌    | 195/354 [00:06<00:05, 28.25it/s] 56%|█████▌    | 198/354 [00:06<00:05, 28.02it/s] 57%|█████▋    | 201/354 [00:06<00:05, 27.74it/s] 58%|█████▊    | 204/354 [00:06<00:05, 27.40it/s] 58%|█████▊    | 207/354 [00:06<00:05, 27.18it/s] 59%|█████▉    | 210/354 [00:06<00:05, 27.15it/s] 60%|██████    | 213/354 [00:06<00:05, 27.58it/s] 61%|██████    | 216/354 [00:06<00:04, 27.75it/s] 62%|██████▏   | 219/354 [00:06<00:04, 27.89it/s] 63%|██████▎   | 222/354 [00:07<00:04, 27.58it/s] 64%|██████▎   | 225/354 [00:07<00:04, 27.62it/s] 64%|██████▍   | 228/354 [00:07<00:04, 27.53it/s] 65%|██████▌   | 231/354 [00:07<00:04, 27.58it/s] 66%|██████▌   | 234/354 [00:07<00:04, 27.24it/s] 67%|██████▋   | 237/354 [00:07<00:04, 27.10it/s] 68%|██████▊   | 240/354 [00:07<00:04, 27.24it/s] 69%|██████▊   | 243/354 [00:07<00:04, 27.71it/s] 69%|██████▉   | 246/354 [00:07<00:03, 28.22it/s] 70%|███████   | 249/354 [00:08<00:04, 25.88it/s] 71%|███████   | 252/354 [00:08<00:04, 24.51it/s] 72%|███████▏  | 255/354 [00:08<00:03, 25.14it/s] 73%|███████▎  | 258/354 [00:08<00:03, 26.31it/s] 74%|███████▎  | 261/354 [00:08<00:03, 26.99it/s] 75%|███████▍  | 264/354 [00:08<00:03, 27.33it/s] 75%|███████▌  | 267/354 [00:08<00:03, 27.62it/s] 76%|███████▋  | 270/354 [00:08<00:03, 27.50it/s] 77%|███████▋  | 273/354 [00:08<00:02, 27.53it/s] 78%|███████▊  | 276/354 [00:09<00:02, 27.70it/s] 79%|███████▉  | 279/354 [00:09<00:02, 27.85it/s] 80%|███████▉  | 282/354 [00:09<00:02, 27.87it/s] 81%|████████  | 285/354 [00:09<00:02, 28.40it/s] 82%|████████▏ | 289/354 [00:09<00:02, 29.49it/s] 83%|████████▎ | 293/354 [00:09<00:02, 30.14it/s] 84%|████████▍ | 297/354 [00:09<00:01, 30.08it/s] 85%|████████▌ | 301/354 [00:09<00:01, 29.53it/s] 86%|████████▌ | 304/354 [00:10<00:01, 29.38it/s] 87%|████████▋ | 308/354 [00:10<00:01, 29.67it/s] 88%|████████▊ | 312/354 [00:10<00:01, 30.36it/s] 89%|████████▉ | 316/354 [00:10<00:01, 30.47it/s] 90%|█████████ | 320/354 [00:10<00:01, 27.76it/s] 92%|█████████▏| 324/354 [00:10<00:01, 29.52it/s] 93%|█████████▎| 328/354 [00:10<00:00, 31.01it/s] 94%|█████████▍| 332/354 [00:10<00:00, 31.28it/s] 95%|█████████▍| 336/354 [00:11<00:00, 30.98it/s] 96%|█████████▌| 340/354 [00:11<00:00, 30.81it/s] 97%|█████████▋| 344/354 [00:11<00:00, 30.42it/s] 98%|█████████▊| 348/354 [00:11<00:00, 30.69it/s] 99%|█████████▉| 352/354 [00:11<00:00, 30.97it/s]100%|██████████| 354/354 [00:11<00:00, 30.33it/s]
+
+#> QueryTokenizer.tensorize(batch_text[0], batch_background[0], bsize) ==
+#> Input: define preventive, 		 True, 		 None
+#> Output IDs: torch.Size([32]), tensor([ 101,    1, 9375, 4652, 3512,  102,  103,  103,  103,  103,  103,  103,
+         103,  103,  103,  103,  103,  103,  103,  103,  103,  103,  103,  103,
+         103,  103,  103,  103,  103,  103,  103,  103], device='cuda:0')
+#> Output Mask: torch.Size([32]), tensor([1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:0')
+
+{"ncells": 1, "centroid_score_threshold": 0.5, "ndocs": 256, "latency_ms": {"mean": 44.49134401651099, "p50": 33.30009989440441, "p90": 71.80920657701792, "p99": 175.2411356056109, "n": 1000}, "wall_s": 44.511753594037145, "qps": 22.46597627045548, "mrr10": 0.3638797619047619, "ndcg10": 0.4252273008578893, "recall_vs_exact10": 0.811, "peak_gpu_gb": 9.599632384}
+{"ncells": 2, "centroid_score_threshold": 0.45, "ndocs": 1024, "latency_ms": {"mean": 72.66891512228176, "p50": 57.487626327201724, "p90": 133.98785423487428, "p99": 247.48155951965595, "n": 1000}, "wall_s": 72.69021168770269, "qps": 13.757010425231355, "mrr10": 0.36858650793650793, "ndcg10": 0.42988960161509243, "recall_vs_exact10": 0.8468000000000001, "peak_gpu_gb": 14.013740032}
+{"ncells": 4, "centroid_score_threshold": 0.4, "ndocs": 4096, "out_of_memory": true, "queries_done": 622, "error": "CUDA out of memory. Tried to allocate 13.70 GiB. GPU 0 has a total capacity of 23.60 GiB of which 1.04 GiB is free. Including non-PyTorch memory, this process has 22.53 GiB memory in use. Of the alloc"}
+{"ncells": 6, "centroid_score_threshold": 0.4, "ndocs": 4096, "out_of_memory": true, "queries_done": 80, "error": "CUDA out of memory. Tried to allocate 12.90 GiB. GPU 0 has a total capacity of 23.60 GiB of which 1.04 GiB is free. Including non-PyTorch memory, this process has 22.53 GiB memory in use. Of the alloc"}
+[stage] plaid_sweep rc=0 2026-10-31T03:01:47Z
+=== 2026-10-31T03:01:47Z reco_throughput_d01: reco scripts/throughput.py --concurrency 1 16 64 --deltas 0.01 --queries 1000 --tokenizer-threads 8 --out outputs/msmarco --result throughput_reco_d01.json
+03:02:17 | INFO  | savemv.msmarco | corpus: 8841823 passages
+03:02:20 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+03:02:47 | INFO  | savemv.throughput | delta=0.01 C=4: 1.7 QPS | latency p50 1835 p90 4901 ms | R 1044 | 1732 docs/s | recall 0.968 | MRR 0.5294 | peak 2.2 GB | {'admit': 1.5, 'tok_wait': 8.8, 'gpu': 13.1, 'cpu_update': 0.7}
+03:22:19 | INFO  | savemv.throughput | delta=0.01 C=1: 0.9 QPS | latency p50 933 p90 2327 ms | R 919 | 785 docs/s | recall 0.992 | MRR 0.3693 | peak 2.0 GB | {'admit': 19.0, 'tok_wait': 359.9, 'gpu': 775.6, 'cpu_update': 16.6}
+03:28:49 | INFO  | savemv.throughput | delta=0.01 C=16: 2.6 QPS | latency p50 4875 p90 12298 ms | R 919 | 2356 docs/s | recall 0.992 | MRR 0.3693 | peak 3.5 GB | {'admit': 31.6, 'tok_wait': 91.0, 'gpu': 237.1, 'cpu_update': 30.4}
+03:33:05 | INFO  | savemv.throughput | delta=0.01 C=64: 3.9 QPS | latency p50 12456 p90 31397 ms | R 920 | 3601 docs/s | recall 0.992 | MRR 0.3695 | peak 8.6 GB | {'admit': 20.2, 'tok_wait': 11.0, 'gpu': 142.9, 'cpu_update': 81.5}
+[stage] reco_throughput_d01 rc=0 2026-10-31T03:33:08Z
+=== 2026-10-31T03:33:08Z plaid_recall_ceiling: plaid_cpu sweep --nbits 2 --device cpu --threads 16 --start 4 --result plaid_sweep_cpu_nbits2.json
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda-12.3'
+[Oct 31, 03:33:12] #> Loading collection...
+0M 1M 2M 3M 4M 5M 6M 7M 8M 
+[Oct 31, 03:33:31] Loading segmented_maxsim_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+/usr/local/lib/python3.10/dist-packages/torch/cuda/amp/grad_scaler.py:126: UserWarning: torch.cuda.amp.GradScaler is enabled, but CUDA is not available.  Disabling.
+  warnings.warn(
+[Oct 31, 03:33:31] #> Loading codec...
+[Oct 31, 03:33:31] #> Loading IVF...
+[Oct 31, 03:33:32] Loading segmented_lookup_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 31, 03:33:32] #> Loading doclens...
+  0%|          | 0/354 [00:00<?, ?it/s] 43%|████▎     | 152/354 [00:00<00:00, 1516.36it/s] 90%|█████████ | 320/354 [00:00<00:00, 1609.86it/s]100%|██████████| 354/354 [00:00<00:00, 1605.17it/s]
+[Oct 31, 03:33:34] #> Loading codes and residuals...
+  0%|          | 0/354 [00:00<?, ?it/s]  1%|          | 4/354 [00:00<00:10, 34.27it/s]  2%|▏         | 8/354 [00:00<00:10, 33.71it/s]  3%|▎         | 12/354 [00:00<00:10, 34.07it/s]  5%|▍         | 16/354 [00:00<00:09, 33.86it/s]  6%|▌         | 20/354 [00:00<00:10, 33.18it/s]  7%|▋         | 24/354 [00:00<00:10, 31.89it/s]  8%|▊         | 28/354 [00:00<00:10, 31.44it/s]  9%|▉         | 32/354 [00:00<00:10, 31.37it/s] 10%|█         | 36/354 [00:01<00:10, 31.28it/s] 11%|█▏        | 40/354 [00:01<00:09, 31.66it/s] 12%|█▏        | 44/354 [00:01<00:09, 31.94it/s] 14%|█▎        | 48/354 [00:01<00:09, 32.29it/s] 15%|█▍        | 52/354 [00:01<00:09, 32.69it/s] 16%|█▌        | 56/354 [00:01<00:09, 32.88it/s] 17%|█▋        | 60/354 [00:01<00:08, 32.99it/s] 18%|█▊        | 64/354 [00:01<00:08, 33.18it/s] 19%|█▉        | 68/354 [00:02<00:08, 33.33it/s] 20%|██        | 72/354 [00:02<00:08, 33.59it/s] 21%|██▏       | 76/354 [00:02<00:08, 33.72it/s] 23%|██▎       | 80/354 [00:02<00:08, 33.82it/s] 24%|██▎       | 84/354 [00:02<00:08, 33.39it/s] 25%|██▍       | 88/354 [00:02<00:08, 33.24it/s] 26%|██▌       | 92/354 [00:02<00:07, 33.55it/s] 27%|██▋       | 96/354 [00:02<00:07, 33.51it/s] 28%|██▊       | 100/354 [00:03<00:07, 33.98it/s] 29%|██▉       | 104/354 [00:03<00:07, 33.69it/s] 31%|███       | 108/354 [00:03<00:07, 33.93it/s] 32%|███▏      | 112/354 [00:03<00:07, 34.29it/s] 33%|███▎      | 116/354 [00:03<00:06, 34.51it/s] 34%|███▍      | 120/354 [00:03<00:06, 34.44it/s] 35%|███▌      | 124/354 [00:03<00:06, 34.21it/s] 36%|███▌      | 128/354 [00:03<00:06, 33.59it/s] 37%|███▋      | 132/354 [00:03<00:06, 32.89it/s] 38%|███▊      | 136/354 [00:04<00:06, 32.62it/s] 40%|███▉      | 140/354 [00:04<00:06, 32.19it/s] 41%|████      | 144/354 [00:04<00:06, 32.09it/s] 42%|████▏     | 148/354 [00:04<00:06, 31.78it/s] 43%|████▎     | 152/354 [00:04<00:06, 31.50it/s] 44%|████▍     | 156/354 [00:04<00:06, 31.62it/s] 45%|████▌     | 160/354 [00:04<00:06, 31.78it/s] 46%|████▋     | 164/354 [00:04<00:05, 31.71it/s] 47%|████▋     | 168/354 [00:05<00:05, 31.44it/s] 49%|████▊     | 172/354 [00:05<00:05, 31.11it/s] 50%|████▉     | 176/354 [00:05<00:05, 31.23it/s] 51%|█████     | 180/354 [00:05<00:05, 31.26it/s] 52%|█████▏    | 184/354 [00:05<00:05, 31.43it/s] 53%|█████▎    | 188/354 [00:05<00:05, 31.58it/s] 54%|█████▍    | 192/354 [00:05<00:05, 31.59it/s] 55%|█████▌    | 196/354 [00:06<00:05, 31.56it/s] 56%|█████▋    | 200/354 [00:06<00:04, 31.27it/s] 58%|█████▊    | 204/354 [00:06<00:04, 31.12it/s] 59%|█████▉    | 208/354 [00:06<00:04, 31.22it/s] 60%|█████▉    | 212/354 [00:06<00:04, 30.98it/s] 61%|██████    | 216/354 [00:06<00:04, 30.36it/s] 62%|██████▏   | 220/354 [00:06<00:04, 30.06it/s] 63%|██████▎   | 224/354 [00:06<00:04, 29.61it/s] 64%|██████▍   | 227/354 [00:07<00:04, 29.35it/s] 65%|██████▍   | 230/354 [00:07<00:04, 29.33it/s] 66%|██████▌   | 233/354 [00:07<00:04, 28.97it/s] 67%|██████▋   | 236/354 [00:07<00:04, 28.77it/s] 68%|██████▊   | 239/354 [00:07<00:03, 28.78it/s] 68%|██████▊   | 242/354 [00:07<00:03, 29.06it/s] 69%|██████▉   | 246/354 [00:07<00:03, 29.43it/s] 70%|███████   | 249/354 [00:07<00:03, 27.40it/s] 71%|███████   | 252/354 [00:07<00:03, 25.94it/s] 72%|███████▏  | 255/354 [00:08<00:03, 26.26it/s] 73%|███████▎  | 258/354 [00:08<00:03, 26.97it/s] 74%|███████▎  | 261/354 [00:08<00:03, 27.70it/s] 75%|███████▍  | 265/354 [00:08<00:03, 28.65it/s] 76%|███████▌  | 269/354 [00:08<00:02, 29.26it/s] 77%|███████▋  | 273/354 [00:08<00:02, 29.62it/s] 78%|███████▊  | 277/354 [00:08<00:02, 30.00it/s] 79%|███████▉  | 281/354 [00:08<00:02, 30.27it/s] 81%|████████  | 285/354 [00:09<00:02, 31.00it/s] 82%|████████▏ | 289/354 [00:09<00:02, 31.93it/s] 83%|████████▎ | 293/354 [00:09<00:01, 32.24it/s] 84%|████████▍ | 297/354 [00:09<00:01, 31.96it/s] 85%|████████▌ | 301/354 [00:09<00:01, 31.90it/s] 86%|████████▌ | 305/354 [00:09<00:01, 31.91it/s] 87%|████████▋ | 309/354 [00:09<00:01, 31.95it/s] 88%|████████▊ | 313/354 [00:09<00:01, 32.14it/s] 90%|████████▉ | 317/354 [00:10<00:01, 32.18it/s] 91%|█████████ | 321/354 [00:10<00:01, 32.24it/s] 92%|█████████▏| 325/354 [00:10<00:00, 32.95it/s] 93%|█████████▎| 329/354 [00:10<00:00, 33.03it/s] 94%|█████████▍| 333/354 [00:10<00:00, 32.10it/s] 95%|█████████▌| 337/354 [00:10<00:00, 31.81it/s] 96%|█████████▋| 341/354 [00:10<00:00, 31.80it/s] 97%|█████████▋| 345/354 [00:10<00:00, 31.67it/s] 99%|█████████▊| 349/354 [00:11<00:00, 31.86it/s]100%|█████████▉| 353/354 [00:11<00:00, 32.11it/s]100%|██████████| 354/354 [00:11<00:00, 31.64it/s]
+[Oct 31, 03:33:45] Loading filter_pids_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 31, 03:33:45] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+/usr/local/lib/python3.10/dist-packages/torch/amp/autocast_mode.py:250: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+
+#> QueryTokenizer.tensorize(batch_text[0], batch_background[0], bsize) ==
+#> Input: define preventive, 		 True, 		 None
+#> Output IDs: torch.Size([32]), tensor([ 101,    1, 9375, 4652, 3512,  102,  103,  103,  103,  103,  103,  103,
+         103,  103,  103,  103,  103,  103,  103,  103,  103,  103,  103,  103,
+         103,  103,  103,  103,  103,  103,  103,  103])
+#> Output Mask: torch.Size([32]), tensor([1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0])
+
+{"ncells": 8, "centroid_score_threshold": 0.4, "ndocs": 8192, "latency_ms": {"mean": 203.342509618029, "p50": 201.59699860960245, "p90": 242.05975397489965, "p99": 289.5284706261009, "n": 1000}, "wall_s": 203.36420239973813, "qps": 4.917286268673644, "mrr10": 0.37239087301587304, "ndcg10": 0.43417625948227306, "recall_vs_exact10": 0.8732000000000002, "peak_gpu_gb": null}
+{"ncells": 16, "centroid_score_threshold": 0.4, "ndocs": 16384, "latency_ms": {"mean": 321.4921362702735, "p50": 322.44925457052886, "p90": 374.32024008594453, "p99": 428.0535237817093, "n": 1000}, "wall_s": 321.5148645150475, "qps": 3.1102761034340856, "mrr10": 0.37239087301587304, "ndcg10": 0.43417625948227306, "recall_vs_exact10": 0.8733000000000002, "peak_gpu_gb": null}
+[stage] plaid_recall_ceiling rc=0 2026-10-31T03:42:54Z
+=== 2026-10-31T03:42:54Z optimality_gap: reco scripts/optimality_gap.py configs/paper_bench.yaml --datasets scifact nfcorpus arguana:encoder.query_maxlen=300,output_root=outputs_q300 scidocs fiqa trec-covid quora:max_queries=1000
+03:42:57 | INFO  | savemv.data.beir | scifact: 5183 docs, 300 test queries
+03:42:58 | INFO  | savemv.optimality_gap | scifact: 300 queries, 5183 docs, paths in 0 s
+03:43:00 | INFO  | savemv.optimality_gap | scifact d=0.05: hazard 47.1, bound 30.8 (1.53x)
+03:43:00 | INFO  | savemv.optimality_gap | scifact d=0.01: hazard 162.1, bound 48.0 (3.38x)
+03:43:00 | INFO  | savemv.optimality_gap | scifact: g falls on 4.3% of steps (100% after a top-k change), rank correlation -0.977
+03:43:00 | INFO  | savemv.optimality_gap | wrote outputs/optimality_gap/scifact.json
+03:43:00 | INFO  | savemv.data.beir | nfcorpus: 3633 docs, 323 test queries
+03:43:01 | INFO  | savemv.optimality_gap | nfcorpus: 323 queries, 3633 docs, paths in 0 s
+03:43:03 | INFO  | savemv.optimality_gap | nfcorpus d=0.05: hazard 122.8, bound 66.5 (1.85x)
+03:43:03 | INFO  | savemv.optimality_gap | nfcorpus d=0.01: hazard 492.5, bound 147.4 (3.34x)
+03:43:03 | INFO  | savemv.optimality_gap | nfcorpus: g falls on 3.8% of steps (100% after a top-k change), rank correlation -0.984
+03:43:03 | INFO  | savemv.optimality_gap | wrote outputs/optimality_gap/nfcorpus.json
+03:43:03 | INFO  | savemv.data.beir | arguana: 8674 docs, 1401 test queries
+03:43:03 | INFO  | savemv.experiments.pipeline | excluding 1294 (query, document) pairs with identical ids
+03:43:20 | INFO  | savemv.optimality_gap | arguana: 1401 queries, 8674 docs, paths in 1 s
+03:43:32 | INFO  | savemv.optimality_gap | arguana d=0.05: hazard 24.8, bound 20.5 (1.21x)
+03:43:32 | INFO  | savemv.optimality_gap | arguana d=0.01: hazard 47.4, bound 27.0 (1.76x)
+03:43:32 | INFO  | savemv.optimality_gap | arguana: g falls on 5.2% of steps (100% after a top-k change), rank correlation -0.973
+03:43:32 | INFO  | savemv.optimality_gap | wrote outputs/optimality_gap/arguana.json
+03:43:32 | INFO  | savemv.data.beir | scidocs: 25657 docs, 1000 test queries
+03:43:38 | INFO  | savemv.optimality_gap | scidocs: 1000 queries, 25657 docs, paths in 2 s
+03:43:50 | INFO  | savemv.optimality_gap | scidocs d=0.05: hazard 36.3, bound 26.2 (1.38x)
+03:43:50 | INFO  | savemv.optimality_gap | scidocs d=0.01: hazard 91.2, bound 37.9 (2.41x)
+03:43:50 | INFO  | savemv.optimality_gap | scidocs: g falls on 6.0% of steps (100% after a top-k change), rank correlation -0.976
+03:43:50 | INFO  | savemv.optimality_gap | wrote outputs/optimality_gap/scidocs.json
+03:43:51 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+03:43:51 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+03:43:58 | INFO  | savemv.optimality_gap | fiqa: 648 queries, 57638 docs, paths in 3 s
+03:44:07 | INFO  | savemv.optimality_gap | fiqa d=0.05: hazard 63.2, bound 39.5 (1.60x)
+03:44:07 | INFO  | savemv.optimality_gap | fiqa d=0.01: hazard 196.0, bound 63.2 (3.10x)
+03:44:07 | INFO  | savemv.optimality_gap | fiqa: g falls on 5.0% of steps (100% after a top-k change), rank correlation -0.983
+03:44:07 | INFO  | savemv.optimality_gap | wrote outputs/optimality_gap/fiqa.json
+03:44:08 | INFO  | savemv.data.beir | trec-covid: 171332 docs, 50 test queries
+03:44:11 | INFO  | savemv.optimality_gap | trec-covid: 50 queries, 171332 docs, paths in 1 s
+03:44:12 | INFO  | savemv.optimality_gap | trec-covid d=0.05: hazard 119.5, bound 38.4 (3.11x)
+03:44:12 | INFO  | savemv.optimality_gap | trec-covid d=0.01: hazard 171332.0, bound 57.3 (2991.13x)
+03:44:12 | INFO  | savemv.optimality_gap | trec-covid: g falls on 4.5% of steps (100% after a top-k change), rank correlation -0.905
+03:44:12 | INFO  | savemv.optimality_gap | wrote outputs/optimality_gap/trec-covid.json
+03:44:14 | INFO  | savemv.data.beir | quora: 522931 docs, 1000 test queries
+03:45:29 | INFO  | savemv.optimality_gap | quora: 1000 queries, 522931 docs, paths in 62 s
+03:46:11 | INFO  | savemv.optimality_gap | quora d=0.05: hazard 97.1, bound 45.8 (2.12x)
+03:46:11 | INFO  | savemv.optimality_gap | quora d=0.01: hazard 449.1, bound 101.2 (4.44x)
+03:46:11 | INFO  | savemv.optimality_gap | quora: g falls on 3.2% of steps (100% after a top-k change), rank correlation -0.991
+03:46:11 | INFO  | savemv.optimality_gap | wrote outputs/optimality_gap/quora.json
+[stage] optimality_gap rc=0 2026-10-31T03:46:12Z
+=== 2026-10-31T03:46:12Z growth: reco scripts/growth.py configs/paper_bench.yaml --datasets scidocs fiqa quora:max_queries=1000
+03:46:16 | INFO  | savemv.data.beir | scidocs: 25657 docs, 1000 test queries
+03:46:17 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.9598, empty=0
+03:46:18 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.9769, empty=0
+03:46:18 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.9774, empty=0
+03:46:19 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.9775, empty=0
+03:46:25 | INFO  | savemv.growth | scidocs base 0.50: codebook and estimates in 10 s
+03:46:44 | INFO  | savemv.growth | scidocs base 0.50 -> 0.50 d=0.05: frozen R 30.9 recall 0.9521 | recalibrated R 30.9 recall 0.9521
+03:46:44 | INFO  | savemv.growth | scidocs base 0.50 -> 0.50 d=0.01: frozen R 66.3 recall 0.9917 | recalibrated R 66.3 recall 0.9917
+03:47:00 | INFO  | savemv.growth | scidocs base 0.50 -> 0.60 d=0.05: frozen R 31.3 recall 0.9470 | recalibrated R 33.0 recall 0.9522
+03:47:00 | INFO  | savemv.growth | scidocs base 0.50 -> 0.60 d=0.01: frozen R 67.2 recall 0.9905 | recalibrated R 72.0 recall 0.9918
+03:47:18 | INFO  | savemv.growth | scidocs base 0.50 -> 0.80 d=0.05: frozen R 31.9 recall 0.9376 | recalibrated R 36.7 recall 0.9525
+03:47:18 | INFO  | savemv.growth | scidocs base 0.50 -> 0.80 d=0.01: frozen R 68.5 recall 0.9872 | recalibrated R 86.5 recall 0.9918
+03:47:34 | INFO  | savemv.growth | scidocs base 0.50 -> 1.00 d=0.05: frozen R 32.2 recall 0.9312 | recalibrated R 39.6 recall 0.9531
+03:47:34 | INFO  | savemv.growth | scidocs base 0.50 -> 1.00 d=0.01: frozen R 69.1 recall 0.9842 | recalibrated R 91.1 recall 0.9917
+03:47:35 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.9595, empty=0
+03:47:35 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.9765, empty=0
+03:47:36 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.9770, empty=0
+03:47:37 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.9771, empty=0
+03:47:43 | INFO  | savemv.growth | scidocs base 0.80: codebook and estimates in 9 s
+03:48:10 | INFO  | savemv.growth | scidocs base 0.80 -> 0.80 d=0.05: frozen R 34.5 recall 0.9530 | recalibrated R 34.5 recall 0.9530
+03:48:10 | INFO  | savemv.growth | scidocs base 0.80 -> 0.80 d=0.01: frozen R 82.5 recall 0.9926 | recalibrated R 82.5 recall 0.9926
+03:48:25 | INFO  | savemv.growth | scidocs base 0.80 -> 1.00 d=0.05: frozen R 34.9 recall 0.9490 | recalibrated R 36.4 recall 0.9527
+03:48:25 | INFO  | savemv.growth | scidocs base 0.80 -> 1.00 d=0.01: frozen R 83.4 recall 0.9910 | recalibrated R 91.2 recall 0.9925
+03:48:25 | INFO  | savemv.growth | wrote outputs/growth/scidocs.json
+03:48:25 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+03:48:25 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+03:48:26 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.9659, empty=0
+03:48:27 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.9793, empty=0
+03:48:28 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.9797, empty=0
+03:48:28 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.9798, empty=0
+03:48:37 | INFO  | savemv.growth | fiqa base 0.50: codebook and estimates in 12 s
+03:48:55 | INFO  | savemv.growth | fiqa base 0.50 -> 0.50 d=0.05: frozen R 50.8 recall 0.9520 | recalibrated R 50.8 recall 0.9520
+03:48:55 | INFO  | savemv.growth | fiqa base 0.50 -> 0.50 d=0.01: frozen R 151.3 recall 0.9941 | recalibrated R 151.3 recall 0.9941
+03:49:07 | INFO  | savemv.growth | fiqa base 0.50 -> 0.60 d=0.05: frozen R 51.3 recall 0.9466 | recalibrated R 55.3 recall 0.9531
+03:49:07 | INFO  | savemv.growth | fiqa base 0.50 -> 0.60 d=0.01: frozen R 154.3 recall 0.9934 | recalibrated R 157.9 recall 0.9938
+03:49:20 | INFO  | savemv.growth | fiqa base 0.50 -> 0.80 d=0.05: frozen R 52.6 recall 0.9387 | recalibrated R 60.6 recall 0.9522
+03:49:20 | INFO  | savemv.growth | fiqa base 0.50 -> 0.80 d=0.01: frozen R 160.6 recall 0.9906 | recalibrated R 193.6 recall 0.9937
+03:49:35 | INFO  | savemv.growth | fiqa base 0.50 -> 1.00 d=0.05: frozen R 53.8 recall 0.9346 | recalibrated R 64.7 recall 0.9519
+03:49:35 | INFO  | savemv.growth | fiqa base 0.50 -> 1.00 d=0.01: frozen R 166.1 recall 0.9895 | recalibrated R 218.0 recall 0.9935
+03:49:35 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.9657, empty=0
+03:49:36 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.9791, empty=0
+03:49:37 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.9795, empty=0
+03:49:37 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.9796, empty=0
+03:49:46 | INFO  | savemv.growth | fiqa base 0.80: codebook and estimates in 12 s
+03:50:11 | INFO  | savemv.growth | fiqa base 0.80 -> 0.80 d=0.05: frozen R 60.6 recall 0.9526 | recalibrated R 60.6 recall 0.9526
+03:50:11 | INFO  | savemv.growth | fiqa base 0.80 -> 0.80 d=0.01: frozen R 161.9 recall 0.9920 | recalibrated R 161.9 recall 0.9920
+03:50:26 | INFO  | savemv.growth | fiqa base 0.80 -> 1.00 d=0.05: frozen R 62.0 recall 0.9455 | recalibrated R 66.3 recall 0.9517
+03:50:26 | INFO  | savemv.growth | fiqa base 0.80 -> 1.00 d=0.01: frozen R 166.4 recall 0.9900 | recalibrated R 187.1 recall 0.9924
+03:50:26 | INFO  | savemv.growth | wrote outputs/growth/fiqa.json
+03:50:27 | INFO  | savemv.data.beir | quora: 522931 docs, 1000 test queries
+03:50:31 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.9478, empty=0
+03:50:31 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.9694, empty=0
+03:50:32 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.9701, empty=0
+03:50:33 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.9702, empty=0
+03:50:46 | INFO  | savemv.growth | quora base 0.50: codebook and estimates in 18 s
+03:52:32 | INFO  | savemv.growth | quora base 0.50 -> 0.50 d=0.05: frozen R 86.0 recall 0.9504 | recalibrated R 86.0 recall 0.9504
+03:52:32 | INFO  | savemv.growth | quora base 0.50 -> 0.50 d=0.01: frozen R 369.5 recall 0.9913 | recalibrated R 369.5 recall 0.9913
+03:54:00 | INFO  | savemv.growth | quora base 0.50 -> 0.60 d=0.05: frozen R 85.3 recall 0.9475 | recalibrated R 91.3 recall 0.9509
+03:54:00 | INFO  | savemv.growth | quora base 0.50 -> 0.60 d=0.01: frozen R 366.4 recall 0.9904 | recalibrated R 418.4 recall 0.9911
+03:55:56 | INFO  | savemv.growth | quora base 0.50 -> 0.80 d=0.05: frozen R 81.8 recall 0.9435 | recalibrated R 92.0 recall 0.9511
+03:55:56 | INFO  | savemv.growth | quora base 0.50 -> 0.80 d=0.01: frozen R 356.0 recall 0.9885 | recalibrated R 417.9 recall 0.9912
+03:58:26 | INFO  | savemv.growth | quora base 0.50 -> 1.00 d=0.05: frozen R 80.3 recall 0.9422 | recalibrated R 89.3 recall 0.9524
+03:58:26 | INFO  | savemv.growth | quora base 0.50 -> 1.00 d=0.01: frozen R 348.5 recall 0.9884 | recalibrated R 406.9 recall 0.9907
+03:58:27 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.9481, empty=0
+03:58:27 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.9696, empty=0
+03:58:28 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.9703, empty=0
+03:58:29 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.9704, empty=0
+03:58:41 | INFO  | savemv.growth | quora base 0.80: codebook and estimates in 15 s
+04:01:20 | INFO  | savemv.growth | quora base 0.80 -> 0.80 d=0.05: frozen R 100.2 recall 0.9504 | recalibrated R 100.2 recall 0.9504
+04:01:20 | INFO  | savemv.growth | quora base 0.80 -> 0.80 d=0.01: frozen R 482.3 recall 0.9906 | recalibrated R 482.3 recall 0.9906
+04:03:56 | INFO  | savemv.growth | quora base 0.80 -> 1.00 d=0.05: frozen R 97.4 recall 0.9503 | recalibrated R 99.5 recall 0.9515
+04:03:56 | INFO  | savemv.growth | quora base 0.80 -> 1.00 d=0.01: frozen R 476.8 recall 0.9922 | recalibrated R 412.6 recall 0.9906
+04:03:56 | INFO  | savemv.growth | wrote outputs/growth/quora.json
+[stage] growth rc=0 2026-10-31T04:03:57Z
+ALL DONE 2026-10-31T04:03:57Z

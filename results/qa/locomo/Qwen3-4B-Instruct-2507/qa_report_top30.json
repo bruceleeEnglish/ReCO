@@ -1,0 +1,95 @@
+{
+  "config": {
+    "bench": "locomo",
+    "data": "data/memory/locomo10.json",
+    "out_root": "outputs/qa",
+    "model": "deepseek-flash",
+    "reader": "hf:models/Qwen3-4B-Instruct-2507",
+    "effort": "high",
+    "top": 30,
+    "retrievers": [
+      "colbert",
+      "reco-K64k+R",
+      "bm25",
+      "bge-base"
+    ],
+    "stop": "hazard",
+    "delta": 0.05,
+    "full_subset": 0,
+    "max_context": 0,
+    "max_questions": 400,
+    "workers": 8,
+    "judge2": null,
+    "judge2_sample": 0
+  },
+  "n_questions": 400,
+  "recompute": {
+    "reco-K64k+R": {
+      "rule": "hazard",
+      "R_mean": 59.45683997980818,
+      "R_p90": 88.0
+    }
+  },
+  "retrievers": {
+    "colbert": {
+      "n": 400,
+      "accuracy": 0.595,
+      "f1": 0.2008418039133421,
+      "prompt_tokens": 2184.2775,
+      "by_category": {
+        "multi-hop": 0.4358974358974359,
+        "open-domain": 0.28,
+        "single-hop": 0.8118811881188119,
+        "temporal": 0.3473684210526316
+      }
+    },
+    "reco-K64k+R": {
+      "n": 400,
+      "accuracy": 0.58,
+      "f1": 0.19826749052582562,
+      "prompt_tokens": 2249.3,
+      "by_category": {
+        "multi-hop": 0.38461538461538464,
+        "open-domain": 0.28,
+        "single-hop": 0.8168316831683168,
+        "temporal": 0.3157894736842105
+      },
+      "vs_colbert": {
+        "diff": -0.015,
+        "ci95": 0.030207620741746495
+      }
+    },
+    "bm25": {
+      "n": 400,
+      "accuracy": 0.52,
+      "f1": 0.1811719184274926,
+      "prompt_tokens": 2013.3875,
+      "by_category": {
+        "multi-hop": 0.41025641025641024,
+        "open-domain": 0.2,
+        "single-hop": 0.6782178217821783,
+        "temporal": 0.35789473684210527
+      },
+      "vs_colbert": {
+        "diff": -0.075,
+        "ci95": 0.04489852105562561
+      }
+    },
+    "bge-base": {
+      "n": 400,
+      "accuracy": 0.535,
+      "f1": 0.18948345803975555,
+      "prompt_tokens": 1807.6325,
+      "by_category": {
+        "multi-hop": 0.2692307692307692,
+        "open-domain": 0.2,
+        "single-hop": 0.7772277227722773,
+        "temporal": 0.3263157894736842
+      },
+      "vs_colbert": {
+        "diff": -0.06,
+        "ci95": 0.038179704354033485
+      }
+    }
+  }
+}

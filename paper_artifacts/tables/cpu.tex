@@ -1,0 +1,15 @@
+\filltable{7}{%
+\begin{tabular}{@{}l r rr r rr@{}}
+\toprule
+ & \multicolumn{3}{c}{LongMemEval-S} & \multicolumn{3}{c}{LoCoMo} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Retriever & B/unit & p50 & p90 & B/unit & p50 & p90 \\
+\midrule
+ColBERT, stored vectors & 41,475 & 20 & 22 & 6,004 & 18 & 19 \\
+\oursL \reco{}, $K$=64k & \ours 233 & \ours 906 & \ours 1,347 & \ours 58 & \ours 816 & \oursR 1,298 \\
+\oursL \reco{}, $K$=16k & \ours 182 & \ours 1,379 & \ours 1,875 & \ours 49 & \ours 1,121 & \oursR 1,823 \\
+Re-encode memory, no index & 0 & 14,185 & 15,625 & 0 & 5,114 & 7,375 \\
+bge-small & 768 & 18 & 24 & 768 & 14 & 15 \\
+BM25 & 244 & 0.2 & 0.3 & 38 & 0.1 & 0.2 \\
+\bottomrule
+\end{tabular}}

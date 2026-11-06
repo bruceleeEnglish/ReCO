@@ -1,0 +1,38 @@
+03:29:53 | INFO  | savemv.data.beir | scifact: 5183 docs, 300 test queries
+03:29:53 | INFO  | savemv.data.beir | scifact: 5183 docs, 809 train queries
+03:29:53 | INFO  | savemv.train_calibration | scifact: 809 train queries, 807 without test overlap, using 807
+03:29:57 | INFO  | savemv.train_calibration | scifact: 300 test + 807 train queries, 5183 docs, paths in 2 s
+03:30:02 | INFO  | savemv.train_calibration | scifact split 0: d=0.05 hazard 40 (0.943) | d=0.01 hazard 92 (0.991)
+03:30:07 | INFO  | savemv.train_calibration | scifact split 1: d=0.05 hazard 42 (0.949) | d=0.01 hazard 99 (0.992)
+03:30:13 | INFO  | savemv.train_calibration | scifact split 2: d=0.05 hazard 41 (0.947) | d=0.01 hazard 100 (0.993)
+03:30:18 | INFO  | savemv.train_calibration | scifact split 3: d=0.05 hazard 42 (0.946) | d=0.01 hazard 105 (0.993)
+03:30:23 | INFO  | savemv.train_calibration | scifact split 4: d=0.05 hazard 40 (0.943) | d=0.01 hazard 101 (0.993)
+03:30:23 | INFO  | savemv.train_calibration | scifact d=0.05 | fixed 45 (0.945) | margin 46 (0.945) | patience 43 (0.947) | hazard 41 (0.946) | probtopk 42 (0.944) | laet 43 (0.946) | darth 61 (0.949) | darth_declared 67 (0.964)
+03:30:23 | INFO  | savemv.train_calibration | scifact d=0.01 | fixed 128 (0.991) | margin 135 (0.993) | patience 108 (0.991) | hazard 99 (0.992) | probtopk 104 (0.992) | laet 112 (0.993) | darth 695 (0.991) | darth_declared 147 (0.988)
+03:30:23 | INFO  | savemv.train_calibration | wrote outputs/train_calibration/scifact.json
+03:30:23 | INFO  | savemv.data.beir | nfcorpus: 3633 docs, 323 test queries
+03:30:23 | INFO  | savemv.data.beir | nfcorpus: 3633 docs, 2590 train queries
+03:30:23 | INFO  | savemv.train_calibration | nfcorpus: 2590 train queries, 2587 without test overlap, using 1000
+03:30:25 | INFO  | savemv.train_calibration | nfcorpus: 323 test + 1000 train queries, 3633 docs, paths in 1 s
+03:30:31 | INFO  | savemv.train_calibration | nfcorpus split 0: d=0.05 hazard 109 (0.953) | d=0.01 hazard 341 (0.992)
+03:30:36 | INFO  | savemv.train_calibration | nfcorpus split 1: d=0.05 hazard 108 (0.950) | d=0.01 hazard 333 (0.992)
+03:30:42 | INFO  | savemv.train_calibration | nfcorpus split 2: d=0.05 hazard 105 (0.947) | d=0.01 hazard 363 (0.993)
+03:30:48 | INFO  | savemv.train_calibration | nfcorpus split 3: d=0.05 hazard 105 (0.949) | d=0.01 hazard 401 (0.994)
+03:30:53 | INFO  | savemv.train_calibration | nfcorpus split 4: d=0.05 hazard 104 (0.946) | d=0.01 hazard 306 (0.990)
+03:30:53 | INFO  | savemv.train_calibration | nfcorpus d=0.05 | fixed 154 (0.943) | margin 139 (0.953) | patience 118 (0.945) | hazard 106 (0.949) | probtopk 146 (0.949) | laet 141 (0.951) | darth 221 (0.947) | darth_declared 271 (0.968)
+03:30:53 | INFO  | savemv.train_calibration | nfcorpus d=0.01 | fixed 641 (0.987) | margin 559 (0.994) | patience 461 (0.988) | hazard 349 (0.992) | probtopk 505 (0.991) | laet 440 (0.992) | darth 955 (0.989) | darth_declared 796 (0.988)
+03:30:53 | INFO  | savemv.train_calibration | wrote outputs/train_calibration/nfcorpus.json
+03:30:54 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+03:30:54 | INFO  | savemv.data.beir | fiqa: 57638 docs, 5500 train queries
+03:30:54 | INFO  | savemv.train_calibration | fiqa: 5500 train queries, 5500 without test overlap, using 1000
+03:30:54 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+03:30:54 | INFO  | savemv.experiments.pipeline | excluding 92 (query, document) pairs with identical ids
+03:31:34 | INFO  | savemv.train_calibration | fiqa: 648 test + 1000 train queries, 57638 docs, paths in 29 s
+03:31:48 | INFO  | savemv.train_calibration | fiqa split 0: d=0.05 hazard 61 (0.949) | d=0.01 hazard 187 (0.992)
+03:32:02 | INFO  | savemv.train_calibration | fiqa split 1: d=0.05 hazard 61 (0.949) | d=0.01 hazard 201 (0.994)
+03:32:17 | INFO  | savemv.train_calibration | fiqa split 2: d=0.05 hazard 63 (0.952) | d=0.01 hazard 159 (0.991)
+03:32:32 | INFO  | savemv.train_calibration | fiqa split 3: d=0.05 hazard 63 (0.953) | d=0.01 hazard 186 (0.993)
+03:32:47 | INFO  | savemv.train_calibration | fiqa split 4: d=0.05 hazard 60 (0.947) | d=0.01 hazard 173 (0.992)
+03:32:47 | INFO  | savemv.train_calibration | fiqa d=0.05 | fixed 70 (0.951) | margin 77 (0.955) | patience 67 (0.952) | hazard 62 (0.950) | probtopk 67 (0.951) | laet 72 (0.953) | darth 176 (0.951) | darth_declared 218 (0.973)
+03:32:47 | INFO  | savemv.train_calibration | fiqa d=0.01 | fixed 232 (0.992) | margin 253 (0.991) | patience 207 (0.993) | hazard 181 (0.992) | probtopk 221 (0.992) | laet 194 (0.992) | darth 768 (0.992) | darth_declared 690 (0.991)
+03:32:47 | INFO  | savemv.train_calibration | wrote outputs/train_calibration/fiqa.json

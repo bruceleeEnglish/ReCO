@@ -1,0 +1,19 @@
+\filltable{10}{%
+\begin{tabular}{@{}l r rrrrrrr r@{}}
+\toprule
+ & Index size & \multicolumn{7}{c}{nDCG@10} & Avg. \\
+\cmidrule(lr){3-9}
+Method & ($\times$raw text) & SciFact & NFCorpus & ArguAna & SCIDOCS & FiQA & TREC-COVID & Quora & (\%) \\
+\midrule
+\textit{ColBERT, uncompressed}~\cite{colbert} & \textit{28--48} & \textit{0.746} & \textit{0.370} & \textit{0.454} & \textit{0.185} & \textit{0.413} & \textit{0.831} & \textit{0.880} & \textit{100.0} \\
+\midrule
+PLAID (2-bit)~\cite{colbertv2,plaid} & 4.0--6.7 & 0.736 & 0.368 & 0.450 & 0.183 & 0.406 & 0.827 & 0.875 & 99.0 \\
+WARP (XTR, 4-bit)$^\dagger$~\cite{warp} & 14--20 & 0.699 & 0.333 & 0.419 & 0.152 & 0.335 & 0.718 & 0.857 & 89.0 \\
+WARP (XTR, 2-bit)$^\dagger$~\cite{warp} & 7.8--11 & 0.704 & 0.332 & 0.414 & 0.149 & 0.331 & 0.723 & 0.851 & 88.5 \\
+TokenPool ($\times$2, 2-bit)~\cite{pooling} & 2.0--3.6 & 0.734 & 0.363 & 0.429 & 0.178 & 0.405 & 0.825 & 0.840 & 97.2 \\
+ConstBERT (32 vectors)$^\dagger$~\cite{constbert} & 5.1--132 & 0.620 & 0.327 & \textbf{0.554} & 0.157 & 0.323 & 0.752 & 0.827 & 91.6 \\
+MUVERA (FDE only, $R$=20)$^\S$~\cite{muvera} & 1.2--21 & 0.274 & 0.075 & 0.041 & 0.047 & 0.072 & 0.177 & 0.339 & 24.1 \\
+\oursL \reco{}, $\delta{=}0.05$$^\ddagger$ & \ours \textbf{0.22--0.53} & \ours 0.737 & \ours \textbf{0.370} & \ours 0.448 & \ours 0.181 & \ours 0.405 & \ours 0.831 & \ours 0.877 & \oursR 99.0 \\
+\oursL \reco{}, $\delta{=}0.01$$^\ddagger$ & \ours \textbf{0.22--0.53} & \ours \textbf{0.742} & \ours \textbf{0.370} & \ours 0.454 & \ours \textbf{0.184} & \ours \textbf{0.411} & \ours \textbf{0.832} & \ours \textbf{0.880} & \oursR \textbf{99.8} \\
+\bottomrule
+\end{tabular}}

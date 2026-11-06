@@ -1,0 +1,25 @@
+\filltable{5}{%
+\begin{tabular}{@{}l rr rr@{}}
+\toprule
+ & \multicolumn{2}{c}{$K=4$k} & \multicolumn{2}{c}{$K=16$k} \\
+\cmidrule(lr){2-3}\cmidrule(l){4-5}
+Variant & $\delta{=}0.05$ & $\delta{=}0.01$ & $\delta{=}0.05$ & $\delta{=}0.01$ \\
+\midrule
+\oursL \reco{} (full hazard model) & \ours 1.00 & \ours 1.00 & \ours 1.00 & \oursR 1.00 \\
+\addlinespace[2pt]
+Residual-risk target & 1.21$\times$ & 1.24$\times$ & 1.10$\times$ & 1.20$\times$ \\
+\addlinespace[2pt]
+Margin only (= TA-Margin) & 1.41$\times$ & 1.83$\times$ & 1.07$\times$ & 1.24$\times$ \\
+Patience only (= Patience) & 1.09$\times$ & 1.33$\times$ & 1.11$\times$ & 1.33$\times$ \\
+\addlinespace[2pt]
+Margin + patience & 1.02$\times$ & 1.04$\times$ & 1.01$\times$ & 1.02$\times$ \\
+w/o online margin & 1.01$\times$ & 1.00$\times$ & 1.01$\times$ & 1.05$\times$ \\
+w/o flatness & 0.99$\times$ & 1.01$\times$ & 1.00$\times$ & 0.99$\times$ \\
+\addlinespace[2pt]
+horizon $H=16$ & 0.99$\times$ & 1.00$\times$ & 0.98$\times$ & 1.01$\times$ \\
+horizon $H=256$ & 1.08$\times$ & 1.06$\times$ & 1.03$\times$ & 1.06$\times$ \\
+\addlinespace[2pt]
+Gradient-boosted trees & 17$\times$ & 11$\times$ & 29$\times$ & 51$\times$ \\
+FixedBudget & 1.30$\times$ & 1.66$\times$ & 1.20$\times$ & 1.63$\times$ \\
+\bottomrule
+\end{tabular}}

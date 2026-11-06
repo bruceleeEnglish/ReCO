@@ -1,0 +1,42 @@
+# ReCo with leave-one-dataset-out ("universal") codebooks, added to the results of configs/beir_bench.yaml.
+# Train the codebooks first: scripts/stopping/train_universal_codebook.py configs/beir_bench.yaml --datasets ...
+dataset: fiqa
+data_root: data
+output_root: outputs
+split: test
+hf_endpoint: https://hf-mirror.com
+exclude_identical_ids: true
+
+encoder:
+  repo: models/answerai-colbert-small-v1
+  query_maxlen: 32
+  doc_maxlen: 300
+  batch_size: 256
+  device: cuda:0
+  fp16: true
+
+sketch:                      # k-means settings shared by the ReCo sketch and every residual codec
+  codebook_sizes: [16384]
+  kmeans_iters: 15
+  points_per_centroid: 32
+  min_train_points: 200000
+  seed: 0
+
+stop:
+  k: 10
+  deltas: [0.1, 0.05, 0.01]
+  batch: 8
+  folds: 5                   # every query is tested once; calibration uses the other folds
+  fit_fraction: 0.4
+  calib_top: 200
+  seed: 0
+
+latency:
+  enabled: false
+
+bench:
+  workers: 32
+  methods:
+    - {kind: reco, codebook_size: 4096, codebook: "models/codebooks/loo-{dataset}_K{k}.npy"}
+    - {kind: reco, codebook_size: 16384, codebook: "models/codebooks/loo-{dataset}_K{k}.npy"}
+    - {kind: reco, codebook_size: 65536, codebook: "models/codebooks/loo-{dataset}_K{k}.npy"}

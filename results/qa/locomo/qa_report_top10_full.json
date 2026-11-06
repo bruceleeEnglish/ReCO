@@ -1,0 +1,188 @@
+{
+  "config": {
+    "bench": "locomo",
+    "data": "data/memory/locomo10.json",
+    "out_root": "outputs/qa",
+    "model": "deepseek-flash",
+    "reader": "api",
+    "effort": "high",
+    "top": 10,
+    "retrievers": [
+      "oracle",
+      "colbert",
+      "reco-K64k+R",
+      "reco-K64k",
+      "bge-base",
+      "bm25"
+    ],
+    "stop": "hazard",
+    "delta": 0.05,
+    "full_subset": 200,
+    "max_context": 0,
+    "max_questions": 400,
+    "workers": 32,
+    "judge2": "deepseek-v4-pro",
+    "judge2_sample": 300
+  },
+  "n_questions": 400,
+  "recompute": {
+    "reco-K64k+R": {
+      "rule": "hazard",
+      "R_mean": 59.45683997980818,
+      "R_p90": 88.0
+    }
+  },
+  "retrievers": {
+    "oracle": {
+      "n": 400,
+      "accuracy": 0.76,
+      "f1": 0.4767901103809847,
+      "prompt_tokens": 221.17,
+      "by_category": {
+        "multi-hop": 0.6410256410256411,
+        "open-domain": 0.48,
+        "single-hop": 0.8415841584158416,
+        "temporal": 0.7578947368421053
+      },
+      "vs_colbert": {
+        "diff": 0.1,
+        "ci95": 0.046543697634305804
+      }
+    },
+    "colbert": {
+      "n": 400,
+      "accuracy": 0.66,
+      "f1": 0.34432146190737606,
+      "prompt_tokens": 775.3,
+      "by_category": {
+        "multi-hop": 0.3717948717948718,
+        "open-domain": 0.52,
+        "single-hop": 0.7524752475247525,
+        "temporal": 0.7368421052631579
+      }
+    },
+    "reco-K64k+R": {
+      "n": 400,
+      "accuracy": 0.6675,
+      "f1": 0.347224344468934,
+      "prompt_tokens": 779.435,
+      "by_category": {
+        "multi-hop": 0.3717948717948718,
+        "open-domain": 0.6,
+        "single-hop": 0.7524752475247525,
+        "temporal": 0.7473684210526316
+      },
+      "vs_colbert": {
+        "diff": 0.0075,
+        "ci95": 0.014700000000000001
+      }
+    },
+    "reco-K64k": {
+      "n": 400,
+      "accuracy": 0.6625,
+      "f1": 0.3467477186709608,
+      "prompt_tokens": 822.4575,
+      "by_category": {
+        "multi-hop": 0.3717948717948718,
+        "open-domain": 0.52,
+        "single-hop": 0.7722772277227723,
+        "temporal": 0.7052631578947368
+      },
+      "vs_colbert": {
+        "diff": 0.0025,
+        "ci95": 0.0350359639788864
+      }
+    },
+    "bge-base": {
+      "n": 400,
+      "accuracy": 0.535,
+      "f1": 0.27958838002013103,
+      "prompt_tokens": 636.4125,
+      "by_category": {
+        "multi-hop": 0.2692307692307692,
+        "open-domain": 0.4,
+        "single-hop": 0.6237623762376238,
+        "temporal": 0.6
+      },
+      "vs_colbert": {
+        "diff": -0.125,
+        "ci95": 0.04155761167005749
+      }
+    },
+    "bm25": {
+      "n": 400,
+      "accuracy": 0.5175,
+      "f1": 0.3047804544195441,
+      "prompt_tokens": 720.8725,
+      "by_category": {
+        "multi-hop": 0.28205128205128205,
+        "open-domain": 0.32,
+        "single-hop": 0.594059405940594,
+        "temporal": 0.6
+      },
+      "vs_colbert": {
+        "diff": -0.1425,
+        "ci95": 0.04778826289137782
+      }
+    },
+    "full": {
+      "n": 200,
+      "accuracy": 0.86,
+      "f1": 0.4294784475641346,
+      "prompt_tokens": 33452.395,
+      "by_category": {
+        "multi-hop": 0.7368421052631579,
+        "open-domain": 0.6,
+        "single-hop": 0.9230769230769231,
+        "temporal": 0.875
+      },
+      "vs_colbert": {
+        "diff": 0.195,
+        "ci95": 0.06007880754124443
+      }
+    }
+  },
+  "judge_check": {
+    "judge2": "deepseek-v4-pro",
+    "n": 300,
+    "agreement": 0.9866666666666667,
+    "kappa": 0.9714013346043852,
+    "accuracy_by_retriever": {
+      "bge-base": {
+        "judge1": 0.45098039215686275,
+        "judge2": 0.45098039215686275,
+        "n": 51
+      },
+      "bm25": {
+        "judge1": 0.5,
+        "judge2": 0.5,
+        "n": 50
+      },
+      "colbert": {
+        "judge1": 0.6458333333333334,
+        "judge2": 0.6458333333333334,
+        "n": 48
+      },
+      "full": {
+        "judge1": 0.85,
+        "judge2": 0.75,
+        "n": 20
+      },
+      "oracle": {
+        "judge1": 0.8695652173913043,
+        "judge2": 0.8695652173913043,
+        "n": 46
+      },
+      "reco-K64k": {
+        "judge1": 0.6410256410256411,
+        "judge2": 0.6410256410256411,
+        "n": 39
+      },
+      "reco-K64k+R": {
+        "judge1": 0.6304347826086957,
+        "judge2": 0.6304347826086957,
+        "n": 46
+      }
+    }
+  }
+}

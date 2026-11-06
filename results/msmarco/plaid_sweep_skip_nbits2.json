@@ -1,0 +1,48 @@
+{
+ "engine": "colbert-ai 0.2.22 (PLAID)",
+ "nbits": 2,
+ "queries": 1000,
+ "device": "gpu",
+ "points": [
+  {
+   "ncells": 4,
+   "centroid_score_threshold": 0.4,
+   "ndocs": 4096,
+   "answered": 999,
+   "skipped": 1,
+   "latency_ms": {
+    "mean": 137.70202140429163,
+    "p50": 110.52006296813488,
+    "p90": 243.42158483341342,
+    "p99": 439.6338046807795,
+    "n": 999
+   },
+   "wall_s": 138.32826668256894,
+   "qps": 7.221951260999111,
+   "mrr10": 0.36898207731541066,
+   "recall_vs_exact10": 0.8529529529529529,
+   "recall_with_skipped_as_miss": 0.8520999999999923,
+   "peak_gpu_gb": 21.6489344
+  },
+  {
+   "ncells": 6,
+   "centroid_score_threshold": 0.4,
+   "ndocs": 4096,
+   "answered": 995,
+   "skipped": 5,
+   "latency_ms": {
+    "mean": 185.963274171136,
+    "p50": 153.160213958472,
+    "p90": 317.3211336135865,
+    "p99": 493.168213292956,
+    "n": 995
+   },
+   "wall_s": 187.83630343386903,
+   "qps": 5.297165573481948,
+   "mrr10": 0.36803661162957646,
+   "recall_vs_exact10": 0.8541708542713569,
+   "recall_with_skipped_as_miss": 0.8498999999999921,
+   "peak_gpu_gb": 24.08922368
+  }
+ ]
+}

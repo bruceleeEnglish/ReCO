@@ -1,0 +1,36 @@
+{
+ "dataset": "fiqa",
+ "n_docs": 57638,
+ "n_tokens": 7314136,
+ "dim": 96,
+ "device": "cuda:0",
+ "raw_bytes_per_doc": 768.1821020854297,
+ "methods": {
+  "colbert-fp16": {
+   "train_s": 0.0,
+   "per_token_s": 0.0,
+   "insert_ms_per_doc": 0.43845007638446987,
+   "bytes_per_doc": 24368.379610673514
+  },
+  "colbertv2-2bit": {
+   "k": 32768,
+   "train_s": 9.62565658800304,
+   "per_token_s": 11.537669721990824,
+   "insert_ms_per_doc": 0.638624782689179,
+   "bytes_per_doc": 3287.480845969673
+  },
+  "reco-K16384": {
+   "train_s": 2.4908387940376997,
+   "per_token_s": 8.475734563078731,
+   "insert_ms_per_doc": 0.5855012329665639,
+   "bytes_per_doc": 155.67206096672334
+  },
+  "reco-K16384-U": {
+   "train_s": 0.0,
+   "per_token_s": 8.572772222105414,
+   "insert_ms_per_doc": 0.5871848038577585,
+   "bytes_per_doc": 135.97279572504252
+  }
+ },
+ "encode_ms_per_doc": 0.43845007638446987
+}

@@ -1,0 +1,20 @@
+\filltable{7}{%
+\begin{tabular}{@{}l rrrrrr@{}}
+\toprule
+ & \multicolumn{3}{c}{$\delta{=}0.05$} & \multicolumn{3}{c}{$\delta{=}0.01$} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Rule & SciF. & NFC. & FiQA & SciF. & NFC. & FiQA \\
+\midrule
+FixedBudget & 45 & 154 & 70 & 128 & 641 & 232 \\
+TA-Margin~\cite{fagin} & 46 & 139 & 77 & 135 & 559 & 253 \\
+Patience~\cite{pip} & 43 & 118 & 67 & 108 & 461 & 207 \\
+ProbTopK~\cite{theobald} & 42 & 146 & 67 & 104 & 505 & 221 \\
+LAET~\cite{learnedterm} & 43 & 141 & 72 & 112 & 440 & 194 \\
+DARTH~\cite{darth} & 61 & 221 & 176 & 695 & 955 & 768 \\
+\oursL \reco{} & \ours \textbf{41} & \ours \textbf{106} & \ours \textbf{62} & \ours \textbf{99} & \ours \textbf{349} & \oursR \textbf{181} \\
+\quad\textit{Saving over best other} & \textit{2\%} & \textit{10\%} & \textit{8\%} & \textit{5\%} & \textit{21\%} & \textit{6\%} \\
+\quad\textit{achieved recall} & \textit{0.945}$^\times$ & \textit{0.949}$^\times$ & \textit{0.950} & \textit{0.992} & \textit{0.992} & \textit{0.992} \\
+\midrule
+\quad\textit{\reco{}-D, test folds}$^\ddagger$ & \textit{44} & \textit{115} & \textit{61} & \textit{100} & \textit{329} & \textit{155} \\
+\bottomrule
+\end{tabular}}

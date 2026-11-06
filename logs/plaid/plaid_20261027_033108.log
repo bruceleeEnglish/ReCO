@@ -1,0 +1,713 @@
++ '[' -f .env.sh ']'
++ source .env.sh
+++ unset http_proxy https_proxy
+++ export CUDA_VISIBLE_DEVICES=0
+++ CUDA_VISIBLE_DEVICES=0
+++ export HF_ENDPOINT=https://hf-mirror.com
+++ HF_ENDPOINT=https://hf-mirror.com
+++ export HF_HUB_DISABLE_XET=1
+++ HF_HUB_DISABLE_XET=1
+++ export HF_HUB_OFFLINE=1
+++ HF_HUB_OFFLINE=1
+++ export TRANSFORMERS_OFFLINE=1
+++ TRANSFORMERS_OFFLINE=1
++ nv=/usr/local/lib/python3.10/dist-packages/nvidia
++ export LD_LIBRARY_PATH=/usr/local/lib/python3.10/dist-packages/nvidia/cublas/lib:/usr/local/lib/python3.10/dist-packages/nvidia/cuda_runtime/lib:
++ LD_LIBRARY_PATH=/usr/local/lib/python3.10/dist-packages/nvidia/cublas/lib:/usr/local/lib/python3.10/dist-packages/nvidia/cuda_runtime/lib:
++ export CUDA_HOME=/usr/local/cuda-12.3 PATH=<repo>/.venv_plaid/bin:/usr/local/cuda-12.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++ CUDA_HOME=/usr/local/cuda-12.3
++ PATH=<repo>/.venv_plaid/bin:/usr/local/cuda-12.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++ py=.venv_plaid/bin/python
++ '[' -f outputs/plaid/collection.tsv ']'
++ CUDA_VISIBLE_DEVICES=0,1
++ .venv_plaid/bin/python scripts/plaid_msmarco.py index --nbits 2 --nranks 2
+
+
+[Oct 27, 03:31:12] #> Note: Output directory outputs/plaid/msmarco/indexes/msmarco.nbits2 already exists
+
+
+[Oct 27, 03:31:12] #> Will delete 8 files already at outputs/plaid/msmarco/indexes/msmarco.nbits2 in 20 seconds...
+#> Starting...
+#> Starting...
+nranks = 2 	 num_gpus = 2 	 device=0
+[pid 3606457] init_process_group timeout 3:00:00
+nranks = 2 	 num_gpus = 2 	 device=1
+[pid 3606458] init_process_group timeout 3:00:00
+[Oct 27, 03:31:37] #> Loading collection...
+0M {
+    "query_token_id": "[unused0]",
+    "doc_token_id": "[unused1]",
+    "query_token": "[Q]",
+    "doc_token": "[D]",
+    "ncells": null,
+    "centroid_score_threshold": null,
+    "ndocs": null,
+    "load_index_with_mmap": false,
+    "index_path": null,
+    "index_bsize": 64,
+    "nbits": 2,
+    "kmeans_niters": 4,
+    "resume": false,
+    "pool_factor": 1,
+    "clustering_mode": "hierarchical",
+    "protected_tokens": 0,
+    "similarity": "cosine",
+    "bsize": 64,
+    "accumsteps": 1,
+    "lr": 1e-5,
+    "maxsteps": 15626,
+    "save_every": null,
+    "warmup": 781,
+    "warmup_bert": null,
+    "relu": false,
+    "nway": 32,
+    "use_ib_negatives": false,
+    "reranker": false,
+    "distillation_alpha": 1.0,
+    "ignore_scores": false,
+    "model_name": "models\/answerai-colbert-small-v1-colbertai",
+    "query_maxlen": 32,
+    "attend_to_mask_tokens": false,
+    "interaction": "colbert",
+    "dim": 96,
+    "doc_maxlen": 300,
+    "mask_punctuation": true,
+    "checkpoint": "models\/answerai-colbert-small-v1-colbertai",
+    "triples": "\/home\/bclavie\/colbertv2.5_en\/data\/msmarco\/triplets.jsonl",
+    "collection": "outputs\/plaid\/collection.tsv",
+    "queries": "\/home\/bclavie\/colbertv2.5_en\/data\/msmarco\/queries.tsv",
+    "index_name": "msmarco.nbits2",
+    "overwrite": false,
+    "root": "outputs\/plaid",
+    "experiment": "msmarco",
+    "index_root": null,
+    "name": "2026-10\/27\/03.31.09",
+    "rank": 0,
+    "nranks": 2,
+    "amp": true,
+    "gpus": 2,
+    "avoid_fork_if_possible": false
+}
+[Oct 27, 03:31:37] #> Loading collection...
+0M 1M 1M 2M 2M 3M 3M 4M 4M 5M 5M 6M 6M 7M 7M 8M 8M 
+[Oct 27, 03:31:49] [0] 		 # of sampled PIDs = 521173 	 sampled_pids[:3] = [6989721, 170610, 5010345]
+[Oct 27, 03:31:52] [0] 		 #> Encoding 260664 passages..
+
+[Oct 27, 03:31:52] [1] 		 #> Encoding 260509 passages..
+[Oct 27, 03:35:27] [1] 		 avg_doclen_est = 67.60347747802734 	 len(local_sample) = 260,509
+[Oct 27, 03:35:27] [0] 		 avg_doclen_est = 67.60347747802734 	 len(local_sample) = 260,664
+[Oct 27, 03:35:30] [0] 		 Creating 262,144 partitions.
+[Oct 27, 03:35:30] [0] 		 *Estimated* 597,737,982 embeddings.
+[Oct 27, 03:35:30] [0] 		 #> Saving the indexing plan to outputs/plaid/msmarco/indexes/msmarco.nbits2/plan.json ..
+Clustering 35183115 points in 96D to 262144 clusters, redo 1 times, 4 iterations
+  Preprocessing in 1.76 s
+  Iteration 0 (156.16 s, search 148.59 s): objective=1.4997e+06 imbalance=1.868 nsplit=0         Iteration 1 (313.17 s, search 298.56 s): objective=1.0656e+06 imbalance=1.441 nsplit=81         Iteration 2 (466.85 s, search 448.51 s): objective=1.00276e+06 imbalance=1.349 nsplit=20         Iteration 3 (623.03 s, search 598.59 s): objective=966009 imbalance=1.313 nsplit=0       [Oct 27, 03:46:05] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 27, 03:46:05] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[0.013, 0.014, 0.013, 0.014, 0.013, 0.013, 0.013, 0.014, 0.015, 0.013, 0.013, 0.014, 0.015, 0.013, 0.013, 0.016, 0.012, 0.015, 0.014, 0.013, 0.013, 0.013, 0.015, 0.013, 0.013, 0.014, 0.013, 0.014, 0.013, 0.013, 0.013, 0.013, 0.013, 0.013, 0.014, 0.014, 0.013, 0.014, 0.014, 0.015, 0.014, 0.014, 0.014, 0.014, 0.013, 0.015, 0.014, 0.014, 0.013, 0.014, 0.014, 0.013, 0.014, 0.013, 0.013, 0.013, 0.014, 0.014, 0.013, 0.014, 0.014, 0.014, 0.014, 0.014, 0.014, 0.014, 0.014, 0.013, 0.013, 0.014, 0.014, 0.013, 0.013, 0.014, 0.013, 0.013, 0.013, 0.014, 0.014, 0.014, 0.014, 0.013, 0.015, 0.014, 0.014, 0.014, 0.013, 0.014, 0.013, 0.013, 0.014, 0.014, 0.014, 0.015, 0.014, 0.014]
+[Oct 27, 03:46:05] #> Got bucket_cutoffs_quantiles = tensor([0.2500, 0.5000, 0.7500], device='cuda:0') and bucket_weights_quantiles = tensor([0.1250, 0.3750, 0.6250, 0.8750], device='cuda:0')
+[Oct 27, 03:46:05] #> Got bucket_cutoffs = tensor([-1.0742e-02,  9.1553e-05,  1.0925e-02], device='cuda:0') and bucket_weights = tensor([-0.0193, -0.0048,  0.0049,  0.0195], device='cuda:0')
+[Oct 27, 03:46:05] avg_residual = 0.0136871337890625
+[Oct 27, 03:46:06] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+0it [00:00, ?it/s][Oct 27, 03:46:06] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:46:06] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 27, 03:46:06] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:46:26] [0] 		 #> Saving chunk 0: 	 25,000 passages and 1,598,945 embeddings. From #0 onward.
+1it [00:23, 23.05s/it][Oct 27, 03:46:29] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:46:29] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:46:49] [0] 		 #> Saving chunk 2: 	 25,000 passages and 1,591,687 embeddings. From #50,000 onward.
+2it [00:45, 22.82s/it][Oct 27, 03:46:51] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:46:53] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:47:11] [0] 		 #> Saving chunk 4: 	 25,000 passages and 1,702,552 embeddings. From #100,000 onward.
+3it [01:08, 22.79s/it][Oct 27, 03:47:14] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:47:18] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:47:33] [0] 		 #> Saving chunk 6: 	 25,000 passages and 1,663,635 embeddings. From #150,000 onward.
+4it [01:30, 22.53s/it][Oct 27, 03:47:36] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:47:41] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:47:55] [0] 		 #> Saving chunk 8: 	 25,000 passages and 1,685,762 embeddings. From #200,000 onward.
+5it [01:52, 22.25s/it][Oct 27, 03:47:58] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:48:06] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:48:18] [0] 		 #> Saving chunk 10: 	 25,000 passages and 1,673,508 embeddings. From #250,000 onward.
+6it [02:15, 22.39s/it][Oct 27, 03:48:21] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:48:29] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:48:41] [0] 		 #> Saving chunk 12: 	 25,000 passages and 1,691,789 embeddings. From #300,000 onward.
+7it [02:38, 22.61s/it][Oct 27, 03:48:44] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:48:54] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:49:04] [0] 		 #> Saving chunk 14: 	 25,000 passages and 1,701,287 embeddings. From #350,000 onward.
+8it [03:01, 22.78s/it][Oct 27, 03:49:07] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:49:16] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:49:26] [0] 		 #> Saving chunk 16: 	 25,000 passages and 1,675,451 embeddings. From #400,000 onward.
+9it [03:23, 22.50s/it][Oct 27, 03:49:29] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:49:39] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:49:48] [0] 		 #> Saving chunk 18: 	 25,000 passages and 1,689,503 embeddings. From #450,000 onward.
+10it [03:44, 22.29s/it][Oct 27, 03:49:51] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:50:03] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:50:11] [0] 		 #> Saving chunk 20: 	 25,000 passages and 1,692,345 embeddings. From #500,000 onward.
+11it [04:07, 22.49s/it][Oct 27, 03:50:14] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:50:27] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:50:33] [0] 		 #> Saving chunk 22: 	 25,000 passages and 1,660,829 embeddings. From #550,000 onward.
+12it [04:30, 22.40s/it][Oct 27, 03:50:36] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:50:51] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:50:56] [0] 		 #> Saving chunk 24: 	 25,000 passages and 1,671,427 embeddings. From #600,000 onward.
+13it [04:53, 22.58s/it][Oct 27, 03:50:59] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:51:14] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:51:19] [0] 		 #> Saving chunk 26: 	 25,000 passages and 1,679,845 embeddings. From #650,000 onward.
+14it [05:15, 22.65s/it][Oct 27, 03:51:22] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:51:38] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:51:42] [0] 		 #> Saving chunk 28: 	 25,000 passages and 1,693,469 embeddings. From #700,000 onward.
+15it [05:39, 22.88s/it][Oct 27, 03:51:45] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:52:00] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:52:04] [0] 		 #> Saving chunk 30: 	 25,000 passages and 1,691,249 embeddings. From #750,000 onward.
+16it [06:01, 22.65s/it][Oct 27, 03:52:07] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:52:24] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:52:27] [0] 		 #> Saving chunk 32: 	 25,000 passages and 1,703,438 embeddings. From #800,000 onward.
+17it [06:23, 22.58s/it][Oct 27, 03:52:30] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:52:49] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:52:49] [0] 		 #> Saving chunk 34: 	 25,000 passages and 1,677,517 embeddings. From #850,000 onward.
+18it [06:46, 22.55s/it][Oct 27, 03:52:52] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:53:11] [0] 		 #> Saving chunk 36: 	 25,000 passages and 1,691,256 embeddings. From #900,000 onward.
+[Oct 27, 03:53:13] [1] 		 #> Encoding 25000 passages..
+19it [07:07, 22.29s/it][Oct 27, 03:53:14] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:53:33] [0] 		 #> Saving chunk 38: 	 25,000 passages and 1,699,842 embeddings. From #950,000 onward.
+20it [07:30, 22.30s/it][Oct 27, 03:53:36] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:53:37] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:53:55] [0] 		 #> Saving chunk 40: 	 25,000 passages and 1,709,359 embeddings. From #1,000,000 onward.
+21it [07:52, 22.12s/it][Oct 27, 03:53:58] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:54:00] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:54:19] [0] 		 #> Saving chunk 42: 	 25,000 passages and 1,687,960 embeddings. From #1,050,000 onward.
+22it [08:15, 22.64s/it][Oct 27, 03:54:22] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:54:25] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:54:42] [0] 		 #> Saving chunk 44: 	 25,000 passages and 1,693,563 embeddings. From #1,100,000 onward.
+23it [08:39, 22.81s/it][Oct 27, 03:54:45] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:54:50] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:55:05] [0] 		 #> Saving chunk 46: 	 25,000 passages and 1,696,589 embeddings. From #1,150,000 onward.
+24it [09:01, 22.81s/it][Oct 27, 03:55:08] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:55:17] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:55:29] [0] 		 #> Saving chunk 48: 	 25,000 passages and 1,678,144 embeddings. From #1,200,000 onward.
+25it [09:25, 23.17s/it][Oct 27, 03:55:32] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:55:40] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:55:52] [0] 		 #> Saving chunk 50: 	 25,000 passages and 1,661,832 embeddings. From #1,250,000 onward.
+26it [09:49, 23.17s/it][Oct 27, 03:55:55] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:56:02] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:56:16] [0] 		 #> Saving chunk 52: 	 25,000 passages and 1,687,997 embeddings. From #1,300,000 onward.
+27it [10:13, 23.56s/it][Oct 27, 03:56:19] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:56:26] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:56:39] [0] 		 #> Saving chunk 54: 	 25,000 passages and 1,700,531 embeddings. From #1,350,000 onward.
+28it [10:36, 23.41s/it][Oct 27, 03:56:42] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:56:52] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:57:03] [0] 		 #> Saving chunk 56: 	 25,000 passages and 1,696,839 embeddings. From #1,400,000 onward.
+29it [11:00, 23.44s/it][Oct 27, 03:57:06] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:57:16] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:57:27] [0] 		 #> Saving chunk 58: 	 25,000 passages and 1,688,799 embeddings. From #1,450,000 onward.
+30it [11:24, 23.77s/it][Oct 27, 03:57:30] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:57:41] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:57:51] [0] 		 #> Saving chunk 60: 	 25,000 passages and 1,682,476 embeddings. From #1,500,000 onward.
+31it [11:47, 23.62s/it][Oct 27, 03:57:54] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:58:05] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:58:14] [0] 		 #> Saving chunk 62: 	 25,000 passages and 1,690,359 embeddings. From #1,550,000 onward.
+32it [12:11, 23.56s/it][Oct 27, 03:58:17] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:58:29] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:58:36] [0] 		 #> Saving chunk 64: 	 25,000 passages and 1,673,964 embeddings. From #1,600,000 onward.
+33it [12:33, 23.19s/it][Oct 27, 03:58:39] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:58:52] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:58:58] [0] 		 #> Saving chunk 66: 	 25,000 passages and 1,685,750 embeddings. From #1,650,000 onward.
+34it [12:55, 22.85s/it][Oct 27, 03:59:02] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:59:16] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:59:22] [0] 		 #> Saving chunk 68: 	 25,000 passages and 1,684,289 embeddings. From #1,700,000 onward.
+35it [13:19, 23.17s/it][Oct 27, 03:59:25] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 03:59:39] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 03:59:46] [0] 		 #> Saving chunk 70: 	 25,000 passages and 1,702,680 embeddings. From #1,750,000 onward.
+36it [13:43, 23.44s/it][Oct 27, 03:59:49] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:00:02] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:00:10] [0] 		 #> Saving chunk 72: 	 25,000 passages and 1,707,749 embeddings. From #1,800,000 onward.
+37it [14:07, 23.49s/it][Oct 27, 04:00:13] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:00:26] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:00:34] [0] 		 #> Saving chunk 74: 	 25,000 passages and 1,704,566 embeddings. From #1,850,000 onward.
+38it [14:31, 23.59s/it][Oct 27, 04:00:37] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:00:48] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:00:58] [0] 		 #> Saving chunk 76: 	 25,000 passages and 1,684,813 embeddings. From #1,900,000 onward.
+39it [14:54, 23.67s/it][Oct 27, 04:01:01] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:01:12] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:01:22] [0] 		 #> Saving chunk 78: 	 25,000 passages and 1,697,049 embeddings. From #1,950,000 onward.
+40it [15:18, 23.70s/it][Oct 27, 04:01:25] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:01:35] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:01:44] [0] 		 #> Saving chunk 80: 	 25,000 passages and 1,718,931 embeddings. From #2,000,000 onward.
+41it [15:41, 23.38s/it][Oct 27, 04:01:47] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:01:58] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:02:08] [0] 		 #> Saving chunk 82: 	 25,000 passages and 1,703,056 embeddings. From #2,050,000 onward.
+42it [16:04, 23.44s/it][Oct 27, 04:02:11] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:02:21] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:02:31] [0] 		 #> Saving chunk 84: 	 25,000 passages and 1,684,041 embeddings. From #2,100,000 onward.
+43it [16:28, 23.41s/it][Oct 27, 04:02:34] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:02:45] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:02:53] [0] 		 #> Saving chunk 86: 	 25,000 passages and 1,702,286 embeddings. From #2,150,000 onward.
+44it [16:50, 23.00s/it][Oct 27, 04:02:56] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:03:10] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:03:16] [0] 		 #> Saving chunk 88: 	 25,000 passages and 1,688,956 embeddings. From #2,200,000 onward.
+45it [17:13, 23.01s/it][Oct 27, 04:03:19] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:03:34] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:03:39] [0] 		 #> Saving chunk 90: 	 25,000 passages and 1,675,535 embeddings. From #2,250,000 onward.
+46it [17:36, 23.05s/it][Oct 27, 04:03:42] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:03:57] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:04:03] [0] 		 #> Saving chunk 92: 	 25,000 passages and 1,653,603 embeddings. From #2,300,000 onward.
+47it [17:59, 23.09s/it][Oct 27, 04:04:06] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:04:22] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:04:25] [0] 		 #> Saving chunk 94: 	 25,000 passages and 1,670,644 embeddings. From #2,350,000 onward.
+48it [18:22, 22.88s/it][Oct 27, 04:04:28] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:04:47] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:04:48] [0] 		 #> Saving chunk 96: 	 25,000 passages and 1,677,939 embeddings. From #2,400,000 onward.
+49it [18:45, 22.96s/it][Oct 27, 04:04:51] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:05:12] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:05:12] [0] 		 #> Saving chunk 98: 	 25,000 passages and 1,664,656 embeddings. From #2,450,000 onward.
+50it [19:09, 23.25s/it][Oct 27, 04:05:15] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:05:34] [0] 		 #> Saving chunk 100: 	 25,000 passages and 1,673,787 embeddings. From #2,500,000 onward.
+[Oct 27, 04:05:37] [1] 		 #> Encoding 25000 passages..
+51it [19:31, 23.01s/it][Oct 27, 04:05:37] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:05:58] [0] 		 #> Saving chunk 102: 	 25,000 passages and 1,673,654 embeddings. From #2,550,000 onward.
+[Oct 27, 04:06:00] [1] 		 #> Encoding 25000 passages..
+52it [19:54, 23.10s/it][Oct 27, 04:06:01] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:06:20] [0] 		 #> Saving chunk 104: 	 25,000 passages and 1,657,226 embeddings. From #2,600,000 onward.
+[Oct 27, 04:06:23] [1] 		 #> Encoding 25000 passages..
+53it [20:17, 22.99s/it][Oct 27, 04:06:23] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:06:43] [0] 		 #> Saving chunk 106: 	 25,000 passages and 1,658,234 embeddings. From #2,650,000 onward.
+54it [20:40, 22.89s/it][Oct 27, 04:06:46] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:06:47] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:07:07] [0] 		 #> Saving chunk 108: 	 25,000 passages and 1,680,401 embeddings. From #2,700,000 onward.
+55it [21:03, 23.08s/it][Oct 27, 04:07:10] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:07:11] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:07:31] [0] 		 #> Saving chunk 110: 	 25,000 passages and 1,658,526 embeddings. From #2,750,000 onward.
+56it [21:28, 23.46s/it][Oct 27, 04:07:34] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:07:35] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:07:54] [0] 		 #> Saving chunk 112: 	 25,000 passages and 1,668,595 embeddings. From #2,800,000 onward.
+57it [21:50, 23.22s/it][Oct 27, 04:07:57] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:07:58] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:08:16] [0] 		 #> Saving chunk 114: 	 25,000 passages and 1,696,152 embeddings. From #2,850,000 onward.
+58it [22:13, 23.05s/it][Oct 27, 04:08:19] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:08:21] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:08:40] [0] 		 #> Saving chunk 116: 	 25,000 passages and 1,690,617 embeddings. From #2,900,000 onward.
+59it [22:37, 23.21s/it][Oct 27, 04:08:43] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:08:44] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:09:03] [0] 		 #> Saving chunk 118: 	 25,000 passages and 1,665,866 embeddings. From #2,950,000 onward.
+60it [23:00, 23.17s/it][Oct 27, 04:09:06] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:09:09] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:09:26] [0] 		 #> Saving chunk 120: 	 25,000 passages and 1,680,473 embeddings. From #3,000,000 onward.
+61it [23:23, 23.13s/it][Oct 27, 04:09:29] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:09:32] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:09:49] [0] 		 #> Saving chunk 122: 	 25,000 passages and 1,690,425 embeddings. From #3,050,000 onward.
+62it [23:46, 23.08s/it][Oct 27, 04:09:52] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:09:54] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:10:13] [0] 		 #> Saving chunk 124: 	 25,000 passages and 1,681,311 embeddings. From #3,100,000 onward.
+63it [24:10, 23.32s/it][Oct 27, 04:10:16] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:10:17] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:10:36] [0] 		 #> Saving chunk 126: 	 25,000 passages and 1,667,287 embeddings. From #3,150,000 onward.
+64it [24:33, 23.24s/it][Oct 27, 04:10:39] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:10:40] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:10:59] [0] 		 #> Saving chunk 128: 	 25,000 passages and 1,673,755 embeddings. From #3,200,000 onward.
+65it [24:56, 23.31s/it][Oct 27, 04:11:02] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:11:03] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:11:23] [0] 		 #> Saving chunk 130: 	 25,000 passages and 1,689,720 embeddings. From #3,250,000 onward.
+66it [25:20, 23.39s/it][Oct 27, 04:11:26] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:11:26] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:11:46] [0] 		 #> Saving chunk 132: 	 25,000 passages and 1,659,229 embeddings. From #3,300,000 onward.
+67it [25:43, 23.31s/it][Oct 27, 04:11:49] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:11:50] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:12:10] [0] 		 #> Saving chunk 134: 	 25,000 passages and 1,686,286 embeddings. From #3,350,000 onward.
+68it [26:07, 23.44s/it][Oct 27, 04:12:13] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:12:14] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:12:33] [0] 		 #> Saving chunk 136: 	 25,000 passages and 1,702,440 embeddings. From #3,400,000 onward.
+69it [26:29, 23.25s/it][Oct 27, 04:12:36] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:12:39] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:12:55] [0] 		 #> Saving chunk 138: 	 25,000 passages and 1,688,308 embeddings. From #3,450,000 onward.
+70it [26:52, 23.12s/it][Oct 27, 04:12:58] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:13:03] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:13:19] [0] 		 #> Saving chunk 140: 	 25,000 passages and 1,673,265 embeddings. From #3,500,000 onward.
+71it [27:16, 23.20s/it][Oct 27, 04:13:22] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:13:25] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:13:41] [0] 		 #> Saving chunk 142: 	 25,000 passages and 1,685,659 embeddings. From #3,550,000 onward.
+72it [27:38, 22.94s/it][Oct 27, 04:13:44] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:13:48] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:14:05] [0] 		 #> Saving chunk 144: 	 25,000 passages and 1,694,487 embeddings. From #3,600,000 onward.
+73it [28:02, 23.15s/it][Oct 27, 04:14:08] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:14:11] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:14:28] [0] 		 #> Saving chunk 146: 	 25,000 passages and 1,700,016 embeddings. From #3,650,000 onward.
+74it [28:25, 23.17s/it][Oct 27, 04:14:31] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:14:36] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:14:50] [0] 		 #> Saving chunk 148: 	 25,000 passages and 1,682,184 embeddings. From #3,700,000 onward.
+75it [28:47, 22.75s/it][Oct 27, 04:14:53] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:14:58] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:15:12] [0] 		 #> Saving chunk 150: 	 25,000 passages and 1,698,770 embeddings. From #3,750,000 onward.
+76it [29:09, 22.75s/it][Oct 27, 04:15:16] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:15:20] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:15:36] [0] 		 #> Saving chunk 152: 	 25,000 passages and 1,692,017 embeddings. From #3,800,000 onward.
+77it [29:33, 23.00s/it][Oct 27, 04:15:39] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:15:43] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:16:00] [0] 		 #> Saving chunk 154: 	 25,000 passages and 1,695,624 embeddings. From #3,850,000 onward.
+78it [29:56, 23.13s/it][Oct 27, 04:16:03] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:16:05] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:16:22] [0] 		 #> Saving chunk 156: 	 25,000 passages and 1,691,732 embeddings. From #3,900,000 onward.
+79it [30:19, 23.01s/it][Oct 27, 04:16:25] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:16:28] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:16:46] [0] 		 #> Saving chunk 158: 	 25,000 passages and 1,692,071 embeddings. From #3,950,000 onward.
+80it [30:42, 23.12s/it][Oct 27, 04:16:49] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:16:51] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:17:09] [0] 		 #> Saving chunk 160: 	 25,000 passages and 1,678,505 embeddings. From #4,000,000 onward.
+81it [31:06, 23.30s/it][Oct 27, 04:17:12] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:17:15] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:17:33] [0] 		 #> Saving chunk 162: 	 25,000 passages and 1,678,104 embeddings. From #4,050,000 onward.
+82it [31:30, 23.47s/it][Oct 27, 04:17:36] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:17:40] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:17:55] [0] 		 #> Saving chunk 164: 	 25,000 passages and 1,685,847 embeddings. From #4,100,000 onward.
+83it [31:52, 22.93s/it][Oct 27, 04:17:58] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:18:02] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:18:17] [0] 		 #> Saving chunk 166: 	 25,000 passages and 1,711,330 embeddings. From #4,150,000 onward.
+84it [32:14, 22.69s/it][Oct 27, 04:18:20] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:18:27] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:18:40] [0] 		 #> Saving chunk 168: 	 25,000 passages and 1,679,125 embeddings. From #4,200,000 onward.
+85it [32:37, 22.72s/it][Oct 27, 04:18:43] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:18:49] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:19:03] [0] 		 #> Saving chunk 170: 	 25,000 passages and 1,686,969 embeddings. From #4,250,000 onward.
+86it [32:59, 22.72s/it][Oct 27, 04:19:06] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:19:12] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:19:24] [0] 		 #> Saving chunk 172: 	 25,000 passages and 1,682,537 embeddings. From #4,300,000 onward.
+87it [33:21, 22.49s/it][Oct 27, 04:19:28] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:19:36] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:19:48] [0] 		 #> Saving chunk 174: 	 25,000 passages and 1,702,487 embeddings. From #4,350,000 onward.
+88it [33:45, 22.85s/it][Oct 27, 04:19:51] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:19:59] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:20:11] [0] 		 #> Saving chunk 176: 	 25,000 passages and 1,689,761 embeddings. From #4,400,000 onward.
+89it [34:07, 22.70s/it][Oct 27, 04:20:14] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:20:23] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:20:35] [0] 		 #> Saving chunk 178: 	 25,000 passages and 1,688,244 embeddings. From #4,450,000 onward.
+90it [34:31, 23.10s/it][Oct 27, 04:20:38] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:20:46] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:20:58] [0] 		 #> Saving chunk 180: 	 25,000 passages and 1,690,190 embeddings. From #4,500,000 onward.
+91it [34:55, 23.26s/it][Oct 27, 04:21:01] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:21:11] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:21:21] [0] 		 #> Saving chunk 182: 	 25,000 passages and 1,689,055 embeddings. From #4,550,000 onward.
+92it [35:18, 23.15s/it][Oct 27, 04:21:24] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:21:33] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:21:44] [0] 		 #> Saving chunk 184: 	 25,000 passages and 1,688,701 embeddings. From #4,600,000 onward.
+93it [35:41, 23.06s/it][Oct 27, 04:21:47] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:21:55] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:22:08] [0] 		 #> Saving chunk 186: 	 25,000 passages and 1,692,975 embeddings. From #4,650,000 onward.
+94it [36:04, 23.23s/it][Oct 27, 04:22:11] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:22:19] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:22:30] [0] 		 #> Saving chunk 188: 	 25,000 passages and 1,686,720 embeddings. From #4,700,000 onward.
+95it [36:27, 23.10s/it][Oct 27, 04:22:33] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:22:42] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:22:55] [0] 		 #> Saving chunk 190: 	 25,000 passages and 1,699,593 embeddings. From #4,750,000 onward.
+96it [36:52, 23.48s/it][Oct 27, 04:22:58] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:23:05] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:23:18] [0] 		 #> Saving chunk 192: 	 25,000 passages and 1,691,678 embeddings. From #4,800,000 onward.
+97it [37:15, 23.40s/it][Oct 27, 04:23:21] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:23:28] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:23:42] [0] 		 #> Saving chunk 194: 	 25,000 passages and 1,691,665 embeddings. From #4,850,000 onward.
+98it [37:39, 23.74s/it][Oct 27, 04:23:46] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:23:52] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:24:06] [0] 		 #> Saving chunk 196: 	 25,000 passages and 1,675,967 embeddings. From #4,900,000 onward.
+99it [38:03, 23.64s/it][Oct 27, 04:24:09] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:24:17] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:24:28] [0] 		 #> Saving chunk 198: 	 25,000 passages and 1,697,186 embeddings. From #4,950,000 onward.
+100it [38:25, 23.11s/it][Oct 27, 04:24:31] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:24:41] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:24:50] [0] 		 #> Saving chunk 200: 	 25,000 passages and 1,677,395 embeddings. From #5,000,000 onward.
+101it [38:46, 22.76s/it][Oct 27, 04:24:53] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:25:06] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:25:12] [0] 		 #> Saving chunk 202: 	 25,000 passages and 1,706,725 embeddings. From #5,050,000 onward.
+102it [39:09, 22.73s/it][Oct 27, 04:25:15] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:25:31] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:25:36] [0] 		 #> Saving chunk 204: 	 25,000 passages and 1,696,845 embeddings. From #5,100,000 onward.
+103it [39:33, 22.93s/it][Oct 27, 04:25:39] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:25:54] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:25:59] [0] 		 #> Saving chunk 206: 	 25,000 passages and 1,696,722 embeddings. From #5,150,000 onward.
+104it [39:55, 22.89s/it][Oct 27, 04:26:02] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:26:19] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:26:23] [0] 		 #> Saving chunk 208: 	 25,000 passages and 1,695,049 embeddings. From #5,200,000 onward.
+105it [40:20, 23.46s/it][Oct 27, 04:26:26] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:26:42] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:26:46] [0] 		 #> Saving chunk 210: 	 25,000 passages and 1,697,453 embeddings. From #5,250,000 onward.
+106it [40:43, 23.23s/it][Oct 27, 04:26:49] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:27:06] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:27:09] [0] 		 #> Saving chunk 212: 	 25,000 passages and 1,695,767 embeddings. From #5,300,000 onward.
+107it [41:05, 23.03s/it][Oct 27, 04:27:12] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:27:29] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:27:31] [0] 		 #> Saving chunk 214: 	 25,000 passages and 1,684,847 embeddings. From #5,350,000 onward.
+108it [41:27, 22.76s/it][Oct 27, 04:27:34] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:27:52] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:27:54] [0] 		 #> Saving chunk 216: 	 25,000 passages and 1,703,925 embeddings. From #5,400,000 onward.
+109it [41:50, 22.83s/it][Oct 27, 04:27:57] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:28:15] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:28:17] [0] 		 #> Saving chunk 218: 	 25,000 passages and 1,754,984 embeddings. From #5,450,000 onward.
+110it [42:14, 22.99s/it][Oct 27, 04:28:20] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:28:38] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:28:40] [0] 		 #> Saving chunk 220: 	 25,000 passages and 1,753,220 embeddings. From #5,500,000 onward.
+111it [42:37, 23.08s/it][Oct 27, 04:28:43] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:29:03] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:29:04] [0] 		 #> Saving chunk 222: 	 25,000 passages and 1,756,273 embeddings. From #5,550,000 onward.
+112it [43:01, 23.36s/it][Oct 27, 04:29:07] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:29:26] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:29:28] [0] 		 #> Saving chunk 224: 	 25,000 passages and 1,753,957 embeddings. From #5,600,000 onward.
+113it [43:24, 23.34s/it][Oct 27, 04:29:31] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:29:51] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:29:52] [0] 		 #> Saving chunk 226: 	 25,000 passages and 1,742,203 embeddings. From #5,650,000 onward.
+114it [43:49, 23.77s/it][Oct 27, 04:29:56] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:30:15] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:30:15] [0] 		 #> Saving chunk 228: 	 25,000 passages and 1,750,220 embeddings. From #5,700,000 onward.
+115it [44:12, 23.50s/it][Oct 27, 04:30:18] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:30:38] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:30:39] [0] 		 #> Saving chunk 230: 	 25,000 passages and 1,759,609 embeddings. From #5,750,000 onward.
+116it [44:36, 23.48s/it][Oct 27, 04:30:42] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:31:02] [0] 		 #> Saving chunk 232: 	 25,000 passages and 1,759,425 embeddings. From #5,800,000 onward.
+[Oct 27, 04:31:03] [1] 		 #> Encoding 25000 passages..
+117it [44:59, 23.34s/it][Oct 27, 04:31:05] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:31:24] [0] 		 #> Saving chunk 234: 	 25,000 passages and 1,761,976 embeddings. From #5,850,000 onward.
+118it [45:21, 23.17s/it][Oct 27, 04:31:28] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:31:28] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:31:47] [0] 		 #> Saving chunk 236: 	 25,000 passages and 1,767,755 embeddings. From #5,900,000 onward.
+119it [45:44, 23.10s/it][Oct 27, 04:31:51] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:31:51] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:32:11] [0] 		 #> Saving chunk 238: 	 25,000 passages and 1,722,053 embeddings. From #5,950,000 onward.
+120it [46:08, 23.30s/it][Oct 27, 04:32:14] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:32:17] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:32:34] [0] 		 #> Saving chunk 240: 	 25,000 passages and 1,772,056 embeddings. From #6,000,000 onward.
+121it [46:31, 23.18s/it][Oct 27, 04:32:37] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:32:39] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:32:57] [0] 		 #> Saving chunk 242: 	 25,000 passages and 1,767,240 embeddings. From #6,050,000 onward.
+122it [46:54, 23.00s/it][Oct 27, 04:33:00] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:33:03] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:33:19] [0] 		 #> Saving chunk 244: 	 25,000 passages and 1,722,002 embeddings. From #6,100,000 onward.
+123it [47:16, 22.84s/it][Oct 27, 04:33:22] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:33:26] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:33:44] [0] 		 #> Saving chunk 246: 	 25,000 passages and 2,149,874 embeddings. From #6,150,000 onward.
+124it [47:41, 23.61s/it][Oct 27, 04:33:48] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:33:49] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:34:08] [0] 		 #> Saving chunk 248: 	 25,000 passages and 2,160,253 embeddings. From #6,200,000 onward.
+125it [48:05, 23.70s/it][Oct 27, 04:34:12] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:34:13] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:34:33] [0] 		 #> Saving chunk 250: 	 25,000 passages and 2,168,580 embeddings. From #6,250,000 onward.
+[Oct 27, 04:34:36] [1] 		 #> Encoding 25000 passages..
+126it [48:30, 24.09s/it][Oct 27, 04:34:37] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:34:57] [0] 		 #> Saving chunk 252: 	 25,000 passages and 2,056,946 embeddings. From #6,300,000 onward.
+127it [48:55, 24.20s/it][Oct 27, 04:35:01] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:35:02] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:35:22] [0] 		 #> Saving chunk 254: 	 25,000 passages and 1,747,734 embeddings. From #6,350,000 onward.
+128it [49:19, 24.32s/it][Oct 27, 04:35:26] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:35:27] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:35:46] [0] 		 #> Saving chunk 256: 	 25,000 passages and 1,761,873 embeddings. From #6,400,000 onward.
+129it [49:43, 24.00s/it][Oct 27, 04:35:49] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:35:53] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:36:09] [0] 		 #> Saving chunk 258: 	 25,000 passages and 1,765,469 embeddings. From #6,450,000 onward.
+130it [50:06, 23.91s/it][Oct 27, 04:36:13] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:36:16] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:36:34] [0] 		 #> Saving chunk 260: 	 25,000 passages and 1,758,584 embeddings. From #6,500,000 onward.
+131it [50:31, 24.03s/it][Oct 27, 04:36:37] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:36:41] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:36:57] [0] 		 #> Saving chunk 262: 	 25,000 passages and 1,742,762 embeddings. From #6,550,000 onward.
+132it [50:54, 23.84s/it][Oct 27, 04:37:00] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:37:05] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:37:21] [0] 		 #> Saving chunk 264: 	 25,000 passages and 1,770,178 embeddings. From #6,600,000 onward.
+133it [51:18, 23.80s/it][Oct 27, 04:37:24] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:37:30] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:37:45] [0] 		 #> Saving chunk 266: 	 25,000 passages and 1,741,807 embeddings. From #6,650,000 onward.
+134it [51:42, 23.81s/it][Oct 27, 04:37:48] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:37:54] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:38:08] [0] 		 #> Saving chunk 268: 	 25,000 passages and 1,721,071 embeddings. From #6,700,000 onward.
+135it [52:05, 23.60s/it][Oct 27, 04:38:11] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:38:17] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:38:32] [0] 		 #> Saving chunk 270: 	 25,000 passages and 1,707,958 embeddings. From #6,750,000 onward.
+136it [52:29, 23.73s/it][Oct 27, 04:38:35] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:38:40] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:38:56] [0] 		 #> Saving chunk 272: 	 25,000 passages and 1,730,718 embeddings. From #6,800,000 onward.
+137it [52:53, 23.76s/it][Oct 27, 04:38:59] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:39:03] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:39:19] [0] 		 #> Saving chunk 274: 	 25,000 passages and 1,717,215 embeddings. From #6,850,000 onward.
+138it [53:15, 23.52s/it][Oct 27, 04:39:22] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:39:27] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:39:41] [0] 		 #> Saving chunk 276: 	 25,000 passages and 1,691,223 embeddings. From #6,900,000 onward.
+139it [53:38, 23.18s/it][Oct 27, 04:39:44] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:39:51] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:40:05] [0] 		 #> Saving chunk 278: 	 25,000 passages and 1,706,755 embeddings. From #6,950,000 onward.
+140it [54:02, 23.33s/it][Oct 27, 04:40:08] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:40:13] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:40:28] [0] 		 #> Saving chunk 280: 	 25,000 passages and 1,710,359 embeddings. From #7,000,000 onward.
+141it [54:25, 23.38s/it][Oct 27, 04:40:31] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:40:37] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:40:52] [0] 		 #> Saving chunk 282: 	 25,000 passages and 1,711,440 embeddings. From #7,050,000 onward.
+142it [54:49, 23.50s/it][Oct 27, 04:40:55] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:41:00] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:41:15] [0] 		 #> Saving chunk 284: 	 25,000 passages and 1,535,966 embeddings. From #7,100,000 onward.
+143it [55:12, 23.34s/it][Oct 27, 04:41:18] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:41:24] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:41:38] [0] 		 #> Saving chunk 286: 	 25,000 passages and 1,537,605 embeddings. From #7,150,000 onward.
+144it [55:34, 23.06s/it][Oct 27, 04:41:41] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:41:48] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:42:01] [0] 		 #> Saving chunk 288: 	 25,000 passages and 1,541,076 embeddings. From #7,200,000 onward.
+145it [55:57, 23.07s/it][Oct 27, 04:42:04] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:42:12] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:42:25] [0] 		 #> Saving chunk 290: 	 25,000 passages and 1,528,873 embeddings. From #7,250,000 onward.
+146it [56:21, 23.37s/it][Oct 27, 04:42:28] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:42:35] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:42:49] [0] 		 #> Saving chunk 292: 	 25,000 passages and 1,690,493 embeddings. From #7,300,000 onward.
+147it [56:46, 23.65s/it][Oct 27, 04:42:52] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:42:58] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:43:13] [0] 		 #> Saving chunk 294: 	 25,000 passages and 1,719,659 embeddings. From #7,350,000 onward.
+148it [57:10, 23.88s/it][Oct 27, 04:43:16] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:43:21] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:43:38] [0] 		 #> Saving chunk 296: 	 25,000 passages and 1,661,843 embeddings. From #7,400,000 onward.
+149it [57:34, 24.03s/it][Oct 27, 04:43:41] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:43:44] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:44:00] [0] 		 #> Saving chunk 298: 	 25,000 passages and 1,632,363 embeddings. From #7,450,000 onward.
+150it [57:57, 23.59s/it][Oct 27, 04:44:03] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:44:06] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:44:23] [0] 		 #> Saving chunk 300: 	 25,000 passages and 1,645,493 embeddings. From #7,500,000 onward.
+151it [58:20, 23.40s/it][Oct 27, 04:44:26] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:44:30] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:44:46] [0] 		 #> Saving chunk 302: 	 25,000 passages and 1,637,770 embeddings. From #7,550,000 onward.
+152it [58:43, 23.24s/it][Oct 27, 04:44:49] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:44:53] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:45:08] [0] 		 #> Saving chunk 304: 	 25,000 passages and 1,627,118 embeddings. From #7,600,000 onward.
+153it [59:05, 22.83s/it][Oct 27, 04:45:11] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:45:17] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:45:31] [0] 		 #> Saving chunk 306: 	 25,000 passages and 1,627,860 embeddings. From #7,650,000 onward.
+154it [59:27, 22.72s/it][Oct 27, 04:45:33] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:45:41] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:45:53] [0] 		 #> Saving chunk 308: 	 25,000 passages and 1,632,641 embeddings. From #7,700,000 onward.
+155it [59:50, 22.71s/it][Oct 27, 04:45:56] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:46:05] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:46:15] [0] 		 #> Saving chunk 310: 	 25,000 passages and 1,614,312 embeddings. From #7,750,000 onward.
+156it [1:00:12, 22.40s/it][Oct 27, 04:46:18] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:46:27] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:46:38] [0] 		 #> Saving chunk 312: 	 25,000 passages and 1,629,545 embeddings. From #7,800,000 onward.
+157it [1:00:34, 22.54s/it][Oct 27, 04:46:41] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:46:51] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:47:00] [0] 		 #> Saving chunk 314: 	 25,000 passages and 1,623,390 embeddings. From #7,850,000 onward.
+158it [1:00:57, 22.46s/it][Oct 27, 04:47:03] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:47:13] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:47:23] [0] 		 #> Saving chunk 316: 	 25,000 passages and 1,599,861 embeddings. From #7,900,000 onward.
+159it [1:01:19, 22.53s/it][Oct 27, 04:47:26] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:47:36] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:47:46] [0] 		 #> Saving chunk 318: 	 25,000 passages and 1,623,835 embeddings. From #7,950,000 onward.
+160it [1:01:43, 22.74s/it][Oct 27, 04:47:49] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:47:59] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:48:09] [0] 		 #> Saving chunk 320: 	 25,000 passages and 1,653,503 embeddings. From #8,000,000 onward.
+161it [1:02:06, 22.95s/it][Oct 27, 04:48:12] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:48:23] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:48:33] [0] 		 #> Saving chunk 322: 	 25,000 passages and 1,538,371 embeddings. From #8,050,000 onward.
+162it [1:02:30, 23.22s/it][Oct 27, 04:48:36] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:48:47] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:48:57] [0] 		 #> Saving chunk 324: 	 25,000 passages and 1,521,662 embeddings. From #8,100,000 onward.
+163it [1:02:53, 23.19s/it][Oct 27, 04:48:59] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:49:10] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:49:20] [0] 		 #> Saving chunk 326: 	 25,000 passages and 1,537,078 embeddings. From #8,150,000 onward.
+164it [1:03:17, 23.30s/it][Oct 27, 04:49:23] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:49:34] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:49:41] [0] 		 #> Saving chunk 328: 	 25,000 passages and 1,499,368 embeddings. From #8,200,000 onward.
+165it [1:03:37, 22.56s/it][Oct 27, 04:49:44] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:49:57] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:50:04] [0] 		 #> Saving chunk 330: 	 25,000 passages and 1,695,321 embeddings. From #8,250,000 onward.
+166it [1:04:01, 22.86s/it][Oct 27, 04:50:07] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:50:20] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:50:27] [0] 		 #> Saving chunk 332: 	 25,000 passages and 1,730,081 embeddings. From #8,300,000 onward.
+167it [1:04:24, 22.89s/it][Oct 27, 04:50:30] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:50:43] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:50:50] [0] 		 #> Saving chunk 334: 	 25,000 passages and 1,649,710 embeddings. From #8,350,000 onward.
+168it [1:04:46, 22.77s/it][Oct 27, 04:50:53] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:51:07] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:51:13] [0] 		 #> Saving chunk 336: 	 25,000 passages and 1,648,774 embeddings. From #8,400,000 onward.
+169it [1:05:10, 22.91s/it][Oct 27, 04:51:16] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:51:31] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:51:37] [0] 		 #> Saving chunk 338: 	 25,000 passages and 1,654,163 embeddings. From #8,450,000 onward.
+170it [1:05:34, 23.33s/it][Oct 27, 04:51:40] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:51:54] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:52:00] [0] 		 #> Saving chunk 340: 	 25,000 passages and 1,646,752 embeddings. From #8,500,000 onward.
+171it [1:05:57, 23.18s/it][Oct 27, 04:52:03] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:52:18] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:52:23] [0] 		 #> Saving chunk 342: 	 25,000 passages and 1,640,445 embeddings. From #8,550,000 onward.
+172it [1:06:19, 23.00s/it][Oct 27, 04:52:26] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:52:41] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:52:46] [0] 		 #> Saving chunk 344: 	 25,000 passages and 1,651,311 embeddings. From #8,600,000 onward.
+173it [1:06:43, 23.17s/it][Oct 27, 04:52:49] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:53:04] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:53:09] [0] 		 #> Saving chunk 346: 	 25,000 passages and 1,603,836 embeddings. From #8,650,000 onward.
+174it [1:07:06, 23.06s/it][Oct 27, 04:53:12] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:53:28] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:53:31] [0] 		 #> Saving chunk 348: 	 25,000 passages and 1,618,623 embeddings. From #8,700,000 onward.
+175it [1:07:28, 22.84s/it][Oct 27, 04:53:34] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:53:52] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:53:54] [0] 		 #> Saving chunk 350: 	 25,000 passages and 1,612,146 embeddings. From #8,750,000 onward.
+176it [1:07:51, 22.78s/it][Oct 27, 04:53:57] [0] 		 #> Encoding 25000 passages..
+[Oct 27, 04:54:15] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:54:16] [0] 		 #> Saving chunk 352: 	 25,000 passages and 1,622,197 embeddings. From #8,800,000 onward.
+177it [1:08:13, 22.61s/it]177it [1:08:13, 23.13s/it]
+[Oct 27, 04:54:37] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:54:58] [1] 		 #> Encoding 25000 passages..
+[Oct 27, 04:55:21] [1] 		 #> Encoding 16823 passages..
+[Oct 27, 04:55:35] [0] 		 #> Checking all files were saved...
+[Oct 27, 04:55:35] [0] 		 Found all files!
+[Oct 27, 04:55:35] [0] 		 #> Building IVF...
+[Oct 27, 04:55:36] [0] 		 #> Loading codes...
+  0%|          | 0/354 [00:00<?, ?it/s]  8%|▊         | 28/354 [00:00<00:01, 278.04it/s] 16%|█▌        | 56/354 [00:00<00:01, 233.20it/s] 25%|██▍       | 88/354 [00:00<00:00, 268.89it/s] 34%|███▍      | 122/354 [00:00<00:00, 293.13it/s] 44%|████▍     | 155/354 [00:00<00:00, 305.76it/s] 53%|█████▎    | 189/354 [00:00<00:00, 316.31it/s] 62%|██████▏   | 221/354 [00:00<00:00, 317.31it/s] 71%|███████▏  | 253/354 [00:00<00:00, 308.11it/s] 80%|████████  | 284/354 [00:00<00:00, 307.70it/s] 90%|████████▉ | 317/354 [00:01<00:00, 312.05it/s] 99%|█████████▉| 350/354 [00:01<00:00, 315.09it/s]100%|██████████| 354/354 [00:01<00:00, 303.57it/s]
+[Oct 27, 04:55:37] [0] 		 Sorting codes...
+[Oct 27, 04:55:51] [0] 		 Getting unique codes...
+[Oct 27, 04:55:52] #> Optimizing IVF to store map from centroids to list of pids..
+[Oct 27, 04:55:52] #> Building the emb2pid mapping..
+[Oct 27, 04:56:17] len(emb2pid) = 597909919
+  0%|          | 0/262144 [00:00<?, ?it/s]  0%|          | 572/262144 [00:00<00:45, 5719.12it/s]  1%|          | 1620/262144 [00:00<00:30, 8518.07it/s]  1%|          | 2897/262144 [00:00<00:24, 10457.08it/s]  2%|▏         | 4073/262144 [00:00<00:23, 10970.52it/s]  2%|▏         | 5398/262144 [00:00<00:21, 11791.81it/s]  3%|▎         | 6724/262144 [00:00<00:20, 12290.56it/s]  3%|▎         | 8113/262144 [00:00<00:21, 11803.18it/s]  4%|▎         | 9517/262144 [00:00<00:20, 12473.90it/s]  4%|▍         | 11002/262144 [00:00<00:19, 13186.67it/s]  5%|▍         | 12646/262144 [00:01<00:17, 14161.43it/s]  5%|▌         | 14239/262144 [00:01<00:16, 14691.81it/s]  6%|▌         | 15876/262144 [00:01<00:16, 15195.36it/s]  7%|▋         | 17403/262144 [00:01<00:16, 15217.45it/s]  7%|▋         | 19007/262144 [00:01<00:15, 15463.19it/s]  8%|▊         | 20614/262144 [00:01<00:15, 15642.05it/s]  8%|▊         | 22210/262144 [00:01<00:15, 15734.49it/s]  9%|▉         | 23785/262144 [00:01<00:15, 15532.03it/s] 10%|▉         | 25396/262144 [00:01<00:15, 15702.70it/s] 10%|█         | 27007/262144 [00:01<00:14, 15822.07it/s] 11%|█         | 28665/262144 [00:02<00:14, 16047.51it/s] 12%|█▏        | 30342/262144 [00:02<00:14, 16261.97it/s] 12%|█▏        | 31969/262144 [00:02<00:14, 16199.92it/s] 13%|█▎        | 33662/262144 [00:02<00:13, 16413.40it/s] 13%|█▎        | 35304/262144 [00:02<00:13, 16278.22it/s] 14%|█▍        | 36998/262144 [00:02<00:13, 16472.43it/s] 15%|█▍        | 38646/262144 [00:02<00:13, 16281.63it/s] 15%|█▌        | 40378/262144 [00:02<00:13, 16587.55it/s] 16%|█▌        | 42057/262144 [00:02<00:13, 16647.11it/s] 17%|█▋        | 43723/262144 [00:02<00:14, 15420.82it/s] 17%|█▋        | 45284/262144 [00:03<00:14, 15095.39it/s] 18%|█▊        | 46852/262144 [00:03<00:14, 15256.03it/s] 19%|█▊        | 48511/262144 [00:03<00:13, 15639.26it/s] 19%|█▉        | 50132/262144 [00:03<00:13, 15805.15it/s] 20%|█▉        | 51719/262144 [00:03<00:13, 15810.21it/s] 20%|██        | 53360/262144 [00:03<00:13, 15981.49it/s] 21%|██        | 54962/262144 [00:03<00:12, 15979.13it/s] 22%|██▏       | 56563/262144 [00:03<00:12, 15908.30it/s] 22%|██▏       | 58196/262144 [00:03<00:12, 16030.48it/s] 23%|██▎       | 59845/262144 [00:03<00:12, 16162.57it/s] 23%|██▎       | 61504/262144 [00:04<00:12, 16285.53it/s] 24%|██▍       | 63195/262144 [00:04<00:12, 16470.94it/s] 25%|██▍       | 64843/262144 [00:04<00:11, 16450.23it/s] 25%|██▌       | 66574/262144 [00:04<00:11, 16704.87it/s] 26%|██▌       | 68245/262144 [00:04<00:11, 16655.56it/s] 27%|██▋       | 69911/262144 [00:04<00:11, 16415.87it/s] 27%|██▋       | 71617/262144 [00:04<00:11, 16606.08it/s] 28%|██▊       | 73279/262144 [00:04<00:11, 15992.80it/s] 29%|██▊       | 74884/262144 [00:04<00:12, 15133.22it/s] 29%|██▉       | 76409/262144 [00:06<00:53, 3456.02it/s]  30%|██▉       | 78089/262144 [00:06<00:40, 4576.16it/s] 30%|███       | 79781/262144 [00:06<00:30, 5898.10it/s] 31%|███       | 81478/262144 [00:06<00:24, 7367.08it/s] 32%|███▏      | 83151/262144 [00:06<00:20, 8858.72it/s] 32%|███▏      | 84696/262144 [00:06<00:17, 9917.39it/s] 33%|███▎      | 86203/262144 [00:06<00:16, 10841.49it/s] 34%|███▎      | 87897/262144 [00:06<00:14, 12216.56it/s] 34%|███▍      | 89602/262144 [00:07<00:12, 13392.97it/s] 35%|███▍      | 91351/262144 [00:07<00:11, 14449.98it/s] 35%|███▌      | 93030/262144 [00:07<00:11, 15078.81it/s] 36%|███▌      | 94700/262144 [00:07<00:10, 15523.74it/s] 37%|███▋      | 96387/262144 [00:07<00:10, 15903.14it/s] 37%|███▋      | 98052/262144 [00:07<00:10, 15965.02it/s] 38%|███▊      | 99748/262144 [00:07<00:09, 16252.84it/s] 39%|███▊      | 101411/262144 [00:07<00:09, 16208.44it/s] 39%|███▉      | 103135/262144 [00:07<00:09, 16510.17it/s] 40%|████      | 104906/262144 [00:07<00:09, 16863.48it/s] 41%|████      | 106607/262144 [00:08<00:09, 16764.82it/s] 41%|████▏     | 108385/262144 [00:08<00:09, 17064.49it/s] 42%|████▏     | 110099/262144 [00:08<00:09, 16709.93it/s] 43%|████▎     | 111777/262144 [00:08<00:09, 16611.45it/s] 43%|████▎     | 113443/262144 [00:08<00:09, 16491.33it/s] 44%|████▍     | 115096/262144 [00:08<00:09, 16070.44it/s] 45%|████▍     | 116707/262144 [00:08<00:09, 14997.35it/s] 45%|████▌     | 118384/262144 [00:08<00:09, 15490.04it/s] 46%|████▌     | 120086/262144 [00:08<00:08, 15923.86it/s] 46%|████▋     | 121736/262144 [00:08<00:08, 16087.14it/s] 47%|████▋     | 123430/262144 [00:09<00:08, 16335.42it/s] 48%|████▊     | 125071/262144 [00:09<00:08, 16121.44it/s] 48%|████▊     | 126699/262144 [00:09<00:08, 16166.27it/s] 49%|████▉     | 128320/262144 [00:09<00:08, 15966.62it/s] 50%|████▉     | 129975/262144 [00:09<00:08, 16133.68it/s] 50%|█████     | 131673/262144 [00:09<00:07, 16383.36it/s] 51%|█████     | 133314/262144 [00:09<00:07, 16390.74it/s] 52%|█████▏    | 135027/262144 [00:09<00:07, 16607.54it/s] 52%|█████▏    | 136689/262144 [00:09<00:07, 16590.57it/s] 53%|█████▎    | 138382/262144 [00:10<00:07, 16691.70it/s] 53%|█████▎    | 140052/262144 [00:10<00:07, 16610.97it/s] 54%|█████▍    | 141774/262144 [00:10<00:07, 16791.94it/s] 55%|█████▍    | 143481/262144 [00:10<00:07, 16870.78it/s] 55%|█████▌    | 145169/262144 [00:10<00:07, 16623.34it/s] 56%|█████▌    | 146833/262144 [00:10<00:07, 16197.47it/s] 57%|█████▋    | 148456/262144 [00:10<00:07, 15208.45it/s] 57%|█████▋    | 150200/262144 [00:10<00:07, 15835.64it/s] 58%|█████▊    | 151797/262144 [00:10<00:06, 15842.77it/s] 59%|█████▊    | 153582/262144 [00:10<00:06, 16420.84it/s] 59%|█████▉    | 155233/262144 [00:11<00:06, 16386.81it/s] 60%|█████▉    | 156969/262144 [00:11<00:06, 16669.40it/s] 61%|██████    | 158689/262144 [00:11<00:06, 16825.59it/s] 61%|██████    | 160375/262144 [00:11<00:06, 16629.31it/s] 62%|██████▏   | 162124/262144 [00:11<00:05, 16883.12it/s] 62%|██████▏   | 163815/262144 [00:11<00:05, 16840.73it/s] 63%|██████▎   | 165505/262144 [00:11<00:05, 16857.32it/s] 64%|██████▍   | 167210/262144 [00:11<00:05, 16911.96it/s] 64%|██████▍   | 168903/262144 [00:11<00:05, 16803.86it/s] 65%|██████▌   | 170585/262144 [00:11<00:05, 16686.17it/s] 66%|██████▌   | 172325/262144 [00:12<00:05, 16895.83it/s] 66%|██████▋   | 174087/262144 [00:12<00:05, 17106.86it/s] 67%|██████▋   | 175799/262144 [00:12<00:05, 16945.47it/s] 68%|██████▊   | 177495/262144 [00:12<00:05, 16818.90it/s] 68%|██████▊   | 179178/262144 [00:12<00:05, 15497.32it/s] 69%|██████▉   | 180839/262144 [00:12<00:05, 15807.75it/s] 70%|██████▉   | 182487/262144 [00:12<00:04, 15998.62it/s] 70%|███████   | 184232/262144 [00:12<00:04, 16417.67it/s] 71%|███████   | 185884/262144 [00:14<00:32, 2344.20it/s]  72%|███████▏  | 187528/262144 [00:15<00:23, 3137.57it/s] 72%|███████▏  | 189144/262144 [00:15<00:17, 4106.67it/s] 73%|███████▎  | 190819/262144 [00:15<00:13, 5321.39it/s] 73%|███████▎  | 192378/262144 [00:15<00:10, 6560.22it/s] 74%|███████▍  | 194021/262144 [00:15<00:08, 8011.64it/s] 75%|███████▍  | 195610/262144 [00:15<00:07, 9378.53it/s] 75%|███████▌  | 197279/262144 [00:15<00:05, 10831.32it/s] 76%|███████▌  | 199148/262144 [00:15<00:05, 12568.55it/s] 77%|███████▋  | 201027/262144 [00:15<00:04, 14060.61it/s] 77%|███████▋  | 202801/262144 [00:15<00:03, 14998.20it/s] 78%|███████▊  | 204616/262144 [00:16<00:03, 15837.78it/s] 79%|███████▊  | 206384/262144 [00:16<00:03, 15941.00it/s] 79%|███████▉  | 208107/262144 [00:16<00:03, 16124.32it/s] 80%|████████  | 209811/262144 [00:16<00:03, 16363.17it/s] 81%|████████  | 211513/262144 [00:16<00:03, 16383.42it/s] 81%|████████▏ | 213344/262144 [00:16<00:02, 16939.27it/s] 82%|████████▏ | 215269/262144 [00:16<00:02, 17608.56it/s] 83%|████████▎ | 217141/262144 [00:16<00:02, 17934.35it/s] 84%|████████▎ | 218971/262144 [00:16<00:02, 18042.00it/s] 84%|████████▍ | 220867/262144 [00:16<00:02, 18311.63it/s] 85%|████████▍ | 222708/262144 [00:17<00:02, 18268.21it/s] 86%|████████▌ | 224586/262144 [00:17<00:02, 18419.05it/s] 86%|████████▋ | 226507/262144 [00:17<00:01, 18650.86it/s] 87%|████████▋ | 228376/262144 [00:17<00:01, 18445.67it/s] 88%|████████▊ | 230236/262144 [00:17<00:01, 18490.61it/s] 89%|████████▊ | 232142/262144 [00:17<00:01, 18657.38it/s] 89%|████████▉ | 234010/262144 [00:17<00:01, 18528.13it/s] 90%|████████▉ | 235865/262144 [00:17<00:01, 17838.97it/s] 91%|█████████ | 237655/262144 [00:17<00:01, 17694.16it/s] 91%|█████████▏| 239429/262144 [00:17<00:01, 17454.59it/s] 92%|█████████▏| 241178/262144 [00:18<00:01, 17439.75it/s] 93%|█████████▎| 243076/262144 [00:18<00:01, 17889.17it/s] 93%|█████████▎| 244879/262144 [00:18<00:00, 17927.68it/s] 94%|█████████▍| 246767/262144 [00:18<00:00, 18207.92it/s] 95%|█████████▍| 248590/262144 [00:18<00:00, 18098.34it/s] 96%|█████████▌| 250513/262144 [00:18<00:00, 18433.91it/s] 96%|█████████▋| 252395/262144 [00:18<00:00, 18545.46it/s] 97%|█████████▋| 254288/262144 [00:18<00:00, 18656.08it/s] 98%|█████████▊| 256155/262144 [00:18<00:00, 18288.77it/s] 98%|█████████▊| 257986/262144 [00:19<00:00, 17965.57it/s] 99%|█████████▉| 259785/262144 [00:19<00:00, 17638.62it/s]100%|█████████▉| 261552/262144 [00:19<00:00, 17557.33it/s]100%|██████████| 262144/262144 [00:19<00:00, 13619.24it/s]
+[Oct 27, 04:56:41] #> Saved optimized IVF to outputs/plaid/msmarco/indexes/msmarco.nbits2/ivf.pid.pt
+[Oct 27, 04:56:42] [0] 		 #> Saving the indexing metadata to outputs/plaid/msmarco/indexes/msmarco.nbits2/metadata.json ..
+
+#> Joined...
+#> Joined...
+indexed in 5133 s, 18.57 GB
++ CUDA_VISIBLE_DEVICES=0
++ .venv_plaid/bin/python scripts/plaid_msmarco.py search --nbits 2 --device gpu
+[Oct 27, 04:56:49] #> Loading collection...
+0M 1M 2M 3M 4M 5M 6M 7M 8M 
+[Oct 27, 04:57:09] #> Loading codec...
+[Oct 27, 04:57:09] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 27, 04:57:09] Loading packbits_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 27, 04:57:09] #> Loading IVF...
+[Oct 27, 04:57:11] #> Loading doclens...
+  0%|          | 0/354 [00:00<?, ?it/s] 39%|███▉      | 139/354 [00:00<00:00, 1384.61it/s] 86%|████████▋ | 306/354 [00:00<00:00, 1547.81it/s]100%|██████████| 354/354 [00:00<00:00, 1543.90it/s]
+[Oct 27, 04:57:12] #> Loading codes and residuals...
+  0%|          | 0/354 [00:00<?, ?it/s]  1%|          | 2/354 [00:00<00:20, 16.91it/s]  1%|          | 4/354 [00:00<00:19, 17.59it/s]  2%|▏         | 6/354 [00:00<00:19, 17.55it/s]  2%|▏         | 8/354 [00:00<00:19, 17.95it/s]  3%|▎         | 10/354 [00:00<00:19, 17.63it/s]  3%|▎         | 12/354 [00:00<00:19, 17.39it/s]  4%|▍         | 14/354 [00:00<00:19, 17.41it/s]  5%|▍         | 17/354 [00:00<00:16, 20.46it/s]  6%|▌         | 21/354 [00:01<00:13, 24.67it/s]  7%|▋         | 25/354 [00:01<00:11, 27.42it/s]  8%|▊         | 29/354 [00:01<00:12, 26.72it/s]  9%|▉         | 32/354 [00:01<00:13, 24.33it/s] 10%|▉         | 35/354 [00:01<00:13, 23.77it/s] 11%|█         | 38/354 [00:01<00:12, 24.46it/s] 12%|█▏        | 41/354 [00:01<00:13, 23.40it/s] 12%|█▏        | 44/354 [00:01<00:12, 24.04it/s] 13%|█▎        | 47/354 [00:02<00:13, 23.38it/s] 14%|█▍        | 50/354 [00:02<00:13, 22.26it/s] 15%|█▍        | 53/354 [00:02<00:14, 20.83it/s] 16%|█▌        | 56/354 [00:02<00:14, 20.15it/s] 17%|█▋        | 59/354 [00:02<00:15, 19.50it/s] 17%|█▋        | 61/354 [00:02<00:15, 19.02it/s] 18%|█▊        | 63/354 [00:02<00:15, 18.51it/s] 18%|█▊        | 65/354 [00:03<00:15, 18.15it/s] 19%|█▉        | 67/354 [00:03<00:16, 17.85it/s] 19%|█▉        | 69/354 [00:03<00:15, 17.85it/s] 20%|██        | 71/354 [00:03<00:17, 16.53it/s] 21%|██        | 73/354 [00:03<00:17, 15.73it/s] 21%|██        | 75/354 [00:03<00:17, 16.15it/s] 22%|██▏       | 77/354 [00:03<00:17, 16.01it/s] 22%|██▏       | 79/354 [00:03<00:17, 15.88it/s] 23%|██▎       | 81/354 [00:04<00:16, 16.26it/s] 23%|██▎       | 83/354 [00:04<00:16, 16.47it/s] 24%|██▍       | 85/354 [00:04<00:16, 16.65it/s] 25%|██▍       | 87/354 [00:04<00:15, 17.06it/s] 25%|██▌       | 89/354 [00:04<00:15, 17.32it/s] 26%|██▌       | 91/354 [00:04<00:14, 17.56it/s] 26%|██▋       | 93/354 [00:04<00:15, 17.31it/s] 27%|██▋       | 95/354 [00:04<00:15, 16.83it/s] 27%|██▋       | 97/354 [00:05<00:15, 16.87it/s] 28%|██▊       | 99/354 [00:05<00:15, 16.82it/s] 29%|██▊       | 101/354 [00:05<00:14, 17.04it/s] 29%|██▉       | 103/354 [00:05<00:14, 17.35it/s] 30%|██▉       | 105/354 [00:05<00:14, 17.12it/s] 30%|███       | 107/354 [00:05<00:15, 15.88it/s] 31%|███       | 109/354 [00:05<00:15, 16.25it/s] 31%|███▏      | 111/354 [00:05<00:14, 16.57it/s] 32%|███▏      | 113/354 [00:05<00:14, 17.14it/s] 32%|███▏      | 115/354 [00:06<00:13, 17.41it/s] 33%|███▎      | 117/354 [00:06<00:13, 17.73it/s] 34%|███▎      | 119/354 [00:06<00:13, 18.00it/s] 34%|███▍      | 121/354 [00:06<00:12, 18.17it/s] 35%|███▌      | 124/354 [00:06<00:11, 20.12it/s] 36%|███▌      | 127/354 [00:06<00:10, 21.39it/s] 37%|███▋      | 131/354 [00:06<00:09, 24.53it/s] 38%|███▊      | 135/354 [00:06<00:08, 26.69it/s] 39%|███▉      | 138/354 [00:07<00:07, 27.36it/s] 40%|████      | 142/354 [00:07<00:07, 28.17it/s] 41%|████      | 146/354 [00:07<00:07, 28.89it/s] 42%|████▏     | 149/354 [00:07<00:07, 29.16it/s] 43%|████▎     | 153/354 [00:07<00:06, 29.44it/s] 44%|████▍     | 156/354 [00:07<00:06, 29.51it/s] 45%|████▍     | 159/354 [00:07<00:07, 26.97it/s] 46%|████▌     | 162/354 [00:07<00:07, 26.02it/s] 47%|████▋     | 166/354 [00:08<00:06, 27.39it/s] 48%|████▊     | 169/354 [00:08<00:06, 28.04it/s] 49%|████▊     | 172/354 [00:08<00:06, 28.25it/s] 50%|████▉     | 176/354 [00:08<00:06, 29.08it/s] 51%|█████     | 179/354 [00:08<00:05, 29.28it/s] 52%|█████▏    | 183/354 [00:08<00:05, 29.64it/s] 53%|█████▎    | 187/354 [00:08<00:05, 29.84it/s] 54%|█████▍    | 191/354 [00:08<00:05, 30.03it/s] 55%|█████▌    | 195/354 [00:08<00:05, 29.94it/s] 56%|█████▌    | 198/354 [00:09<00:05, 29.92it/s] 57%|█████▋    | 201/354 [00:09<00:05, 29.85it/s] 58%|█████▊    | 205/354 [00:09<00:04, 29.98it/s] 59%|█████▉    | 209/354 [00:09<00:04, 30.33it/s] 60%|██████    | 213/354 [00:09<00:04, 30.19it/s] 61%|██████▏   | 217/354 [00:09<00:04, 29.88it/s] 62%|██████▏   | 220/354 [00:09<00:04, 29.72it/s] 63%|██████▎   | 223/354 [00:09<00:04, 29.18it/s] 64%|██████▍   | 226/354 [00:10<00:04, 29.15it/s] 65%|██████▍   | 229/354 [00:10<00:04, 29.06it/s] 66%|██████▌   | 232/354 [00:10<00:04, 29.02it/s] 66%|██████▋   | 235/354 [00:10<00:04, 28.57it/s] 67%|██████▋   | 238/354 [00:10<00:04, 28.32it/s] 68%|██████▊   | 241/354 [00:10<00:04, 24.24it/s] 69%|██████▉   | 245/354 [00:10<00:04, 26.02it/s] 70%|███████   | 248/354 [00:10<00:04, 25.75it/s] 71%|███████   | 251/354 [00:11<00:04, 24.55it/s] 72%|███████▏  | 254/354 [00:11<00:04, 24.36it/s] 73%|███████▎  | 257/354 [00:11<00:03, 24.91it/s] 73%|███████▎  | 260/354 [00:11<00:03, 25.63it/s] 74%|███████▍  | 263/354 [00:11<00:03, 26.22it/s] 75%|███████▌  | 266/354 [00:11<00:03, 26.85it/s] 76%|███████▌  | 269/354 [00:11<00:03, 27.55it/s] 77%|███████▋  | 273/354 [00:11<00:02, 28.50it/s] 78%|███████▊  | 277/354 [00:11<00:02, 29.10it/s] 79%|███████▉  | 281/354 [00:12<00:02, 29.41it/s] 81%|████████  | 285/354 [00:12<00:02, 30.05it/s] 82%|████████▏ | 289/354 [00:12<00:02, 30.12it/s] 83%|████████▎ | 293/354 [00:12<00:01, 30.53it/s] 84%|████████▍ | 297/354 [00:12<00:01, 29.79it/s] 85%|████████▌ | 301/354 [00:12<00:01, 30.32it/s] 86%|████████▌ | 305/354 [00:12<00:01, 30.09it/s] 87%|████████▋ | 309/354 [00:12<00:01, 30.36it/s] 88%|████████▊ | 313/354 [00:13<00:01, 30.34it/s] 90%|████████▉ | 317/354 [00:13<00:01, 30.94it/s] 91%|█████████ | 321/354 [00:13<00:01, 31.04it/s] 92%|█████████▏| 325/354 [00:13<00:00, 31.93it/s] 93%|█████████▎| 329/354 [00:13<00:00, 31.98it/s] 94%|█████████▍| 333/354 [00:13<00:00, 31.78it/s] 95%|█████████▌| 337/354 [00:13<00:00, 31.50it/s] 96%|█████████▋| 341/354 [00:13<00:00, 31.52it/s] 97%|█████████▋| 345/354 [00:14<00:00, 31.20it/s] 99%|█████████▊| 349/354 [00:14<00:00, 31.35it/s]100%|█████████▉| 353/354 [00:14<00:00, 31.56it/s]100%|██████████| 354/354 [00:14<00:00, 24.57it/s]
+
+#> QueryTokenizer.tensorize(batch_text[0], batch_background[0], bsize) ==
+#> Input: define preventive, 		 True, 		 None
+#> Output IDs: torch.Size([32]), tensor([ 101,    1, 9375, 4652, 3512,  102,  103,  103,  103,  103,  103,  103,
+         103,  103,  103,  103,  103,  103,  103,  103,  103,  103,  103,  103,
+         103,  103,  103,  103,  103,  103,  103,  103], device='cuda:0')
+#> Output Mask: torch.Size([32]), tensor([1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0], device='cuda:0')
+
+{"latency_ms": {"mean": 50.243364442139864, "p50": 37.54920628853142, "p90": 83.17318237386645, "p99": 213.88430842198431, "n": 1000}, "mrr10": 0.3638797619047619, "ndcg10": 0.4252273008578893, "recall_vs_exact10": 0.811, "queries": 1000, "threads": null, "settings": "colbert-ai defaults for k=10"}
++ CUDA_VISIBLE_DEVICES=
++ taskset -c 0,2,4,6,8,10,12,14 .venv_plaid/bin/python scripts/plaid_msmarco.py search --nbits 2 --device cpu --threads 8 --num-queries 200
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda-12.3'
+[Oct 27, 04:58:25] #> Loading collection...
+0M 1M 2M 3M 4M 5M 6M 7M 8M 
+[Oct 27, 04:58:44] Loading segmented_maxsim_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+/usr/local/lib/python3.10/dist-packages/torch/cuda/amp/grad_scaler.py:126: UserWarning: torch.cuda.amp.GradScaler is enabled, but CUDA is not available.  Disabling.
+  warnings.warn(
+[Oct 27, 04:58:45] #> Loading codec...
+[Oct 27, 04:58:45] #> Loading IVF...
+[Oct 27, 04:58:46] Loading segmented_lookup_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 27, 04:58:46] #> Loading doclens...
+  0%|          | 0/354 [00:00<?, ?it/s] 44%|████▎     | 154/354 [00:00<00:00, 1530.41it/s] 90%|█████████ | 320/354 [00:00<00:00, 1603.86it/s]100%|██████████| 354/354 [00:00<00:00, 1603.89it/s]
+[Oct 27, 04:58:47] #> Loading codes and residuals...
+  0%|          | 0/354 [00:00<?, ?it/s]  1%|          | 3/354 [00:00<00:11, 29.43it/s]  2%|▏         | 6/354 [00:00<00:12, 27.63it/s]  3%|▎         | 9/354 [00:00<00:12, 27.69it/s]  4%|▎         | 13/354 [00:00<00:11, 28.83it/s]  5%|▍         | 16/354 [00:00<00:12, 26.51it/s]  5%|▌         | 19/354 [00:00<00:15, 22.29it/s]  6%|▌         | 22/354 [00:00<00:16, 20.13it/s]  7%|▋         | 25/354 [00:01<00:17, 19.26it/s]  8%|▊         | 27/354 [00:01<00:17, 18.57it/s]  8%|▊         | 29/354 [00:01<00:19, 17.04it/s]  9%|▉         | 32/354 [00:01<00:18, 17.42it/s] 10%|▉         | 35/354 [00:01<00:16, 18.97it/s] 11%|█         | 38/354 [00:01<00:16, 19.11it/s] 12%|█▏        | 41/354 [00:01<00:15, 20.20it/s] 12%|█▏        | 44/354 [00:02<00:15, 19.43it/s] 13%|█▎        | 47/354 [00:02<00:14, 20.69it/s] 14%|█▍        | 50/354 [00:02<00:13, 21.79it/s] 15%|█▌        | 54/354 [00:02<00:12, 24.52it/s] 16%|█▋        | 58/354 [00:02<00:11, 26.46it/s] 18%|█▊        | 62/354 [00:02<00:10, 28.33it/s] 19%|█▊        | 66/354 [00:02<00:09, 29.16it/s] 20%|█▉        | 70/354 [00:03<00:09, 30.08it/s] 21%|██        | 74/354 [00:03<00:09, 30.80it/s] 22%|██▏       | 78/354 [00:03<00:08, 31.14it/s] 23%|██▎       | 82/354 [00:03<00:08, 31.00it/s] 24%|██▍       | 86/354 [00:03<00:08, 30.56it/s] 25%|██▌       | 90/354 [00:03<00:08, 31.03it/s] 27%|██▋       | 94/354 [00:03<00:08, 31.25it/s] 28%|██▊       | 98/354 [00:03<00:08, 31.65it/s] 29%|██▉       | 102/354 [00:04<00:07, 31.86it/s] 30%|██▉       | 106/354 [00:04<00:07, 32.22it/s] 31%|███       | 110/354 [00:04<00:07, 32.40it/s] 32%|███▏      | 114/354 [00:04<00:07, 32.59it/s] 33%|███▎      | 118/354 [00:04<00:07, 32.54it/s] 34%|███▍      | 122/354 [00:04<00:07, 32.35it/s] 36%|███▌      | 126/354 [00:04<00:07, 31.78it/s] 37%|███▋      | 130/354 [00:04<00:07, 31.04it/s] 38%|███▊      | 134/354 [00:05<00:07, 30.49it/s] 39%|███▉      | 138/354 [00:05<00:07, 30.27it/s] 40%|████      | 142/354 [00:05<00:07, 29.71it/s] 41%|████      | 145/354 [00:05<00:07, 29.70it/s] 42%|████▏     | 148/354 [00:05<00:06, 29.69it/s] 43%|████▎     | 151/354 [00:05<00:06, 29.60it/s] 44%|████▎     | 154/354 [00:05<00:06, 29.68it/s] 44%|████▍     | 157/354 [00:05<00:06, 29.16it/s] 45%|████▌     | 160/354 [00:05<00:06, 29.39it/s] 46%|████▌     | 163/354 [00:06<00:06, 29.55it/s] 47%|████▋     | 167/354 [00:06<00:06, 29.98it/s] 48%|████▊     | 171/354 [00:06<00:06, 30.28it/s] 49%|████▉     | 175/354 [00:06<00:05, 30.37it/s] 51%|█████     | 179/354 [00:06<00:05, 29.98it/s] 52%|█████▏    | 183/354 [00:06<00:05, 30.09it/s] 53%|█████▎    | 187/354 [00:06<00:05, 30.06it/s] 54%|█████▍    | 191/354 [00:06<00:05, 30.33it/s] 55%|█████▌    | 195/354 [00:07<00:05, 30.21it/s] 56%|█████▌    | 199/354 [00:07<00:05, 30.13it/s] 57%|█████▋    | 203/354 [00:07<00:05, 29.86it/s] 58%|█████▊    | 206/354 [00:07<00:05, 25.60it/s] 59%|█████▉    | 209/354 [00:07<00:06, 24.08it/s] 60%|█████▉    | 212/354 [00:07<00:06, 21.98it/s] 61%|██████    | 215/354 [00:07<00:06, 21.83it/s] 62%|██████▏   | 218/354 [00:08<00:06, 20.84it/s] 62%|██████▏   | 221/354 [00:08<00:06, 20.67it/s] 63%|██████▎   | 224/354 [00:08<00:07, 18.52it/s] 64%|██████▍   | 226/354 [00:08<00:07, 18.22it/s] 64%|██████▍   | 228/354 [00:08<00:07, 17.21it/s] 65%|██████▍   | 230/354 [00:08<00:07, 15.94it/s] 66%|██████▌   | 232/354 [00:09<00:08, 15.16it/s] 66%|██████▌   | 234/354 [00:09<00:08, 14.48it/s] 67%|██████▋   | 236/354 [00:09<00:07, 15.09it/s] 67%|██████▋   | 238/354 [00:09<00:07, 16.17it/s] 68%|██████▊   | 240/354 [00:09<00:06, 16.87it/s] 69%|██████▊   | 243/354 [00:09<00:06, 17.80it/s] 69%|██████▉   | 245/354 [00:09<00:05, 18.24it/s] 70%|██████▉   | 247/354 [00:09<00:05, 18.04it/s] 70%|███████   | 249/354 [00:10<00:06, 16.59it/s] 71%|███████   | 251/354 [00:10<00:06, 16.41it/s] 71%|███████▏  | 253/354 [00:10<00:06, 16.40it/s] 72%|███████▏  | 255/354 [00:10<00:05, 17.04it/s] 73%|███████▎  | 258/354 [00:10<00:05, 18.53it/s] 73%|███████▎  | 260/354 [00:10<00:05, 18.18it/s] 74%|███████▍  | 262/354 [00:10<00:04, 18.59it/s] 75%|███████▍  | 265/354 [00:10<00:04, 20.06it/s] 76%|███████▌  | 268/354 [00:11<00:04, 20.18it/s] 77%|███████▋  | 271/354 [00:11<00:04, 19.67it/s] 77%|███████▋  | 274/354 [00:11<00:03, 20.90it/s] 78%|███████▊  | 277/354 [00:11<00:04, 19.16it/s] 79%|███████▉  | 279/354 [00:11<00:03, 18.91it/s] 80%|███████▉  | 282/354 [00:11<00:03, 20.18it/s] 81%|████████  | 285/354 [00:11<00:03, 21.09it/s] 81%|████████▏ | 288/354 [00:11<00:02, 22.79it/s] 82%|████████▏ | 291/354 [00:12<00:02, 21.36it/s] 83%|████████▎ | 294/354 [00:12<00:02, 21.21it/s] 84%|████████▍ | 297/354 [00:12<00:02, 21.75it/s] 85%|████████▍ | 300/354 [00:12<00:02, 21.62it/s] 86%|████████▌ | 303/354 [00:12<00:02, 20.79it/s] 86%|████████▋ | 306/354 [00:12<00:02, 22.18it/s] 87%|████████▋ | 309/354 [00:12<00:02, 20.55it/s] 88%|████████▊ | 312/354 [00:13<00:01, 21.38it/s] 89%|████████▉ | 315/354 [00:13<00:01, 20.43it/s] 90%|████████▉ | 318/354 [00:13<00:01, 21.11it/s] 91%|█████████ | 321/354 [00:13<00:01, 20.26it/s] 92%|█████████▏| 324/354 [00:13<00:01, 21.49it/s] 92%|█████████▏| 327/354 [00:13<00:01, 20.55it/s] 93%|█████████▎| 330/354 [00:13<00:01, 21.53it/s] 94%|█████████▍| 333/354 [00:14<00:01, 19.61it/s] 95%|█████████▍| 336/354 [00:14<00:00, 19.96it/s] 96%|█████████▌| 339/354 [00:14<00:00, 20.15it/s] 97%|█████████▋| 342/354 [00:14<00:00, 20.72it/s] 97%|█████████▋| 345/354 [00:14<00:00, 19.36it/s] 98%|█████████▊| 347/354 [00:14<00:00, 19.05it/s] 99%|█████████▊| 349/354 [00:14<00:00, 18.98it/s] 99%|█████████▉| 352/354 [00:15<00:00, 20.91it/s]100%|██████████| 354/354 [00:15<00:00, 23.34it/s]
+[Oct 27, 04:59:02] Loading filter_pids_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+[Oct 27, 04:59:02] Loading decompress_residuals_cpp extension (set COLBERT_LOAD_TORCH_EXTENSION_VERBOSE=True for more info)...
+/usr/local/lib/python3.10/dist-packages/torch/amp/autocast_mode.py:250: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+
+#> QueryTokenizer.tensorize(batch_text[0], batch_background[0], bsize) ==
+#> Input: define preventive, 		 True, 		 None
+#> Output IDs: torch.Size([32]), tensor([ 101,    1, 9375, 4652, 3512,  102,  103,  103,  103,  103,  103,  103,
+         103,  103,  103,  103,  103,  103,  103,  103,  103,  103,  103,  103,
+         103,  103,  103,  103,  103,  103,  103,  103])
+#> Output Mask: torch.Size([32]), tensor([1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0])
+
+{"latency_ms": {"mean": 78.75845019472763, "p50": 77.61454954743385, "p90": 99.11575876176357, "p99": 119.39279508311294, "n": 200}, "mrr10": 0.43474206349206357, "ndcg10": 0.49937485399324744, "recall_vs_exact10": 0.8080000000000002, "queries": 200, "threads": 8, "settings": "colbert-ai defaults for k=10"}
++ echo 'ALL DONE'
+ALL DONE

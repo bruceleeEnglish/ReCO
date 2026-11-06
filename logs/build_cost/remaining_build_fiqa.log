@@ -1,0 +1,18 @@
+14:34:43 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+14:34:44 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+14:34:44 | INFO  | savemv.encoders.colbert | encoded 64 / 64 documents
+14:34:44 | INFO  | savemv.encoders.colbert | encoded 256 / 2000 documents
+14:34:45 | INFO  | savemv.build_cost | encoding: 0.44 ms / doc
+14:34:47 | INFO  | savemv.core.codebook | k-means K=32768 iter 1/15: mean cos=0.9700, empty=0
+14:34:49 | INFO  | savemv.core.codebook | k-means K=32768 iter 6/15: mean cos=0.9819, empty=0
+14:34:52 | INFO  | savemv.core.codebook | k-means K=32768 iter 11/15: mean cos=0.9822, empty=0
+14:34:54 | INFO  | savemv.core.codebook | k-means K=32768 iter 15/15: mean cos=0.9823, empty=0
+14:35:07 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.9657, empty=0
+14:35:08 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.9791, empty=0
+14:35:08 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.9795, empty=0
+14:35:09 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.9796, empty=0
+14:35:26 | INFO  | savemv.build_cost | colbert-fp16     train 0.0s | per-token pass 0.0s | insert 0.44 ms/doc | 24368 B/doc
+14:35:26 | INFO  | savemv.build_cost | colbertv2-2bit   train 9.6s | per-token pass 11.5s | insert 0.64 ms/doc | 3287 B/doc
+14:35:26 | INFO  | savemv.build_cost | reco-K16384      train 2.5s | per-token pass 8.5s | insert 0.59 ms/doc | 156 B/doc
+14:35:26 | INFO  | savemv.build_cost | reco-K16384-U    train 0.0s | per-token pass 8.6s | insert 0.59 ms/doc | 136 B/doc
+14:35:26 | INFO  | savemv.build_cost | wrote outputs/build_cost/fiqa.json

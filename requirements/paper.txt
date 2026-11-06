@@ -1,0 +1,6 @@
+# Rebuilding the paper's numbers, tables and figures from results/ and checking them (no GPU, no data, no models).
+# With matplotlib 3.10.8 and Times New Roman installed, the figures are pixel-identical to the paper's. Other
+# matplotlib versions or fonts change only the figures' pixels, never a number or a table.
+numpy>=1.24
+scipy>=1.10
+matplotlib==3.10.8

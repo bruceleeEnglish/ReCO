@@ -1,0 +1,23 @@
+12:31:00 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+12:31:00 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+12:31:01 | INFO  | savemv.experiments.bench | full-fp16: cached
+12:31:01 | INFO  | savemv.experiments.bench | reco-K1024: cached
+12:31:01 | INFO  | savemv.experiments.bench | reco-K4096: cached
+12:31:01 | INFO  | savemv.experiments.bench | reco-K16384: cached
+12:31:01 | INFO  | savemv.experiments.bench | reco-K65536: cached
+12:31:01 | INFO  | savemv.experiments.bench | residual-2bit, residual-1bit: cached
+12:31:01 | INFO  | savemv.experiments.bench | pool2-fp16, pool2-2bit, pool2-1bit: cached
+12:31:01 | INFO  | savemv.experiments.bench | pool4-fp16, pool4-2bit, pool4-1bit: cached
+12:31:01 | INFO  | savemv.experiments.bench | pool8-fp16, pool8-2bit, pool8-1bit: cached
+12:31:01 | INFO  | savemv.experiments.bench | pool16-fp16, pool16-2bit, pool16-1bit: cached
+12:31:05 | INFO  | savemv.baselines.pooling | pooled factor 32: 126.9 -> 4.5 vectors / doc
+12:31:30 | INFO  | savemv.experiments.bench | pool32-fp16        1146.4 B/doc (1.492x raw) | estimate nDCG 0.2078 R@10 0.327 R95 1345 | ReCo stop: R 3877.9 recall 0.958 nDCG 0.3568
+12:31:30 | INFO  | savemv.core.codebook | k-means K=4096 iter 1/15: mean cos=0.7137, empty=0
+12:31:30 | INFO  | savemv.core.codebook | k-means K=4096 iter 6/15: mean cos=0.7931, empty=0
+12:31:30 | INFO  | savemv.core.codebook | k-means K=4096 iter 11/15: mean cos=0.7956, empty=0
+12:31:30 | INFO  | savemv.core.codebook | k-means K=4096 iter 15/15: mean cos=0.7962, empty=0
+12:31:54 | INFO  | savemv.experiments.bench | pool32-2bit         171.7 B/doc (0.223x raw) | estimate nDCG 0.1872 R@10 0.298 R95 1830 | ReCo stop: R 5314.5 recall 0.958 nDCG 0.3568
+12:32:21 | INFO  | savemv.experiments.bench | pool32-1bit         100.3 B/doc (0.131x raw) | estimate nDCG 0.1557 R@10 0.256 R95 2838 | ReCo stop: R 7966.0 recall 0.960 nDCG 0.3572
+12:32:21 | INFO  | savemv.experiments.bench | fde-r2-pq, fde-r5-pq, fde-r10-pq, fde-r20-pq: cached
+12:32:21 | INFO  | savemv.experiments.bench | meanpool-fp16, meanpool-int8, meanpool-binary: cached
+12:32:22 | INFO  | savemv.experiments.bench | wrote outputs_cv2/fiqa/bench/bench_summary.md

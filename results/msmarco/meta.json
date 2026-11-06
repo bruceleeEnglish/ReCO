@@ -1,0 +1,5095 @@
+{
+  "encoder": "models/answerai-colbert-small-v1",
+  "doc_maxlen": 300,
+  "n_docs": 8841823,
+  "n_queries": 1000,
+  "dim": 96,
+  "m": 32,
+  "max_docs": null,
+  "ks": [
+    16384,
+    65536
+  ],
+  "seed": 0,
+  "qids": [
+    "125705",
+    "1090242",
+    "89786",
+    "208145",
+    "79891",
+    "208494",
+    "323382",
+    "237373",
+    "127876",
+    "1101271",
+    "46711",
+    "1089964",
+    "1089810",
+    "1101228",
+    "1089776",
+    "1089750",
+    "1089727",
+    "1089719",
+    "1089541",
+    "1089401",
+    "1089312",
+    "1089044",
+    "1089036",
+    "1089026",
+    "1088958",
+    "1088903",
+    "1088758",
+    "1088715",
+    "1088541",
+    "1088210",
+    "1088164",
+    "1088043",
+    "1087848",
+    "1087764",
+    "1087722",
+    "1087675",
+    "1087609",
+    "1087556",
+    "1087514",
+    "1087435",
+    "1087226",
+    "1087173",
+    "1100980",
+    "1087114",
+    "1087074",
+    "1087061",
+    "1086942",
+    "1086715",
+    "1100919",
+    "1086384",
+    "1086309",
+    "1086248",
+    "1086145",
+    "1086120",
+    "1085804",
+    "1085780",
+    "1085760",
+    "1085733",
+    "1085697",
+    "1085572",
+    "1085386",
+    "1085327",
+    "1085288",
+    "1085245",
+    "1085229",
+    "1085008",
+    "1084930",
+    "1084889",
+    "1084814",
+    "1084713",
+    "1084712",
+    "1084686",
+    "1084603",
+    "1084555",
+    "1084512",
+    "1084324",
+    "1102262",
+    "1100732",
+    "1084192",
+    "1083846",
+    "1083743",
+    "1083686",
+    "1083642",
+    "1083611",
+    "1083597",
+    "1083584",
+    "1083535",
+    "1083500",
+    "1100640",
+    "1083161",
+    "1083158",
+    "1082948",
+    "1100580",
+    "1082502",
+    "1082455",
+    "1082339",
+    "1100541",
+    "1079231",
+    "1077356",
+    "1075741",
+    "1075591",
+    "1074989",
+    "1073569",
+    "1073358",
+    "1071992",
+    "1071534",
+    "1069981",
+    "1069028",
+    "1067826",
+    "1067640",
+    "1065971",
+    "1065650",
+    "1065558",
+    "1064473",
+    "1064206",
+    "1063758",
+    "1063644",
+    "1063607",
+    "1063461",
+    "1062223",
+    "1061167",
+    "1058952",
+    "1058792",
+    "1100299",
+    "1056446",
+    "1056437",
+    "1056265",
+    "1055889",
+    "1055125",
+    "1054999",
+    "1054969",
+    "1054923",
+    "1054593",
+    "1054450",
+    "1054186",
+    "1051307",
+    "1049329",
+    "1047642",
+    "1047365",
+    "1100119",
+    "1046463",
+    "1045826",
+    "1045567",
+    "1045527",
+    "1045227",
+    "1043969",
+    "1043914",
+    "1042507",
+    "1041146",
+    "1038859",
+    "1099981",
+    "1037689",
+    "1037373",
+    "1036782",
+    "1036385",
+    "1035805",
+    "1035383",
+    "1035367",
+    "1034595",
+    "1034204",
+    "1034136",
+    "1033962",
+    "1033398",
+    "1033296",
+    "1033250",
+    "1033249",
+    "1099903",
+    "1031976",
+    "1031910",
+    "1031580",
+    "1099855",
+    "1030378",
+    "1029552",
+    "1029058",
+    "1099831",
+    "1028755",
+    "1028098",
+    "1099803",
+    "1026768",
+    "1026148",
+    "1024591",
+    "1024305",
+    "1024300",
+    "1024221",
+    "1022911",
+    "1022620",
+    "1022370",
+    "1022022",
+    "1021695",
+    "1020376",
+    "1019705",
+    "1019262",
+    "1019236",
+    "1018807",
+    "1017952",
+    "1015641",
+    "1099636",
+    "1015347",
+    "1014242",
+    "1013965",
+    "1012464",
+    "1011248",
+    "1011166",
+    "1010670",
+    "1009994",
+    "1009695",
+    "1009610",
+    "1008951",
+    "1008947",
+    "1006911",
+    "1006580",
+    "1006578",
+    "1006509",
+    "1005798",
+    "1003482",
+    "1003359",
+    "1003015",
+    "1002585",
+    "1002330",
+    "1002197",
+    "1099340",
+    "1000170",
+    "999791",
+    "999691",
+    "999685",
+    "999356",
+    "998609",
+    "998493",
+    "998246",
+    "997860",
+    "997808",
+    "997227",
+    "997086",
+    "995598",
+    "995141",
+    "1099219",
+    "994228",
+    "994070",
+    "994012",
+    "993606",
+    "993353",
+    "993178",
+    "991685",
+    "991364",
+    "990852",
+    "990375",
+    "990345",
+    "990176",
+    "990093",
+    "988743",
+    "1099084",
+    "1099077",
+    "988142",
+    "987809",
+    "987671",
+    "1099050",
+    "986210",
+    "985752",
+    "985207",
+    "984948",
+    "984774",
+    "96379",
+    "298565",
+    "86094",
+    "353623",
+    "1098927",
+    "362845",
+    "244821",
+    "285158",
+    "89777",
+    "160562",
+    "166043",
+    "53813",
+    "88577",
+    "185009",
+    "99676",
+    "242219",
+    "47674",
+    "222954",
+    "235089",
+    "2962",
+    "61277",
+    "92437",
+    "24979",
+    "1098719",
+    "227591",
+    "61882",
+    "102506",
+    "1098570",
+    "49802",
+    "184452",
+    "134014",
+    "208411",
+    "132263",
+    "236580",
+    "130932",
+    "206549",
+    "291516",
+    "93308",
+    "156566",
+    "54531",
+    "56033",
+    "300312",
+    "209651",
+    "132317",
+    "146269",
+    "279987",
+    "371204",
+    "277701",
+    "62648",
+    "72613",
+    "53814",
+    "259239",
+    "1098110",
+    "76770",
+    "201366",
+    "195440",
+    "1098102",
+    "234165",
+    "193742",
+    "196111",
+    "9454",
+    "61836",
+    "126491",
+    "27932",
+    "323154",
+    "377805",
+    "20356",
+    "303777",
+    "260762",
+    "253965",
+    "92260",
+    "1097939",
+    "126525",
+    "1097885",
+    "107283",
+    "226509",
+    "56323",
+    "256052",
+    "184235",
+    "154301",
+    "169390",
+    "262232",
+    "178325",
+    "271038",
+    "234644",
+    "270422",
+    "1097602",
+    "1101977",
+    "230179",
+    "283154",
+    "11913",
+    "116820",
+    "451406",
+    "47419",
+    "699510",
+    "533105",
+    "1097523",
+    "758074",
+    "713448",
+    "450921",
+    "60677",
+    "1097448",
+    "344400",
+    "70709",
+    "387848",
+    "483521",
+    "257885",
+    "1097386",
+    "675320",
+    "1097359",
+    "326629",
+    "610940",
+    "477100",
+    "226335",
+    "47513",
+    "372070",
+    "400696",
+    "731759",
+    "666694",
+    "499904",
+    "610056",
+    "487279",
+    "400692",
+    "738165",
+    "1097242",
+    "462765",
+    "662334",
+    "6217",
+    "426442",
+    "470611",
+    "406181",
+    "674702",
+    "496276",
+    "511101",
+    "565868",
+    "1097135",
+    "1097066",
+    "407274",
+    "707670",
+    "1096998",
+    "691141",
+    "1096944",
+    "727837",
+    "407102",
+    "512405",
+    "568649",
+    "559018",
+    "415500",
+    "492681",
+    "643561",
+    "1096823",
+    "650378",
+    "656371",
+    "477648",
+    "1096776",
+    "1101902",
+    "590433",
+    "413040",
+    "735343",
+    "1096742",
+    "1096712",
+    "497596",
+    "759503",
+    "90169",
+    "749244",
+    "185879",
+    "1096667",
+    "635125",
+    "589777",
+    "406140",
+    "303045",
+    "645604",
+    "539648",
+    "503674",
+    "464484",
+    "670142",
+    "717763",
+    "53191",
+    "1096557",
+    "1096551",
+    "412982",
+    "534941",
+    "1096532",
+    "613233",
+    "637234",
+    "576851",
+    "547301",
+    "693152",
+    "1101870",
+    "1096476",
+    "636437",
+    "42361",
+    "1101868",
+    "1096457",
+    "1096429",
+    "443081",
+    "282214",
+    "747937",
+    "511367",
+    "458885",
+    "613694",
+    "682025",
+    "627323",
+    "82100",
+    "724579",
+    "352236",
+    "212477",
+    "755275",
+    "648049",
+    "220761",
+    "408563",
+    "555558",
+    "504335",
+    "677460",
+    "509730",
+    "693469",
+    "427730",
+    "478295",
+    "151011",
+    "171776",
+    "605363",
+    "746055",
+    "697983",
+    "669800",
+    "548099",
+    "517085",
+    "650076",
+    "663950",
+    "649110",
+    "646179",
+    "221664",
+    "1095971",
+    "692955",
+    "422600",
+    "418423",
+    "738162",
+    "641284",
+    "641618",
+    "277556",
+    "708438",
+    "503401",
+    "1095881",
+    "183880",
+    "550609",
+    "282411",
+    "87926",
+    "681264",
+    "242107",
+    "289276",
+    "613870",
+    "483178",
+    "40337",
+    "425505",
+    "480536",
+    "742988",
+    "163038",
+    "740624",
+    "436602",
+    "59392",
+    "649893",
+    "393268",
+    "529090",
+    "249866",
+    "551819",
+    "625205",
+    "574051",
+    "636949",
+    "546956",
+    "444350",
+    "510158",
+    "389385",
+    "393462",
+    "506579",
+    "576312",
+    "594105",
+    "748771",
+    "321239",
+    "1095542",
+    "658372",
+    "1095537",
+    "242061",
+    "555590",
+    "581801",
+    "237936",
+    "1095495",
+    "491585",
+    "415962",
+    "527625",
+    "437752",
+    "153037",
+    "556307",
+    "727699",
+    "124787",
+    "407662",
+    "706215",
+    "577511",
+    "637254",
+    "719749",
+    "625458",
+    "428819",
+    "556144",
+    "750421",
+    "275137",
+    "659182",
+    "455782",
+    "562821",
+    "701345",
+    "588627",
+    "591993",
+    "43781",
+    "700835",
+    "653054",
+    "441734",
+    "478054",
+    "203458",
+    "37685",
+    "521801",
+    "752473",
+    "746065",
+    "711811",
+    "129517",
+    "1101739",
+    "1095066",
+    "438324",
+    "680102",
+    "524733",
+    "1094999",
+    "724680",
+    "1094991",
+    "703383",
+    "643359",
+    "587853",
+    "245120",
+    "394095",
+    "707513",
+    "147090",
+    "753299",
+    "449442",
+    "503580",
+    "589586",
+    "614047",
+    "393203",
+    "693101",
+    "466252",
+    "80876",
+    "212796",
+    "577131",
+    "689885",
+    "617968",
+    "604113",
+    "722352",
+    "567895",
+    "584569",
+    "455456",
+    "565231",
+    "729672",
+    "112477",
+    "512807",
+    "421813",
+    "458235",
+    "679878",
+    "677519",
+    "398335",
+    "574002",
+    "607292",
+    "659247",
+    "612846",
+    "478691",
+    "576195",
+    "439375",
+    "702855",
+    "1094575",
+    "657091",
+    "743668",
+    "721885",
+    "122582",
+    "191792",
+    "1094453",
+    "693636",
+    "413858",
+    "402318",
+    "618408",
+    "647260",
+    "1094361",
+    "96250",
+    "733892",
+    "437291",
+    "231877",
+    "452200",
+    "540983",
+    "646071",
+    "724275",
+    "635150",
+    "438316",
+    "285729",
+    "1094271",
+    "563359",
+    "602652",
+    "574730",
+    "753071",
+    "543951",
+    "1101665",
+    "524166",
+    "393420",
+    "281702",
+    "408945",
+    "230891",
+    "512278",
+    "417946",
+    "647872",
+    "674595",
+    "1094056",
+    "699837",
+    "544308",
+    "1094039",
+    "686746",
+    "565915",
+    "449750",
+    "576452",
+    "605651",
+    "506025",
+    "503607",
+    "690508",
+    "609956",
+    "1093926",
+    "617167",
+    "1093881",
+    "239830",
+    "4696",
+    "744261",
+    "961921",
+    "870861",
+    "1047012",
+    "1093795",
+    "1039586",
+    "1047625",
+    "934134",
+    "824282",
+    "787784",
+    "1041473",
+    "1093732",
+    "920458",
+    "989855",
+    "1053111",
+    "900924",
+    "944700",
+    "930326",
+    "25534",
+    "986972",
+    "942221",
+    "1070361",
+    "1093564",
+    "1076078",
+    "959228",
+    "771734",
+    "950799",
+    "1093540",
+    "824080",
+    "1023850",
+    "825954",
+    "1093507",
+    "1078731",
+    "1093487",
+    "1093481",
+    "301777",
+    "790110",
+    "831474",
+    "1093443",
+    "241246",
+    "822859",
+    "762111",
+    "948397",
+    "826153",
+    "800792",
+    "831030",
+    "1093359",
+    "1003114",
+    "29089",
+    "954455",
+    "881582",
+    "971633",
+    "905057",
+    "767745",
+    "869035",
+    "828588",
+    "1024669",
+    "872823",
+    "984178",
+    "1093235",
+    "321918",
+    "1093181",
+    "254652",
+    "910818",
+    "89143",
+    "781074",
+    "924978",
+    "130034",
+    "786857",
+    "1093094",
+    "810680",
+    "1093038",
+    "995125",
+    "839528",
+    "1101535",
+    "338917",
+    "817309",
+    "134239",
+    "57270",
+    "994112",
+    "910622",
+    "1092978",
+    "22231",
+    "904542",
+    "1092919",
+    "91722",
+    "161828",
+    "837202",
+    "889104",
+    "25294",
+    "315884",
+    "1056548",
+    "1018525",
+    "809556",
+    "359040",
+    "762059",
+    "65957",
+    "809798",
+    "904007",
+    "96602",
+    "1092751",
+    "783098",
+    "1072506",
+    "1092724",
+    "69871",
+    "844211",
+    "952452",
+    "922335",
+    "932223",
+    "1063177",
+    "837467",
+    "884533",
+    "283548",
+    "913568",
+    "1092551",
+    "1092528",
+    "72485",
+    "1043413",
+    "320970",
+    "823549",
+    "930124",
+    "333579",
+    "1044041",
+    "961097",
+    "1078491",
+    "1092441",
+    "894161",
+    "902931",
+    "1050747",
+    "914406",
+    "860655",
+    "865971",
+    "952658",
+    "78418",
+    "914771",
+    "212303",
+    "999610",
+    "1092297",
+    "979787",
+    "919310",
+    "789292",
+    "860942",
+    "940386",
+    "62055",
+    "882141",
+    "69789",
+    "1057270",
+    "128178",
+    "877845",
+    "914845",
+    "1073721",
+    "798945",
+    "786520",
+    "761388",
+    "72809",
+    "990010",
+    "849596",
+    "840445",
+    "955220",
+    "1014911",
+    "975495",
+    "801478",
+    "1019830",
+    "1101443",
+    "1024176",
+    "1092005",
+    "763619",
+    "907127",
+    "930621",
+    "847726",
+    "177238",
+    "842272",
+    "290585",
+    "1091955",
+    "762296",
+    "893789",
+    "890890",
+    "775355",
+    "924047",
+    "989099",
+    "1091850",
+    "780993",
+    "766202",
+    "200062",
+    "815421",
+    "769630",
+    "1079141",
+    "1091765",
+    "351820",
+    "963564",
+    "1042676",
+    "829103",
+    "874691",
+    "1048995",
+    "1091667",
+    "913286",
+    "1065032",
+    "938066",
+    "1091643",
+    "1038678",
+    "910870",
+    "771170",
+    "1091576",
+    "1091569",
+    "58234",
+    "964577",
+    "834848",
+    "1015766",
+    "1091522",
+    "900164",
+    "814568",
+    "328704",
+    "964152",
+    "863112",
+    "920885",
+    "831871",
+    "844658",
+    "75335",
+    "980789",
+    "1080968",
+    "765583",
+    "808235",
+    "853471",
+    "180693",
+    "960003",
+    "1019405",
+    "1010607",
+    "785721",
+    "853995",
+    "969264",
+    "995526",
+    "985905",
+    "1091269",
+    "830649",
+    "357519",
+    "1023838",
+    "958993",
+    "954711",
+    "897401",
+    "968310",
+    "1009668",
+    "860462",
+    "769085",
+    "844128",
+    "1052610",
+    "970830",
+    "1000509",
+    "924844",
+    "822642",
+    "938140",
+    "91790",
+    "898631",
+    "59190",
+    "1036999",
+    "941749",
+    "832188",
+    "999897",
+    "90209",
+    "792187",
+    "906692",
+    "854785",
+    "857956",
+    "1052563",
+    "193422",
+    "780850",
+    "958142",
+    "946825",
+    "972064",
+    "1077000",
+    "1090838",
+    "311540",
+    "968921",
+    "791140",
+    "1071061",
+    "153739",
+    "1049767",
+    "818421",
+    "775297",
+    "1079959",
+    "1090700",
+    "971904",
+    "348994",
+    "205741",
+    "126821",
+    "197542",
+    "326637",
+    "1090537",
+    "1101300",
+    "72435",
+    "79763",
+    "133977",
+    "277737",
+    "1090458",
+    "81649",
+    "203039",
+    "56188",
+    "35996",
+    "141185",
+    "57258",
+    "1090400",
+    "176701",
+    "1090374",
+    "255469",
+    "331141",
+    "1090352",
+    "291248",
+    "165007",
+    "205809",
+    "1090311",
+    "326719"
+  ],
+  "query_texts": [
+    "define preventive",
+    "symptoms of ptsd in vietnam veterans",
+    "central city definition",
+    "how bicycle tire tubes are sized",
+    "can you substitute chocolate chips for semi-sweet",
+    "how big do newfypoo's get",
+    "how much is the stamp to send a card",
+    "how is soil created from rocks",
+    "define tapestry",
+    "do vhi swiftcare do blood tests?",
+    "average wage gilded age",
+    "texas roadhouse glen mills pa phone number",
+    "the largest company in each state",
+    "does bromelain help with weight loss",
+    "the meaning of stinchcombe",
+    "britne oldford worth",
+    "the role of a champion on an improvement team",
+    "the small intestine is small in what",
+    "to what extent is exclusion ethical according to the nasw code of ethics?",
+    "tsca definition malpractice claim",
+    "types of java fonts",
+    "valve of hasner",
+    "vasospasms caused by what",
+    "vegetables good for diabetic dogs",
+    "cadi b age",
+    "volatile meaning?",
+    "wayfair tile",
+    "weather for tennessee in april",
+    "weather in fletcher,nc",
+    "weather in spring lake mn",
+    "weather in warwick",
+    "calories in canned black beans",
+    "calories in homemade apple butter",
+    "what are assets when applying for food stamps",
+    "what are catgut strings?",
+    "what are deposit solutions banking",
+    "what are fed funds sold",
+    "calories in soy oil",
+    "what are legacy matters",
+    "what are peripheral proteins?",
+    "what are stampings used for",
+    "what are the average annual sales made with dunkin donuts",
+    "during which phase does a cell spend the majority of its life cycle?",
+    "what are the complications of varicose vein",
+    "what are the different forms of marijuana",
+    "what are the early signs of colon cancer?",
+    "what are the most common causes of paralysis",
+    "what are the tools used to make a relief print",
+    "another word for density",
+    "what can be used in place of a coffee filter?",
+    "what car class is the mclaren",
+    "what causes a prickly itchy feeling all over",
+    "what causes hormonal bleeding",
+    "what causes mild elevation of bnp",
+    "what company manufactures docetaxel",
+    "what conference is bryant for football",
+    "what contains inner membranes arranged in stacks of membranous sacs called grana",
+    "what could cause soreness of heel",
+    "what county is albany mo",
+    "what county is elkhart texas in",
+    "carrier conditioners phone number",
+    "what county is ridgway pa in",
+    "case can arrive at the supreme court through each of these ways except",
+    "what county is upper saddle river nj in",
+    "what county is wendelville ny in",
+    "what did maria theresa do for the serfs",
+    "what did wells fargo do wrong",
+    "what dna molecules bond with each other",
+    "what do goblins represent in literature",
+    "what do rich people complain about",
+    "what do rich people do",
+    "what do teachers need from administrators",
+    "what do you learn in nursing school",
+    "what does a bank lockbox clerk do",
+    "what does a coo do at a hospital",
+    "what does adjudicate mean",
+    "definition of sadducees",
+    "examples is bottleneck effect in biology",
+    "what does aus",
+    "what does factory default mean",
+    "what does greek small letter psi represent",
+    "what does homesteads mean",
+    "what does in semper mean in latin",
+    "what does inverted means?",
+    "what does it mean centcom",
+    "what does it mean to be alienated",
+    "what does joe maddon use on his hair",
+    "causes of hand, leg numbness",
+    "fascial definition",
+    "what does qhs stand for",
+    "what does qmap stand for",
+    "what does starling mean",
+    "fin de siecle meaning",
+    "what does thhn in electrical stand for",
+    "what does uncharted mean",
+    "what drugs treat uti in dogs",
+    "fitchburg state university number",
+    "what happens if you ignore a collections agency",
+    "what injectable meds treat cervical dystonia",
+    "what is a cavalier",
+    "what is a chromosomes function and purpose",
+    "what is a cyst on the kidneys do",
+    "what is a finderscope",
+    "what is a fume hood used for in chemistry",
+    "what is a illusionist",
+    "what is a lantern fish",
+    "what is a mustelidae",
+    "what is a preliminary source",
+    "what is a router meaning",
+    "what is a signal transduction pathway example",
+    "what is a transfer of debt account?",
+    "what is a url on my",
+    "what is a variable account in a annuity",
+    "what is adventure time?",
+    "color of urine",
+    "colors in code",
+    "what is an amazon center",
+    "columbine massacre killed how many people",
+    "what is an atm mutation",
+    "what is animsition",
+    "what is at the base of the aorta",
+    "what is cataflam",
+    "computing definition",
+    "generic lotrel side effects",
+    "what is dockpanel used for",
+    "what is does un stands for",
+    "what is dry rot answers",
+    "what is endocrinology clinic",
+    "what is force fluids mean",
+    "what is framework in information",
+    "what is freddie mac first look initiative",
+    "what is full recourse guaranty",
+    "what is glass sightline",
+    "what is green soap used for",
+    "what is hdl is that good or bad cholesterol",
+    "what is medical term for neck fusion?",
+    "what is nyu ranked",
+    "what is ptztv",
+    "what is rectus sheath block",
+    "har-co credit union routing number",
+    "what is sealaska corporation",
+    "what is ssc je",
+    "what is super duplex stainless steel",
+    "what is surety bond and how it works",
+    "what is termis",
+    "what is the best place for all inclusive vacations for families",
+    "what is the best way to treat a cold sore that is scabbed over",
+    "cost to purchase cattle",
+    "what is the description of a gas",
+    "what is the goddess of agriculture in greek mythology",
+    "heslin rothenberg farley & mesiti p.c.",
+    "what is the legal definition of deposit",
+    "what is the location of the river cocytus",
+    "crm finance definition",
+    "what is the meaning of weber",
+    "what is the most protected crop in japan?",
+    "ct unemployment customer service number",
+    "cto systems meaning",
+    "what is the phone number to spe",
+    "what is the population of wuhan china",
+    "what is the priceline customer service number?",
+    "what is the purpose for computer security",
+    "what is the purpose of the nursing department",
+    "what is the purpose of the twenty-fifth amendment?",
+    "what is the quickest flowering plant",
+    "what is the radius if the diame",
+    "hiouchi ca is in what county",
+    "what is the standard pd for a woman",
+    "what is the standard size of a king size headboard",
+    "what is the temp for costa rica",
+    "holgate ohio population",
+    "cwh price target",
+    "what is tosca automation tool",
+    "what is used to help with urinary leakage surgeries",
+    "home remedies for lupus pain",
+    "what is walgreens starting pay",
+    "what islands have pine tree",
+    "honolulu chinese new year celebration",
+    "what kind of oil is good for dry hair",
+    "what kind of water do axolotls",
+    "declared definition",
+    "what nationality is dr. nowzaradan",
+    "what nationality is joe pesci",
+    "what natural processes affect climate change",
+    "what part of the integumentary system does scc",
+    "define a productive project manager",
+    "define activity on node",
+    "define alpenhorn",
+    "what rhymes with mistake",
+    "what size should amplicons be",
+    "what street is nordstrom rack is on",
+    "what temp do you roast potatoes",
+    "what temp is plasma stored at",
+    "what the cost if you are convicted of a class c misdemeanor",
+    "what time of year do most employees choose to retire",
+    "what type of dog mix is a morkie",
+    "how can deforestation directly affect living organisms",
+    "what type of government does a small group of people rule",
+    "what type of security do routers have by default",
+    "what type of wave is electromagnetic,",
+    "what was the basis for the gideon v. wainwright case?",
+    "what wheel do parking brake brakes use?",
+    "what willow herb is used to make the tea",
+    "what year did silver discovered at potosi",
+    "_______ ratios measure an organization's ability to meet its short term obligations.",
+    "what's a twin flame",
+    "what's an impact drill",
+    "what's the max dose of xanax you can take",
+    "what's the maximum amount to contribute to a sep",
+    "define podiatry",
+    "when did leonardo vinci live",
+    "define prefabricate",
+    "when did moody blues do days of future past",
+    "define rarefy",
+    "when making a payment what is an aba number",
+    "when should you wash strawberries",
+    "when was ft mcnair established?",
+    "when was the first catapult invented?",
+    "when was tv invented?",
+    "when were the first call",
+    "how do you call a rapid response in the hospital?",
+    "where does blood come from before it enters the left atrium",
+    "where does tulips now grow",
+    "where in the brain is dyslexia located",
+    "where in the earth do faults form",
+    "where is casey base located",
+    "where is macy's westfield valley fair",
+    "where is metro ny distribution center",
+    "where is newfoundland, pa?",
+    "where is selah washington located",
+    "where is south easton ma",
+    "where is the new sheet button in excel",
+    "where is the street webster",
+    "which car brands hold value",
+    "which county is knoxville, tn in",
+    "how does guaifenesin work in the body",
+    "which is the original delmonico's",
+    "which legal protection requires you to defend it with lawsuits",
+    "which memory is also called primary memory",
+    "which phylum is acanthocephala in",
+    "which quality of high-performing teams helps team members build confidence?",
+    "which sexually transmitted disease has three stages, the first of which involves development of a chancre?",
+    "who has quit trump's advisory team",
+    "who is admiral rickover",
+    "who is dr ari brown",
+    "who is jeconiah",
+    "definition of futility",
+    "definition of gist summary",
+    "who is kwame nkrumah",
+    "who is the oldest dodge dealer in the world",
+    "how expensive is sydney",
+    "how far away from a fire hydrant parking",
+    "who paul clark",
+    "who proposed the xy theory",
+    "who said never let a tragedy go to waste",
+    "how far in advance to send invitations birthday party",
+    "who was the basket of apples by",
+    "who was william henry preceded by",
+    "why are healthy microglia important?",
+    "why are the nerves in my nose tingling",
+    "definition of quoting",
+    "compressive atelectasis definition",
+    "how many times the normal radiation",
+    "causes of drugs and alcohol",
+    "how to create one pivot table from multiple tabs",
+    "how is a pre existing condition determined pets",
+    "how to get student loans without a cosigner",
+    "how long do dogs and cats live",
+    "how many grams of sugar does a banana have",
+    "centra credit union routing number",
+    "do you italicize play titles",
+    "does estrogen make me start my period",
+    "binding spell definition",
+    "causes of swelling in the feet and ankles",
+    "famous people who was born on pi day",
+    "core tenets of the constitution",
+    "how long can it take for a hernia to heal ?",
+    "average yearly return on stock market",
+    "how do you lower hardness in pool water?",
+    "how has the economy changed since trump",
+    "Explain what a bone scan is and what it is used for.",
+    "calories per brat",
+    "cincinnati baseball teams",
+    "are snails good for plants",
+    "how long are you contagious with a stomach bug",
+    "how does society affect the individual",
+    "can a backache cause stomach pain",
+    "cost of appendectomy surgery in usa",
+    "how long did barack obama be president",
+    "belizean cuisine",
+    "eye surgery lasik cost",
+    "definition of discourse analysis pdf",
+    "how big do boxers get",
+    "definition of an empath",
+    "how is drive booster",
+    "definition for naive",
+    "house is settling and outside wall is cracked",
+    "how many pages does bruiser book have",
+    "clientele definition",
+    "do guys lose weight quicker than girls facts",
+    "blood coagulation is a component of this process",
+    "brandywine md population",
+    "how many words one page double spaced",
+    "how big should my boa constrictor be",
+    "definition of angioneurotic oedema",
+    "difference between a trowel and float",
+    "how many corn seeds per acre",
+    "how to not bloat after every meal",
+    "how many calories in publix chicken tender subway",
+    "can a lp gas furnace be serviced",
+    "can prednisone cause headaches",
+    "bindlestiff definition",
+    "how long does pink eye last bacterial",
+    "how long does norovirus last on surfaces",
+    "can you depended on oxygen",
+    "here comes the hotstepper song",
+    "gnosticism heresy definition",
+    "how long does priority mail take to get delivered",
+    "how fast is a saluki",
+    "gendered phenomenon definition",
+    "gorm the dissolver",
+    "a simple definition for the word bias.",
+    "can a 15 year old fly alone domestic flights?",
+    "define resit",
+    "at what age can a kitten",
+    "how much is the cost of a movie ticket",
+    "how to rig for crappie",
+    "approximately how many moons does uranus have",
+    "how much coffee is safe per day pregnancy",
+    "how long for an ach deposit to clear",
+    "how long does it take for hemorrhoids to heal",
+    "chrome type definition web",
+    "how long is the bachelor finale",
+    "define retrogressed",
+    "how long nicotine stay in your saliva",
+    "cost of starting a restaurant",
+    "how does humira work for ulcerative colitis",
+    "brief government definition",
+    "how long does it take to cook dry beans",
+    "expropriated define",
+    "divine wisdom definition",
+    "does mustard help lower blood pressure",
+    "how long is a day on ven",
+    "effect of salt on water boiling point",
+    "how long to grow a pineapple",
+    "how ford fusion pre collision assist with pedestrian detection works",
+    "how long to do rotisserie chicken",
+    "how many alcohol in malibu rum",
+    "why must oil be used with oil immersion lens",
+    "how far down do great white sharks live",
+    "how many episodes is there in naruto jump",
+    "advanced aerospace engineering salary",
+    "deferred action literal definition",
+    "medicare advantage cost per month",
+    "average weight of male labrador",
+    "what is a serigraph",
+    "upstart meaning",
+    "how many burn centers are in the usa",
+    "what is in egg white protein powder",
+    "what is an emg/ncs test",
+    "median house price for spokane wa",
+    "calories in one slice ham",
+    "how many calories in slim fast shakes",
+    "how to bake homemade pumpkin",
+    "can lease renewal date be changed by landlord",
+    "how was the radar used",
+    "pseudocoelom definition",
+    "how long does it take to process your request for ssa retirement benefits?",
+    "how many categories of coverage on a homeowners policy",
+    "what is a bot fly bot",
+    "how many chromosomes can be seen in a normal human karyotype",
+    "how much protein is in a lb of ground beef",
+    "what county is pacific beach, wa in",
+    "population in davidson county tn",
+    "how does genome editing work",
+    "average winter temperature in kent co. delaware",
+    "how to pass the certified occupancy course",
+    "is a procedure considered a medical error",
+    "what is cobol",
+    "what happens to the boiling point when a solute is added to a solution",
+    "socially dysfunctional definition",
+    "what county is naples fl",
+    "remit payment definition",
+    "is a presynaptic neuron is stimulated",
+    "what is definition of fugue music",
+    "abid cardiology",
+    "nauticus hours",
+    "what form of racism is racial profiling",
+    "The hormone that does the opposite of calcitonin is",
+    "is the hawb the tracking number",
+    "outflow boundary definition",
+    "is china a reserve currency",
+    "what is a bimetallic thermometer used for",
+    "should diabetics eat watermelon",
+    "teamwork definition for kids",
+    "what are some subatomic particles",
+    "how many gallons of gas in a chevy cruze",
+    "how many homes in heritage oak park port charlotte fl",
+    "is cortana smart???",
+    "what is acrylic used for",
+    "how many kids does jack osbourne have",
+    "what is a mini smart fridge",
+    "how many microns thick is house paint?",
+    "what is cardamom used for",
+    "is coolant the same as antifreeze",
+    "temperature in terryville.",
+    "what are the darker parts of period blood",
+    "what are forests sinks for?",
+    "is keppra medication a barbiturate?",
+    "samsung galaxy s6 edge att price",
+    "what does modern time mean",
+    "how many people died in the parkland school shooting",
+    "what does the greek word kai mean",
+    "what education do pipelayers need",
+    "population of glendale az",
+    "how many percent of people worldwide have vitiligo",
+    "why were the reaper and steel plow important",
+    "what causes over pronation of the foot",
+    "is inserting an iv a billable procedure",
+    "what is counter",
+    "how many pounds is in a metric ton",
+    "how many reps does missouri have",
+    "side effects of flaygl antibiotics",
+    "what is instamed",
+    "cgd autoimmune",
+    "what is frp lock on mean/",
+    "fec independent expenditure definition",
+    "how many soldiers can i fit in a tent",
+    "what does corrective action in a job mean",
+    "what causes men to be infertile",
+    "is chihuahua yorkshire mix",
+    "how much can a hoverboard cost",
+    "what does phyto mean",
+    "was amelia earhart alone when she crashed",
+    "stereognosis definition",
+    "nighttime hip pain causes",
+    "what if my idea was stolen",
+    "what is anaphylaxis symptoms",
+    "biggest island of hawaii",
+    "how many us dollars are currently in circulation",
+    "how many valence electrons does an atom of the element neon (ne) have?",
+    "is indirect labor an overhead cost",
+    "usps schedule a delivery",
+    "how many weeks is best to do gender ultrasound",
+    "what county is stedman nc in",
+    "what does exempt or non-exempt employee mean",
+    "what are volatility swaps",
+    "weight in stones conversion",
+    "what is a np grade",
+    "willie mays worth",
+    "how many years must a person be a u.s. citizen before they can be senator",
+    "what does dv stand for in psychology",
+    "average salary for high school counselor",
+    "willie weeks net worth",
+    "how much a square foot does it cost to have carpet installed",
+    "how much bitcoins are there in the world",
+    "lotte world skyscraper",
+    "how many died in boston bombing",
+    "what is floof",
+    "telephone number for nfcu",
+    "most popular tourist attraction in uruguay",
+    "what county is tinker afb located in",
+    "what is a dower affidavit",
+    "what doctors have expertise in hashimoto's disease",
+    "cannot print to adobe pdf printer",
+    "what is blackwater called now",
+    "how to cook beets without bleeding",
+    "how deep is lake ouachita",
+    "what is hobbs act",
+    "what does slough mean",
+    "how do water waves form",
+    "is dog the bounty hunter married to beth",
+    "what are bifidobacterium",
+    "stress effects on the body",
+    "what is a cincture",
+    "synonym for the word evaluate",
+    "what is a pacemaker for",
+    "is the walmart money card plus still available",
+    "population of tigard oregon",
+    "different types of tuberculosis 2015pff",
+    "does strep cause fever blisters",
+    "what county is east ellijay ga in",
+    "what is face primer",
+    "what is a resolution by its board of directors",
+    "what hours are considered brunch",
+    "wellcare mike vice president",
+    "the meaning of mistry",
+    "what does the egyptian plover",
+    "what gland secrete epinephrine",
+    "what does tear himself away mean",
+    "what does pro forma mean",
+    "how do you cook turkey necks",
+    "how much fiber is in valencia orange",
+    "what is a normal pulse rate for men uk",
+    "is rinsing with water enough after swimming",
+    "is monarch bank owned by townebank?",
+    "what is definition of fever",
+    "what does it mean when you dream about babies",
+    "what does it mean your body in ketosis",
+    "how many calories in mahi mahi",
+    "what is ads usaid",
+    "statute of limitations or statutes of limitations",
+    "how much is boston university tuition",
+    "explain the term testing in programming",
+    "what age did martin luther king died",
+    "how many digits does a vin have",
+    "causes of placenta previa",
+    "what is a digital perm",
+    "how long can i keep cooked italian sausage in refrigerator",
+    "how many milligrams of ritalin should an adult take",
+    "what county is tumacacori az in",
+    "prostate cancer what to look for",
+    "average plumbing cost to replace a kitchen sink/faucet",
+    "is term gpa and semester gpa the same thing",
+    "price of bath fitter for a tub",
+    "what is einstein neem oil good for",
+    "does amlodipine make you itch",
+    "what is docket management",
+    "largest hips in the world",
+    "calories burned using elliptical",
+    "what does the constitutional protection of due process mean??",
+    "in banking what is a consumer",
+    "types of owls in nebraska",
+    "how long does a pa marriage license last",
+    "what age should toddlers start sleeping in a toddler bed",
+    "what do the colors on the russian mean",
+    "what are the subordinating conjunctions",
+    "what does eobr means",
+    "webmd symptoms of lupus",
+    "mageirocophobia definition",
+    "t age can a widow collect social security",
+    "human symptoms of bird flu",
+    "in its infancy synonym",
+    "symptoms for color blindness",
+    "what are two differences between meiosis and mitosis",
+    "what cell structure does archaebacteria have",
+    "what is fortran programming language",
+    "how much is a rabie shot",
+    "how much rain does phoenix get in a year",
+    "what event started world war 1",
+    "how much ram is needed for gaming",
+    "how long can i cancel contract in home signing",
+    "what are biokinetics",
+    "what can help arteries dilate",
+    "how is volcano formed",
+    "average salary seguin",
+    "salary for insurance agen",
+    "is lantus considered an insulin?",
+    "types of eyebrow shapes",
+    "lasik surgery how long to wear goggles at night",
+    "distance between cities amarillo tx and mora new mexico",
+    "what are cellular biomarkers",
+    "what is carbohydrate intake",
+    "define oppress",
+    "is cyclosporine an antibiotic",
+    "what is a wheel offset mean",
+    "what areas of the brain are affected by autism",
+    "what does exoskeletons mean",
+    "what is army force management",
+    "what do the testes do in the reproductive system",
+    "is there an age limit for using a swegway",
+    "what are casein curds",
+    "what is generation x?",
+    "how many babies in a chipmunk birth?",
+    "what family of antibiotics is levaquin in",
+    "monoxide poisoning symptoms",
+    "what are overpacks used for in hazardous material",
+    "what is a star wars sith",
+    "what causes hepatomegaly",
+    "what causes spots on tree leaves",
+    "average savings per age group",
+    "what is a spanner wrench used for",
+    "what does the term big elephant in the room mean",
+    "lockheed martin field engineer salary",
+    "population of paducah tx",
+    "hippo denotation definition",
+    "average income for north salem new york",
+    "tissue creep definition",
+    "what is granicrete",
+    "what is facebook used for",
+    "what is an anoscopy for",
+    "define: entity's",
+    "definition of vit",
+    "how soon before workout to take pre workout",
+    "leading causes of death who",
+    "what is a cumulative average",
+    "trigeminal definition",
+    "accounting definition of office supplies",
+    "what is blockchain simple",
+    "how tall is the ice wall in game of thrones",
+    "what is a thoracentesis",
+    "what does microsoft warranty cover for surface book?",
+    "what causes feet to swell at night",
+    "how long do fresh pies last",
+    "in what environment do coral reefs form",
+    "what is acha",
+    "difference between diverticulitis and diverticulosis",
+    "what is haile selassie famous for",
+    "meaning of the indian name parth",
+    "stepford wife definition",
+    "what causes low pressure on a pump for well water",
+    "what county is van nuys, ca in",
+    "in a plant what is oleoresin",
+    "what is a note for mortgage",
+    "nuclear definition in science",
+    "can you use text messages in court",
+    "how did amber alert get its name",
+    "what are year quarters",
+    "what is a malanga",
+    "what depletes testosterone in men",
+    "what county is champlain va located in",
+    "what is bargain hunt store",
+    "what are the causes of burning and weakness in the legs",
+    "what causes a fluid belly?",
+    "molar mass of phenol",
+    "what are some causes of vertigo",
+    "what is charter bus",
+    "creative arts definition",
+    "temperature rules cooking for food service",
+    "is protonix an antacid",
+    "most knockouts in boxing",
+    "what is a cross liability clause in insurance",
+    "what is a cirt",
+    "irish foods list",
+    "what are the stress hormones in the body",
+    "what county is hinton wv located?",
+    "what famous person passed away recently",
+    "what county is soldier grove, wi",
+    "positive effects of agriculture",
+    "what are trigonometric ratios",
+    "lesion on rib causes",
+    "what is a tarkus",
+    "in the klipfish code how old is lars",
+    "what else can marijuana be used for",
+    "what is employee turnover definition",
+    "what is backbone of rna vs dna",
+    "define imperiously",
+    "frequency of homozygous recessive",
+    "indent meaning",
+    "what is a paragraph example",
+    "is it illegal to be a sugar daddy",
+    "is ammonium salts soluble water",
+    "what device cools",
+    "what does rough trade mean",
+    "ayi price",
+    "complex protein definition",
+    "what is considered inpatient types",
+    "largest shipping day of year",
+    "how far is niagara on the lake to hamilton",
+    "medicine that causes tremor",
+    "was the philippines a us territory",
+    "what does preferred provider organization stand for",
+    "what is biote",
+    "what does coterminal angle mean",
+    "leading causes of death in united states",
+    "how many hours are in fmla",
+    "is a complex molecule in the cell's chromosomes that carries genetic information.",
+    "what are platitudes",
+    "what county is attleboro ma",
+    "what are the three monetary policy tools of the fed",
+    "what is guatemala main export",
+    "weather in danville, ca",
+    "dental assistant salary course cost",
+    "transportation to us bank stadium",
+    "in history what is a sphere of influence",
+    "how many days to contact eo office",
+    "is dylan o'brien related to adam brody",
+    "how far is disney world from universal",
+    "temperature in oslo in september",
+    "is methadone an mdma receptor agonist",
+    "what does shortcut mean",
+    "what is a bezoar in terraria",
+    "is pay equity unfair",
+    "what is a short term study abroad",
+    "weather in germany",
+    "is qgenda a software",
+    "what is a hernia check",
+    "what are some treats you can use for in infection",
+    "meaning of the name elodie",
+    "what are two ways a mineral can form",
+    "what county is emmett ks in",
+    "sydeny climate",
+    "stephen porter wiseman fax number",
+    "what is a medical mc provider",
+    "what county is mt vernon ohio",
+    "is the judicial branch of the un.",
+    "what days is the ides of march",
+    "is there a fee to send bitcoin using exodus",
+    "how long are german shepherds pregnant",
+    "Is the Louisiana sales tax 4.75",
+    "what is eod mean",
+    "when was the national park system established",
+    "what kind of sword does Strider Hiryu use",
+    "who played miss kitty in gunsmoke",
+    "ithaca teachers salaries",
+    "who is the ceo of enstar legacy",
+    "who plays ash the porcupine in sing",
+    "what's what caused the dark ages?",
+    "what is the half life of trintellix",
+    "what is provocative allergy testing",
+    "who is the president of switzerland?",
+    "judith e. burgess, md npi number",
+    "what was the first music boxed set",
+    "where is osborn corner",
+    "who voices steven universe",
+    "what temp do you cook pork chops on in the oven? and for how long?",
+    "when do symptoms of seasonal affective disorder start?",
+    "what's good for sinus pressure",
+    "are there allergy drops for your ear congestion",
+    "where is luton",
+    "when did the sitcom. rhoda come out?",
+    "why is government necessary quizlet",
+    "largest industries in north carolina",
+    "why was what rosa parks did important",
+    "when was outlet founded thurman",
+    "what is michael strahans salary",
+    "when is jamaican flag day",
+    "largest state in usa new twenty",
+    "what is the green dinosaur",
+    "who are in the eagles",
+    "what is the indication for microalbumin creatinine ratio",
+    "7) how does human rights law differ from the law of war?",
+    "withdrawal symptoms for coffee",
+    "laws synonyms",
+    "leaf miner definition in horticulture",
+    "how much  is state gas tax in florida",
+    "what is red yeast rice good for",
+    "what is the meaning of service tenure",
+    "lewiston idaho fedex express phone number",
+    "how long can a hippo hold its breath underwater",
+    "what is the function of the microphone",
+    "what is javascript?",
+    "when does the stock market close daily",
+    "what is the interaction between surface water and groundwater in a watershed?",
+    "what is sucrose used for",
+    "what is the meaning of flood",
+    "list the four main tastes",
+    "where was paul newman born",
+    "at what temperature is rump roast done",
+    "when should fatigue and shortness of breath be considered serious",
+    "what network connection transmits data quickly via light?",
+    "where do tapirs live",
+    "what time is it pdt?",
+    "what is mag",
+    "what kind of leg pain comes from sciatica",
+    "what is the literal meaning of linguini",
+    "who becomes president if the president is impeached",
+    "what latitude is paris france",
+    "where is hartwell ga",
+    "managed meaning",
+    "how much is derek jeter worth",
+    "martinica meaning",
+    "how long does it take for the earth to make one revolution?",
+    "what type of cancer did jim kelly have",
+    "causes stomach bloating women",
+    "what is palace chase",
+    "what word means inflammation of the throat",
+    "definition  moebius syndrome",
+    "what is probability biology",
+    "benefit to prostate massage",
+    "what is the charter of french liberties",
+    "meaning of house arrest",
+    "where is the condyle",
+    "what is the plural of titmouse",
+    "diff types of fuses",
+    "how similar is spanish to portuguese",
+    "what is the difference between delta and volatility?",
+    "definition of electric field",
+    "burning libraries",
+    "where is tea tree oil from",
+    "what type of bond occurs when an atom shares one or more pairs of electrons with another atom?",
+    "meaning of prima donna",
+    "are eggs or grapes better to fight colds",
+    "what time does sams pharmacy open",
+    "meaning of unity in designing",
+    "child support legal definition of",
+    "does LOS ANGELES have buses or metro",
+    "what is the nutritional value of oatmeal",
+    "what program is syntphelper",
+    "are tesla electric cars",
+    "how much does it cost to hire a web designer",
+    "who was the lone survivor",
+    "which region does the black bear live in",
+    "what is the bovine growth hormone",
+    "how to find regular payback period",
+    "what is java for",
+    "can congress collect taxes",
+    "what is the butler's name in the addams family",
+    "what those pending mean",
+    "concomitant, definition",
+    "metrocast phone number",
+    "what is persuasive essay",
+    "why is the lean concept important to study?",
+    "midland states bank aba number",
+    "can i use 10 volume developer with permanent color",
+    "what is the respiration system",
+    "when is the best time to take priligy?",
+    "what was the reason for the snake war",
+    "what's the lizard from monsters inc name",
+    "why did spock die in wrath of khan",
+    "what is the oldest constitutional republic",
+    "what part is the sigmoid colon",
+    "how many feet is a survey pole",
+    "what type of music is disturbed considered",
+    "most common molds in hay",
+    "most decorated american skiers",
+    "can plywood be painted",
+    "who made rihanna famous",
+    "how much is a kia sorento",
+    "what is the geography of china like",
+    "what's beyond pluto",
+    "how old do you have to be to have a twitter account",
+    "who makes jammy dodgers",
+    "when was the first nba game?",
+    "winn companies salaries",
+    "most romantic zodiac sign",
+    "what should you eat if you have a hernia?",
+    "what test is for lupus",
+    "who sings arabian nights aladdin",
+    "what type of rock is the mantle made of",
+    "what is ventolin for",
+    "what kills ants home remedy",
+    "when is the daylight savings time change",
+    "can you keep swiss meringue in the fridge?",
+    "what type of substance minimizes the changes in h+ and oh- in a solution.",
+    "how days is the safe periods",
+    "where is vista ca",
+    "names of tundras",
+    "where is chedun town songjiang district",
+    "what was steve jobs worth",
+    "what is radio miraya",
+    "what is viastone",
+    "when did president obama tickets first vacation while in office",
+    "can a chiropractor treat a herniated disc",
+    "what number do i call to cancel amazon prime",
+    "can i take the mortgage interest deduction and the standard deduction?",
+    "who were marilyn monroe's friends",
+    "define the term codon",
+    "what metal to keep boat compass away from",
+    "what type of tax does virginia collect",
+    "why ph levels are important in hydroponics",
+    "what is spotting",
+    "what is pretexting",
+    "what is it called when you flex a muscle",
+    "can prozac cause nausea",
+    "where is paihia",
+    "what is the synonym for prudent",
+    "what is the prentice-hall corporation system, inc.",
+    "when to aerate grass",
+    "which of the following is a genetic condition in which the body is unable to make melanin?",
+    "where heat pumps are commonly used",
+    "what is sweetfx",
+    "which state speaks the most spanish",
+    "anchor definition in literature",
+    "who are the hibernians",
+    "on what do biologists base their classification of organisms?",
+    "what is kodak real name",
+    "what to eat and drink to help lose belly fat",
+    "what's it called when someone only eats fish",
+    "what is the specific name for walrus classifying organisms",
+    "early signs of thyroid problems",
+    "what is the purpose of buttermilk in baking",
+    "how many of grams a sugar should a person have in one day?",
+    "origination of pi day",
+    "what is jilo",
+    "what should geniuses be able to do",
+    "what region was rome in",
+    "what is natamycin",
+    "what were the first coins made of what material",
+    "where is new columbia pa",
+    "pantone color numbers",
+    "what is pad thai?",
+    "what is liquid white paint",
+    "health services administration salary",
+    "what is the definition of restatement",
+    "what is meant by a blind copy in an email",
+    "word that means to threaten or be forceful",
+    "people who were accused of being communist",
+    "how to convert voice recording to mp4 samsung galaxy",
+    "when will anet announce earnings",
+    "who is venus de milo",
+    "what is the lunula purpose",
+    "what major do you need to be a veterinarian",
+    "who proposed the geocentric theory",
+    "phone number for groupone healthsource",
+    "what type of meals to eat for morning sickness",
+    "why do mice eat themselves",
+    "when did dc comics start",
+    "phone number for the springhill",
+    "who is stardust",
+    "what type of car was ms sally in cars",
+    "what is mercury's orbital period",
+    "pineapple conure price",
+    "pity meaning",
+    "calan medication",
+    "when you give blood how much do they take",
+    "what is the name of the artery on the bottom of the wrist",
+    "which of the following steps occurs last in the initiation phase of translation?hints",
+    "population based incremental learning (pbil)",
+    "what system does straight talk use?",
+    "what is the definition of a discriminant in math",
+    "how much times does your body need to recover",
+    "when will the hurricane be available in star citizen",
+    "what is windows shell experience host process",
+    "what was the holocaust when and where did it happen",
+    "what is the meaning of the word merci",
+    "what is the role of lipids in a cell",
+    "can vigamox eye drops cause nausea",
+    "where is crystal colorado",
+    "xfinity support number",
+    "what is liberty of london fabric",
+    "what is the best erectile dysfunction pill",
+    "what is the weather in death valley",
+    "enlarge definition",
+    "when was stew invented",
+    "which soils are prone to erosion",
+    "which hormone is directly responsible for the development of secondary sex characteristics in males?",
+    "what is postulate in algebra",
+    "what is the weather like in toronto",
+    "where did slavery exist",
+    "where is the federal penitentiary in ind",
+    "where is kl sentral",
+    "proclivity meaning",
+    "what is the meaning behind welcome to the black parade",
+    "how to explain  elevated ck",
+    "who are harrison ford's children",
+    "when was mt. st. helens last eruption",
+    "when should sutures be removed",
+    "what state district is cherokee county oklahoma",
+    "where did an important battle for the tennessee campaign happen",
+    "which folate is known as mthfr",
+    "what is veba account",
+    "what is maven dependency",
+    "what is the required courses to become an it manager",
+    "who started filled a patent on an electric vote recorder",
+    "where do hormones come from",
+    "where is ymca kimball camp located",
+    "what wine goes with corned beef",
+    "what is the function of rna polymerase",
+    "when did disney make beauty and the beast",
+    "chili's pork carnitas calories",
+    "what station is near river street in hoboken, nj",
+    "calorie intake for normal guy lifting weights",
+    "who is penelope hume on lost",
+    "when did the hittites start",
+    "what is the median nerve at carpal tunnel",
+    "where is way st. binghamton",
+    "chagas early stage symptoms",
+    "what is rohs testing",
+    "what to do in seattle on memorial day",
+    "what is the yearly temperature in santa maria california",
+    "what is trump truly hiding",
+    "who stars in the tv show taken",
+    "gas price in mount gilead oh",
+    "what is oxycodone",
+    "when was internet explorer first released",
+    "when does la liga espanola start",
+    "where do you feel contractions",
+    "width of tissue paper rolls",
+    "sea cucumber health benefits",
+    "how much does a spectacled bear weigh",
+    "where did last names originate",
+    "what is respite",
+    "why is kinder gelt provide to german families",
+    "distance from uranus to earth",
+    "who sang delta dawn?",
+    "what is the difference between soul & spirit",
+    "what is narrow broadband access",
+    "world's most poisonous snakes in the world",
+    "> what is powershell",
+    "where do tonsil stones form",
+    "how to change the color of facebook comments",
+    "hot air balloon festival in maryland",
+    "define scooped out",
+    "guatemala absolute location",
+    "how much protein is in bacon",
+    "sound is an example of what kind of wave",
+    "do atoms make up dna",
+    "can pine floors be whitewashed",
+    "can you spray roundup after it rains",
+    "definition of dignity for kids",
+    "how many calories in skyy vodka",
+    "bondsman definition",
+    "cancer of the stomach symptoms",
+    "highest state income tax rate",
+    "breathing in dust symptoms",
+    "average developer salary",
+    "department of labor sedentary definition",
+    "burning feeling in stomach symptoms",
+    "stellar lumens price forecast",
+    "during the depression what percent of american workers were unemployed",
+    "strategery definition",
+    "how long does it take to be come an lpn",
+    "how muxch do cdl endorsement tests cost",
+    "sty causes",
+    "how many ounces of liquid is in one gallon",
+    "does conviction mean jail",
+    "hot to transfer music to my samsung s6",
+    "sustained definition law",
+    "how much protein should a female eat"
+  ],
+  "rel": [
+    [
+      7067056
+    ],
+    [
+      7070556
+    ],
+    [
+      7071501
+    ],
+    [
+      7072838,
+      7072843
+    ],
+    [
+      7073211
+    ],
+    [
+      7073272
+    ],
+    [
+      4778293
+    ],
+    [
+      7075449
+    ],
+    [
+      7075540
+    ],
+    [
+      7075989
+    ],
+    [
+      7077382
+    ],
+    [
+      7079676
+    ],
+    [
+      7081127
+    ],
+    [
+      7081141
+    ],
+    [
+      7081482
+    ],
+    [
+      7081741
+    ],
+    [
+      7081948
+    ],
+    [
+      7082006
+    ],
+    [
+      7083912
+    ],
+    [
+      7085252
+    ],
+    [
+      7086188
+    ],
+    [
+      7088720
+    ],
+    [
+      7088809,
+      7088813
+    ],
+    [
+      7088908
+    ],
+    [
+      7089538
+    ],
+    [
+      7090090
+    ],
+    [
+      7091499
+    ],
+    [
+      7091855
+    ],
+    [
+      7092963
+    ],
+    [
+      7095217
+    ],
+    [
+      7095519
+    ],
+    [
+      7096464
+    ],
+    [
+      7098298
+    ],
+    [
+      7099149
+    ],
+    [
+      7099584
+    ],
+    [
+      7100040
+    ],
+    [
+      7100512
+    ],
+    [
+      7101044
+    ],
+    [
+      7101448
+    ],
+    [
+      7102127
+    ],
+    [
+      7103529
+    ],
+    [
+      7104007
+    ],
+    [
+      7104178
+    ],
+    [
+      4885390
+    ],
+    [
+      7104929
+    ],
+    [
+      7105044
+    ],
+    [
+      7106131
+    ],
+    [
+      7107910
+    ],
+    [
+      7109889
+    ],
+    [
+      7110606
+    ],
+    [
+      7111386
+    ],
+    [
+      7111936
+    ],
+    [
+      7112788
+    ],
+    [
+      7112966
+    ],
+    [
+      7115878,
+      7115880
+    ],
+    [
+      7116118
+    ],
+    [
+      7116292
+    ],
+    [
+      7116569
+    ],
+    [
+      7116917
+    ],
+    [
+      7117981
+    ],
+    [
+      7119548
+    ],
+    [
+      7119970
+    ],
+    [
+      7120331
+    ],
+    [
+      7120828
+    ],
+    [
+      7120979
+    ],
+    [
+      7123013
+    ],
+    [
+      7123743
+    ],
+    [
+      7124113
+    ],
+    [
+      7124884
+    ],
+    [
+      7125770,
+      7125772
+    ],
+    [
+      7125784
+    ],
+    [
+      7125967
+    ],
+    [
+      7126756
+    ],
+    [
+      7127220
+    ],
+    [
+      7127588
+    ],
+    [
+      1193200
+    ],
+    [
+      7129543
+    ],
+    [
+      7129766
+    ],
+    [
+      7130584
+    ],
+    [
+      542028
+    ],
+    [
+      7134662
+    ],
+    [
+      7135193
+    ],
+    [
+      7135569
+    ],
+    [
+      7135798
+    ],
+    [
+      7135965
+    ],
+    [
+      7136061
+    ],
+    [
+      7136575
+    ],
+    [
+      7136911,
+      7136916
+    ],
+    [
+      7138770
+    ],
+    [
+      7140020
+    ],
+    [
+      7140038
+    ],
+    [
+      7141783
+    ],
+    [
+      7144671
+    ],
+    [
+      7144918
+    ],
+    [
+      7145392
+    ],
+    [
+      3357223
+    ],
+    [
+      7147901
+    ],
+    [
+      7150489
+    ],
+    [
+      7151669
+    ],
+    [
+      7153085
+    ],
+    [
+      2196128
+    ],
+    [
+      7154444,
+      7154451
+    ],
+    [
+      7155564
+    ],
+    [
+      7155806
+    ],
+    [
+      7156996
+    ],
+    [
+      7157420
+    ],
+    [
+      7158640
+    ],
+    [
+      7159758
+    ],
+    [
+      7160664
+    ],
+    [
+      7161101
+    ],
+    [
+      7162493
+    ],
+    [
+      7162765
+    ],
+    [
+      7162884
+    ],
+    [
+      7164008
+    ],
+    [
+      7164219
+    ],
+    [
+      1365657
+    ],
+    [
+      7165005
+    ],
+    [
+      7165026
+    ],
+    [
+      7165265
+    ],
+    [
+      7167072
+    ],
+    [
+      7167846
+    ],
+    [
+      7170462
+    ],
+    [
+      7170746
+    ],
+    [
+      7172062
+    ],
+    [
+      7174389
+    ],
+    [
+      7174419
+    ],
+    [
+      7174734
+    ],
+    [
+      7175462
+    ],
+    [
+      7176742
+    ],
+    [
+      7176922
+    ],
+    [
+      7176952
+    ],
+    [
+      7177087
+    ],
+    [
+      7177597
+    ],
+    [
+      7178052
+    ],
+    [
+      7178665
+    ],
+    [
+      7183532
+    ],
+    [
+      7186077
+    ],
+    [
+      7189248
+    ],
+    [
+      7189804
+    ],
+    [
+      7190993
+    ],
+    [
+      7191628
+    ],
+    [
+      7192866
+    ],
+    [
+      7193374
+    ],
+    [
+      7193473,
+      7193475
+    ],
+    [
+      7194251
+    ],
+    [
+      7196311
+    ],
+    [
+      4771283
+    ],
+    [
+      7198089
+    ],
+    [
+      7200025
+    ],
+    [
+      7203676
+    ],
+    [
+      7204887
+    ],
+    [
+      1872166
+    ],
+    [
+      7205912
+    ],
+    [
+      171535
+    ],
+    [
+      7207568
+    ],
+    [
+      7208493
+    ],
+    [
+      7209267
+    ],
+    [
+      7209314
+    ],
+    [
+      7210726
+    ],
+    [
+      7211181
+    ],
+    [
+      7211406
+    ],
+    [
+      7211818
+    ],
+    [
+      7212537
+    ],
+    [
+      7212637
+    ],
+    [
+      7212754
+    ],
+    [
+      7212767
+    ],
+    [
+      7212883
+    ],
+    [
+      7214898
+    ],
+    [
+      7214917
+    ],
+    [
+      7215701
+    ],
+    [
+      6980249
+    ],
+    [
+      7217828
+    ],
+    [
+      7219107
+    ],
+    [
+      7220130
+    ],
+    [
+      7220186
+    ],
+    [
+      7220998
+    ],
+    [
+      7222146
+    ],
+    [
+      7223384
+    ],
+    [
+      7223929
+    ],
+    [
+      7224650
+    ],
+    [
+      7226978
+    ],
+    [
+      7227444
+    ],
+    [
+      7227476
+    ],
+    [
+      7227653
+    ],
+    [
+      844915
+    ],
+    [
+      7229780
+    ],
+    [
+      7230094
+    ],
+    [
+      7230751
+    ],
+    [
+      7231321
+    ],
+    [
+      7233137
+    ],
+    [
+      7234511
+    ],
+    [
+      7235073
+    ],
+    [
+      7235110
+    ],
+    [
+      7235794
+    ],
+    [
+      2388250
+    ],
+    [
+      7240024
+    ],
+    [
+      7240158
+    ],
+    [
+      7240345
+    ],
+    [
+      7241170
+    ],
+    [
+      7241551
+    ],
+    [
+      7243610
+    ],
+    [
+      7246062
+    ],
+    [
+      7246297
+    ],
+    [
+      7247038
+    ],
+    [
+      7247940,
+      7247941
+    ],
+    [
+      7248372
+    ],
+    [
+      7248448
+    ],
+    [
+      7249642
+    ],
+    [
+      6048070
+    ],
+    [
+      7252452
+    ],
+    [
+      7252995
+    ],
+    [
+      7253021
+    ],
+    [
+      7253087
+    ],
+    [
+      7254169
+    ],
+    [
+      7257371
+    ],
+    [
+      7257719
+    ],
+    [
+      7258673
+    ],
+    [
+      7259816
+    ],
+    [
+      2339676
+    ],
+    [
+      7260755
+    ],
+    [
+      7263857
+    ],
+    [
+      7264060
+    ],
+    [
+      7264701
+    ],
+    [
+      7264912
+    ],
+    [
+      7264931
+    ],
+    [
+      7265664
+    ],
+    [
+      7267718
+    ],
+    [
+      7267942
+    ],
+    [
+      7268310
+    ],
+    [
+      7269017
+    ],
+    [
+      7269235
+    ],
+    [
+      7270352
+    ],
+    [
+      7270726
+    ],
+    [
+      7273542
+    ],
+    [
+      7274238
+    ],
+    [
+      7275286
+    ],
+    [
+      7275543
+    ],
+    [
+      7275955
+    ],
+    [
+      7276138
+    ],
+    [
+      7277219
+    ],
+    [
+      7277670
+    ],
+    [
+      7277958
+    ],
+    [
+      7281799
+    ],
+    [
+      7282339
+    ],
+    [
+      7283549
+    ],
+    [
+      7284446
+    ],
+    [
+      7284501
+    ],
+    [
+      7284874
+    ],
+    [
+      7285000
+    ],
+    [
+      7287898
+    ],
+    [
+      7288218
+    ],
+    [
+      7288774
+    ],
+    [
+      7289626
+    ],
+    [
+      7290503
+    ],
+    [
+      7290763
+    ],
+    [
+      7291603
+    ],
+    [
+      7293395
+    ],
+    [
+      7294084
+    ],
+    [
+      7295281
+    ],
+    [
+      7295782
+    ],
+    [
+      7296082
+    ],
+    [
+      7299094
+    ],
+    [
+      7299213
+    ],
+    [
+      7299269,
+      7299271
+    ],
+    [
+      7300169,
+      7300170
+    ],
+    [
+      7302992
+    ],
+    [
+      4538702
+    ],
+    [
+      7303539
+    ],
+    [
+      7303645
+    ],
+    [
+      7305067
+    ],
+    [
+      7306611
+    ],
+    [
+      7307244
+    ],
+    [
+      7308294
+    ],
+    [
+      404219,
+      1721889,
+      163907
+    ],
+    [
+      7310715
+    ],
+    [
+      7311517,
+      7311518
+    ],
+    [
+      1535460
+    ],
+    [
+      7313683
+    ],
+    [
+      7313953
+    ],
+    [
+      7314292
+    ],
+    [
+      658625,
+      7314664
+    ],
+    [
+      7317603
+    ],
+    [
+      7318105,
+      7318114
+    ],
+    [
+      7318277
+    ],
+    [
+      7318668
+    ],
+    [
+      7319314,
+      7319322
+    ],
+    [
+      366294
+    ],
+    [
+      7326977
+    ],
+    [
+      4224737
+    ],
+    [
+      7329439
+    ],
+    [
+      7329485
+    ],
+    [
+      7330714
+    ],
+    [
+      7334522,
+      7334526
+    ],
+    [
+      7334648
+    ],
+    [
+      7339748,
+      7339751
+    ],
+    [
+      7339966
+    ],
+    [
+      7340514,
+      7340517
+    ],
+    [
+      7341001
+    ],
+    [
+      7341084
+    ],
+    [
+      7342672
+    ],
+    [
+      7342775
+    ],
+    [
+      7343233
+    ],
+    [
+      7343719
+    ],
+    [
+      7344668
+    ],
+    [
+      7349282
+    ],
+    [
+      7351322
+    ],
+    [
+      7357514
+    ],
+    [
+      3296704
+    ],
+    [
+      7360038
+    ],
+    [
+      7360402
+    ],
+    [
+      7360466
+    ],
+    [
+      7360776
+    ],
+    [
+      3826784
+    ],
+    [
+      7363701
+    ],
+    [
+      7363961
+    ],
+    [
+      7364238
+    ],
+    [
+      7364279
+    ],
+    [
+      7361145
+    ],
+    [
+      7365361
+    ],
+    [
+      7365969
+    ],
+    [
+      7368724
+    ],
+    [
+      7368996
+    ],
+    [
+      7370781
+    ],
+    [
+      7370908
+    ],
+    [
+      1270948
+    ],
+    [
+      7371568
+    ],
+    [
+      7371677
+    ],
+    [
+      7372511
+    ],
+    [
+      7372760
+    ],
+    [
+      7376469
+    ],
+    [
+      1225604
+    ],
+    [
+      7376967
+    ],
+    [
+      7378227
+    ],
+    [
+      7381328
+    ],
+    [
+      7382357
+    ],
+    [
+      7383919
+    ],
+    [
+      7387931
+    ],
+    [
+      7389732
+    ],
+    [
+      5489517
+    ],
+    [
+      7393434
+    ],
+    [
+      7394410
+    ],
+    [
+      7395344
+    ],
+    [
+      7395566
+    ],
+    [
+      7399376
+    ],
+    [
+      4765747
+    ],
+    [
+      7400409
+    ],
+    [
+      7400778
+    ],
+    [
+      7401471
+    ],
+    [
+      7401572
+    ],
+    [
+      7401953
+    ],
+    [
+      7402811
+    ],
+    [
+      7403482
+    ],
+    [
+      7403564
+    ],
+    [
+      2438646
+    ],
+    [
+      7404959
+    ],
+    [
+      7405041
+    ],
+    [
+      7405441
+    ],
+    [
+      7407735
+    ],
+    [
+      7410675
+    ],
+    [
+      2056798
+    ],
+    [
+      7411800
+    ],
+    [
+      5832346
+    ],
+    [
+      103635
+    ],
+    [
+      7415844
+    ],
+    [
+      7416200
+    ],
+    [
+      7416529
+    ],
+    [
+      7417036
+    ],
+    [
+      6661520
+    ],
+    [
+      7418684
+    ],
+    [
+      7420141
+    ],
+    [
+      7421094
+    ],
+    [
+      7422765
+    ],
+    [
+      7423187
+    ],
+    [
+      7423256
+    ],
+    [
+      7423657
+    ],
+    [
+      7423796
+    ],
+    [
+      7424843
+    ],
+    [
+      7426348
+    ],
+    [
+      7426576
+    ],
+    [
+      7426822
+    ],
+    [
+      1063820
+    ],
+    [
+      7428853
+    ],
+    [
+      7429330
+    ],
+    [
+      7430503
+    ],
+    [
+      7430567
+    ],
+    [
+      7430712
+    ],
+    [
+      7430864
+    ],
+    [
+      7431106
+    ],
+    [
+      7431269
+    ],
+    [
+      7434231
+    ],
+    [
+      7435549
+    ],
+    [
+      7436153
+    ],
+    [
+      7436505
+    ],
+    [
+      7436847
+    ],
+    [
+      7437034
+    ],
+    [
+      7438278
+    ],
+    [
+      7438804
+    ],
+    [
+      7444223
+    ],
+    [
+      7446791
+    ],
+    [
+      3192747
+    ],
+    [
+      7449890
+    ],
+    [
+      7450500
+    ],
+    [
+      7454764
+    ],
+    [
+      7457249,
+      7457254,
+      7457256
+    ],
+    [
+      7457376
+    ],
+    [
+      7458120
+    ],
+    [
+      7458144
+    ],
+    [
+      7458549
+    ],
+    [
+      7460564
+    ],
+    [
+      7462026
+    ],
+    [
+      7464350
+    ],
+    [
+      7466152
+    ],
+    [
+      2177965
+    ],
+    [
+      7470460
+    ],
+    [
+      7470598
+    ],
+    [
+      7470816
+    ],
+    [
+      7471828
+    ],
+    [
+      7472728
+    ],
+    [
+      7472824
+    ],
+    [
+      7472931
+    ],
+    [
+      232135
+    ],
+    [
+      7476485
+    ],
+    [
+      7477943
+    ],
+    [
+      7478241
+    ],
+    [
+      7478931
+    ],
+    [
+      7479235
+    ],
+    [
+      4846315
+    ],
+    [
+      7480796
+    ],
+    [
+      7481231
+    ],
+    [
+      7482158
+    ],
+    [
+      5516546
+    ],
+    [
+      7484421
+    ],
+    [
+      7484648
+    ],
+    [
+      4213956
+    ],
+    [
+      7484923
+    ],
+    [
+      7487135
+    ],
+    [
+      7488354,
+      7488358
+    ],
+    [
+      598109
+    ],
+    [
+      7489438
+    ],
+    [
+      7490832
+    ],
+    [
+      7491456
+    ],
+    [
+      7492039
+    ],
+    [
+      7492091
+    ],
+    [
+      7493363
+    ],
+    [
+      7494148
+    ],
+    [
+      7494365,
+      7494367
+    ],
+    [
+      7494666
+    ],
+    [
+      2274875
+    ],
+    [
+      7495348
+    ],
+    [
+      7498356
+    ],
+    [
+      7498584
+    ],
+    [
+      7498811
+    ],
+    [
+      7499337
+    ],
+    [
+      7500425
+    ],
+    [
+      7500436
+    ],
+    [
+      7503162
+    ],
+    [
+      7503832
+    ],
+    [
+      7503941
+    ],
+    [
+      7504079
+    ],
+    [
+      1781843
+    ],
+    [
+      7509847
+    ],
+    [
+      7510407
+    ],
+    [
+      7511179
+    ],
+    [
+      7511316
+    ],
+    [
+      7511352
+    ],
+    [
+      7512955
+    ],
+    [
+      330839
+    ],
+    [
+      7516558
+    ],
+    [
+      7516887
+    ],
+    [
+      7520483
+    ],
+    [
+      7526095
+    ],
+    [
+      2322244
+    ],
+    [
+      7526753
+    ],
+    [
+      7528849,
+      7528851,
+      7528852,
+      7528854
+    ],
+    [
+      7529087
+    ],
+    [
+      7529540
+    ],
+    [
+      7530170,
+      7530174
+    ],
+    [
+      7530341
+    ],
+    [
+      6359963
+    ],
+    [
+      7532006
+    ],
+    [
+      7534196
+    ],
+    [
+      7534976
+    ],
+    [
+      7535109
+    ],
+    [
+      7535285
+    ],
+    [
+      7535890
+    ],
+    [
+      7538554
+    ],
+    [
+      7539156
+    ],
+    [
+      7539979,
+      7539981
+    ],
+    [
+      7541223
+    ],
+    [
+      7542609
+    ],
+    [
+      7543313
+    ],
+    [
+      4369406
+    ],
+    [
+      7546838
+    ],
+    [
+      7547124
+    ],
+    [
+      7547189
+    ],
+    [
+      7549977
+    ],
+    [
+      7550591
+    ],
+    [
+      7551052
+    ],
+    [
+      4102612
+    ],
+    [
+      3655235
+    ],
+    [
+      7553263
+    ],
+    [
+      1491391
+    ],
+    [
+      7555276
+    ],
+    [
+      7555625
+    ],
+    [
+      7556469
+    ],
+    [
+      1245358
+    ],
+    [
+      7557306
+    ],
+    [
+      7558093
+    ],
+    [
+      92150
+    ],
+    [
+      7559170
+    ],
+    [
+      7559421
+    ],
+    [
+      7560119
+    ],
+    [
+      3504966
+    ],
+    [
+      7561410
+    ],
+    [
+      6956847
+    ],
+    [
+      7562778
+    ],
+    [
+      7563727
+    ],
+    [
+      7564762
+    ],
+    [
+      7565509
+    ],
+    [
+      7567087
+    ],
+    [
+      4353583
+    ],
+    [
+      7568324
+    ],
+    [
+      7569884
+    ],
+    [
+      7570414
+    ],
+    [
+      7571873
+    ],
+    [
+      7572345
+    ],
+    [
+      7572381
+    ],
+    [
+      7573001
+    ],
+    [
+      7573530,
+      5963925
+    ],
+    [
+      7573567
+    ],
+    [
+      7575647
+    ],
+    [
+      2269086
+    ],
+    [
+      7576937
+    ],
+    [
+      7577227
+    ],
+    [
+      106318,
+      7577254
+    ],
+    [
+      7577350
+    ],
+    [
+      7577720
+    ],
+    [
+      7579502
+    ],
+    [
+      7580351
+    ],
+    [
+      7580404
+    ],
+    [
+      7580864
+    ],
+    [
+      6034688
+    ],
+    [
+      7581740
+    ],
+    [
+      7582354
+    ],
+    [
+      1990785,
+      1990789
+    ],
+    [
+      7582675
+    ],
+    [
+      7555346
+    ],
+    [
+      7045036
+    ],
+    [
+      7586017
+    ],
+    [
+      7586101
+    ],
+    [
+      7586905
+    ],
+    [
+      7587676
+    ],
+    [
+      7588841
+    ],
+    [
+      7588934
+    ],
+    [
+      7589197
+    ],
+    [
+      3645530
+    ],
+    [
+      7593721
+    ],
+    [
+      7593941
+    ],
+    [
+      7593979
+    ],
+    [
+      7595054
+    ],
+    [
+      7596886
+    ],
+    [
+      7597426
+    ],
+    [
+      5382338
+    ],
+    [
+      2850054
+    ],
+    [
+      7599364,
+      7599371
+    ],
+    [
+      7600584
+    ],
+    [
+      7600595
+    ],
+    [
+      7600724
+    ],
+    [
+      7601517
+    ],
+    [
+      448393
+    ],
+    [
+      3713070,
+      999958
+    ],
+    [
+      7605167
+    ],
+    [
+      7606027
+    ],
+    [
+      7606120
+    ],
+    [
+      7606657
+    ],
+    [
+      7607736
+    ],
+    [
+      7609925
+    ],
+    [
+      7610379
+    ],
+    [
+      7611574
+    ],
+    [
+      7612190
+    ],
+    [
+      7613233
+    ],
+    [
+      7490272
+    ],
+    [
+      7618413
+    ],
+    [
+      7618627
+    ],
+    [
+      1944454
+    ],
+    [
+      7561416
+    ],
+    [
+      3399995
+    ],
+    [
+      7624096
+    ],
+    [
+      7624226
+    ],
+    [
+      7624604
+    ],
+    [
+      7624955
+    ],
+    [
+      7625543
+    ],
+    [
+      76335
+    ],
+    [
+      3595128
+    ],
+    [
+      7628696
+    ],
+    [
+      7629288
+    ],
+    [
+      7631445
+    ],
+    [
+      7631636,
+      7631639
+    ],
+    [
+      7632239
+    ],
+    [
+      7632461
+    ],
+    [
+      7633013
+    ],
+    [
+      7634288
+    ],
+    [
+      7634509
+    ],
+    [
+      7635176
+    ],
+    [
+      7635938
+    ],
+    [
+      7636706
+    ],
+    [
+      7637191
+    ],
+    [
+      7637414
+    ],
+    [
+      7637587
+    ],
+    [
+      7637756
+    ],
+    [
+      7639945
+    ],
+    [
+      7640068
+    ],
+    [
+      3194503
+    ],
+    [
+      1500751
+    ],
+    [
+      7641623
+    ],
+    [
+      7642015
+    ],
+    [
+      6147967
+    ],
+    [
+      7643700
+    ],
+    [
+      7643825
+    ],
+    [
+      2554945,
+      7644384
+    ],
+    [
+      7645326,
+      7645327
+    ],
+    [
+      5786828
+    ],
+    [
+      7647118
+    ],
+    [
+      7647539
+    ],
+    [
+      490553
+    ],
+    [
+      7648208
+    ],
+    [
+      447379
+    ],
+    [
+      7654094
+    ],
+    [
+      7621493
+    ],
+    [
+      7655302
+    ],
+    [
+      7656104
+    ],
+    [
+      7656399
+    ],
+    [
+      7659857
+    ],
+    [
+      7661634,
+      7661636
+    ],
+    [
+      7664187
+    ],
+    [
+      7665472,
+      2646237
+    ],
+    [
+      7667009
+    ],
+    [
+      7667700
+    ],
+    [
+      7669183
+    ],
+    [
+      4305606
+    ],
+    [
+      7671593
+    ],
+    [
+      7671637
+    ],
+    [
+      7672149
+    ],
+    [
+      7673655
+    ],
+    [
+      7676610
+    ],
+    [
+      1186091
+    ],
+    [
+      3721216
+    ],
+    [
+      7679571
+    ],
+    [
+      7680302
+    ],
+    [
+      7680609
+    ],
+    [
+      7681577
+    ],
+    [
+      7681649
+    ],
+    [
+      7681654
+    ],
+    [
+      7681941
+    ],
+    [
+      7681944,
+      223186,
+      1254095
+    ],
+    [
+      1054505
+    ],
+    [
+      7683773
+    ],
+    [
+      4794763
+    ],
+    [
+      7685266
+    ],
+    [
+      3239670
+    ],
+    [
+      7685957
+    ],
+    [
+      7686120
+    ],
+    [
+      7686735
+    ],
+    [
+      7688092
+    ],
+    [
+      7689572
+    ],
+    [
+      7691277
+    ],
+    [
+      7692287
+    ],
+    [
+      7696487
+    ],
+    [
+      7698013
+    ],
+    [
+      7698401
+    ],
+    [
+      7698671
+    ],
+    [
+      7700221
+    ],
+    [
+      6863431
+    ],
+    [
+      7703464
+    ],
+    [
+      2565202
+    ],
+    [
+      7703778
+    ],
+    [
+      7704297
+    ],
+    [
+      784687
+    ],
+    [
+      7705364
+    ],
+    [
+      2663619
+    ],
+    [
+      7706644
+    ],
+    [
+      1089642
+    ],
+    [
+      7707295
+    ],
+    [
+      178693
+    ],
+    [
+      7708790
+    ],
+    [
+      7711294
+    ],
+    [
+      7713540
+    ],
+    [
+      7713721
+    ],
+    [
+      7713961
+    ],
+    [
+      7716223
+    ],
+    [
+      7716436
+    ],
+    [
+      7717326
+    ],
+    [
+      7719280
+    ],
+    [
+      4783316
+    ],
+    [
+      7719659
+    ],
+    [
+      7721048
+    ],
+    [
+      7721281
+    ],
+    [
+      7721810
+    ],
+    [
+      7722320
+    ],
+    [
+      7724077
+    ],
+    [
+      7724405
+    ],
+    [
+      7724624
+    ],
+    [
+      7725997
+    ],
+    [
+      7726173
+    ],
+    [
+      7727900
+    ],
+    [
+      84482
+    ],
+    [
+      7730244
+    ],
+    [
+      2248151
+    ],
+    [
+      7733858
+    ],
+    [
+      7735236
+    ],
+    [
+      7735766
+    ],
+    [
+      7736917
+    ],
+    [
+      7737826
+    ],
+    [
+      7738004
+    ],
+    [
+      7738468
+    ],
+    [
+      7738727
+    ],
+    [
+      7739212
+    ],
+    [
+      7740001
+    ],
+    [
+      7740974
+    ],
+    [
+      1607869
+    ],
+    [
+      7741548
+    ],
+    [
+      7741722
+    ],
+    [
+      7742389
+    ],
+    [
+      7743266
+    ],
+    [
+      7743873
+    ],
+    [
+      7745789
+    ],
+    [
+      5483197
+    ],
+    [
+      7746556
+    ],
+    [
+      7747064
+    ],
+    [
+      5729188
+    ],
+    [
+      7747634
+    ],
+    [
+      7748310
+    ],
+    [
+      2797280
+    ],
+    [
+      7748945
+    ],
+    [
+      2940924
+    ],
+    [
+      7751423
+    ],
+    [
+      7753498
+    ],
+    [
+      7753905
+    ],
+    [
+      7755534
+    ],
+    [
+      1592437
+    ],
+    [
+      2473108
+    ],
+    [
+      7757439
+    ],
+    [
+      2315919
+    ],
+    [
+      7758951
+    ],
+    [
+      2187084
+    ],
+    [
+      2806207
+    ],
+    [
+      2953794
+    ],
+    [
+      7763891
+    ],
+    [
+      347885
+    ],
+    [
+      7765139
+    ],
+    [
+      7767736
+    ],
+    [
+      7770151
+    ],
+    [
+      2314610
+    ],
+    [
+      7772693
+    ],
+    [
+      7773118
+    ],
+    [
+      7774062
+    ],
+    [
+      7775733
+    ],
+    [
+      7775811
+    ],
+    [
+      7777221
+    ],
+    [
+      7777919
+    ],
+    [
+      7782553
+    ],
+    [
+      7782615
+    ],
+    [
+      7026693
+    ],
+    [
+      7783395
+    ],
+    [
+      7785020,
+      7785021
+    ],
+    [
+      7786555,
+      7786557
+    ],
+    [
+      7786814
+    ],
+    [
+      7786934
+    ],
+    [
+      7787203
+    ],
+    [
+      2383808
+    ],
+    [
+      7787883
+    ],
+    [
+      7788315
+    ],
+    [
+      7790147
+    ],
+    [
+      7791167
+    ],
+    [
+      7793587
+    ],
+    [
+      7794547
+    ],
+    [
+      7794870
+    ],
+    [
+      7795218
+    ],
+    [
+      7795710
+    ],
+    [
+      7795857
+    ],
+    [
+      7796324
+    ],
+    [
+      7796544
+    ],
+    [
+      7797314
+    ],
+    [
+      7801964
+    ],
+    [
+      7801984
+    ],
+    [
+      7802784
+    ],
+    [
+      7803450
+    ],
+    [
+      7803851
+    ],
+    [
+      826895
+    ],
+    [
+      4797535
+    ],
+    [
+      7806656
+    ],
+    [
+      4096072
+    ],
+    [
+      2496281
+    ],
+    [
+      7809161
+    ],
+    [
+      5241038
+    ],
+    [
+      5268318
+    ],
+    [
+      7811186
+    ],
+    [
+      7811374
+    ],
+    [
+      7812781
+    ],
+    [
+      7812997
+    ],
+    [
+      7815103
+    ],
+    [
+      31718
+    ],
+    [
+      7817084
+    ],
+    [
+      7818946
+    ],
+    [
+      7820843
+    ],
+    [
+      7823039,
+      7823040
+    ],
+    [
+      7823356
+    ],
+    [
+      7824282
+    ],
+    [
+      7824719
+    ],
+    [
+      7824968
+    ],
+    [
+      7825261
+    ],
+    [
+      7826718
+    ],
+    [
+      7828625
+    ],
+    [
+      7829355
+    ],
+    [
+      7829524
+    ],
+    [
+      7829554
+    ],
+    [
+      7829934
+    ],
+    [
+      4123683
+    ],
+    [
+      7831366
+    ],
+    [
+      7831507
+    ],
+    [
+      2518205
+    ],
+    [
+      7835678,
+      7835679,
+      7835683
+    ],
+    [
+      166256
+    ],
+    [
+      7838237
+    ],
+    [
+      7839052
+    ],
+    [
+      7840105
+    ],
+    [
+      1389277
+    ],
+    [
+      2067678
+    ],
+    [
+      7841769
+    ],
+    [
+      3964021
+    ],
+    [
+      7842289
+    ],
+    [
+      7843334
+    ],
+    [
+      3482735
+    ],
+    [
+      7844751
+    ],
+    [
+      7846040
+    ],
+    [
+      7846488
+    ],
+    [
+      7847045,
+      7847048,
+      7847051
+    ],
+    [
+      7848725
+    ],
+    [
+      7849787
+    ],
+    [
+      7851199
+    ],
+    [
+      7852823
+    ],
+    [
+      2652138
+    ],
+    [
+      7854389
+    ],
+    [
+      7855504
+    ],
+    [
+      7855539
+    ],
+    [
+      7856454
+    ],
+    [
+      7857918
+    ],
+    [
+      7858303
+    ],
+    [
+      7859673
+    ],
+    [
+      7860462
+    ],
+    [
+      7860590
+    ],
+    [
+      7862679
+    ],
+    [
+      7865340,
+      7865341
+    ],
+    [
+      7865401
+    ],
+    [
+      7866588
+    ],
+    [
+      7867845,
+      7867849
+    ],
+    [
+      7867903
+    ],
+    [
+      942315,
+      7867940
+    ],
+    [
+      7868108
+    ],
+    [
+      358892
+    ],
+    [
+      7870812
+    ],
+    [
+      7871035
+    ],
+    [
+      5504239
+    ],
+    [
+      7872115
+    ],
+    [
+      7872590
+    ],
+    [
+      7873473
+    ],
+    [
+      7822296
+    ],
+    [
+      7873839
+    ],
+    [
+      7874763
+    ],
+    [
+      7876197
+    ],
+    [
+      7879758
+    ],
+    [
+      7880070,
+      7880075
+    ],
+    [
+      7880238
+    ],
+    [
+      7881863
+    ],
+    [
+      7881906
+    ],
+    [
+      7883028
+    ],
+    [
+      7884753
+    ],
+    [
+      7887047
+    ],
+    [
+      7887686
+    ],
+    [
+      7889562
+    ],
+    [
+      7893016
+    ],
+    [
+      7894150
+    ],
+    [
+      7894987
+    ],
+    [
+      7895593
+    ],
+    [
+      7896033
+    ],
+    [
+      7896174
+    ],
+    [
+      7897677
+    ],
+    [
+      7897692
+    ],
+    [
+      7898210
+    ],
+    [
+      7899044
+    ],
+    [
+      4278602
+    ],
+    [
+      7902024
+    ],
+    [
+      7902114
+    ],
+    [
+      7902691
+    ],
+    [
+      7903273
+    ],
+    [
+      1591008,
+      7905416
+    ],
+    [
+      7906463
+    ],
+    [
+      7906915
+    ],
+    [
+      7907331
+    ],
+    [
+      3193165
+    ],
+    [
+      7908505
+    ],
+    [
+      7909626
+    ],
+    [
+      7910921
+    ],
+    [
+      7911082
+    ],
+    [
+      6267290
+    ],
+    [
+      7912411
+    ],
+    [
+      7913028
+    ],
+    [
+      7915790
+    ],
+    [
+      7918107
+    ],
+    [
+      940173
+    ],
+    [
+      7919991
+    ],
+    [
+      1524326
+    ],
+    [
+      4888683
+    ],
+    [
+      7921289
+    ],
+    [
+      7921821
+    ],
+    [
+      7922813
+    ],
+    [
+      2722440
+    ],
+    [
+      7923064
+    ],
+    [
+      7923771
+    ],
+    [
+      12954,
+      7924696
+    ],
+    [
+      7926561
+    ],
+    [
+      7927797
+    ],
+    [
+      7927821
+    ],
+    [
+      7927875
+    ],
+    [
+      7928087
+    ],
+    [
+      7928733
+    ],
+    [
+      7929226
+    ],
+    [
+      3123064
+    ],
+    [
+      7931447
+    ],
+    [
+      7932720
+    ],
+    [
+      4039657
+    ],
+    [
+      1982266
+    ],
+    [
+      7933751
+    ],
+    [
+      7934032,
+      7934036,
+      7934037
+    ],
+    [
+      7934341
+    ],
+    [
+      7936320
+    ],
+    [
+      7936830
+    ],
+    [
+      7936988
+    ],
+    [
+      3725246
+    ],
+    [
+      7943868
+    ],
+    [
+      7946813
+    ],
+    [
+      7947471
+    ],
+    [
+      7947670
+    ],
+    [
+      7948267
+    ],
+    [
+      7950294
+    ],
+    [
+      7950629
+    ],
+    [
+      114326
+    ],
+    [
+      7951649
+    ],
+    [
+      7953301
+    ],
+    [
+      7954439
+    ],
+    [
+      7956583
+    ],
+    [
+      7957118
+    ],
+    [
+      2882149
+    ],
+    [
+      7962386
+    ],
+    [
+      7962609
+    ],
+    [
+      7962635
+    ],
+    [
+      7963463
+    ],
+    [
+      131864
+    ],
+    [
+      7965694
+    ],
+    [
+      7965897,
+      7965901
+    ],
+    [
+      7967212
+    ],
+    [
+      2386921
+    ],
+    [
+      7968596
+    ],
+    [
+      7968606,
+      7968609
+    ],
+    [
+      7969933
+    ],
+    [
+      3276859
+    ],
+    [
+      7972333,
+      7972335,
+      7972340
+    ],
+    [
+      7973234
+    ],
+    [
+      7974712
+    ],
+    [
+      3168763
+    ],
+    [
+      7975512
+    ],
+    [
+      7978371
+    ],
+    [
+      7980122
+    ],
+    [
+      7983869
+    ],
+    [
+      7987264
+    ],
+    [
+      2770103
+    ],
+    [
+      7989435
+    ],
+    [
+      7990432
+    ],
+    [
+      7992762
+    ],
+    [
+      7993158
+    ],
+    [
+      7993331
+    ],
+    [
+      7994926
+    ],
+    [
+      7995401
+    ],
+    [
+      7995724
+    ],
+    [
+      1101373
+    ],
+    [
+      7996420
+    ],
+    [
+      7996640
+    ],
+    [
+      7997717
+    ],
+    [
+      7998692
+    ],
+    [
+      7999520
+    ],
+    [
+      7999764
+    ],
+    [
+      8001682
+    ],
+    [
+      8002293
+    ],
+    [
+      8003025
+    ],
+    [
+      2791813
+    ],
+    [
+      8003933
+    ],
+    [
+      8004079
+    ],
+    [
+      7402355
+    ],
+    [
+      8006790
+    ],
+    [
+      2865593
+    ]
+  ],
+  "tokens": 597909930,
+  "raw_bytes": 2983086288,
+  "sketch_bytes": {
+    "16384": 703194285.75,
+    "65536": 856300752.0
+  },
+  "train_docs": 60000,
+  "timings": {
+    "load_s": 40.29609507601708,
+    "kmeans_K16384_s": 2.2456268100067973,
+    "kmeans_K65536_s": 33.98679225286469,
+    "pass_s": 3304.8338101957925,
+    "encode_s": 1549.604503893759,
+    "assign_s": 749.9362478880212,
+    "exact_s": 936.1578887025826
+  }
+}

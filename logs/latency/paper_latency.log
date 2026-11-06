@@ -1,0 +1,67 @@
+2026-10-25 11:11:52 == latency
+11:11:55 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+11:11:55 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+11:11:56 | INFO  | savemv.experiments.pipeline | full ColBERT nDCG@10: all=0.4131 test=0.4131
+11:13:04 | INFO  | savemv.experiments.pipeline | K=16384 storage=0.203x | fixed R=72 | rank-aware R=105.2 recall=0.969 nDCG=0.4092 | strict R=430.1
+11:13:05 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+11:13:26 | INFO  | savemv.experiments.pipeline | latency batch=8: p50=93.5 p90=139.4 ms | recomputed 65.6 docs (1.30 ms/doc) | recall 0.952
+11:13:38 | INFO  | savemv.experiments.pipeline | latency batch=32: p50=60.6 p90=78.5 ms | recomputed 78.1 docs (0.63 ms/doc) | recall 0.962
+11:13:38 | INFO  | savemv.experiments.pipeline | wrote outputs/fiqa/summary.md
+11:13:43 | INFO  | savemv.data.beir | scifact: 5183 docs, 300 test queries
+11:13:43 | INFO  | savemv.experiments.pipeline | full ColBERT nDCG@10: all=0.7456 test=0.7456
+11:14:03 | INFO  | savemv.experiments.pipeline | K=4096 storage=0.119x | fixed R=56 | rank-aware R=72.8 recall=0.974 nDCG=0.7406 | strict R=229.7
+11:14:04 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+11:14:17 | INFO  | savemv.experiments.pipeline | latency batch=8: p50=56.4 p90=91.0 ms | recomputed 44.5 docs (1.18 ms/doc) | recall 0.948
+11:14:26 | INFO  | savemv.experiments.pipeline | latency batch=32: p50=44.5 p90=61.5 ms | recomputed 55.8 docs (0.68 ms/doc) | recall 0.968
+11:14:26 | INFO  | savemv.experiments.pipeline | wrote outputs/scifact/summary.md
+11:14:32 | INFO  | savemv.data.beir | trec-covid: 171332 docs, 50 test queries
+11:14:32 | INFO  | savemv.experiments.pipeline | full ColBERT nDCG@10: all=0.8308 test=0.8308
+11:14:42 | INFO  | savemv.experiments.pipeline | K=65536 storage=0.202x | fixed R=116 | rank-aware R=65.1 recall=0.984 nDCG=0.8342 | strict R=296.2
+11:14:44 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+11:14:53 | INFO  | savemv.experiments.pipeline | latency batch=8: p50=154.3 p90=253.6 ms | recomputed 119.4 docs (1.17 ms/doc) | recall 0.978
+11:14:59 | INFO  | savemv.experiments.pipeline | latency batch=32: p50=108.0 p90=146.3 ms | recomputed 129.9 docs (0.61 ms/doc) | recall 0.980
+11:14:59 | INFO  | savemv.experiments.pipeline | wrote outputs/trec-covid/summary.md
+11:15:04 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+11:15:04 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+11:15:05 | INFO  | savemv.experiments.pipeline | full ColBERT nDCG@10: all=0.4131 test=0.4131
+11:16:12 | INFO  | savemv.experiments.pipeline | K=16384 storage=0.203x | fixed R=72 | rank-aware R=105.2 recall=0.969 nDCG=0.4092 | strict R=430.1
+11:16:14 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+11:16:38 | INFO  | savemv.experiments.pipeline | latency batch=8: p50=93.0 p90=194.9 ms | recomputed 76.5 docs (1.32 ms/doc) | recall 0.953
+11:16:53 | INFO  | savemv.experiments.pipeline | latency batch=32: p50=69.5 p90=107.3 ms | recomputed 87.7 docs (0.69 ms/doc) | recall 0.965
+11:16:53 | INFO  | savemv.experiments.pipeline | wrote outputs/fiqa/summary.md
+11:16:58 | INFO  | savemv.data.beir | scifact: 5183 docs, 300 test queries
+11:16:58 | INFO  | savemv.experiments.pipeline | full ColBERT nDCG@10: all=0.7456 test=0.7456
+11:17:17 | INFO  | savemv.experiments.pipeline | K=4096 storage=0.119x | fixed R=56 | rank-aware R=72.8 recall=0.974 nDCG=0.7406 | strict R=229.7
+11:17:17 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+11:17:34 | INFO  | savemv.experiments.pipeline | latency batch=8: p50=64.7 p90=152.6 ms | recomputed 54.4 docs (1.34 ms/doc) | recall 0.953
+11:17:46 | INFO  | savemv.experiments.pipeline | latency batch=32: p50=49.2 p90=80.1 ms | recomputed 65.9 docs (0.71 ms/doc) | recall 0.974
+11:17:46 | INFO  | savemv.experiments.pipeline | wrote outputs/scifact/summary.md
+11:17:52 | INFO  | savemv.data.beir | trec-covid: 171332 docs, 50 test queries
+11:17:52 | INFO  | savemv.experiments.pipeline | full ColBERT nDCG@10: all=0.8308 test=0.8308
+11:17:58 | INFO  | savemv.experiments.pipeline | K=65536 storage=0.202x | fixed R=116 | rank-aware R=65.1 recall=0.984 nDCG=0.8342 | strict R=296.2
+11:18:00 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+11:18:11 | INFO  | savemv.experiments.pipeline | latency batch=8: p50=147.9 p90=290.4 ms | recomputed 114.9 docs (1.29 ms/doc) | recall 0.984
+11:18:17 | INFO  | savemv.experiments.pipeline | latency batch=32: p50=89.0 p90=164.9 ms | recomputed 127.4 docs (0.58 ms/doc) | recall 0.984
+11:18:17 | INFO  | savemv.experiments.pipeline | wrote outputs/trec-covid/summary.md
+11:18:21 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+11:18:21 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+11:18:21 | INFO  | savemv.experiments.pipeline | full ColBERT nDCG@10: all=0.4131 test=0.4131
+11:19:29 | INFO  | savemv.experiments.pipeline | K=16384 storage=0.203x | fixed R=72 | rank-aware R=105.2 recall=0.969 nDCG=0.4092 | strict R=430.1
+11:19:30 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+11:19:54 | INFO  | savemv.experiments.pipeline | latency batch=8: p50=116.8 p90=139.4 ms | recomputed 72.7 docs (1.40 ms/doc) | recall 0.952
+11:20:07 | INFO  | savemv.experiments.pipeline | latency batch=32: p50=61.9 p90=69.2 ms | recomputed 72.7 docs (0.71 ms/doc) | recall 0.952
+11:20:07 | INFO  | savemv.experiments.pipeline | wrote outputs/fiqa/summary.md
+11:20:14 | INFO  | savemv.data.beir | scifact: 5183 docs, 300 test queries
+11:20:14 | INFO  | savemv.experiments.pipeline | full ColBERT nDCG@10: all=0.7456 test=0.7456
+11:20:35 | INFO  | savemv.experiments.pipeline | K=4096 storage=0.119x | fixed R=56 | rank-aware R=72.8 recall=0.974 nDCG=0.7406 | strict R=229.7
+11:20:36 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+11:20:54 | INFO  | savemv.experiments.pipeline | latency batch=8: p50=80.1 p90=111.3 ms | recomputed 53.2 docs (1.42 ms/doc) | recall 0.956
+11:21:04 | INFO  | savemv.experiments.pipeline | latency batch=32: p50=49.1 p90=58.8 ms | recomputed 53.2 docs (0.77 ms/doc) | recall 0.956
+11:21:04 | INFO  | savemv.experiments.pipeline | wrote outputs/scifact/summary.md
+11:21:11 | INFO  | savemv.data.beir | trec-covid: 171332 docs, 50 test queries
+11:21:12 | INFO  | savemv.experiments.pipeline | full ColBERT nDCG@10: all=0.8308 test=0.8308
+11:21:21 | INFO  | savemv.experiments.pipeline | K=65536 storage=0.202x | fixed R=116 | rank-aware R=65.1 recall=0.984 nDCG=0.8342 | strict R=296.2
+11:21:22 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+11:21:31 | INFO  | savemv.experiments.pipeline | latency batch=8: p50=149.2 p90=223.1 ms | recomputed 116.2 docs (1.09 ms/doc) | recall 0.984
+11:21:36 | INFO  | savemv.experiments.pipeline | latency batch=32: p50=94.7 p90=127.3 ms | recomputed 116.2 docs (0.59 ms/doc) | recall 0.984
+11:21:36 | INFO  | savemv.experiments.pipeline | wrote outputs/trec-covid/summary.md

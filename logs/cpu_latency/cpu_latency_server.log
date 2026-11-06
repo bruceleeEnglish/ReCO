@@ -1,0 +1,35 @@
+14:20:19 | INFO  | savemv.cpu_latency | longmemeval on server (Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz), 8 threads: 100 questions, 249 units per memory
+14:20:19 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cpu (dim=96, fp16 weights=False)
+14:24:31 | INFO  | savemv.cpu_latency | reco-K16k: p50 2400 p90 4121 ms (encode 17.2, estimate 9.23, recompute 2489; R 24.4)
+14:28:00 | INFO  | savemv.cpu_latency | reco-K64k: p50 2298 p90 3686 ms (encode 17.2, estimate 10.07, recompute 2054; R 19.0)
+14:29:48 | INFO  | savemv.cpu_latency | reco-K16k      p50   2400.3 ms  p90   4120.8 ms
+14:29:48 | INFO  | savemv.cpu_latency | reco-K64k      p50   2297.9 ms  p90   3686.3 ms
+14:29:48 | INFO  | savemv.cpu_latency | colbert-stored p50     22.6 ms  p90     24.7 ms
+14:29:48 | INFO  | savemv.cpu_latency | reencode-all   p50  14998.5 ms  p90  17508.9 ms
+14:29:48 | INFO  | savemv.cpu_latency | bm25           p50      0.1 ms  p90      0.2 ms
+14:29:48 | INFO  | savemv.cpu_latency | bge-small      p50    145.0 ms  p90    150.8 ms
+14:29:48 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00, 16.83it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 24.59it/s]
+14:35:05 | INFO  | savemv.cpu_latency | reader prefill on cuda:0 (torch.bfloat16): 794 ms for 5120 tokens
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.26it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.23it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.82it/s]
+15:23:56 | INFO  | savemv.cpu_latency | reader prefill on cpu (torch.float32): 663136 ms for 4559 tokens
+15:23:56 | INFO  | savemv.cpu_latency | wrote outputs/cpu_latency/longmemeval_server.json
+15:24:01 | INFO  | savemv.cpu_latency | locomo on server (Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz), 8 threads: 100 questions, 603 units per memory
+15:24:01 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cpu (dim=96, fp16 weights=False)
+15:25:25 | INFO  | savemv.cpu_latency | reco-K16k: p50 758 p90 1206 ms (encode 15.9, estimate 8.15, recompute 811; R 77.3)
+15:26:34 | INFO  | savemv.cpu_latency | reco-K64k: p50 651 p90 932 ms (encode 17.4, estimate 8.85, recompute 660; R 60.8)
+15:27:12 | INFO  | savemv.cpu_latency | reco-K16k      p50    758.0 ms  p90   1205.8 ms
+15:27:12 | INFO  | savemv.cpu_latency | reco-K64k      p50    651.2 ms  p90    931.7 ms
+15:27:12 | INFO  | savemv.cpu_latency | colbert-stored p50     17.5 ms  p90     18.8 ms
+15:27:12 | INFO  | savemv.cpu_latency | reencode-all   p50   3406.3 ms  p90   3534.9 ms
+15:27:12 | INFO  | savemv.cpu_latency | bm25           p50      0.1 ms  p90      0.2 ms
+15:27:12 | INFO  | savemv.cpu_latency | bge-small      p50    142.3 ms  p90    149.3 ms
+15:27:13 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 67.76it/s]
+15:29:48 | INFO  | savemv.cpu_latency | reader prefill on cuda:0 (torch.bfloat16): 84 ms for 489 tokens
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.42it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.43it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.12it/s]
+15:32:54 | INFO  | savemv.cpu_latency | reader prefill on cpu (torch.float32): 49720 ms for 451 tokens
+15:32:55 | INFO  | savemv.cpu_latency | wrote outputs/cpu_latency/locomo_server.json
+ALL DONE

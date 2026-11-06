@@ -1,0 +1,18 @@
+\filltable{6}{%
+\begin{tabular}{@{}l l rrr r@{}}
+\toprule
+Dataset ($K$) & rule & p50 & p90 & p99 & $\bar R$ \\
+\midrule
+SciFact (4k) & FixedBudget & 49 & 59 & 71 & 53 \\
+ & TA-Margin & 49 & 80 & 145 & 66 \\
+ & \ours \reco{} & \ours 45 & \ours 62 & \ours 80 & \oursR 56 \\
+\addlinespace[2pt]
+FiQA (16k) & FixedBudget & 62 & 69 & 77 & 73 \\
+ & TA-Margin & 69 & 107 & 212 & 88 \\
+ & \ours \reco{} & \ours 61 & \ours 78 & \ours 108 & \oursR 78 \\
+\addlinespace[2pt]
+TREC-COVID (64k) & FixedBudget & 95 & 127 & 137 & 116 \\
+ & TA-Margin & 89 & 165 & 237 & 127 \\
+ & \ours \reco{} & \ours 108 & \ours 146 & \ours 211 & \oursR 130 \\
+\bottomrule
+\end{tabular}}

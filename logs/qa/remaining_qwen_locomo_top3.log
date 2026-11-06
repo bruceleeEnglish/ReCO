@@ -1,0 +1,11 @@
+15:06:05 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+15:08:25 | INFO  | savemv.experiments.qa | reco-K64k+R: hazard rule recomputes 59.5 units on average
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 72.50it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+15:24:48 | INFO  | savemv.experiments.qa | colbert        n= 400 acc 0.412 F1 0.187 ctx    305 tok
+15:24:48 | INFO  | savemv.experiments.qa | reco-K64k+R    n= 400 acc 0.412 F1 0.187 ctx    305 tok | vs ColBERT +0.000 +- 0.007
+15:24:48 | INFO  | savemv.experiments.qa | bm25           n= 400 acc 0.315 F1 0.143 ctx    291 tok | vs ColBERT -0.098 +- 0.043
+15:24:48 | INFO  | savemv.experiments.qa | bge-base       n= 400 acc 0.290 F1 0.130 ctx    259 tok | vs ColBERT -0.122 +- 0.045
+15:24:48 | INFO  | savemv.experiments.qa | wrote outputs/qa/locomo/Qwen3-4B-Instruct-2507/qa_report_top3.json

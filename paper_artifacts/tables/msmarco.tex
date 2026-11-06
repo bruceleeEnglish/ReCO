@@ -1,0 +1,17 @@
+\filltable{7}{%
+\begin{tabular}{@{}l rrrrrr@{}}
+\toprule
+ & Index & & Recall & & \multicolumn{2}{c}{Latency (ms)} \\
+\cmidrule(l){6-7}
+Method & (GB) & MRR@10 & @10 & $\bar R$ & p50 & p99 \\
+\midrule
+ColBERT (exact) & \textit{114.8} & \textit{0.369} & \textit{1.000} & all & -- & -- \\
+\midrule
+PLAID, $k{\le}10$ defaults & 18.6 & 0.364 & 0.811 & -- & \textbf{33} & 175 \\
+PLAID, $k{>}100$ defaults$^\dagger$ & 18.6 & \textbf{0.369} & 0.853 & -- & 111 & 440 \\
+BM25-Rerank & \textbf{0.60} & 0.367 & 0.952 & 11,205 & -- & -- \\
+\oursL \reco{}, $\delta{=}0.1$ & \ours 0.87 & \ours \textbf{0.369} & \ours 0.903 & \ours \textbf{88} & \ours 53 & \oursR \textbf{105} \\
+\oursL \reco{}, $\delta{=}0.05$ & \ours 0.87 & \ours \textbf{0.369} & \ours 0.951 & \ours 167 & \ours 80 & \oursR 190 \\
+\oursL \reco{}, $\delta{=}0.01$ & \ours 0.87 & \ours \textbf{0.369} & \ours \textbf{0.993} & \ours 920 & \ours 351 & \oursR 1,516 \\
+\bottomrule
+\end{tabular}}

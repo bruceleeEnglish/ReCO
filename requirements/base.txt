@@ -1,0 +1,16 @@
+# Core (already present on the server's system Python: torch 2.2 + CUDA 12.1, numpy, numba, pyyaml)
+torch>=2.1
+numpy>=1.24
+numba>=0.58
+pyyaml>=5.4
+scipy>=1.10            # token pooling (Ward linkage), sparse scoring
+# Installed into the project venv on the server
+transformers>=4.40,<5
+safetensors>=0.4
+huggingface_hub>=0.23
+# transformers imports image utilities even for BERT; the server's Debian Pillow predates
+# PIL.Image.Resampling (Pillow 9.1), so a newer Pillow is installed into the venv
+pillow>=9.1
+# Baselines (savemv.bench): BM25 with Snowball stemming
+bm25s>=0.2
+PyStemmer>=2.2

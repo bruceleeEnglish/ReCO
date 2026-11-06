@@ -1,0 +1,186 @@
++ .venv/bin/python scripts/msmarco_scale.py encode --out outputs/msmarco --queries 1000
+12:15:15 | INFO  | savemv.msmarco | corpus: 8841823 passages
+12:15:21 | INFO  | savemv.msmarco | queries: 1000 dev queries with judged passages
+12:15:23 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+12:15:45 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.9537, empty=0
+12:15:46 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.9723, empty=0
+12:15:47 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.9728, empty=0
+12:15:47 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.9730, empty=0
+12:15:50 | INFO  | savemv.core.codebook | k-means K=65536 iter 1/15: mean cos=0.9665, empty=0
+12:16:01 | INFO  | savemv.core.codebook | k-means K=65536 iter 6/15: mean cos=0.9807, empty=0
+12:16:12 | INFO  | savemv.core.codebook | k-means K=65536 iter 11/15: mean cos=0.9811, empty=0
+12:16:21 | INFO  | savemv.core.codebook | k-means K=65536 iter 15/15: mean cos=0.9812, empty=0
+12:16:45 | INFO  | savemv.msmarco | 65536 / 8841823 passages (2744/s, ETA 53 min) | encode 11s assign 5s exact 7s
+12:17:10 | INFO  | savemv.msmarco | 131072 / 8841823 passages (2709/s, ETA 54 min) | encode 23s assign 11s exact 14s
+12:17:34 | INFO  | savemv.msmarco | 196608 / 8841823 passages (2706/s, ETA 53 min) | encode 34s assign 16s exact 21s
+12:17:59 | INFO  | savemv.msmarco | 262144 / 8841823 passages (2693/s, ETA 53 min) | encode 46s assign 22s exact 28s
+12:18:23 | INFO  | savemv.msmarco | 327680 / 8841823 passages (2694/s, ETA 53 min) | encode 57s assign 28s exact 34s
+12:18:48 | INFO  | savemv.msmarco | 393216 / 8841823 passages (2683/s, ETA 52 min) | encode 69s assign 33s exact 42s
+12:19:12 | INFO  | savemv.msmarco | 458752 / 8841823 passages (2684/s, ETA 52 min) | encode 80s assign 39s exact 48s
+12:19:37 | INFO  | savemv.msmarco | 524288 / 8841823 passages (2681/s, ETA 52 min) | encode 92s assign 44s exact 55s
+12:20:02 | INFO  | savemv.msmarco | 589824 / 8841823 passages (2677/s, ETA 51 min) | encode 104s assign 50s exact 62s
+12:20:26 | INFO  | savemv.msmarco | 655360 / 8841823 passages (2678/s, ETA 51 min) | encode 115s assign 55s exact 69s
+12:20:51 | INFO  | savemv.msmarco | 720896 / 8841823 passages (2676/s, ETA 51 min) | encode 127s assign 61s exact 76s
+12:21:15 | INFO  | savemv.msmarco | 786432 / 8841823 passages (2679/s, ETA 50 min) | encode 138s assign 67s exact 83s
+12:21:40 | INFO  | savemv.msmarco | 851968 / 8841823 passages (2677/s, ETA 50 min) | encode 150s assign 72s exact 90s
+12:22:04 | INFO  | savemv.msmarco | 917504 / 8841823 passages (2676/s, ETA 49 min) | encode 161s assign 78s exact 97s
+12:22:29 | INFO  | savemv.msmarco | 983040 / 8841823 passages (2677/s, ETA 49 min) | encode 173s assign 84s exact 104s
+12:22:53 | INFO  | savemv.msmarco | 1048576 / 8841823 passages (2676/s, ETA 49 min) | encode 184s assign 89s exact 111s
+12:23:19 | INFO  | savemv.msmarco | 1114112 / 8841823 passages (2668/s, ETA 48 min) | encode 196s assign 95s exact 118s
+12:23:43 | INFO  | savemv.msmarco | 1179648 / 8841823 passages (2670/s, ETA 48 min) | encode 207s assign 100s exact 125s
+12:24:08 | INFO  | savemv.msmarco | 1245184 / 8841823 passages (2670/s, ETA 47 min) | encode 219s assign 106s exact 132s
+12:24:32 | INFO  | savemv.msmarco | 1310720 / 8841823 passages (2670/s, ETA 47 min) | encode 231s assign 112s exact 139s
+12:24:57 | INFO  | savemv.msmarco | 1376256 / 8841823 passages (2668/s, ETA 47 min) | encode 242s assign 117s exact 146s
+12:25:22 | INFO  | savemv.msmarco | 1441792 / 8841823 passages (2666/s, ETA 46 min) | encode 254s assign 123s exact 153s
+12:25:48 | INFO  | savemv.msmarco | 1507328 / 8841823 passages (2661/s, ETA 46 min) | encode 266s assign 129s exact 160s
+12:26:13 | INFO  | savemv.msmarco | 1572864 / 8841823 passages (2659/s, ETA 46 min) | encode 278s assign 134s exact 167s
+12:26:38 | INFO  | savemv.msmarco | 1638400 / 8841823 passages (2658/s, ETA 45 min) | encode 290s assign 140s exact 174s
+12:27:03 | INFO  | savemv.msmarco | 1703936 / 8841823 passages (2657/s, ETA 45 min) | encode 301s assign 146s exact 181s
+12:27:28 | INFO  | savemv.msmarco | 1769472 / 8841823 passages (2656/s, ETA 44 min) | encode 313s assign 152s exact 188s
+12:27:53 | INFO  | savemv.msmarco | 1835008 / 8841823 passages (2654/s, ETA 44 min) | encode 324s assign 157s exact 195s
+12:28:18 | INFO  | savemv.msmarco | 1900544 / 8841823 passages (2654/s, ETA 44 min) | encode 336s assign 163s exact 202s
+12:28:42 | INFO  | savemv.msmarco | 1966080 / 8841823 passages (2655/s, ETA 43 min) | encode 348s assign 169s exact 209s
+12:29:06 | INFO  | savemv.msmarco | 2031616 / 8841823 passages (2656/s, ETA 43 min) | encode 359s assign 174s exact 216s
+12:29:31 | INFO  | savemv.msmarco | 2097152 / 8841823 passages (2656/s, ETA 42 min) | encode 370s assign 180s exact 223s
+12:29:56 | INFO  | savemv.msmarco | 2162688 / 8841823 passages (2656/s, ETA 42 min) | encode 382s assign 185s exact 230s
+12:30:20 | INFO  | savemv.msmarco | 2228224 / 8841823 passages (2656/s, ETA 41 min) | encode 394s assign 191s exact 237s
+12:30:44 | INFO  | savemv.msmarco | 2293760 / 8841823 passages (2658/s, ETA 41 min) | encode 405s assign 197s exact 244s
+12:31:09 | INFO  | savemv.msmarco | 2359296 / 8841823 passages (2659/s, ETA 41 min) | encode 416s assign 202s exact 251s
+12:31:33 | INFO  | savemv.msmarco | 2424832 / 8841823 passages (2661/s, ETA 40 min) | encode 427s assign 207s exact 257s
+12:31:57 | INFO  | savemv.msmarco | 2490368 / 8841823 passages (2662/s, ETA 40 min) | encode 439s assign 213s exact 264s
+12:32:21 | INFO  | savemv.msmarco | 2555904 / 8841823 passages (2663/s, ETA 39 min) | encode 450s assign 219s exact 271s
+12:32:46 | INFO  | savemv.msmarco | 2621440 / 8841823 passages (2664/s, ETA 39 min) | encode 461s assign 224s exact 278s
+12:33:09 | INFO  | savemv.msmarco | 2686976 / 8841823 passages (2667/s, ETA 38 min) | encode 472s assign 230s exact 284s
+12:33:33 | INFO  | savemv.msmarco | 2752512 / 8841823 passages (2669/s, ETA 38 min) | encode 483s assign 235s exact 291s
+12:33:57 | INFO  | savemv.msmarco | 2818048 / 8841823 passages (2671/s, ETA 38 min) | encode 495s assign 241s exact 298s
+12:34:20 | INFO  | savemv.msmarco | 2883584 / 8841823 passages (2672/s, ETA 37 min) | encode 506s assign 246s exact 304s
+12:34:45 | INFO  | savemv.msmarco | 2949120 / 8841823 passages (2674/s, ETA 37 min) | encode 517s assign 252s exact 311s
+12:35:08 | INFO  | savemv.msmarco | 3014656 / 8841823 passages (2676/s, ETA 36 min) | encode 528s assign 257s exact 318s
+12:35:32 | INFO  | savemv.msmarco | 3080192 / 8841823 passages (2677/s, ETA 36 min) | encode 539s assign 263s exact 325s
+12:35:56 | INFO  | savemv.msmarco | 3145728 / 8841823 passages (2677/s, ETA 35 min) | encode 551s assign 268s exact 332s
+12:36:20 | INFO  | savemv.msmarco | 3211264 / 8841823 passages (2679/s, ETA 35 min) | encode 562s assign 274s exact 338s
+12:36:44 | INFO  | savemv.msmarco | 3276800 / 8841823 passages (2680/s, ETA 35 min) | encode 573s assign 279s exact 345s
+12:37:08 | INFO  | savemv.msmarco | 3342336 / 8841823 passages (2680/s, ETA 34 min) | encode 584s assign 285s exact 352s
+12:37:33 | INFO  | savemv.msmarco | 3407872 / 8841823 passages (2681/s, ETA 34 min) | encode 596s assign 290s exact 359s
+12:37:57 | INFO  | savemv.msmarco | 3473408 / 8841823 passages (2682/s, ETA 33 min) | encode 607s assign 296s exact 366s
+12:38:21 | INFO  | savemv.msmarco | 3538944 / 8841823 passages (2682/s, ETA 33 min) | encode 618s assign 301s exact 373s
+12:38:45 | INFO  | savemv.msmarco | 3604480 / 8841823 passages (2682/s, ETA 33 min) | encode 630s assign 307s exact 379s
+12:39:09 | INFO  | savemv.msmarco | 3670016 / 8841823 passages (2683/s, ETA 32 min) | encode 641s assign 312s exact 386s
+12:39:33 | INFO  | savemv.msmarco | 3735552 / 8841823 passages (2684/s, ETA 32 min) | encode 652s assign 318s exact 393s
+12:39:57 | INFO  | savemv.msmarco | 3801088 / 8841823 passages (2685/s, ETA 31 min) | encode 663s assign 323s exact 400s
+12:40:21 | INFO  | savemv.msmarco | 3866624 / 8841823 passages (2686/s, ETA 31 min) | encode 674s assign 329s exact 406s
+12:40:45 | INFO  | savemv.msmarco | 3932160 / 8841823 passages (2687/s, ETA 30 min) | encode 685s assign 334s exact 413s
+12:41:09 | INFO  | savemv.msmarco | 3997696 / 8841823 passages (2687/s, ETA 30 min) | encode 697s assign 340s exact 420s
+12:41:33 | INFO  | savemv.msmarco | 4063232 / 8841823 passages (2688/s, ETA 30 min) | encode 708s assign 345s exact 427s
+12:41:57 | INFO  | savemv.msmarco | 4128768 / 8841823 passages (2688/s, ETA 29 min) | encode 719s assign 351s exact 434s
+12:42:22 | INFO  | savemv.msmarco | 4194304 / 8841823 passages (2688/s, ETA 29 min) | encode 730s assign 356s exact 441s
+12:42:46 | INFO  | savemv.msmarco | 4259840 / 8841823 passages (2688/s, ETA 28 min) | encode 742s assign 362s exact 448s
+12:43:10 | INFO  | savemv.msmarco | 4325376 / 8841823 passages (2689/s, ETA 28 min) | encode 753s assign 368s exact 454s
+12:43:34 | INFO  | savemv.msmarco | 4390912 / 8841823 passages (2689/s, ETA 28 min) | encode 764s assign 373s exact 461s
+12:43:59 | INFO  | savemv.msmarco | 4456448 / 8841823 passages (2689/s, ETA 27 min) | encode 776s assign 379s exact 468s
+12:44:23 | INFO  | savemv.msmarco | 4521984 / 8841823 passages (2690/s, ETA 27 min) | encode 787s assign 384s exact 475s
+12:44:47 | INFO  | savemv.msmarco | 4587520 / 8841823 passages (2690/s, ETA 26 min) | encode 798s assign 390s exact 482s
+12:45:12 | INFO  | savemv.msmarco | 4653056 / 8841823 passages (2690/s, ETA 26 min) | encode 810s assign 395s exact 489s
+12:45:36 | INFO  | savemv.msmarco | 4718592 / 8841823 passages (2690/s, ETA 26 min) | encode 821s assign 401s exact 496s
+12:46:00 | INFO  | savemv.msmarco | 4784128 / 8841823 passages (2690/s, ETA 25 min) | encode 833s assign 406s exact 503s
+12:46:24 | INFO  | savemv.msmarco | 4849664 / 8841823 passages (2690/s, ETA 25 min) | encode 844s assign 412s exact 510s
+12:46:49 | INFO  | savemv.msmarco | 4915200 / 8841823 passages (2690/s, ETA 24 min) | encode 855s assign 417s exact 517s
+12:47:13 | INFO  | savemv.msmarco | 4980736 / 8841823 passages (2690/s, ETA 24 min) | encode 867s assign 423s exact 523s
+12:47:37 | INFO  | savemv.msmarco | 5046272 / 8841823 passages (2691/s, ETA 24 min) | encode 878s assign 428s exact 530s
+12:48:01 | INFO  | savemv.msmarco | 5111808 / 8841823 passages (2691/s, ETA 23 min) | encode 889s assign 434s exact 537s
+12:48:26 | INFO  | savemv.msmarco | 5177344 / 8841823 passages (2690/s, ETA 23 min) | encode 901s assign 439s exact 544s
+12:48:50 | INFO  | savemv.msmarco | 5242880 / 8841823 passages (2690/s, ETA 22 min) | encode 912s assign 445s exact 551s
+12:49:14 | INFO  | savemv.msmarco | 5308416 / 8841823 passages (2691/s, ETA 22 min) | encode 923s assign 451s exact 558s
+12:49:39 | INFO  | savemv.msmarco | 5373952 / 8841823 passages (2691/s, ETA 21 min) | encode 935s assign 456s exact 565s
+12:50:03 | INFO  | savemv.msmarco | 5439488 / 8841823 passages (2691/s, ETA 21 min) | encode 946s assign 462s exact 571s
+12:50:27 | INFO  | savemv.msmarco | 5505024 / 8841823 passages (2691/s, ETA 21 min) | encode 957s assign 467s exact 578s
+12:50:53 | INFO  | savemv.msmarco | 5570560 / 8841823 passages (2689/s, ETA 20 min) | encode 969s assign 473s exact 586s
+12:51:18 | INFO  | savemv.msmarco | 5636096 / 8841823 passages (2688/s, ETA 20 min) | encode 981s assign 479s exact 593s
+12:51:43 | INFO  | savemv.msmarco | 5701632 / 8841823 passages (2688/s, ETA 19 min) | encode 993s assign 484s exact 600s
+12:52:07 | INFO  | savemv.msmarco | 5767168 / 8841823 passages (2688/s, ETA 19 min) | encode 1004s assign 490s exact 607s
+12:52:32 | INFO  | savemv.msmarco | 5832704 / 8841823 passages (2687/s, ETA 19 min) | encode 1016s assign 496s exact 614s
+12:52:57 | INFO  | savemv.msmarco | 5898240 / 8841823 passages (2686/s, ETA 18 min) | encode 1027s assign 502s exact 621s
+12:53:23 | INFO  | savemv.msmarco | 5963776 / 8841823 passages (2685/s, ETA 18 min) | encode 1039s assign 507s exact 628s
+12:53:47 | INFO  | savemv.msmarco | 6029312 / 8841823 passages (2685/s, ETA 17 min) | encode 1051s assign 513s exact 635s
+12:54:12 | INFO  | savemv.msmarco | 6094848 / 8841823 passages (2684/s, ETA 17 min) | encode 1062s assign 519s exact 642s
+12:54:37 | INFO  | savemv.msmarco | 6160384 / 8841823 passages (2684/s, ETA 17 min) | encode 1074s assign 525s exact 649s
+12:55:06 | INFO  | savemv.msmarco | 6225920 / 8841823 passages (2679/s, ETA 16 min) | encode 1087s assign 532s exact 657s
+12:55:35 | INFO  | savemv.msmarco | 6291456 / 8841823 passages (2673/s, ETA 16 min) | encode 1100s assign 539s exact 665s
+12:56:02 | INFO  | savemv.msmarco | 6356992 / 8841823 passages (2670/s, ETA 16 min) | encode 1113s assign 545s exact 673s
+12:56:27 | INFO  | savemv.msmarco | 6422528 / 8841823 passages (2670/s, ETA 15 min) | encode 1125s assign 551s exact 680s
+12:56:52 | INFO  | savemv.msmarco | 6488064 / 8841823 passages (2669/s, ETA 15 min) | encode 1136s assign 557s exact 687s
+12:57:17 | INFO  | savemv.msmarco | 6553600 / 8841823 passages (2668/s, ETA 14 min) | encode 1148s assign 562s exact 694s
+12:57:43 | INFO  | savemv.msmarco | 6619136 / 8841823 passages (2668/s, ETA 14 min) | encode 1160s assign 568s exact 702s
+12:58:07 | INFO  | savemv.msmarco | 6684672 / 8841823 passages (2668/s, ETA 13 min) | encode 1172s assign 574s exact 709s
+12:58:32 | INFO  | savemv.msmarco | 6750208 / 8841823 passages (2667/s, ETA 13 min) | encode 1183s assign 579s exact 716s
+12:58:57 | INFO  | savemv.msmarco | 6815744 / 8841823 passages (2667/s, ETA 13 min) | encode 1195s assign 585s exact 723s
+12:59:22 | INFO  | savemv.msmarco | 6881280 / 8841823 passages (2667/s, ETA 12 min) | encode 1207s assign 591s exact 730s
+12:59:47 | INFO  | savemv.msmarco | 6946816 / 8841823 passages (2667/s, ETA 12 min) | encode 1218s assign 596s exact 737s
+13:00:12 | INFO  | savemv.msmarco | 7012352 / 8841823 passages (2666/s, ETA 11 min) | encode 1230s assign 602s exact 744s
+13:00:37 | INFO  | savemv.msmarco | 7077888 / 8841823 passages (2666/s, ETA 11 min) | encode 1242s assign 607s exact 751s
+13:01:00 | INFO  | savemv.msmarco | 7143424 / 8841823 passages (2667/s, ETA 11 min) | encode 1253s assign 612s exact 758s
+13:01:24 | INFO  | savemv.msmarco | 7208960 / 8841823 passages (2668/s, ETA 10 min) | encode 1264s assign 617s exact 765s
+13:01:47 | INFO  | savemv.msmarco | 7274496 / 8841823 passages (2669/s, ETA 10 min) | encode 1275s assign 622s exact 771s
+13:02:11 | INFO  | savemv.msmarco | 7340032 / 8841823 passages (2670/s, ETA 9 min) | encode 1287s assign 628s exact 778s
+13:02:36 | INFO  | savemv.msmarco | 7405568 / 8841823 passages (2669/s, ETA 9 min) | encode 1298s assign 633s exact 785s
+13:03:00 | INFO  | savemv.msmarco | 7471104 / 8841823 passages (2670/s, ETA 9 min) | encode 1310s assign 639s exact 792s
+13:03:25 | INFO  | savemv.msmarco | 7536640 / 8841823 passages (2669/s, ETA 8 min) | encode 1321s assign 644s exact 799s
+13:03:50 | INFO  | savemv.msmarco | 7602176 / 8841823 passages (2669/s, ETA 8 min) | encode 1333s assign 650s exact 806s
+13:04:14 | INFO  | savemv.msmarco | 7667712 / 8841823 passages (2669/s, ETA 7 min) | encode 1345s assign 655s exact 813s
+13:04:38 | INFO  | savemv.msmarco | 7733248 / 8841823 passages (2669/s, ETA 7 min) | encode 1356s assign 660s exact 820s
+13:05:02 | INFO  | savemv.msmarco | 7798784 / 8841823 passages (2670/s, ETA 7 min) | encode 1367s assign 666s exact 827s
+13:05:26 | INFO  | savemv.msmarco | 7864320 / 8841823 passages (2671/s, ETA 6 min) | encode 1379s assign 671s exact 834s
+13:05:51 | INFO  | savemv.msmarco | 7929856 / 8841823 passages (2671/s, ETA 6 min) | encode 1391s assign 676s exact 841s
+13:06:15 | INFO  | savemv.msmarco | 7995392 / 8841823 passages (2671/s, ETA 5 min) | encode 1402s assign 682s exact 848s
+13:06:39 | INFO  | savemv.msmarco | 8060928 / 8841823 passages (2671/s, ETA 5 min) | encode 1414s assign 687s exact 855s
+13:07:03 | INFO  | savemv.msmarco | 8126464 / 8841823 passages (2672/s, ETA 4 min) | encode 1425s assign 692s exact 861s
+13:07:26 | INFO  | savemv.msmarco | 8192000 / 8841823 passages (2673/s, ETA 4 min) | encode 1436s assign 697s exact 868s
+13:07:49 | INFO  | savemv.msmarco | 8257536 / 8841823 passages (2675/s, ETA 4 min) | encode 1447s assign 702s exact 874s
+13:08:14 | INFO  | savemv.msmarco | 8323072 / 8841823 passages (2674/s, ETA 3 min) | encode 1458s assign 707s exact 882s
+13:08:39 | INFO  | savemv.msmarco | 8388608 / 8841823 passages (2674/s, ETA 3 min) | encode 1471s assign 713s exact 889s
+13:09:04 | INFO  | savemv.msmarco | 8454144 / 8841823 passages (2674/s, ETA 2 min) | encode 1482s assign 718s exact 896s
+13:09:28 | INFO  | savemv.msmarco | 8519680 / 8841823 passages (2674/s, ETA 2 min) | encode 1494s assign 724s exact 903s
+13:09:53 | INFO  | savemv.msmarco | 8585216 / 8841823 passages (2674/s, ETA 2 min) | encode 1505s assign 729s exact 910s
+13:10:17 | INFO  | savemv.msmarco | 8650752 / 8841823 passages (2673/s, ETA 1 min) | encode 1517s assign 735s exact 917s
+13:10:41 | INFO  | savemv.msmarco | 8716288 / 8841823 passages (2674/s, ETA 1 min) | encode 1528s assign 740s exact 923s
+13:11:05 | INFO  | savemv.msmarco | 8781824 / 8841823 passages (2675/s, ETA 0 min) | encode 1539s assign 745s exact 930s
+13:11:26 | INFO  | savemv.msmarco | 8841823 / 8841823 passages (2675/s, ETA 0 min) | encode 1550s assign 750s exact 936s
+13:11:37 | INFO  | savemv.msmarco | K=16384: 43.2 entries/passage, 79.5 B/passage
+13:11:42 | INFO  | savemv.msmarco | K=65536: 46.4 entries/passage, 96.8 B/passage
+13:11:42 | INFO  | savemv.msmarco | encode stage done in 3345 s
++ .venv/bin/python scripts/msmarco_scale.py eval --out outputs/msmarco --bm25
+<repo>/scripts/msmarco_scale.py:309: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  top1k = np.stack([torch.topk(torch.from_numpy(np.asarray(exact[q])).to(dev), 1000).indices.cpu().numpy()
+13:12:05 | INFO  | savemv.msmarco | exact ColBERT: MRR@10 0.3689 nDCG@10 0.4312 R@1k 0.9746
+13:13:55 | INFO  | savemv.msmarco | K=16384: scan 9.7 ms | estimate MRR 0.2339 | d=0.05 fixed R 787 (MRR 0.3685) hazard R 503 (MRR 0.3688)
+13:15:21 | INFO  | savemv.msmarco | K=65536: scan 10.8 ms | estimate MRR 0.2785 | d=0.05 fixed R 246 (MRR 0.3684) hazard R 167 (MRR 0.3695)
+13:15:47 | INFO  | savemv.msmarco | corpus: 8841823 passages
+13:28:44 | INFO  | savemv.msmarco | BM25 cascade: d=0.05 fixed R 17636 (MRR 0.3662) hazard R 11205 (MRR 0.3667)
++ .venv/bin/python scripts/msmarco_scale.py eval --out outputs/msmarco --stop-batch 32
+13:28:50 | INFO  | savemv.msmarco | exact ColBERT: MRR@10 0.3689 nDCG@10 0.4312 R@1k 0.9746
+13:30:49 | INFO  | savemv.msmarco | K=16384: scan 9.4 ms | estimate MRR 0.2339 | d=0.05 fixed R 787 (MRR 0.3685) hazard R 497 (MRR 0.3688)
+13:32:10 | INFO  | savemv.msmarco | K=65536: scan 10.7 ms | estimate MRR 0.2785 | d=0.05 fixed R 246 (MRR 0.3684) hazard R 167 (MRR 0.3693)
++ .venv/bin/python scripts/msmarco_scale.py latency --out outputs/msmarco --k 65536
+13:32:41 | INFO  | savemv.msmarco | corpus: 8841823 passages
+13:32:44 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+13:33:16 | INFO  | savemv.msmarco | fixed@0.1: p50 125.7 p90 148.9 ms | estimate 12.7 ms | R 107 | recall 0.897
+13:33:38 | INFO  | savemv.msmarco | hazard@0.1: p50 95.8 p90 180.0 ms | estimate 12.6 ms | R 93 | recall 0.909
+13:34:28 | INFO  | savemv.msmarco | fixed@0.05: p50 243.6 p90 254.8 ms | estimate 12.8 ms | R 234 | recall 0.952
+13:35:07 | INFO  | savemv.msmarco | hazard@0.05: p50 159.7 p90 337.7 ms | estimate 12.8 ms | R 171 | recall 0.952
+13:41:40 | INFO  | savemv.msmarco | fixed@0.01: p50 1884.6 p90 2114.9 ms | estimate 13.0 ms | R 1941 | recall 0.992
+13:45:01 | INFO  | savemv.msmarco | hazard@0.01: p50 769.8 p90 1874.4 ms | estimate 12.9 ms | R 1026 | recall 0.993
+13:48:04 | INFO  | savemv.msmarco | hazard_doc@0.01: p50 686.2 p90 1782.1 ms | estimate 12.9 ms | R 931 | recall 0.992
+13:48:13 | INFO  | savemv.msmarco | CPU sketch scan: {'80': 201.74246453680098, '8': 557.3586900252849} ms
++ .venv/bin/python scripts/msmarco_scale.py latency --out outputs/msmarco --k 65536 --stop-batch 32
+13:48:45 | INFO  | savemv.msmarco | corpus: 8841823 passages
+13:48:47 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+13:49:05 | INFO  | savemv.msmarco | fixed@0.1: p50 62.1 p90 68.6 ms | estimate 11.0 ms | R 107 | recall 0.897
+13:49:16 | INFO  | savemv.msmarco | hazard@0.1: p50 53.0 p90 80.4 ms | estimate 11.0 ms | R 91 | recall 0.907
+13:49:39 | INFO  | savemv.msmarco | fixed@0.05: p50 112.2 p90 122.6 ms | estimate 11.2 ms | R 234 | recall 0.951
+13:49:57 | INFO  | savemv.msmarco | hazard@0.05: p50 80.4 p90 138.3 ms | estimate 11.2 ms | R 172 | recall 0.953
+13:52:28 | INFO  | savemv.msmarco | fixed@0.01: p50 735.2 p90 825.1 ms | estimate 11.4 ms | R 1941 | recall 0.991
+13:53:58 | INFO  | savemv.msmarco | hazard@0.01: p50 350.6 p90 815.3 ms | estimate 11.3 ms | R 1064 | recall 0.993
+13:55:11 | INFO  | savemv.msmarco | hazard_doc@0.01: p50 288.8 p90 654.8 ms | estimate 11.3 ms | R 949 | recall 0.992
+13:55:20 | INFO  | savemv.msmarco | CPU sketch scan: {'80': 190.42668868787587, '8': 562.7124781254679} ms
++ .venv/bin/python scripts/msmarco_scale.py latency --out outputs/msmarco --k 16384
+Terminated

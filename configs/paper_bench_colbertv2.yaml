@@ -1,0 +1,58 @@
+# Second encoder: the paper benchmark (protocol v3) with ColBERTv2 (dim 128) instead of answerai-colbert-small.
+# Only encoder-dependent methods are rerun; single-vector/sparse first stages do not depend on the encoder.
+# No universal hazard models exist for this encoder, so rule hazard_u is skipped (hazard_model: null).
+#   BENCH_CONFIG=configs/paper_bench_colbertv2.yaml scripts/pipeline/run_bench.sh 1 scifact nfcorpus scidocs fiqa
+dataset: fiqa
+data_root: data
+output_root: outputs_cv2
+split: test
+hf_endpoint: https://hf-mirror.com
+exclude_identical_ids: true
+
+encoder:
+  repo: models/colbertv2.0
+  query_maxlen: 32
+  doc_maxlen: 300
+  batch_size: 256
+  device: cuda:0
+  fp16: true
+
+sketch:
+  codebook_sizes: [16384]
+  kmeans_iters: 15
+  points_per_centroid: 32
+  min_train_points: 200000
+  seed: 0
+
+stop:
+  k: 10
+  deltas: [0.1, 0.05, 0.01]
+  batch: 8
+  folds: 5
+  fit_fraction: 0.4
+  calib_top: 200
+  hazard_horizon: 64
+  hazard_ahead: 64
+  hazard_l2: 1.0
+  hazard_model: null
+  seed: 0
+
+latency:
+  enabled: false
+
+bench:
+  workers: 32
+  methods:
+    - {kind: full}
+    - {kind: reco, codebook_size: 1024}
+    - {kind: reco, codebook_size: 4096}
+    - {kind: reco, codebook_size: 16384}
+    - {kind: reco, codebook_size: 65536}
+    - {kind: residual, nbits: [2, 1]}
+    - {kind: pool, factor: 2, nbits: [null, 2, 1]}
+    - {kind: pool, factor: 4, nbits: [null, 2, 1]}
+    - {kind: pool, factor: 8, nbits: [null, 2, 1]}
+    - {kind: pool, factor: 16, nbits: [null, 2, 1]}
+    - {kind: pool, factor: 32, nbits: [null, 2, 1]}
+    - {kind: fde, reps: [2, 5, 10, 20], simhash_bits: 5, proj_dim: 16, pq: true}
+    - {kind: meanpool, quant: [fp16, int8, binary]}

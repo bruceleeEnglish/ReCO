@@ -1,0 +1,77 @@
+11:55:55 | INFO  | savemv.data.beir | scidocs: 25657 docs, 1000 test queries
+11:55:58 | INFO  | savemv.encoders.colbert | encoder models/colbertv2.0 on cuda:0 (dim=128, fp16 weights=True)
+11:56:00 | INFO  | savemv.encoders.colbert | encoded 256 / 25657 documents
+11:56:28 | INFO  | savemv.encoders.colbert | encoded 25657 / 25657 documents
+11:56:32 | INFO  | savemv.experiments.pipeline | corpus: 25657 docs, 4820738 tokens (187.9 / doc) in 35.4s
+11:56:39 | INFO  | savemv.experiments.pipeline | exact MaxSim for 1000 queries x 25657 docs in 7.5s
+11:57:10 | INFO  | savemv.experiments.bench | full-fp16         48104.3 B/doc (39.873x raw) | estimate nDCG 0.1567 R@10 1.000 R95 10 | ReCo stop: R 16.0 recall 1.000 nDCG 0.1567
+11:57:11 | INFO  | savemv.core.codebook | k-means K=1024 iter 1/15: mean cos=0.6441, empty=0
+11:57:11 | INFO  | savemv.core.codebook | k-means K=1024 iter 6/15: mean cos=0.7566, empty=0
+11:57:11 | INFO  | savemv.core.codebook | k-means K=1024 iter 11/15: mean cos=0.7613, empty=0
+11:57:11 | INFO  | savemv.core.codebook | k-means K=1024 iter 15/15: mean cos=0.7624, empty=0
+11:57:14 | INFO  | savemv.experiments.pipeline | sketch K=1024: 83.3 centroids / doc, 104.9 bytes / doc
+11:57:45 | INFO  | savemv.experiments.bench | reco-K1024          115.2 B/doc (0.095x raw) | estimate nDCG 0.0626 R@10 0.271 R95 841 | ReCo stop: R 3342.4 recall 0.975 nDCG 0.1544
+11:57:45 | INFO  | savemv.core.codebook | k-means K=4096 iter 1/15: mean cos=0.7239, empty=0
+11:57:45 | INFO  | savemv.core.codebook | k-means K=4096 iter 6/15: mean cos=0.8238, empty=0
+11:57:45 | INFO  | savemv.core.codebook | k-means K=4096 iter 11/15: mean cos=0.8265, empty=0
+11:57:46 | INFO  | savemv.core.codebook | k-means K=4096 iter 15/15: mean cos=0.8272, empty=0
+11:57:49 | INFO  | savemv.experiments.pipeline | sketch K=4096: 97.5 centroids / doc, 150.2 bytes / doc
+11:58:20 | INFO  | savemv.experiments.bench | reco-K4096          191.1 B/doc (0.158x raw) | estimate nDCG 0.0991 R@10 0.471 R95 154 | ReCo stop: R 419.2 recall 0.974 nDCG 0.1540
+11:58:20 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.7929, empty=0
+11:58:21 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.8712, empty=0
+11:58:22 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.8732, empty=0
+11:58:23 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.8736, empty=0
+11:58:27 | INFO  | savemv.experiments.pipeline | sketch K=16384: 104.8 centroids / doc, 187.4 bytes / doc
+11:58:58 | INFO  | savemv.experiments.bench | reco-K16384         350.8 B/doc (0.291x raw) | estimate nDCG 0.1228 R@10 0.635 R95 45 | ReCo stop: R 64.9 recall 0.973 nDCG 0.1547
+11:59:03 | INFO  | savemv.core.codebook | k-means K=65536 iter 1/15: mean cos=0.8453, empty=0
+11:59:16 | INFO  | savemv.core.codebook | k-means K=65536 iter 6/15: mean cos=0.9064, empty=0
+11:59:29 | INFO  | savemv.core.codebook | k-means K=65536 iter 11/15: mean cos=0.9082, empty=0
+11:59:40 | INFO  | savemv.core.codebook | k-means K=65536 iter 15/15: mean cos=0.9085, empty=0
+11:59:49 | INFO  | savemv.experiments.pipeline | sketch K=65536: 103.4 centroids / doc, 210.8 bytes / doc
+12:00:21 | INFO  | savemv.experiments.bench | reco-K65536         864.7 B/doc (0.717x raw) | estimate nDCG 0.1396 R@10 0.741 R95 25 | ReCo stop: R 31.3 recall 0.977 nDCG 0.1553
+12:00:22 | INFO  | savemv.core.codebook | k-means K=32768 iter 1/15: mean cos=0.8204, empty=0
+12:00:26 | INFO  | savemv.core.codebook | k-means K=32768 iter 6/15: mean cos=0.8895, empty=0
+12:00:29 | INFO  | savemv.core.codebook | k-means K=32768 iter 11/15: mean cos=0.8914, empty=0
+12:00:32 | INFO  | savemv.core.codebook | k-means K=32768 iter 15/15: mean cos=0.8917, empty=0
+12:01:01 | INFO  | savemv.experiments.bench | residual-2bit      6695.8 B/doc (5.550x raw) | estimate nDCG 0.1539 R@10 0.911 R95 12 | ReCo stop: R 16.2 recall 0.995 nDCG 0.1563
+12:01:38 | INFO  | savemv.experiments.bench | residual-1bit      3689.5 B/doc (3.058x raw) | estimate nDCG 0.1504 R@10 0.847 R95 15 | ReCo stop: R 18.8 recall 0.985 nDCG 0.1561
+12:01:43 | INFO  | savemv.baselines.pooling | pooled factor 2: 187.9 -> 94.2 vectors / doc
+12:02:13 | INFO  | savemv.experiments.bench | pool2-fp16        24118.1 B/doc (19.991x raw) | estimate nDCG 0.1554 R@10 0.922 R95 11 | ReCo stop: R 16.2 recall 0.991 nDCG 0.1571
+12:02:13 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.7984, empty=0
+12:02:14 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.8763, empty=0
+12:02:15 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.8780, empty=0
+12:02:16 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.8783, empty=0
+12:02:42 | INFO  | savemv.experiments.bench | pool2-2bit         3346.6 B/doc (2.774x raw) | estimate nDCG 0.1514 R@10 0.875 R95 13 | ReCo stop: R 18.3 recall 0.986 nDCG 0.1561
+12:03:12 | INFO  | savemv.experiments.bench | pool2-1bit         1839.4 B/doc (1.525x raw) | estimate nDCG 0.1467 R@10 0.803 R95 18 | ReCo stop: R 25.1 recall 0.980 nDCG 0.1558
+12:03:16 | INFO  | savemv.baselines.pooling | pooled factor 4: 187.9 -> 47.3 vectors / doc
+12:03:49 | INFO  | savemv.experiments.bench | pool4-fp16        12124.6 B/doc (10.050x raw) | estimate nDCG 0.1547 R@10 0.753 R95 35 | ReCo stop: R 45.1 recall 0.968 nDCG 0.1570
+12:03:50 | INFO  | savemv.core.codebook | k-means K=16384 iter 1/15: mean cos=0.7889, empty=0
+12:03:50 | INFO  | savemv.core.codebook | k-means K=16384 iter 6/15: mean cos=0.8658, empty=0
+12:03:51 | INFO  | savemv.core.codebook | k-means K=16384 iter 11/15: mean cos=0.8675, empty=0
+12:03:52 | INFO  | savemv.core.codebook | k-means K=16384 iter 15/15: mean cos=0.8678, empty=0
+12:04:25 | INFO  | savemv.experiments.bench | pool4-2bit         1765.4 B/doc (1.463x raw) | estimate nDCG 0.1520 R@10 0.734 R95 42 | ReCo stop: R 55.5 recall 0.966 nDCG 0.1573
+12:04:59 | INFO  | savemv.experiments.bench | pool4-1bit         1007.9 B/doc (0.835x raw) | estimate nDCG 0.1443 R@10 0.696 R95 57 | ReCo stop: R 76.5 recall 0.965 nDCG 0.1574
+12:05:03 | INFO  | savemv.baselines.pooling | pooled factor 8: 187.9 -> 23.9 vectors / doc
+12:05:34 | INFO  | savemv.experiments.bench | pool8-fp16         6128.2 B/doc (5.080x raw) | estimate nDCG 0.1492 R@10 0.594 R95 144 | ReCo stop: R 266.4 recall 0.960 nDCG 0.1561
+12:05:34 | INFO  | savemv.core.codebook | k-means K=8192 iter 1/15: mean cos=0.7546, empty=0
+12:05:34 | INFO  | savemv.core.codebook | k-means K=8192 iter 6/15: mean cos=0.8391, empty=0
+12:05:34 | INFO  | savemv.core.codebook | k-means K=8192 iter 11/15: mean cos=0.8413, empty=0
+12:05:34 | INFO  | savemv.core.codebook | k-means K=8192 iter 15/15: mean cos=0.8416, empty=0
+12:06:06 | INFO  | savemv.experiments.bench | pool8-2bit          890.1 B/doc (0.738x raw) | estimate nDCG 0.1450 R@10 0.572 R95 193 | ReCo stop: R 370.7 recall 0.959 nDCG 0.1559
+12:06:38 | INFO  | savemv.experiments.bench | pool8-1bit          507.4 B/doc (0.421x raw) | estimate nDCG 0.1368 R@10 0.542 R95 292 | ReCo stop: R 589.0 recall 0.958 nDCG 0.1560
+12:06:43 | INFO  | savemv.baselines.pooling | pooled factor 16: 187.9 -> 12.2 vectors / doc
+12:07:14 | INFO  | savemv.experiments.bench | pool16-fp16        3132.1 B/doc (2.596x raw) | estimate nDCG 0.1352 R@10 0.452 R95 491 | ReCo stop: R 1274.2 recall 0.958 nDCG 0.1569
+12:07:15 | INFO  | savemv.core.codebook | k-means K=8192 iter 1/15: mean cos=0.7542, empty=1
+12:07:15 | INFO  | savemv.core.codebook | k-means K=8192 iter 6/15: mean cos=0.8353, empty=0
+12:07:15 | INFO  | savemv.core.codebook | k-means K=8192 iter 11/15: mean cos=0.8373, empty=0
+12:07:15 | INFO  | savemv.core.codebook | k-means K=8192 iter 15/15: mean cos=0.8378, empty=0
+12:07:47 | INFO  | savemv.experiments.bench | pool16-2bit         496.6 B/doc (0.412x raw) | estimate nDCG 0.1276 R@10 0.434 R95 665 | ReCo stop: R 1716.8 recall 0.957 nDCG 0.1573
+12:08:18 | INFO  | savemv.experiments.bench | pool16-1bit         301.1 B/doc (0.250x raw) | estimate nDCG 0.1222 R@10 0.407 R95 990 | ReCo stop: R 2515.0 recall 0.958 nDCG 0.1573
+12:08:57 | INFO  | savemv.experiments.bench | fde-r2-pq           168.9 B/doc (0.140x raw) | estimate nDCG 0.0451 R@10 0.108 R95 10520 | ReCo stop: R 18419.1 recall 0.970 nDCG 0.1558
+12:09:37 | INFO  | savemv.experiments.bench | fde-r5-pq           422.2 B/doc (0.350x raw) | estimate nDCG 0.0788 R@10 0.217 R95 4176 | ReCo stop: R 12122.7 recall 0.967 nDCG 0.1568
+12:10:16 | INFO  | savemv.experiments.bench | fde-r10-pq          844.3 B/doc (0.700x raw) | estimate nDCG 0.1071 R@10 0.307 R95 1709 | ReCo stop: R 7233.2 recall 0.964 nDCG 0.1574
+12:11:01 | INFO  | savemv.experiments.bench | fde-r20-pq         1688.7 B/doc (1.400x raw) | estimate nDCG 0.1251 R@10 0.377 R95 613 | ReCo stop: R 4737.9 recall 0.966 nDCG 0.1574
+12:11:36 | INFO  | savemv.experiments.bench | meanpool-fp16       256.0 B/doc (0.212x raw) | estimate nDCG 0.0424 R@10 0.091 R95 2805 | ReCo stop: R 14732.1 recall 0.969 nDCG 0.1568
+12:12:07 | INFO  | savemv.experiments.bench | meanpool-int8       128.0 B/doc (0.106x raw) | estimate nDCG 0.0422 R@10 0.091 R95 2815 | ReCo stop: R 14716.9 recall 0.969 nDCG 0.1568
+12:12:40 | INFO  | savemv.experiments.bench | meanpool-binary      16.0 B/doc (0.013x raw) | estimate nDCG 0.0295 R@10 0.062 R95 6861 | ReCo stop: R 15971.0 recall 0.966 nDCG 0.1570
+12:12:42 | INFO  | savemv.experiments.bench | wrote outputs_cv2/scidocs/bench/bench_summary.md

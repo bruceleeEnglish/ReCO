@@ -1,0 +1,22 @@
+12:29:04 | INFO  | savemv.data.beir | scidocs: 25657 docs, 1000 test queries
+12:29:04 | INFO  | savemv.experiments.bench | full-fp16: cached
+12:29:04 | INFO  | savemv.experiments.bench | reco-K1024: cached
+12:29:04 | INFO  | savemv.experiments.bench | reco-K4096: cached
+12:29:04 | INFO  | savemv.experiments.bench | reco-K16384: cached
+12:29:04 | INFO  | savemv.experiments.bench | reco-K65536: cached
+12:29:04 | INFO  | savemv.experiments.bench | residual-2bit, residual-1bit: cached
+12:29:04 | INFO  | savemv.experiments.bench | pool2-fp16, pool2-2bit, pool2-1bit: cached
+12:29:04 | INFO  | savemv.experiments.bench | pool4-fp16, pool4-2bit, pool4-1bit: cached
+12:29:04 | INFO  | savemv.experiments.bench | pool8-fp16, pool8-2bit, pool8-1bit: cached
+12:29:04 | INFO  | savemv.experiments.bench | pool16-fp16, pool16-2bit, pool16-1bit: cached
+12:29:07 | INFO  | savemv.baselines.pooling | pooled factor 32: 187.9 -> 6.4 vectors / doc
+12:29:46 | INFO  | savemv.experiments.bench | pool32-fp16        1638.8 B/doc (1.358x raw) | estimate nDCG 0.1223 R@10 0.349 R95 1176 | ReCo stop: R 3512.6 recall 0.958 nDCG 0.1570
+12:29:46 | INFO  | savemv.core.codebook | k-means K=4096 iter 1/15: mean cos=0.7278, empty=0
+12:29:46 | INFO  | savemv.core.codebook | k-means K=4096 iter 6/15: mean cos=0.8115, empty=0
+12:29:46 | INFO  | savemv.core.codebook | k-means K=4096 iter 11/15: mean cos=0.8141, empty=0
+12:29:46 | INFO  | savemv.core.codebook | k-means K=4096 iter 15/15: mean cos=0.8147, empty=0
+12:30:19 | INFO  | savemv.experiments.bench | pool32-2bit         258.8 B/doc (0.215x raw) | estimate nDCG 0.1145 R@10 0.318 R95 1524 | ReCo stop: R 4560.5 recall 0.959 nDCG 0.1573
+12:30:53 | INFO  | savemv.experiments.bench | pool32-1bit         156.6 B/doc (0.130x raw) | estimate nDCG 0.1053 R@10 0.286 R95 2183 | ReCo stop: R 6129.8 recall 0.959 nDCG 0.1574
+12:30:53 | INFO  | savemv.experiments.bench | fde-r2-pq, fde-r5-pq, fde-r10-pq, fde-r20-pq: cached
+12:30:53 | INFO  | savemv.experiments.bench | meanpool-fp16, meanpool-int8, meanpool-binary: cached
+12:30:55 | INFO  | savemv.experiments.bench | wrote outputs_cv2/scidocs/bench/bench_summary.md

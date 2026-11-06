@@ -1,0 +1,38 @@
+02:53:54 | INFO  | savemv.data.beir | scidocs: 25657 docs, 1000 test queries
+02:54:21 | INFO  | savemv.param_study | scidocs k=1 (23 s): fixed 10 (0.955) | crc 9 (0.952) | patience 10 (0.958) | hazard 9 (0.954) | rank1 22 (0.995) | hazard_doc 9 (0.954)
+02:54:47 | INFO  | savemv.param_study | scidocs k=5 (26 s): fixed 25 (0.955) | crc 25 (0.951) | patience 24 (0.954) | hazard 22 (0.950) | rank1 35 (0.971) | hazard_doc 22 (0.949)
+02:55:09 | INFO  | savemv.param_study | scidocs k=10 (22 s): fixed 41 (0.954) | crc 41 (0.952) | patience 39 (0.954) | hazard 36 (0.951) | rank1 52 (0.968) | hazard_doc 36 (0.950)
+02:55:33 | INFO  | savemv.param_study | scidocs k=20 (24 s): fixed 71 (0.954) | crc 71 (0.952) | patience 67 (0.954) | hazard 64 (0.951) | rank1 82 (0.964) | hazard_doc 63 (0.950)
+02:56:00 | INFO  | savemv.param_study | scidocs k=50 (27 s): fixed 147 (0.953) | crc 147 (0.953) | patience 141 (0.954) | hazard 138 (0.953) | rank1 164 (0.963) | hazard_doc 136 (0.951)
+02:56:54 | INFO  | savemv.param_study | scidocs n_cal=19: fixed 181 (0.993, min 0.988) | crc 227 (0.995, min 0.990) | patience 144 (0.993, min 0.989) | hazard 139 (0.994, min 0.990) | rank1 53 (0.965, min 0.958) | hazard_doc 39 (0.955, min 0.951)
+02:57:47 | INFO  | savemv.param_study | scidocs n_cal=50: fixed 55 (0.968, min 0.965) | crc 52 (0.966, min 0.963) | patience 50 (0.969, min 0.966) | hazard 46 (0.968, min 0.964) | rank1 50 (0.966, min 0.964) | hazard_doc 36 (0.949, min 0.943)
+02:59:08 | INFO  | savemv.param_study | scidocs n_cal=100: fixed 49 (0.963, min 0.962) | crc 46 (0.960, min 0.958) | patience 44 (0.963, min 0.959) | hazard 41 (0.961, min 0.955) | rank1 53 (0.968, min 0.966) | hazard_doc 37 (0.952, min 0.947)
+03:00:22 | INFO  | savemv.param_study | scidocs n_cal=200: fixed 43 (0.956, min 0.953) | crc 43 (0.955, min 0.952) | patience 41 (0.958, min 0.956) | hazard 38 (0.955, min 0.953) | rank1 52 (0.968, min 0.965) | hazard_doc 36 (0.951, min 0.949)
+03:00:43 | INFO  | savemv.param_study | scidocs n_cal=480: fixed 41 (0.954, min 0.954) | crc 41 (0.952, min 0.952) | patience 39 (0.954, min 0.954) | hazard 36 (0.951, min 0.951) | rank1 52 (0.968, min 0.968) | hazard_doc 36 (0.950, min 0.950)
+03:00:43 | INFO  | savemv.param_study | wrote outputs/param_study/scidocs.json
+03:00:43 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+03:00:43 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+03:01:05 | INFO  | savemv.param_study | fiqa k=1 (18 s): fixed 19 (0.954) | crc 12 (0.949) | patience 19 (0.955) | hazard 12 (0.951) | rank1 36 (0.988) | hazard_doc 12 (0.951)
+03:01:31 | INFO  | savemv.param_study | fiqa k=5 (26 s): fixed 45 (0.952) | crc 48 (0.951) | patience 42 (0.951) | hazard 38 (0.953) | rank1 66 (0.965) | hazard_doc 37 (0.950)
+03:01:47 | INFO  | savemv.param_study | fiqa k=10 (16 s): fixed 72 (0.953) | crc 73 (0.950) | patience 69 (0.954) | hazard 63 (0.953) | rank1 92 (0.964) | hazard_doc 61 (0.949)
+03:02:04 | INFO  | savemv.param_study | fiqa k=20 (16 s): fixed 108 (0.953) | crc 113 (0.952) | patience 102 (0.953) | hazard 97 (0.952) | rank1 128 (0.960) | hazard_doc 93 (0.948)
+03:02:21 | INFO  | savemv.param_study | fiqa k=50 (17 s): fixed 211 (0.953) | crc 213 (0.953) | patience 200 (0.954) | hazard 193 (0.953) | rank1 231 (0.958) | hazard_doc 186 (0.949)
+03:02:58 | INFO  | savemv.param_study | fiqa n_cal=19: fixed 1300 (0.993, min 0.990) | crc 1229 (0.994, min 0.990) | patience 1063 (0.993, min 0.991) | hazard 862 (0.994, min 0.991) | rank1 124 (0.967, min 0.959) | hazard_doc 67 (0.951, min 0.944)
+03:03:37 | INFO  | savemv.param_study | fiqa n_cal=50: fixed 97 (0.967, min 0.963) | crc 104 (0.966, min 0.961) | patience 85 (0.966, min 0.960) | hazard 77 (0.966, min 0.963) | rank1 96 (0.963, min 0.959) | hazard_doc 60 (0.947, min 0.944)
+03:04:20 | INFO  | savemv.param_study | fiqa n_cal=100: fixed 80 (0.959, min 0.955) | crc 84 (0.958, min 0.957) | patience 74 (0.958, min 0.956) | hazard 68 (0.959, min 0.956) | rank1 95 (0.964, min 0.964) | hazard_doc 60 (0.949, min 0.943)
+03:05:18 | INFO  | savemv.param_study | fiqa n_cal=200: fixed 76 (0.956, min 0.954) | crc 76 (0.953, min 0.952) | patience 71 (0.956, min 0.954) | hazard 65 (0.956, min 0.953) | rank1 92 (0.963, min 0.962) | hazard_doc 61 (0.951, min 0.948)
+03:05:30 | INFO  | savemv.param_study | fiqa n_cal=311: fixed 72 (0.953, min 0.953) | crc 73 (0.950, min 0.950) | patience 69 (0.954, min 0.954) | hazard 63 (0.953, min 0.953) | rank1 92 (0.964, min 0.964) | hazard_doc 61 (0.949, min 0.949)
+03:05:30 | INFO  | savemv.param_study | wrote outputs/param_study/fiqa.json
+03:05:32 | INFO  | savemv.data.beir | quora: 522931 docs, 1000 test queries
+03:06:40 | INFO  | savemv.param_study | quora k=1 (59 s): fixed 6 (0.950) | crc 8 (0.966) | patience 8 (0.966) | hazard 8 (0.967) | rank1 55 (1.000) | hazard_doc 8 (0.967)
+03:08:00 | INFO  | savemv.param_study | quora k=5 (80 s): fixed 58 (0.949) | crc 102 (0.950) | patience 48 (0.948) | hazard 45 (0.949) | rank1 313 (0.982) | hazard_doc 44 (0.948)
+03:09:13 | INFO  | savemv.param_study | quora k=10 (73 s): fixed 120 (0.949) | crc 173 (0.952) | patience 98 (0.949) | hazard 97 (0.949) | rank1 362 (0.976) | hazard_doc 93 (0.948)
+03:10:20 | INFO  | savemv.param_study | quora k=20 (67 s): fixed 212 (0.949) | crc 279 (0.951) | patience 182 (0.952) | hazard 176 (0.950) | rank1 436 (0.970) | hazard_doc 169 (0.948)
+03:11:27 | INFO  | savemv.param_study | quora k=50 (67 s): fixed 434 (0.951) | crc 468 (0.951) | patience 367 (0.951) | hazard 361 (0.951) | rank1 563 (0.962) | hazard_doc 353 (0.949)
+03:14:53 | INFO  | savemv.param_study | quora n_cal=19: fixed 2337 (0.992, min 0.987) | crc 6701 (0.990, min 0.984) | patience 1764 (0.992, min 0.986) | hazard 1460 (0.992, min 0.987) | rank1 519 (0.972, min 0.966) | hazard_doc 122 (0.950, min 0.935)
+03:18:31 | INFO  | savemv.param_study | quora n_cal=50: fixed 210 (0.964, min 0.961) | crc 324 (0.967, min 0.960) | patience 164 (0.966, min 0.961) | hazard 168 (0.968, min 0.959) | rank1 414 (0.976, min 0.971) | hazard_doc 99 (0.948, min 0.940)
+03:21:44 | INFO  | savemv.param_study | quora n_cal=100: fixed 133 (0.952, min 0.944) | crc 203 (0.957, min 0.951) | patience 111 (0.953, min 0.949) | hazard 104 (0.953, min 0.950) | rank1 352 (0.974, min 0.973) | hazard_doc 89 (0.945, min 0.942)
+03:25:19 | INFO  | savemv.param_study | quora n_cal=200: fixed 125 (0.950, min 0.949) | crc 186 (0.954, min 0.948) | patience 105 (0.952, min 0.948) | hazard 101 (0.951, min 0.948) | rank1 358 (0.974, min 0.971) | hazard_doc 93 (0.947, min 0.944)
+03:26:16 | INFO  | savemv.param_study | quora n_cal=480: fixed 120 (0.949, min 0.949) | crc 173 (0.952, min 0.952) | patience 98 (0.949, min 0.949) | hazard 97 (0.949, min 0.949) | rank1 362 (0.976, min 0.976) | hazard_doc 93 (0.948, min 0.948)
+03:26:16 | INFO  | savemv.param_study | wrote outputs/param_study/quora.json
+ALL DONE

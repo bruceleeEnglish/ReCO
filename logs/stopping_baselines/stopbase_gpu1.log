@@ -1,0 +1,13 @@
+02:52:47 | INFO  | savemv.data.beir | trec-covid: 171332 docs, 50 test queries
+02:52:52 | INFO  | savemv.stopping_baselines | trec-covid: 50 queries, 171332 docs, paths in 3 s
+02:52:58 | INFO  | savemv.stopping_baselines | trec-covid d=0.1 | fixed 45 (0.936) | margin 42 (0.936) | hazard 44 (0.938) | probtopk 45 (0.926) | laet 48 (0.940) | darth 17223 (0.950) | hazard_doc 35 (0.904) | probtopk_doc 37 (0.902) | laet_doc 36 (0.900) | darth_doc 84 (0.938) | darth_declared 54 (0.904)
+02:52:58 | INFO  | savemv.stopping_baselines | trec-covid d=0.05 | fixed 116 (0.988) | margin 115 (0.988) | hazard 120 (0.982) | probtopk 179 (0.978) | laet 118 (0.994) | darth 150784 (0.984) | hazard_doc 46 (0.942) | probtopk_doc 50 (0.928) | laet_doc 58 (0.966) | darth_doc 85727 (0.970) | darth_declared 86 (0.956)
+02:52:58 | INFO  | savemv.stopping_baselines | trec-covid d=0.01 | fixed 171332 (1.000) | margin 171332 (1.000) | hazard 171332 (1.000) | probtopk 171332 (1.000) | laet 171332 (1.000) | darth 171332 (1.000) | hazard_doc 145 (0.984) | probtopk_doc 206 (0.984) | laet_doc 183 (0.994) | darth_doc 171332 (1.000) | darth_declared 109 (0.976)
+02:52:58 | INFO  | savemv.stopping_baselines | wrote outputs/stopping_baselines/trec-covid.json
+02:53:04 | INFO  | savemv.data.beir | quora: 522931 docs, 1000 test queries
+02:57:49 | INFO  | savemv.stopping_baselines | quora: 1000 queries, 522931 docs, paths in 270 s
+03:01:49 | INFO  | savemv.stopping_baselines | quora d=0.1 | fixed 53 (0.900) | margin 71 (0.899) | hazard 49 (0.900) | probtopk 75 (0.901) | laet 63 (0.901) | darth 188 (0.896) | hazard_doc 48 (0.898) | probtopk_doc 73 (0.899) | laet_doc 61 (0.899) | darth_doc 184 (0.893) | darth_declared 190 (0.943)
+03:01:49 | INFO  | savemv.stopping_baselines | quora d=0.05 | fixed 120 (0.949) | margin 173 (0.952) | hazard 97 (0.950) | probtopk 186 (0.952) | laet 138 (0.952) | darth 391 (0.949) | hazard_doc 93 (0.948) | probtopk_doc 178 (0.950) | laet_doc 134 (0.949) | darth_doc 381 (0.948) | darth_declared 400 (0.972)
+03:01:49 | INFO  | savemv.stopping_baselines | quora d=0.01 | fixed 791 (0.992) | margin 1199 (0.992) | hazard 449 (0.992) | probtopk 1262 (0.992) | laet 589 (0.992) | darth 64027 (0.991) | hazard_doc 383 (0.989) | probtopk_doc 972 (0.990) | laet_doc 507 (0.990) | darth_doc 3032 (0.989) | darth_declared 1138 (0.986)
+03:01:50 | INFO  | savemv.stopping_baselines | wrote outputs/stopping_baselines/quora.json
+ALL DONE

@@ -1,0 +1,5 @@
+13:15:50 | INFO  | savemv.inverted_eval | posting lists built in 6.7 s, 1.68 GB in memory
+13:16:13 | INFO  | savemv.inverted_eval | delta=0.1: 116.0 ms mean (p50 84.1, p99 366.4) | probe median 4 | 492699 candidates
+13:18:00 | INFO  | savemv.inverted_eval | delta=0.05: 112.4 ms mean (p50 84.7, p99 331.4) | probe median 4 | 516740 candidates
+13:18:30 | INFO  | savemv.inverted_eval | delta=0.01: 150.2 ms mean (p50 126.8, p99 345.8) | probe median 8 | 795396 candidates
+13:18:30 | INFO  | savemv.inverted_eval | full scan 516.1 ms mean; identical prefixes 50 / 50

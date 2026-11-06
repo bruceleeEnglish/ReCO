@@ -1,0 +1,11 @@
+14:38:35 | INFO  | savemv.encoders.colbert | encoder models/answerai-colbert-small-v1 on cuda:0 (dim=96, fp16 weights=True)
+14:45:39 | INFO  | savemv.experiments.qa | reco-K64k+R: hazard rule recomputes 19.6 units on average
+14:48:20 | INFO  | savemv.experiments.qa | oracle         n= 470 acc 0.898 F1 0.366 ctx   1152 tok | vs ColBERT +0.051 +- 0.033
+14:48:20 | INFO  | savemv.experiments.qa | colbert        n= 470 acc 0.847 F1 0.312 ctx   5198 tok
+14:48:20 | INFO  | savemv.experiments.qa | reco-K64k+R    n= 470 acc 0.845 F1 0.310 ctx   5202 tok | vs ColBERT -0.002 +- 0.015
+14:48:20 | INFO  | savemv.experiments.qa | reco-K64k      n= 470 acc 0.838 F1 0.319 ctx   5239 tok | vs ColBERT -0.009 +- 0.024
+14:48:20 | INFO  | savemv.experiments.qa | bge-base       n= 470 acc 0.798 F1 0.309 ctx   5188 tok | vs ColBERT -0.049 +- 0.032
+14:48:20 | INFO  | savemv.experiments.qa | bm25           n= 470 acc 0.768 F1 0.295 ctx   5610 tok | vs ColBERT -0.079 +- 0.030
+14:48:20 | INFO  | savemv.experiments.qa | full           n=  60 acc 0.900 F1 0.379 ctx 109470 tok | vs ColBERT +0.083 +- 0.085
+14:48:20 | INFO  | savemv.experiments.qa | judge check (deepseek-v4-pro, n=300): agreement 0.973, kappa 0.902
+14:48:20 | INFO  | savemv.experiments.qa | wrote outputs/qa/longmemeval/qa_report_top10_full.json

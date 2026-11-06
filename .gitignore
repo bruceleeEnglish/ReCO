@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.nbi
+*.nbc
+.venv*/
+.env.sh
+data/
+models/
+outputs*/
+third_party/

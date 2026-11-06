@@ -1,0 +1,22 @@
+# Quick end-to-end check on CPU: first 1,000 SciFact documents, small codebooks.
+dataset: scifact
+data_root: data
+output_root: outputs
+max_docs: 1000
+
+encoder:
+  batch_size: 32
+  device: cpu
+
+sketch:
+  codebook_sizes: [256, 1024]
+  kmeans_iters: 10
+  min_train_points: 50000
+
+stop:
+  deltas: [0.1, 0.05]
+
+latency:
+  codebook_size: 1024
+  num_queries: 10
+  batches: [8]

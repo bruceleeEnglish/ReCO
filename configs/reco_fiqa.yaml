@@ -1,0 +1,35 @@
+# FiQA-2018 (BEIR): 57,638 docs, 648 test queries. Full run on one GPU.
+dataset: fiqa
+data_root: data
+output_root: outputs
+split: test
+
+encoder:
+  repo: models/answerai-colbert-small-v1   # local copy of answerdotai/answerai-colbert-small-v1 (a HF id also works)
+  query_maxlen: 32
+  doc_maxlen: 300
+  batch_size: 256
+  device: cuda:0
+  fp16: true
+
+sketch:
+  codebook_sizes: [1024, 4096, 16384]
+  kmeans_iters: 15
+  points_per_centroid: 32
+  min_train_points: 200000
+  seed: 0
+
+stop:
+  k: 10
+  deltas: [0.1, 0.05, 0.01]
+  batch: 8
+  split: [0.2, 0.3, 0.5]
+  calib_top: 200
+  seed: 0
+
+latency:
+  enabled: true
+  codebook_size: 16384
+  delta: 0.05
+  num_queries: 100
+  batches: [8, 32]

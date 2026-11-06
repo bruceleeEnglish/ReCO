@@ -1,0 +1,64 @@
+{
+ "benchmark": "locomo",
+ "tasks": 1981,
+ "delta": 0.05,
+ "R_mean": 59.45683997980818,
+ "recall": 0.9522968197879859,
+ "sizes": {
+  "min": 369,
+  "p25": 509.0,
+  "median": 663.0,
+  "p75": 680.0,
+  "max": 689
+ },
+ "by_size": [
+  {
+   "quartile": 1,
+   "tasks": 498,
+   "size_min": 369,
+   "size_max": 509,
+   "recall": 0.9576305220883534,
+   "R_mean": 58.024096385542165
+  },
+  {
+   "quartile": 2,
+   "tasks": 654,
+   "size_min": 568,
+   "size_max": 663,
+   "recall": 0.954434250764526,
+   "R_mean": 63.07033639143731
+  },
+  {
+   "quartile": 3,
+   "tasks": 400,
+   "size_min": 675,
+   "size_max": 680,
+   "recall": 0.9380000000000002,
+   "R_mean": 58.22
+  },
+  {
+   "quartile": 4,
+   "tasks": 429,
+   "size_min": 681,
+   "size_max": 689,
+   "recall": 0.9561771561771563,
+   "R_mean": 56.764568764568764
+  }
+ ],
+ "small_to_large": {
+  "small_tasks": 1152,
+  "large_tasks": 829,
+  "small_mean_size": 544.0269097222222,
+  "large_mean_size": 681.3980699638118,
+  "recall": 0.9375150784077203,
+  "recall_splits": [
+   0.9370325693606756,
+   0.9399276236429434,
+   0.9372738238841978,
+   0.9377563329312426,
+   0.9355850422195418
+  ],
+  "R_mean": 52.93896260554885,
+  "recall_on_small_itself": 0.951875
+ }
+}

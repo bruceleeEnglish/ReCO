@@ -1,0 +1,62 @@
+# Systematic comparison (gate G1): ReCo vs. lossy multi-vector indexes and first-stage retrievers.
+#   scripts/pipeline/run_bench.sh <gpu> <dataset>[:key=value,...] ...   (Quora: quora:max_queries=1000)
+dataset: fiqa
+data_root: data
+output_root: outputs
+split: test
+hf_endpoint: https://hf-mirror.com
+exclude_identical_ids: true
+
+encoder:
+  repo: models/answerai-colbert-small-v1
+  query_maxlen: 32
+  doc_maxlen: 300
+  batch_size: 256
+  device: cuda:0
+  fp16: true
+
+sketch:                      # k-means settings shared by the ReCo sketch and every residual codec
+  codebook_sizes: [16384]
+  kmeans_iters: 15
+  points_per_centroid: 32
+  min_train_points: 200000
+  seed: 0
+
+stop:
+  k: 10
+  deltas: [0.1, 0.05, 0.01]
+  batch: 8
+  folds: 5                   # every query is tested once; calibration uses the other folds
+  fit_fraction: 0.4
+  calib_top: 200
+  seed: 0
+
+latency:
+  enabled: false
+
+bench:
+  workers: 32
+  methods:
+    - {kind: full}
+    # ours (alone = PLAID centroid interaction without residuals)
+    - {kind: reco, codebook_size: 1024}
+    - {kind: reco, codebook_size: 4096}
+    - {kind: reco, codebook_size: 16384}
+    - {kind: reco, codebook_size: 65536}
+    # lossy multi-vector indexes
+    - {kind: residual, nbits: [2, 1]}
+    - {kind: pool, factor: 2, nbits: [null, 2, 1]}
+    - {kind: pool, factor: 4, nbits: [null, 2, 1]}
+    - {kind: pool, factor: 8, nbits: [null, 2, 1]}
+    - {kind: pool, factor: 16, nbits: [null, 2, 1]}
+    - {kind: pool, factor: 32, nbits: [null, 2, 1]}
+    - {kind: pool, factor: 4, nbits: [null], normalize: false}
+    - {kind: fde, reps: [2, 5, 10, 20], simhash_bits: 5, proj_dim: 16, pq: true}
+    - {kind: fde, reps: [20], simhash_bits: 5, proj_dim: 16, fill_empty: true, pq: true}
+    - {kind: constbert, model: models/ConstBERT, nbits: [null, 2, 1]}
+    - {kind: constbert, model: models/ConstBERT, nbits: [null], query_marker: hf}   # official wrapper's [UNK] marker
+    # single-vector and sparse first stages
+    - {kind: meanpool, quant: [fp16, int8, binary]}
+    - {kind: dense, model: models/bge-small-en-v1.5, quant: [fp16, int8, binary]}
+    - {kind: bm25, k1: 0.9, b: 0.4}
+    - {kind: splade, model: models/splade-cocondenser-ensembledistil, max_length: 256}

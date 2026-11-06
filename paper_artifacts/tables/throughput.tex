@@ -1,0 +1,19 @@
+\filltable{6}{%
+\begin{tabular}{@{}l rrrrr@{}}
+\toprule
+ & & \multicolumn{2}{c}{Latency (ms)} & Recall & GPU \\
+\cmidrule(lr){3-4}
+System & QPS & p50 & p99 & @10 & (GB) \\
+\midrule
+PLAID, $k{\le}10$ defaults & 22.5 & 33 & 175 & 0.811 & 9.6 \\
+PLAID, batch API & 23.3 & -- & -- & 0.811 & 13.6 \\
+PLAID, $k{\le}100$ defaults & 13.8 & 57 & 247 & 0.847 & 14.0 \\
+PLAID, $k{>}100$ defaults$^\dagger$ & 7.2 & 111 & 440 & 0.853 & 21.6 \\
+\oursL \reco{}, $\delta{=}0.1$, $C{=}1$ & \ours 17.8 & \ours 53 & \ours 105 & \ours 0.903 & \oursR -- \\
+\oursL \reco{}, $\delta{=}0.1$, $C{=}64$ & \ours \textbf{26.9} & \ours 1,966 & \ours 6,834 & \ours 0.904 & \oursR 8.6 \\
+\oursL \reco{}, $\delta{=}0.05$, $C{=}1$ & \ours 11.6 & \ours 80 & \ours 190 & \ours 0.951 & \oursR -- \\
+\oursL \reco{}, $\delta{=}0.05$, $C{=}64$ & \ours 16.9 & \ours 2,992 & \ours 11,479 & \ours 0.950 & \oursR 8.6 \\
+\oursL \reco{}, $\delta{=}0.01$, $C{=}1$ & \ours 2.3 & \ours 351 & \ours 1,516 & \ours 0.992 & \oursR -- \\
+\oursL \reco{}, $\delta{=}0.01$, $C{=}64$ & \ours 3.9 & \ours 12,456 & \ours 58,290 & \ours 0.992 & \oursR 8.6 \\
+\bottomrule
+\end{tabular}}

@@ -1,0 +1,17 @@
+12:30:21 | INFO  | savemv.data.beir | quora: 522931 docs, 1000 test queries
+12:30:59 | INFO  | savemv.scalability | quora n=10459: R95 47 | d=0.05 fixed 47.6 crc 45.2 hazard 44.4
+12:31:31 | INFO  | savemv.scalability | quora n=26147: R95 61 | d=0.05 fixed 62.4 crc 54.7 hazard 53.2
+12:32:10 | INFO  | savemv.scalability | quora n=52293: R95 76 | d=0.05 fixed 76.2 crc 69.2 hazard 65.1
+12:33:02 | INFO  | savemv.scalability | quora n=130733: R95 101 | d=0.05 fixed 102.4 crc 98.3 hazard 80.4
+12:34:11 | INFO  | savemv.scalability | quora n=261466: R95 112 | d=0.05 fixed 111.8 crc 134.0 hazard 95.3
+12:36:09 | INFO  | savemv.scalability | quora n=522931: R95 123 | d=0.05 fixed 119.8 crc 173.3 hazard 96.6
+12:36:09 | INFO  | savemv.scalability | wrote outputs/scalability/quora_K16384.json
+12:36:14 | INFO  | savemv.data.beir | fiqa: 57638 docs, 648 test queries
+12:36:14 | INFO  | savemv.experiments.pipeline | excluding 55 (query, document) pairs with identical ids
+12:36:36 | INFO  | savemv.scalability | fiqa n=1153: R95 27 | d=0.05 fixed 28.4 crc 27.5 hazard 26.3
+12:36:54 | INFO  | savemv.scalability | fiqa n=2882: R95 33 | d=0.05 fixed 35.0 crc 32.6 hazard 31.5
+12:37:12 | INFO  | savemv.scalability | fiqa n=5764: R95 36 | d=0.05 fixed 37.0 crc 35.0 hazard 34.1
+12:37:31 | INFO  | savemv.scalability | fiqa n=14410: R95 46 | d=0.05 fixed 47.6 crc 44.1 hazard 41.8
+12:37:52 | INFO  | savemv.scalability | fiqa n=28819: R95 54 | d=0.05 fixed 55.8 crc 58.2 hazard 50.6
+12:38:17 | INFO  | savemv.scalability | fiqa n=57638: R95 69 | d=0.05 fixed 72.4 crc 73.3 hazard 63.1
+12:38:17 | INFO  | savemv.scalability | wrote outputs/scalability/fiqa_K16384.json
