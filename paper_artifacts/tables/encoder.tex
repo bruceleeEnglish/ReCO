@@ -3,7 +3,7 @@
 \toprule
  & \multicolumn{2}{c}{ColBERTv2} & lossy & \multicolumn{3}{c}{\ours \reco{}} & \multicolumn{2}{c}{\ours fewer recomp.} \\
 \cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(lr){5-7}\cmidrule(l){8-9}
-Dataset & $\times$raw & nDCG & $\Delta$ & \ours $\times$raw & \ours $\Delta_{.05}$ & \ours $\Delta_{.01}$ & \ours $\delta{=}.05$ & \oursR $\delta{=}.01$ \\
+Dataset & $\times$raw & nDCG@10 & $\Delta$ & \ours $\times$raw & \ours $\Delta_{.05}$ & \ours $\Delta_{.01}$ & \ours $\delta{=}.05$ & \oursR $\delta{=}.01$ \\
 \midrule
 SciFact & 40 & 0.692 & \minus{}17.2 & \ours \textbf{0.26} & \ours \minus{}0.3 & \ours \minus{}0.1 & \ours 27\% & \oursR 56\%$^\ddagger$ \\
 NFCorpus & 38 & 0.344 & \minus{}6.7 & \ours \textbf{0.29} & \ours \minus{}0.3 & \ours 0.0 & \ours 32\% & \oursR 49\%$^\ddagger$ \\

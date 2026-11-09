@@ -169,16 +169,16 @@ def frontier(data: dict, out: Path, reco_ndcg, warp: dict | None = None) -> None
         ax.set_xlim(0.03, 80)
         ax.set_ylim(60, 104 if top <= 101 else 10 * math.ceil((top + 3) / 10))
         log_ticks(ax, "x", [0.1, 1, 10])
+        ax.xaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:g}×"))
         frame(ax, "both")
-        if i % 4 == 0:
-            ax.set_ylabel("nDCG@10 (%)")
         caption(ax, f"({chr(97 + i)}) {TITLE[name]}", below=9.5)
+    fig.supylabel("nDCG@10 (% of exact ColBERT)", x=0.004, fontsize=8)
     key_ax = axes[1][3]
     key_ax.axis("off")
     handles = [handle("reco"), handle("plaid")] + ([handle("warp")] if warp else []) + [handle("pool"), handle("constbert"),
                handle("colbert"), Patch(facecolor=SHADE, edgecolor="none", label="Smaller than raw text")]
     key_ax.legend(handles=handles, loc="upper left", bbox_to_anchor=(0.0, 1.1), ncol=1, labelspacing=0.2,
-                  handlelength=2.2)
+                  handlelength=2.2, title="x: index size (× raw text)", title_fontsize=7.5, alignment="left")
     fig.savefig(out / "frontier.pdf")
     plt.close(fig)
 
@@ -242,7 +242,7 @@ def codebook(data: dict, out: Path, headline_rules) -> None:
                   markeredgewidth=0.6, label=TITLE[name])
         axes[0].plot(x, [m["storage_ratio"] for m in ms], **kw)
         axes[1].plot(x, [m["evaluation"]["deltas"]["0.05"][rule]["R_mean"] for m in ms], **kw)
-    for ax, ylab, cap in ((axes[0], "× raw text", "(a) Index size versus $K$"),
+    for ax, ylab, cap in ((axes[0], "Size (× raw text)", "(a) Index size versus $K$"),
                           (axes[1], "Recomputations", "(b) Verification cost versus $K$")):
         ax.set_xticks(range(len(ks)))
         ax.set_xticklabels(["1k", "4k", "16k", "64k"])
@@ -347,8 +347,8 @@ def calibration_size(params: dict, out: Path) -> dict:
         plot(ax, rule, x, low[rule], linestyle="--" if rule == "hazard_doc" else "-")
     ax.axhline(0.95, color=INK, linewidth=0.7, zorder=1)
     ax.text(len(order) - 1, 0.951, "target", ha="right", va="bottom", fontsize=6.5, color=INK2)
-    ax.set_ylabel("Achieved recall")
-    for a, cap in zip(axes, ("(a) Quora: calibration queries", "(b) Lowest of 3 corpora")):
+    ax.set_ylabel("Lowest recall")
+    for a, cap in zip(axes, ("(a) Quora: calibration queries", "(b) 3 corpora: calibration queries")):
         a.set_xticks(x)
         a.set_xticklabels(labels)
         frame(a)

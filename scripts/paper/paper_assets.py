@@ -122,7 +122,7 @@ def encoder_table(data: dict, macros: dict) -> str:
              r" & \multicolumn{2}{c}{ColBERTv2} & lossy & \multicolumn{3}{c}{\ours ReCo} "
              r"& \multicolumn{2}{c}{\ours fewer recomp.} \\",
              r"\cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(lr){5-7}\cmidrule(l){8-9}",
-             r"Dataset & $\times$raw & nDCG & $\Delta$ & \ours $\times$raw & \ours $\Delta_{.05}$ & \ours $\Delta_{.01}$ "
+             r"Dataset & $\times$raw & nDCG@10 & $\Delta$ & \ours $\times$raw & \ours $\Delta_{.05}$ & \ours $\Delta_{.01}$ "
              r"& \ours $\delta{=}.05$ & \ours $\delta{=}.01$ \\", r"\midrule"]
     gaps, lossy, cuts5, cuts1, saving = [], [], [], [], []
     for name in names:
@@ -317,7 +317,7 @@ def cpu_table(d: Path, macros: dict) -> str:
     lines = [r"\begin{tabular}{@{}l r rr r rr@{}}", r"\toprule",
              r" & \multicolumn{3}{c}{LongMemEval-S} & \multicolumn{3}{c}{LoCoMo} \\",
              r"\cmidrule(lr){2-4}\cmidrule(l){5-7}",
-             r"Retriever & B/unit & p50 & p90 & B/unit & p50 & p90 \\", r"\midrule"]
+             r"Retriever & B/unit & p50 (ms) & p90 (ms) & B/unit & p50 (ms) & p90 (ms) \\", r"\midrule"]
     for key, lab, size_key, ours in CPU_ROWS:
         o = r"\ours " if ours else ""
         cells = [o + lab]
@@ -523,7 +523,7 @@ def ablation_table(abl: dict, macros: dict) -> str:
 # ------------------------------------------------------------------------------------------ latency
 def latency_table(lat_dir: Path, macros: dict) -> str:
     lines = [r"\begin{tabular}{@{}l l rrr r@{}}", r"\toprule",
-             r"Dataset ($K$) & rule & p50 & p90 & p99 & $\bar R$ \\", r"\midrule"]
+             r"Dataset ($K$) & Rule & p50 (ms) & p90 (ms) & p99 (ms) & $\bar R$ \\", r"\midrule"]
     found = False
     for ds, k in (("scifact", 4096), ("fiqa", 16384), ("trec-covid", 65536)):
         group = []
@@ -583,7 +583,7 @@ def build_table(build_dir: Path, macros: dict) -> str:
              " & " + " & ".join(rf"\multicolumn{{3}}{{c}}{{{TITLE[n]} ({reps[n]['n_docs'] / 1000:.0f}k docs)}}"
                                 for n in names) + r" \\",
              "".join(rf"\cmidrule(lr){{{2 + 3 * i}-{4 + 3 * i}}}" for i in range(len(names))),
-             "Index & " + " & ".join(["B/doc", "build (s)", "insert"] * len(names)) + r" \\", r"\midrule"]
+             "Index & " + " & ".join(["B/doc", "Build (s)", "Insert (ms)"] * len(names)) + r" \\", r"\midrule"]
     best_b = {n: min(reps[n]["methods"][k]["bytes_per_doc"] for k, _, _ in BUILD_ROWS if k in reps[n]["methods"])
               for n in names}
     for key, lab, ours in BUILD_ROWS:
@@ -630,7 +630,7 @@ def qa_table(qa: Path, mem: Path, macros: dict) -> str:
     storage = {b: json.loads((mem / f"memory_{b}.json").read_text(encoding="utf-8"))["storage_bytes_per_unit"]
                for b in ("longmemeval", "locomo") if (mem / f"memory_{b}.json").exists()}
     lines = [r"\begin{tabular}{@{}l rr rr rr@{}}", r"\toprule",
-             r" & \multicolumn{2}{c}{bytes / unit} & \multicolumn{2}{c}{4B reader (on-device)} "
+             r" & \multicolumn{2}{c}{Index (B/unit)} & \multicolumn{2}{c}{4B reader (on-device)} "
              r"& \multicolumn{2}{c}{cloud reader} \\", r"\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-7}",
              r"Retriever (top-10) & LME & LoCoMo & LME & LoCoMo & LME & LoCoMo \\", r"\midrule"]
     size_key = {"colbert": "ColBERT fp16", "reco-K64k+R": "ReCo sketch K=64k", "reco-K64k": "ReCo sketch K=64k",
@@ -997,7 +997,7 @@ STOP_SHORT = {"scifact": "SciF.", "nfcorpus": "NFC.", "arguana": "Arg.", "scidoc
 
 
 def fmt_big(v: float) -> str:
-    return f"{v / 1000:.0f}k" if v >= 10000 else fmt_r(v)
+    return f"{v:,.0f}" if v >= 1000 else fmt_r(v)
 
 
 def stopping_table(data: dict, sb: dict, macros: dict) -> str:
@@ -1207,7 +1207,7 @@ def throughput_table(d: Path, macros: dict) -> str:
                      r["recall_vs_exact10"], r["peak_gpu_gb"], True))
     best_qps = max(r[1] for r in rows)
     lines = [r"\begin{tabular}{@{}l rrrrr@{}}", r"\toprule",
-             r" & & \multicolumn{2}{c}{Latency (ms)} & Recall & GPU \\", r"\cmidrule(lr){3-4}",
+             r" & & \multicolumn{2}{c}{Latency (ms)} & Recall & GPU mem. \\", r"\cmidrule(lr){3-4}",
              r"System & QPS & p50 & p99 & @10 & (GB) \\", r"\midrule"]
     for lab, qps, p50, p99_, rec, mem, ours in rows:
         o = r"\ours " if ours else ""

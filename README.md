@@ -186,6 +186,16 @@ The ten largest result files are gzipped (`results/beir`, `results/beir_cv2`), a
 both forms. Exploratory pilots, runs superseded by a later protocol, and intermediate artifacts such as encodings and
 indexes are not included.
 
+## Review of the theory and code
+
+The theoretical results of the paper and the experimental code in this repository were reviewed in detail by two large
+language models, Claude and ChatGPT. Each proof and derivation was checked step by step, including Proposition 1,
+Theorems 1 and 2 with their corollaries, and the bound of the pooled variant ReCo-D. The code was compared with the
+algorithms and the experimental settings described in the paper. No errors were found in the final versions of the
+paper and the code. This review complements the checks above, which rebuild every number, table and figure of the paper
+from `results/` and verify `results/` against the original run logs. Reports of any remaining issue are welcome through
+the GitHub issue tracker.
+
 ## License
 
 The code is released under the MIT License, see [LICENSE](LICENSE). The datasets, models and official baseline engines
